@@ -215,12 +215,22 @@ const Index = () => {
             <div className="flex flex-col items-center">
               <Phone className="h-8 w-8 mb-3" />
               <h4 className="font-semibold mb-2">Call / WhatsApp</h4>
-              <p className="text-lg">+421 919 040 118</p>
+              <a 
+                href="tel:+421919040118" 
+                className="text-lg hover:text-[hsl(var(--military-gold))] transition-colors cursor-pointer"
+              >
+                +421 919 040 118
+              </a>
             </div>
             <div className="flex flex-col items-center">
               <Mail className="h-8 w-8 mb-3" />
               <h4 className="font-semibold mb-2">Email Us</h4>
-              <p>fabianmarian8@gmail.com</p>
+              <a 
+                href="mailto:fabianmarian8@gmail.com" 
+                className="hover:text-[hsl(var(--military-gold))] transition-colors cursor-pointer"
+              >
+                fabianmarian8@gmail.com
+              </a>
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="h-8 w-8 mb-3" />
