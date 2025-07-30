@@ -89,7 +89,7 @@ ${formData.name}`);
           <img 
             src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
             alt="FRANKO TAXI Logo" 
-            className="h-16 w-16 rounded-full bg-white p-2"
+            className="h-20 w-20 rounded-full bg-white p-2"
           />
           <Link to="/help">
             <Button variant="destructive" size="sm" className="bg-red-600 hover:bg-red-700">
