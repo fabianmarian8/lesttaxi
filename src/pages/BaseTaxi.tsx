@@ -170,7 +170,8 @@ const BaseTaxi = () => {
                   </div>
                   <div className="mt-6 p-4 bg-[hsl(var(--military-gold))]/10 rounded-lg">
                     <p className="text-sm text-center">
-                      <strong>Payment Options:</strong> USD Cash • EUR Cash • Credit Cards • Military Star Cards • USAA Cards
+                      <strong>Taxi Payment:</strong> USD Cash • EUR Cash<br/>
+                      <strong>Food Delivery Payment:</strong> USD Cash • EUR Cash • Credit Cards
                     </p>
                   </div>
                 </CardContent>
