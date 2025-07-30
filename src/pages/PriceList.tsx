@@ -18,7 +18,7 @@ const PriceList = () => {
   const localServices = [
     { service: "McDonald's Delivery", price: 45, description: "Hot food delivery to base" },
     { service: "KFC Delivery", price: 45, description: "Fresh chicken delivery" },
-    { service: "Europa Shopping Center", price: "od 45€", description: "Shopping trip transport" },
+    { service: "Europa Shopping Center", price: 45, description: "Shopping trip transport" },
     { service: "Hourly Rate", price: 25, description: "Per hour for multiple stops" },
     { service: "Waiting One Hour", price: 20, description: "Driver waiting time per hour" },
   ];
@@ -128,7 +128,7 @@ const PriceList = () => {
                       </div>
                       <div className="text-right">
                         <span className="text-xl font-bold text-[hsl(var(--military-gold))]">
-                          {service.service === "Europa Shopping Center" ? service.price : `€${service.price}`}
+                          €{service.price}
                         </span>
                       </div>
                     </div>
