@@ -183,23 +183,25 @@ const PriceList = () => {
       {/* Payment Methods */}
       <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Payment Methods</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Payment Methods by Service</h2>
           <div className="max-w-3xl mx-auto">
             <Card>
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="font-semibold text-lg mb-4">Cash Payments</h4>
+                    <h4 className="font-semibold text-lg mb-4">🚗 Taxi Rides</h4>
+                    <p className="text-sm text-muted-foreground mb-2">Cash payments only</p>
                     <ul className="space-y-2 text-muted-foreground">
                       <li>• Euro (EUR) only</li>
                       <li>• Exact change preferred</li>
-                      <li>• All taxi services</li>
+                      <li>• All destinations & local trips</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-4">Card Payments</h4>
+                    <h4 className="font-semibold text-lg mb-4">🍔 Food Delivery</h4>
+                    <p className="text-sm text-muted-foreground mb-2">Cash & card payments accepted</p>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>• Food delivery only</li>
+                      <li>• Euro (EUR) cash</li>
                       <li>• Visa & Mastercard</li>
                       <li>• Military Star Cards</li>
                       <li>• USAA Cards</li>
