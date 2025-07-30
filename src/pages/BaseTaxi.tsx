@@ -23,7 +23,7 @@ const BaseTaxi = () => {
     },
     {
       question: "Is military ID required for base transportation?",
-      answer: "Military ID is required for base access. Our drivers are familiar with base security protocols and will assist with the check-in process at the gate."
+      answer: "Military ID is required for base access. Please ensure you have your valid military identification ready for base security. Our drivers will wait for you at the designated pickup point after you clear security."
     }
   ];
 
