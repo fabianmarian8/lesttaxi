@@ -2,45 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Military-Inspired Design System */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Enhanced Color Palette */
+    --background: 8 8% 7%;
+    --foreground: 43 96% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 12 10% 12%;
+    --card-foreground: 43 96% 88%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 10 8% 10%;
+    --popover-foreground: 43 96% 88%;
 
-    --primary: 46 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 43 96% 56%;
+    --primary-foreground: 12 10% 8%;
 
-    --secondary: 120 50% 25%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 88 45% 20%;
+    --secondary-foreground: 43 96% 88%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 15 15% 18%;
+    --muted-foreground: 43 30% 65%;
 
-    --accent: 46 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 35 100% 65%;
+    --accent-foreground: 12 10% 8%;
 
-    --military-gold: 46 100% 50%;
-    --military-green: 120 50% 25%;
+    /* Military Theme Colors */
+    --military-gold: 43 96% 56%;
+    --military-green: 88 45% 20%;
+    --military-bronze: 35 85% 45%;
     --whatsapp-green: 142 70% 49%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Elite Military Colors */
+    --elite-gold: 48 100% 67%;
+    --combat-green: 94 50% 15%;
+    --tactical-orange: 25 95% 62%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 20 20% 25%;
+    --input: 15 15% 18%;
+    --ring: 43 96% 56%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Advanced Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--military-gold)) 0%, hsl(var(--elite-gold)) 50%, hsl(var(--tactical-orange)) 100%);
+    --gradient-combat: linear-gradient(180deg, hsl(var(--combat-green)) 0%, hsl(var(--military-green)) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    
+    /* Advanced Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--military-gold) / 0.3), 0 0 40px hsl(var(--military-gold) / 0.1);
+    --shadow-tactical: 0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.2);
+    --shadow-elite: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px hsl(var(--elite-gold) / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -104,6 +121,77 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20;
+    background: var(--gradient-glass);
+  }
+
+  .neon-glow {
+    box-shadow: var(--shadow-neon);
+  }
+
+  .tactical-card {
+    @apply glass-effect rounded-xl p-6 transition-all duration-500;
+    box-shadow: var(--shadow-tactical);
+  }
+
+  .tactical-card:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-elite);
+  }
+
+  .combat-text {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from {
+      box-shadow: 0 0 10px hsl(var(--military-gold) / 0.3);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(var(--military-gold) / 0.6), 0 0 60px hsl(var(--military-gold) / 0.3);
+    }
+  }
+
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

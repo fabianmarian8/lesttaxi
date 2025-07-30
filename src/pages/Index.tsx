@@ -9,139 +9,172 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
-      {/* Military Pattern Background */}
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `url('/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png')`,
-          backgroundSize: '200px 200px',
-          backgroundRepeat: 'repeat'
-        }}
-      />
+      {/* Enhanced Military Pattern Background */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 opacity-3"
+          style={{
+            backgroundImage: `url('/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png')`,
+            backgroundSize: '150px 150px',
+            backgroundRepeat: 'repeat'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-[hsl(var(--combat-green))] opacity-90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--military-gold))_0%,transparent_70%)] opacity-10" />
+      </div>
       
-      {/* Header with Military Gold Theme */}
-      <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 relative z-10 shadow-lg">
+      {/* Enhanced Header with Glass Effect */}
+      <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
           <img 
             src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
             alt="FRANKO TAXI Logo" 
-            className="h-24 w-24 rounded-full bg-white p-2"
+            className="h-20 w-20 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30 pulse-glow"
           />
           <Link to="/help">
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-8 px-3 text-xs bg-red-600 hover:bg-red-700 text-white">
-              <HelpCircle className="h-4 w-4 mr-2" />
+            <button className="glass-effect px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 neon-glow">
+              <HelpCircle className="h-4 w-4 mr-2 inline" />
               Need help?
             </button>
           </Link>
         </nav>
       </header>
 
-      {/* Hero Section with Promotional Images */}
-      <section className="relative py-20 px-6">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 via-background to-[hsl(var(--military-green))]/20"></div>
-        <div className="container mx-auto text-center relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-            <div className="text-left">
-              <h1 className="text-5xl font-bold mb-6 text-foreground bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--military-green))] bg-clip-text text-transparent">
-                READY TO GO from base?
+      {/* Enhanced Hero Section */}
+      <section className="relative py-32 px-6">
+        <div className="container mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left slide-up">
+              <h1 className="text-6xl lg:text-7xl font-black mb-8 combat-text leading-tight">
+                READY TO GO
+                <span className="block text-4xl lg:text-5xl font-bold text-[hsl(var(--accent))]">
+                  from base?
+                </span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-4">
-                Professional Transportation Service for American Military Personnel
+              <p className="text-2xl text-foreground/90 mb-6 font-medium">
+                Elite Transportation Service for American Military Personnel
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                24h/7days always ready • verified and fast taxi • Tennis court pickup • Food delivery
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🍕 Food delivery
               </p>
-              <div className="flex gap-4 flex-wrap">
+              <div className="flex gap-6 flex-wrap">
                 <a 
                   href="https://wa.me/421919040118"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-12 px-8 shadow-xl bg-[hsl(var(--whatsapp-green))] text-white hover:bg-[hsl(var(--whatsapp-green))]/90"
+                  className="tactical-card px-8 py-4 text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
                 >
-                  <MessageCircle className="h-6 w-6 mr-2" />
-                  WhatsApp Now
+                  <MessageCircle className="h-6 w-6 mr-3 inline" />
+                  WhatsApp Command
                 </a>
                 <a 
                   href="tel:+421919040118"
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-12 px-8 bg-primary text-primary-foreground shadow hover:bg-primary/90"
+                  className="tactical-card px-8 py-4 text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
                 >
-                  Call
+                  <Phone className="h-6 w-6 mr-3 inline" />
+                  Direct Call
                 </a>
               </div>
             </div>
-            <div className="space-y-4">
-              <img 
-                src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
-                alt="FRANKO TAXI Service Banner" 
-                className="rounded-lg shadow-xl w-full"
-              />
+            <div className="floating">
+              <div className="tactical-card p-4">
+                <img 
+                  src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
+                  alt="FRANKO TAXI Elite Service" 
+                  className="rounded-xl w-full shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Services Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Our Services</h2>
+      {/* Elite Services Section */}
+      <section className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10" />
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-5xl font-black text-center mb-16 combat-text">
+            TACTICAL SERVICES
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <Car className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Airport Transfers</h3>
-              <p className="text-muted-foreground">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional service.</p>
+            <div className="tactical-card text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                <Car className="h-10 w-10 text-black" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--military-gold))]">Airport Transfers</h3>
+              <p className="text-muted-foreground leading-relaxed">Elite transportation to Budapest, Vienna, and Bratislava airports with military-grade punctuality and security protocols.</p>
             </div>
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Military Base Taxi</h3>
-              <p className="text-muted-foreground">Specialized taxi service for military personnel with base protocol understanding.</p>
+            <div className="tactical-card text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                <MapPin className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))]">Base Operations</h3>
+              <p className="text-muted-foreground leading-relaxed">Specialized tactical transport for military personnel with complete base protocol understanding and clearance verification.</p>
             </div>
-            <div className="text-center">
-              <MessageCircle className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">City Rides</h3>
-              <p className="text-muted-foreground">Local transportation to cities, shopping centers, and other destinations across Slovakia.</p>
+            <div className="tactical-card text-center group">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                <MessageCircle className="h-10 w-10 text-[hsl(var(--military-gold))]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--combat-green))]">Urban Missions</h3>
+              <p className="text-muted-foreground leading-relaxed">Strategic urban transportation to cities, command centers, and mission-critical destinations across Slovakia.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Us Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Contact Us</h2>
-          <ContactForm />
+      {/* Command Center Contact */}
+      <section className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-5xl font-black text-center mb-16 combat-text">
+            ESTABLISH CONTACT
+          </h2>
+          <div className="max-w-2xl mx-auto mb-16">
+            <ContactForm />
+          </div>
           
-          <div className="flex justify-center gap-8 mt-12">
+          <div className="flex justify-center gap-6">
             <a 
               href="tel:+421919040118"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-white/50 transition-colors"
+              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
             >
-              <Phone className="h-8 w-8 text-[hsl(var(--military-gold))]" />
-              <span className="text-sm font-medium">Call</span>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Phone className="h-8 w-8 text-black" />
+              </div>
+              <span className="text-lg font-bold text-[hsl(var(--military-gold))]">Direct Line</span>
             </a>
             <a 
               href="https://wa.me/421919040118"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-white/50 transition-colors"
+              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
             >
-              <MessageCircle className="h-8 w-8 text-[hsl(var(--whatsapp-green))]" />
-              <span className="text-sm font-medium">WhatsApp</span>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MessageCircle className="h-8 w-8 text-white" />
+              </div>
+              <span className="text-lg font-bold text-[hsl(var(--whatsapp-green))]">WhatsApp HQ</span>
             </a>
             <a 
               href="mailto:fabianmarian8@gmail.com"
-              className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-white/50 transition-colors"
+              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
             >
-              <Mail className="h-8 w-8 text-[hsl(var(--military-gold))]" />
-              <span className="text-sm font-medium">Email</span>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Mail className="h-8 w-8 text-white" />
+              </div>
+              <span className="text-lg font-bold text-[hsl(var(--tactical-orange))]">Intel Report</span>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className="bg-[hsl(var(--military-green))]/80 py-8 px-6 text-white">
-        <div className="container mx-auto text-center">
-          <p>© 2024 Franko Taxi | All rights reserved.</p>
+      {/* Command Footer */}
+      <footer className="relative py-12 px-6">
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] opacity-90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--military-gold))_0%,transparent_70%)] opacity-20" />
+        <div className="container mx-auto text-center relative z-10">
+          <p className="text-xl font-semibold text-[hsl(var(--military-gold))] tracking-wider">
+            © 2024 FRANKO TACTICAL TRANSPORT | MISSION CLASSIFIED
+          </p>
         </div>
       </footer>
       
