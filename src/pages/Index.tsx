@@ -82,7 +82,12 @@ const Index = () => {
                   <MessageCircle className="h-6 w-6 mr-2" />
                   WhatsApp Now
                 </Button>
-                <Button variant="default" size="lg" className="text-lg px-8">
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="text-lg px-8"
+                  onClick={() => window.location.href = 'tel:+421919040118'}
+                >
                   Call
                 </Button>
               </div>
