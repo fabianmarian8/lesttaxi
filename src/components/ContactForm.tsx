@@ -27,13 +27,21 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // For now, we'll simulate form submission
-      // In a real implementation, you would send this to an API endpoint
-      console.log("Form submission:", formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      const response = await fetch(
+        "https://kkuybturazislquqaxci.supabase.co/functions/v1/send-contact-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       toast({
         title: "Message sent!",
         description: "Thank you for your message. We'll get back to you soon.",
@@ -42,6 +50,7 @@ const ContactForm = () => {
       // Reset form
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error("Contact form error:", error);
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
