@@ -84,7 +84,7 @@ ${formData.name}`);
       />
       
       {/* Header with Military Gold Theme */}
-      <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-6 px-6 relative z-10 shadow-lg">
+      <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 relative z-10 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <img 
             src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
