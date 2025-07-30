@@ -16,11 +16,11 @@ const PriceList = () => {
   ];
 
   const localServices = [
-    { service: "Gate Pick-up Service", price: "", description: "Pick-up directly from base gate" },
-    { service: "McDonald's Delivery", price: 8, description: "Hot food delivery to base" },
-    { service: "KFC Delivery", price: 8, description: "Fresh chicken delivery" },
-    { service: "Europa Shopping Center", price: 12, description: "Shopping trip transport" },
+    { service: "McDonald's Delivery", price: 45, description: "Hot food delivery to base" },
+    { service: "KFC Delivery", price: 45, description: "Fresh chicken delivery" },
+    { service: "Europa Shopping Center", price: "from 45", description: "Shopping trip transport" },
     { service: "Hourly Rate", price: 25, description: "Per hour for multiple stops" },
+    { service: "Waiting One Hour", price: 20, description: "Driver waiting time per hour" },
   ];
 
   return (
@@ -128,7 +128,7 @@ const PriceList = () => {
                       </div>
                       <div className="text-right">
                         <span className="text-xl font-bold text-[hsl(var(--military-gold))]">
-                          {service.price ? `€${service.price}` : "Free"}
+                          €{service.price}
                         </span>
                       </div>
                     </div>
