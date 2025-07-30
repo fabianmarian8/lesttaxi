@@ -7,7 +7,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "How do I book a taxi from Lešť Military Base?",
-      answer: "Booking is easy! You can contact us via WhatsApp at +421 919 040 118, call us directly, or use our online booking form. We recommend booking 30 minutes in advance for base pickups to coordinate with security protocols."
+      answer: "Booking is easy! Contact us via WhatsApp at +421 919 040 118 or call us directly. We recommend booking 30 minutes in advance. We'll meet you at the tennis court parking area near the upper gate."
     },
     {
       question: "Where do you pick up passengers from the base?",
@@ -15,19 +15,19 @@ const FAQ = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept EUR cash, plus all major credit cards including Visa, Mastercard, American Express, Military Star Cards, and USAA cards. Payment is due at the end of your journey."
+      answer: "For taxi rides, we accept EUR cash only. For food delivery services (McDonald's, KFC), we accept both EUR cash and major credit cards including Visa, Mastercard, Military Star Cards, and USAA cards."
     },
     {
       question: "How much notice do you need for airport transfers?",
-      answer: "For airport transfers, we recommend booking at least 2 hours in advance. For international flights, we suggest 3-4 hours notice. We track your flight status and adjust pickup times for delays automatically."
+      answer: "For airport transfers, we recommend booking at least 1 hour in advance. For international flights, we suggest 2 hours notice. We track your flight status and adjust pickup times for delays automatically."
     },
     {
       question: "Do you provide 24/7 service for emergencies?",
       answer: "Absolutely! We operate 24/7, 365 days a year. For emergency transport, medical appointments, or urgent travel needs, call us anytime. We understand military schedules don't follow normal business hours."
     },
     {
-      question: "Are there discounts for military units or group bookings?",
-      answer: "Yes! We offer 10% discount for 5+ rides, 15% for 10+ rides, and 20% for monthly service contracts. Perfect for unit deployments, group airport transfers, or regular base transportation needs."
+      question: "What vehicles do you have available?",
+      answer: "We have Toyota Corolla (economy sedan), Toyota Camry (premium sedan), and Toyota RAV4 (SUV). All vehicles accommodate up to 4 passengers and are well-maintained with air conditioning, GPS navigation, and phone charging."
     }
   ];
 
