@@ -65,9 +65,9 @@ ${formData.name}`);
       icon: <MapPin className="h-8 w-8" />
     },
     {
-      title: "Food Delivery & Gate Pick-up",
-      description: "McDonald's & KFC delivery, gate transportation services",
-      destinations: ["McDonald's delivery", "KFC delivery", "Gate pick-up service", "Base transportation"],
+      title: "Food Delivery & Pickup Service",
+      description: "McDonald's & KFC delivery, tennis court pickup near upper gate",
+      destinations: ["McDonald's delivery", "KFC delivery", "Tennis court pickup", "Base transportation"],
       icon: <Users className="h-8 w-8" />
     }
   ];
@@ -114,7 +114,7 @@ ${formData.name}`);
                 Professional Transportation Service for American Military Personnel
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                24h/7days always ready • verified and fast taxi • Gate pick-up • Food delivery
+                24h/7days always ready • verified and fast taxi • Tennis court pickup • Food delivery
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Button 
@@ -407,7 +407,7 @@ ${formData.name}`);
             Professional transportation service for American military personnel at LEST Base
           </p>
           <p className="text-white/60 text-sm">
-            24/7 • Gate Pick-up • Airport Transfers • Food Delivery • Verified & Fast
+            24/7 • Tennis Court Pickup • Airport Transfers • Food Delivery • Verified & Fast
           </p>
         </div>
       </footer>

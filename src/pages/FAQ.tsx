@@ -10,8 +10,8 @@ const FAQ = () => {
       answer: "Booking is easy! You can contact us via WhatsApp at +421 919 040 118, call us directly, or use our online booking form. We recommend booking 30 minutes in advance for base pickups to coordinate with security protocols."
     },
     {
-      question: "Do your drivers have clearance for military base access?",
-      answer: "Yes, all our drivers have proper clearance and understand military base security protocols. We coordinate with base security for smooth gate access and pickup procedures. Please have your military ID ready."
+      question: "Where do you pick up passengers from the base?",
+      answer: "We meet you at the tennis court parking area near the upper gate. We do not have clearance to enter the military facility, so please walk to the tennis court parking area where our driver will be waiting for you."
     },
     {
       question: "What payment methods do you accept?",

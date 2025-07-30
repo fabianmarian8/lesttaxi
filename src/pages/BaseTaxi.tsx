@@ -14,8 +14,8 @@ const BaseTaxi = () => {
 
   const faqItems = [
     {
-      question: "What are the base gate hours for taxi pick-up?",
-      answer: "We provide 24/7 service. For security reasons, we coordinate with base security for gate access. We recommend scheduling pick-ups at least 30 minutes in advance for smooth processing."
+      question: "Where do we meet for pickup from the base?",
+      answer: "We meet you at the tennis court parking area near the upper gate. We do not have access to enter the base, so please walk to the tennis court parking where our driver will be waiting."
     },
     {
       question: "Do you accept Euro payments?",
@@ -123,7 +123,7 @@ const BaseTaxi = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Our drivers understand base security requirements and will assist with gate procedures and identification verification.
+                    We understand base security requirements. Our pickup location is at the tennis court parking area near the upper gate for your safety and convenience.
                   </p>
                 </CardContent>
               </Card>
@@ -131,12 +131,12 @@ const BaseTaxi = () => {
               <Card className="text-center">
                 <CardHeader>
                   <MapPin className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
-                  <CardTitle>Gate Pick-up Service</CardTitle>
-                  <CardDescription>Direct pickup from base entrance</CardDescription>
+                  <CardTitle>Tennis Court Pickup</CardTitle>
+                  <CardDescription>Meeting point near upper gate</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    We pick you up directly at the base gate, saving you time and ensuring smooth transitions for your transportation needs.
+                    We meet you at the tennis court parking area near the upper gate. Safe and convenient pickup location just outside the base.
                   </p>
                 </CardContent>
               </Card>
