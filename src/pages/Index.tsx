@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Users, Car, MessageCircle, Send, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -410,6 +411,8 @@ ${formData.name}`);
           </p>
         </div>
       </footer>
+      
+      <FloatingWhatsApp />
     </div>
   );
 };
