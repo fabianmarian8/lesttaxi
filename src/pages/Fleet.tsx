@@ -15,7 +15,7 @@ const Fleet = () => {
       description: "Perfect for airport transfers and city trips"
     },
     {
-      name: "Škoda Octavia",
+      name: "Toyota Camry",
       type: "Premium Sedan", 
       passengers: 4,
       luggage: "4 large bags",
@@ -29,14 +29,6 @@ const Fleet = () => {
       luggage: "5 large bags",
       features: ["All-Weather Capable", "High Seating", "Cargo Space"],
       description: "Ideal for groups and bulky equipment transport"
-    },
-    {
-      name: "Mercedes Vito",
-      type: "Van",
-      passengers: 8,
-      luggage: "8+ bags",
-      features: ["Group Transport", "Maximum Space", "Unit Deployments"],
-      description: "Perfect for military unit transport and large groups"
     }
   ];
 
@@ -242,8 +234,8 @@ const Fleet = () => {
               </Card>
               <Card className="p-6 text-center hover:shadow-lg transition-shadow cursor-pointer">
                 <Users className="h-8 w-8 text-[hsl(var(--military-gold))] mx-auto mb-3" />
-                <h4 className="font-semibold mb-2">5+ Passengers</h4>
-                <p className="text-sm text-muted-foreground">SUV or Van recommended</p>
+                <h4 className="font-semibold mb-2">5 Passengers</h4>
+                <p className="text-sm text-muted-foreground">SUV recommended</p>
               </Card>
             </div>
           </div>
