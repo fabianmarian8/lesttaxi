@@ -11,7 +11,7 @@ const PriceList = () => {
     { name: "Banská Bystrica", distance: "45 km", price: 70, time: "45 min" },
     { name: "Bratislava", distance: "235 km", price: 220, time: "2.5 hours" },
     { name: "Budapest Airport", distance: "180 km", price: 200, time: "2.5 hours" },
-    { name: "Vienna Airport", distance: "220 km", price: 290, time: "3 hours" },
+    { name: "Vienna Airport", distance: "283 km", price: 290, time: "3 hours" },
     { name: "Bratislava Airport", distance: "235 km", price: 220, time: "2.5 hours" },
   ];
 
