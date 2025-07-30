@@ -156,8 +156,13 @@ const FAQ = () => {
                       <p className="text-sm text-muted-foreground mb-3">
                         Detailed inquiries and documentation
                       </p>
-                      <Button variant="outline" size="sm" className="w-full">
-                        frankotaxi@gmail.com
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="w-full"
+                        onClick={() => window.open('mailto:fabianmarian8@gmail.com', '_blank')}
+                      >
+                        Send Email
                       </Button>
                     </div>
                   </div>
