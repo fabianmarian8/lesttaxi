@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MapPin, Phone, Mail, Clock, Users, Car, MessageCircle, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import ContactForm from "@/components/ContactForm";
+import BookingButton from "@/components/BookingButton";
 
 const Index = () => {
 
@@ -103,11 +103,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Order Form Section */}
+      {/* Booking Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5">
-        <div className="container mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-12 text-foreground">Book Your Ride</h3>
-          <ContactForm />
+        <div className="container mx-auto text-center">
+          <h3 className="text-4xl font-bold mb-6 text-foreground">Ready to Book Your Transportation?</h3>
+          <p className="text-lg text-muted-foreground mb-8">
+            Quick and easy booking for all your transportation needs. Click below to get started.
+          </p>
+          <BookingButton />
         </div>
       </section>
 
