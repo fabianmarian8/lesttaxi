@@ -48,25 +48,36 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission - replace with actual email service
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      toast({
-        title: "Request sent successfully!",
-        description: "Thanks, we'll confirm within 10 minutes.",
+      const response = await fetch('https://kkuybturazislquqaxci.supabase.co/functions/v1/send-contact-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        phone: '',
-        pickup: '',
-        destination: '',
-        date: '',
-        time: '',
-        passengers: '1',
-        message: ''
-      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast({
+          title: "Request sent successfully!",
+          description: "Thanks, we'll confirm within 10 minutes.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          phone: '',
+          pickup: '',
+          destination: '',
+          date: '',
+          time: '',
+          passengers: '1',
+          message: ''
+        });
+      } else {
+        throw new Error(result.error || 'Failed to send email');
+      }
     } catch (error) {
       console.error('Error sending form:', error);
       toast({

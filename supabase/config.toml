@@ -1,1 +1,25 @@
 project_id = "kkuybturazislquqaxci"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+host = "127.0.0.1"
+port = 5432
+user = "postgres"
+password = "postgres"
+database = "postgres"
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:3000"
+
+[functions]
+enabled = true
+
+[functions.send-contact-email]
+verify_jwt = false
