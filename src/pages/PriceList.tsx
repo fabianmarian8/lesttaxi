@@ -6,18 +6,17 @@ import { Link } from "react-router-dom";
 
 const PriceList = () => {
   const destinations = [
-    { name: "Sliač Airport", distance: "15 km", price: 25, time: "15 min" },
-    { name: "Zvolen City Center", distance: "20 km", price: 15, time: "20 min" },
-    { name: "Banská Bystrica", distance: "45 km", price: 35, time: "45 min" },
-    { name: "Trenčín", distance: "80 km", price: 60, time: "1.5 hours" },
-    { name: "Bratislava", distance: "160 km", price: 100, time: "2 hours" },
-    { name: "Budapest Airport", distance: "180 km", price: 120, time: "2.5 hours" },
-    { name: "Vienna Airport", distance: "220 km", price: 150, time: "3 hours" },
-    { name: "Bratislava Airport", distance: "160 km", price: 100, time: "2 hours" },
+    { name: "Sliač Airport", distance: "15 km", price: 55, time: "40 min" },
+    { name: "Zvolen City Center", distance: "20 km", price: 45, time: "30 min" },
+    { name: "Banská Bystrica", distance: "45 km", price: 70, time: "45 min" },
+    { name: "Bratislava", distance: "235 km", price: 220, time: "2.5 hours" },
+    { name: "Budapest Airport", distance: "180 km", price: 200, time: "2.5 hours" },
+    { name: "Vienna Airport", distance: "220 km", price: 290, time: "3 hours" },
+    { name: "Bratislava Airport", distance: "235 km", price: 220, time: "2.5 hours" },
   ];
 
   const localServices = [
-    { service: "Gate Pick-up Service", price: 5, description: "Pick-up directly from base gate" },
+    { service: "Gate Pick-up Service", price: "", description: "Pick-up directly from base gate" },
     { service: "McDonald's Delivery", price: 8, description: "Hot food delivery to base" },
     { service: "KFC Delivery", price: 8, description: "Fresh chicken delivery" },
     { service: "Europa Shopping Center", price: 12, description: "Shopping trip transport" },
@@ -129,7 +128,7 @@ const PriceList = () => {
                       </div>
                       <div className="text-right">
                         <span className="text-xl font-bold text-[hsl(var(--military-gold))]">
-                          €{service.price}
+                          {service.price ? `€${service.price}` : "Free"}
                         </span>
                       </div>
                     </div>
