@@ -55,7 +55,7 @@ const PriceList = () => {
             Special military discounts available for bulk bookings.
           </p>
           <Badge variant="secondary" className="text-lg px-6 py-2 bg-[hsl(var(--military-gold))]/20">
-            All prices in EUR • USD accepted at daily exchange rate
+            All prices in EUR
           </Badge>
         </div>
       </section>
@@ -192,9 +192,8 @@ const PriceList = () => {
                   <div>
                     <h4 className="font-semibold text-lg mb-4">Cash Payments</h4>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>• US Dollars (USD)</li>
-                      <li>• Euro (EUR)</li>
-                      <li>• Daily exchange rates apply</li>
+                      <li>• Euro (EUR) only</li>
+                      <li>• Exact change preferred</li>
                     </ul>
                   </div>
                   <div>

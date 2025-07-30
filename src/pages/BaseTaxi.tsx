@@ -18,8 +18,8 @@ const BaseTaxi = () => {
       answer: "We provide 24/7 service. For security reasons, we coordinate with base security for gate access. We recommend scheduling pick-ups at least 30 minutes in advance for smooth processing."
     },
     {
-      question: "Do you accept US Dollars and military payment cards?",
-      answer: "Yes, we accept both USD and EUR cash payments. We also accept major credit cards including military Star Cards and USAA cards for your convenience."
+      question: "Do you accept Euro payments?",
+      answer: "Yes, we accept EUR cash payments only for taxi services. For food delivery services, we accept both EUR cash and major credit cards for your convenience."
     },
     {
       question: "Is military ID required for base transportation?",
@@ -170,8 +170,8 @@ const BaseTaxi = () => {
                   </div>
                   <div className="mt-6 p-4 bg-[hsl(var(--military-gold))]/10 rounded-lg">
                     <p className="text-sm text-center">
-                      <strong>Taxi Payment:</strong> USD Cash • EUR Cash<br/>
-                      <strong>Food Delivery Payment:</strong> USD Cash • EUR Cash • Credit Cards
+                      <strong>Taxi Payment:</strong> EUR Cash<br/>
+                      <strong>Food Delivery Payment:</strong> EUR Cash • Credit Cards
                     </p>
                   </div>
                 </CardContent>

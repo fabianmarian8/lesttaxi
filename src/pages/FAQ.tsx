@@ -15,7 +15,7 @@ const FAQ = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept USD and EUR cash, plus all major credit cards including Visa, Mastercard, American Express, Military Star Cards, and USAA cards. Payment is due at the end of your journey."
+      answer: "We accept EUR cash, plus all major credit cards including Visa, Mastercard, American Express, Military Star Cards, and USAA cards. Payment is due at the end of your journey."
     },
     {
       question: "How much notice do you need for airport transfers?",
