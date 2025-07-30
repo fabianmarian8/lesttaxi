@@ -84,28 +84,19 @@ ${formData.name}`);
       />
       
       {/* Header with Military Gold Theme */}
-      <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-4 px-6 relative z-10 shadow-lg">
+      <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-6 px-6 relative z-10 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <img 
-              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
-              alt="FRANKO TAXI Logo" 
-              className="h-12 w-12 rounded-full bg-white p-1"
-            />
-            <h1 className="text-2xl font-bold tracking-wider">FRANKO TAXI</h1>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link to="/help">
-              <Button variant="destructive" size="sm" className="bg-red-600 hover:bg-red-700">
-                <HelpCircle className="h-4 w-4 mr-2" />
-                Need help?
-              </Button>
-            </Link>
-            <div className="flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              <span className="font-semibold">+421 919 040 118</span>
-            </div>
-          </div>
+          <img 
+            src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+            alt="FRANKO TAXI Logo" 
+            className="h-16 w-16 rounded-full bg-white p-2"
+          />
+          <Link to="/help">
+            <Button variant="destructive" size="sm" className="bg-red-600 hover:bg-red-700">
+              <HelpCircle className="h-4 w-4 mr-2" />
+              Need help?
+            </Button>
+          </Link>
         </div>
       </header>
 
