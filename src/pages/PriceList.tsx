@@ -143,35 +143,35 @@ const PriceList = () => {
       {/* Bulk Discount */}
       <section className="py-16 px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Military Unit Discounts</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Lest Taxi?</h2>
           <div className="max-w-4xl mx-auto">
             <Card className="bg-gradient-to-r from-[hsl(var(--military-gold))]/10 to-[hsl(var(--military-green))]/10">
               <CardHeader className="text-center">
                 <Star className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
-                <CardTitle className="text-2xl">Special Military Discounts</CardTitle>
-                <CardDescription>Save money on bulk bookings for your unit</CardDescription>
+                <CardTitle className="text-2xl">Professional Taxi Service</CardTitle>
+                <CardDescription>Reliable transport you can count on</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div className="p-6 bg-background rounded-lg">
-                    <h4 className="text-lg font-semibold mb-2">5+ Rides</h4>
-                    <div className="text-3xl font-bold text-[hsl(var(--military-gold))] mb-2">10% OFF</div>
-                    <p className="text-sm text-muted-foreground">Perfect for unit transport</p>
+                    <h4 className="text-lg font-semibold mb-2">24/7 Service</h4>
+                    <div className="text-3xl font-bold text-[hsl(var(--military-gold))] mb-2">Always</div>
+                    <p className="text-sm text-muted-foreground">Available when you need us most</p>
                   </div>
                   <div className="p-6 bg-background rounded-lg">
-                    <h4 className="text-lg font-semibold mb-2">10+ Rides</h4>
-                    <div className="text-3xl font-bold text-[hsl(var(--military-gold))] mb-2">15% OFF</div>
-                    <p className="text-sm text-muted-foreground">Great for deployment groups</p>
+                    <h4 className="text-lg font-semibold mb-2">Fixed Prices</h4>
+                    <div className="text-3xl font-bold text-[hsl(var(--military-gold))] mb-2">No Surprise</div>
+                    <p className="text-sm text-muted-foreground">What we quote is what you pay</p>
                   </div>
                   <div className="p-6 bg-background rounded-lg">
-                    <h4 className="text-lg font-semibold mb-2">Monthly Contract</h4>
-                    <div className="text-3xl font-bold text-[hsl(var(--military-gold))] mb-2">20% OFF</div>
-                    <p className="text-sm text-muted-foreground">Regular service agreement</p>
+                    <h4 className="text-lg font-semibold mb-2">Base Experience</h4>
+                    <div className="text-3xl font-bold text-[hsl(var(--military-gold))] mb-2">Military</div>
+                    <p className="text-sm text-muted-foreground">We understand base protocols</p>
                   </div>
                 </div>
                 <div className="mt-6 p-4 bg-background rounded-lg text-center">
                   <p className="text-sm">
-                    <strong>Note:</strong> Discounts apply to the total fare. Contact us for custom rates for large groups or regular service contracts.
+                    <strong>Note:</strong> Professional drivers with clean vehicles and local knowledge of all destinations.
                   </p>
                 </div>
               </CardContent>
@@ -193,11 +193,13 @@ const PriceList = () => {
                     <ul className="space-y-2 text-muted-foreground">
                       <li>• Euro (EUR) only</li>
                       <li>• Exact change preferred</li>
+                      <li>• All taxi services</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-4">Card Payments</h4>
                     <ul className="space-y-2 text-muted-foreground">
+                      <li>• Food delivery only</li>
                       <li>• Visa & Mastercard</li>
                       <li>• Military Star Cards</li>
                       <li>• USAA Cards</li>
