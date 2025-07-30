@@ -19,6 +19,7 @@ interface FormData {
 }
 
 const ContactForm = () => {
+  console.log('ContactForm component rendered');
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
@@ -33,6 +34,7 @@ const ContactForm = () => {
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    console.log('Input change detected:', e.target.name, e.target.value);
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -42,6 +44,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log('Form submit triggered', formData);
     setIsSubmitting(true);
 
     try {
