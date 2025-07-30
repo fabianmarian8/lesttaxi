@@ -25,10 +25,10 @@ const Fleet = () => {
     {
       name: "Toyota RAV4",
       type: "SUV",
-      passengers: 5,
-      luggage: "5 large bags",
+      passengers: 4,
+      luggage: "4 large bags",
       features: ["All-Weather Capable", "High Seating", "Cargo Space"],
-      description: "Ideal for groups and bulky equipment transport"
+      description: "Ideal for comfort and bulky equipment transport"
     }
   ];
 
@@ -229,13 +229,13 @@ const Fleet = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <Card className="p-6 text-center hover:shadow-lg transition-shadow cursor-pointer">
                 <Users className="h-8 w-8 text-[hsl(var(--military-gold))] mx-auto mb-3" />
-                <h4 className="font-semibold mb-2">1-4 Passengers</h4>
-                <p className="text-sm text-muted-foreground">Sedan recommended</p>
+                <h4 className="font-semibold mb-2">Economy Choice</h4>
+                <p className="text-sm text-muted-foreground">Toyota Corolla - 4 passengers</p>
               </Card>
               <Card className="p-6 text-center hover:shadow-lg transition-shadow cursor-pointer">
                 <Users className="h-8 w-8 text-[hsl(var(--military-gold))] mx-auto mb-3" />
-                <h4 className="font-semibold mb-2">5 Passengers</h4>
-                <p className="text-sm text-muted-foreground">SUV recommended</p>
+                <h4 className="font-semibold mb-2">Premium Choice</h4>
+                <p className="text-sm text-muted-foreground">Toyota Camry or RAV4 - 4 passengers</p>
               </Card>
             </div>
           </div>
