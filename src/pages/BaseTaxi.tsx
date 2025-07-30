@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 const BaseTaxi = () => {
   const priceList = [
-    { destination: "Lešť Base to Sliač Airport", price: "€25", time: "15 min" },
-    { destination: "Lešť Base to Zvolen City Center", price: "€15", time: "20 min" },
-    { destination: "Lešť Base to Banská Bystrica", price: "€35", time: "45 min" },
-    { destination: "Lešť Base to Budapest Airport", price: "€120", time: "2.5 hours" },
-    { destination: "Gate Pick-up Service", price: "€5", time: "5 min" },
+    { destination: "Lešť Base to Sliač Airport", price: "€55", time: "40 min" },
+    { destination: "Lešť Base to Zvolen City Center", price: "€45", time: "30 min" },
+    { destination: "Lešť Base to Banská Bystrica", price: "€70", time: "45 min" },
+    { destination: "Lešť Base to Budapest Airport", price: "€200", time: "2.5 hours" },
+    { destination: "Gate Pick-up Service", price: "", time: "30-45 min" },
   ];
 
   const faqItems = [
