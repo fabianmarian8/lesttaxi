@@ -1,55 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, Clock, Users, Car, MessageCircle, Send, HelpCircle } from "lucide-react";
-import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Users, Car, MessageCircle, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    pickup: '',
-    destination: '',
-    date: '',
-    time: '',
-    passengers: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent('FRANKO TAXI - Transportation Request');
-    const body = encodeURIComponent(`Hello FRANKO TAXI,
-
-I need transportation:
-
-Name: ${formData.name}
-Phone: ${formData.phone}
-Pickup Location: ${formData.pickup}
-Destination: ${formData.destination}
-Date: ${formData.date}
-Time: ${formData.time}
-Number of Passengers: ${formData.passengers}
-Additional Information: ${formData.message}
-
-Please contact me to confirm the booking.
-
-Best regards,
-${formData.name}`);
-    
-    window.open(`mailto:fabianmarian8@gmail.com?subject=${subject}&body=${body}`, '_blank');
-  };
 
   const services = [
     {
@@ -144,124 +100,9 @@ ${formData.name}`);
 
       {/* Order Form Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto">
           <h3 className="text-4xl font-bold text-center mb-12 text-foreground">Book Your Ride</h3>
-          <Card className="shadow-2xl border-2 border-[hsl(var(--military-gold))]/20">
-            <CardHeader className="bg-gradient-to-r from-[hsl(var(--military-gold))]/10 to-[hsl(var(--military-green))]/10">
-              <CardTitle className="text-2xl text-center">Transportation Request</CardTitle>
-              <CardDescription className="text-center">Fill out the form and we'll contact you immediately</CardDescription>
-            </CardHeader>
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit}>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your full name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="phone">Phone Number *</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="Your phone number"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="pickup">Pickup Location *</Label>
-                      <Input
-                        id="pickup"
-                        name="pickup"
-                        value={formData.pickup}
-                        onChange={handleInputChange}
-                        placeholder="e.g., LEST Base Gate, Barracks..."
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="destination">Destination *</Label>
-                      <Input
-                        id="destination"
-                        name="destination"
-                        value={formData.destination}
-                        onChange={handleInputChange}
-                        placeholder="e.g., Budapest Airport, Zvolen..."
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="date">Date *</Label>
-                      <Input
-                        id="date"
-                        name="date"
-                        type="date"
-                        value={formData.date}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="time">Time *</Label>
-                      <Input
-                        id="time"
-                        name="time"
-                        type="time"
-                        value={formData.time}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="passengers">Number of Passengers</Label>
-                      <Input
-                        id="passengers"
-                        name="passengers"
-                        type="number"
-                        min="1"
-                        max="8"
-                        value={formData.passengers}
-                        onChange={handleInputChange}
-                        placeholder="1-8 passengers"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="message">Additional Information</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Any special requests, luggage, etc..."
-                        rows={3}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-center mt-8">
-                  <Button 
-                    type="submit"
-                    size="lg" 
-                    className="px-12 py-3 text-lg"
-                  >
-                    <Send className="h-5 w-5 mr-2" />
-                    Submit Request
-                  </Button>
-                </div>
-              </form>
-            </CardContent>
-          </Card>
+          <ContactForm />
         </div>
       </section>
 
