@@ -83,7 +83,7 @@ const Index = () => {
                   WhatsApp Now
                 </Button>
                 <Button variant="default" size="lg" className="text-lg px-8">
-                  Call +421 919 040 118
+                  Call
                 </Button>
               </div>
             </div>
