@@ -126,7 +126,7 @@ export function BookingForm() {
                 type="tel"
                 value={formData.phone}
                 onChange={handleInputChange}
-                placeholder="+421 919 040 118"
+                placeholder="+1 XXX XXX XXXX"
                 required
               />
             </div>
