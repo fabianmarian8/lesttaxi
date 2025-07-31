@@ -11,6 +11,11 @@ import AirportTransfer from "./pages/AirportTransfer";
 import PriceList from "./pages/PriceList";
 import Fleet from "./pages/Fleet";
 import FAQ from "./pages/FAQ";
+import KFCDelivery from "./pages/KFCDelivery";
+import McdonaldsDelivery from "./pages/McdonaldsDelivery";
+import MilitaryShopping from "./pages/MilitaryShopping";
+import AirportMilitary from "./pages/AirportMilitary";
+import MilitaryBasePickup from "./pages/MilitaryBasePickup";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +33,11 @@ const App = () => (
           <Route path="/fleet" element={<Fleet />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/kfc-delivery" element={<KFCDelivery />} />
+          <Route path="/mcdonalds-delivery" element={<McdonaldsDelivery />} />
+          <Route path="/military-shopping" element={<MilitaryShopping />} />
+          <Route path="/airport-military" element={<AirportMilitary />} />
+          <Route path="/military-base-pickup" element={<MilitaryBasePickup />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<Index />} />
         </Routes>
