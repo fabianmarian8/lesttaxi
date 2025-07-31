@@ -120,34 +120,34 @@ const Index = () => {
       </header>
 
       {/* Enhanced Hero Section */}
-      <section className="relative py-32 px-6">
+      <section className="relative py-12 sm:py-16 lg:py-32 px-6">
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-left slide-up">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-8 combat-text leading-tight break-words" itemProp="name">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 lg:mb-8 combat-text leading-tight break-words" itemProp="name">
                 Professional Taxi Service for US Military at Lešť Base Slovakia
               </h1>
-              <p className="text-2xl text-foreground/90 mb-6 font-medium">
+              <p className="text-lg sm:text-xl lg:text-2xl text-foreground/90 mb-4 sm:mb-6 font-medium">
                 Professional Transportation Service for American Military Personnel
               </p>
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
                 🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🍕 Food delivery
               </p>
-              <div className="flex gap-6 flex-wrap">
+              <div className="flex gap-4 sm:gap-6 flex-wrap">
                 <a 
                   href="https://wa.me/421919040118"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tactical-card px-8 py-4 text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
+                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
                 >
-                  <MessageCircle className="h-6 w-6 mr-3 inline" />
+                  <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
                   Book on WhatsApp
                 </a>
                 <a 
                   href="tel:+421919040118"
-                  className="tactical-card px-8 py-4 text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
+                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
                 >
-                  <Phone className="h-6 w-6 mr-3 inline" />
+                  <Phone className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
                   Direct Call
                 </a>
               </div>
