@@ -117,7 +117,7 @@ const Index = () => {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left slide-up">
-              <h1 className="text-6xl lg:text-7xl font-black mb-8 combat-text leading-tight" itemProp="name">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-8 combat-text leading-tight break-words" itemProp="name">
                 Professional Taxi Service for US Military at Lešť Base Slovakia
               </h1>
               <p className="text-2xl text-foreground/90 mb-6 font-medium">

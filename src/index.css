@@ -137,6 +137,13 @@
     background: var(--gradient-glass);
   }
 
+  .text-wrap-mobile {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+
   .neon-glow {
     box-shadow: var(--shadow-neon);
   }
