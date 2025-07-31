@@ -168,27 +168,27 @@ const Index = () => {
           <h2 className="text-5xl font-black text-center mb-16 combat-text">
             Military Transportation Services at Lešť Base
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="tactical-card text-center group">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <Car className="h-10 w-10 text-black" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--military-gold))]">Airport Transfers from Lešť Base</h3>
-              <p className="text-muted-foreground leading-relaxed">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[hsl(var(--military-gold))] break-words">Airport Transfers from Lešť Base</h3>
+              <p className="text-muted-foreground leading-relaxed break-words overflow-wrap-anywhere">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
             </div>
             <div className="tactical-card text-center group">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <MapPin className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))]">US Military Base Transport</h3>
-              <p className="text-muted-foreground leading-relaxed">Specialized transport for military personnel with complete base protocol understanding and security clearance.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))] break-words">US Military Base Transport</h3>
+              <p className="text-muted-foreground leading-relaxed break-words overflow-wrap-anywhere">Specialized transport for military personnel with complete base protocol understanding and security clearance.</p>
             </div>
             <div className="tactical-card text-center group">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <MessageCircle className="h-10 w-10 text-[hsl(var(--military-gold))]" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--combat-green))]">Slovakia City Transport</h3>
-              <p className="text-muted-foreground leading-relaxed">Convenient urban transportation to cities, shopping centers, and important destinations across Slovakia.</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[hsl(var(--combat-green))] break-words">Slovakia City Transport</h3>
+              <p className="text-muted-foreground leading-relaxed break-words overflow-wrap-anywhere">Convenient urban transportation to cities, shopping centers, and important destinations across Slovakia.</p>
             </div>
           </div>
         </div>
