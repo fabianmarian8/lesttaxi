@@ -16,6 +16,9 @@ import McdonaldsDelivery from "./pages/McdonaldsDelivery";
 import MilitaryShopping from "./pages/MilitaryShopping";
 import AirportMilitary from "./pages/AirportMilitary";
 import MilitaryBasePickup from "./pages/MilitaryBasePickup";
+import BanskaBystricaTaxi from "./pages/BanskaBystricaTaxi";
+import BudapestTransport from "./pages/BudapestTransport";
+import MilitaryAccommodation from "./pages/MilitaryAccommodation";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/military-shopping" element={<MilitaryShopping />} />
           <Route path="/airport-military" element={<AirportMilitary />} />
           <Route path="/military-base-pickup" element={<MilitaryBasePickup />} />
+          <Route path="/banska-bystrica-military-taxi" element={<BanskaBystricaTaxi />} />
+          <Route path="/budapest-military-transport" element={<BudapestTransport />} />
+          <Route path="/military-accommodation-transport" element={<MilitaryAccommodation />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<Index />} />
         </Routes>
