@@ -80,7 +80,7 @@ const Fleet = () => {
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Modern, well-maintained fleet specifically chosen for military personnel comfort and safety. 
-            From solo airport runs to unit group transport, we have the right vehicle for every mission.
+            From solo airport runs to group transport, we have the right vehicle for every journey.
           </p>
           <Badge variant="secondary" className="text-lg px-6 py-2 bg-[hsl(var(--military-gold))]/20">
             All vehicles under 5 years old • Professional maintenance
@@ -195,7 +195,7 @@ const Fleet = () => {
             <Card className="bg-gradient-to-r from-[hsl(var(--military-gold))]/10 to-[hsl(var(--military-green))]/10">
               <CardHeader className="text-center">
                 <Shield className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
-                <CardTitle className="text-2xl">Military-Grade Safety Standards</CardTitle>
+                <CardTitle className="text-2xl">Professional Safety Standards</CardTitle>
                 <CardDescription>Your security is our top priority</CardDescription>
               </CardHeader>
               <CardContent>
