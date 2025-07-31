@@ -14,17 +14,65 @@ const Index = () => {
     canonical: "https://lesttaxi.com",
     jsonLd: {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "LEST TAXI",
+      "@type": "LocalBusiness",
+      "name": "LEST TAXI - Professional Military Transportation",
       "url": "https://lesttaxi.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://lesttaxi.com/search?q={search_term_string}"
+      "telephone": "+421919040118",
+      "email": "fabianmarian8@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lešť Military Base Area",
+        "addressLocality": "Lešť",
+        "addressRegion": "Banská Bystrica Region",
+        "postalCode": "96223",
+        "addressCountry": "SK"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "48.6397",
+        "longitude": "19.1342"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "48.6397",
+          "longitude": "19.1342"
         },
-        "query-input": "required name=search_term_string"
-      }
+        "geoRadius": "300000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Military Transportation Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Airport Transfer Service",
+              "description": "Professional airport transfers from Lešť Base to Budapest, Vienna, and Bratislava airports"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Military Base Transport",
+              "description": "Specialized transportation for US military personnel at Lešť Base"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "City Transport Slovakia",
+              "description": "Urban transportation to Slovak cities and shopping centers"
+            }
+          }
+        ]
+      },
+      "description": "Professional 24/7 taxi service for US military personnel at Lešť Base Slovakia. Specializing in airport transfers, base transport, and city travel with fixed rates and military protocol understanding."
     }
   });
 
@@ -70,10 +118,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left slide-up">
               <h1 className="text-6xl lg:text-7xl font-black mb-8 combat-text leading-tight" itemProp="name">
-                TAXI SERVICE
-                <span className="block text-4xl lg:text-5xl font-bold text-[hsl(var(--accent))]">
-                  for military
-                </span>
+                Professional Taxi Service for US Military at Lešť Base Slovakia
               </h1>
               <p className="text-2xl text-foreground/90 mb-6 font-medium">
                 Professional Transportation Service for American Military Personnel
@@ -121,28 +166,28 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10" />
         <div className="container mx-auto relative z-10">
           <h2 className="text-5xl font-black text-center mb-16 combat-text">
-            OUR SERVICES
+            Military Transportation Services at Lešť Base
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="tactical-card text-center group">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <Car className="h-10 w-10 text-black" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--military-gold))]">Airport Transfers</h3>
+              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--military-gold))]">Airport Transfers from Lešť Base</h3>
               <p className="text-muted-foreground leading-relaxed">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
             </div>
             <div className="tactical-card text-center group">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <MapPin className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))]">Base Transport</h3>
+              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))]">US Military Base Transport</h3>
               <p className="text-muted-foreground leading-relaxed">Specialized transport for military personnel with complete base protocol understanding and security clearance.</p>
             </div>
             <div className="tactical-card text-center group">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <MessageCircle className="h-10 w-10 text-[hsl(var(--military-gold))]" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--combat-green))]">City Transport</h3>
+              <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--combat-green))]">Slovakia City Transport</h3>
               <p className="text-muted-foreground leading-relaxed">Convenient urban transportation to cities, shopping centers, and important destinations across Slovakia.</p>
             </div>
           </div>
@@ -154,7 +199,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />
         <div className="container mx-auto relative z-10">
           <h2 className="text-5xl font-black text-center mb-16 combat-text">
-            CONTACT US
+            Contact LEST TAXI - Book Your Military Transport
           </h2>
           <div className="max-w-2xl mx-auto mb-16">
             <BookingForm />
