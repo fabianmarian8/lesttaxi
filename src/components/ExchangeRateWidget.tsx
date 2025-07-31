@@ -84,16 +84,19 @@ const ExchangeRateWidget: React.FC = () => {
 
   return (
     <div 
-      className="glass-effect rounded-lg px-3 py-2 flex items-center space-x-2 border border-primary/20 hover:border-primary/40 transition-all duration-300 cursor-pointer group"
+      className="glass-effect rounded-lg px-2 py-1 sm:px-3 sm:py-2 flex items-center space-x-1 sm:space-x-2 border border-primary/20 hover:border-primary/40 transition-all duration-300 cursor-pointer group"
       title={`Last updated: ${lastUpdated?.toLocaleTimeString() || 'Unknown'}`}
     >
-      <DollarSign className="w-4 h-4 text-primary group-hover:text-accent transition-colors" />
+      <DollarSign className="w-3 h-3 sm:w-4 sm:h-4 text-primary group-hover:text-accent transition-colors" />
       <div className="flex items-center space-x-1">
-        <span className="text-sm font-medium text-foreground">USD→EUR:</span>
-        <span className="text-sm font-bold text-primary group-hover:text-accent transition-colors">
+        <span className="text-xs sm:text-sm font-medium text-foreground">
+          <span className="hidden sm:inline">USD→EUR:</span>
+          <span className="sm:hidden">USD/EUR:</span>
+        </span>
+        <span className="text-xs sm:text-sm font-bold text-primary group-hover:text-accent transition-colors">
           {exchangeRate ? exchangeRate.toFixed(4) : 'N/A'}
         </span>
-        {isLoading && <TrendingUp className="w-3 h-3 text-accent animate-pulse" />}
+        {isLoading && <TrendingUp className="w-2 h-2 sm:w-3 sm:h-3 text-accent animate-pulse" />}
       </div>
     </div>
   );

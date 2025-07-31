@@ -106,9 +106,7 @@ const Index = () => {
               />
           
           <div className="flex items-center space-x-4">
-            <div className="hidden sm:block">
-              <ExchangeRateWidget />
-            </div>
+            <ExchangeRateWidget />
             <Link to="/help">
               <button className="glass-effect px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 neon-glow bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
                 <HelpCircle className="h-4 w-4 mr-2 inline" />
