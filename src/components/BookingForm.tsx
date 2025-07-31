@@ -163,7 +163,7 @@ export function BookingForm() {
                 name="destination"
                 value={formData.destination}
                 onChange={handleInputChange}
-                placeholder="e.g. Military Base Záhorie"
+                placeholder="e.g. Military Base Lešť"
                 required
               />
             </div>
