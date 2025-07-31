@@ -2,8 +2,32 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Clock, Shield, Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 
 const BaseTaxi = () => {
+  useSEO({
+    title: "Base Taxi Lešť - Military Transport Service | LEST TAXI",
+    description: "Specialized base taxi service for US military personnel at Lešť Base. 24/7 gate pickup, security clearance, fixed rates. Book now via WhatsApp +421 919 040 118",
+    keywords: "base taxi Lešť, military transport Slovakia, Lešť base pickup, gate service, US military taxi, base transport",
+    canonical: "https://lesttaxi.com/base-taxi",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Base Taxi Lešť",
+      "description": "Specialized base taxi service for US military personnel at Lešť Base",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "LEST TAXI",
+        "telephone": "+421919040118"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Lešť Base, Slovakia"
+      },
+      "serviceType": "Military Base Transportation"
+    }
+  });
+
   const priceList = [
     { destination: "Lešť Base to Sliač Airport", price: "€55", time: "40 min" },
     { destination: "Lešť Base to Zvolen City Center", price: "€45", time: "30 min" },

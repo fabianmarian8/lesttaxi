@@ -2,8 +2,28 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plane, Clock, MapPin, Phone, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 
 const AirportTransfer = () => {
+  useSEO({
+    title: "Airport Transfer Slovakia - Sliač, Bratislava, Vienna | LEST TAXI",
+    description: "Professional airport transfer service from Lešť Base to major airports. Fixed rates, flight tracking, 24/7 service. Book via WhatsApp +421 919 040 118",
+    keywords: "airport transfer Slovakia, Sliač airport taxi, Bratislava airport transfer, Vienna airport transport, military airport taxi",
+    canonical: "https://lesttaxi.com/airport-transfer",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Airport Transfer Service",
+      "description": "Professional airport transfer service from Lešť Base to major airports",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "LEST TAXI",
+        "telephone": "+421919040118"
+      },
+      "serviceType": "Airport Transportation"
+    }
+  });
+
   const airports = [
     { name: "Sliač Airport (SLD)", distance: "15 km", time: "15 min", price: "€25" },
     { name: "Budapest Airport (BUD)", distance: "180 km", time: "2.5 hours", price: "€120" },

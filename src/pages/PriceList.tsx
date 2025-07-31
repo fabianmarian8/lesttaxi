@@ -3,8 +3,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 
 const PriceList = () => {
+  useSEO({
+    title: "Taxi Prices Slovakia - Transparent Rates | LEST TAXI",
+    description: "Transparent taxi pricing for military transport in Slovakia. Fixed rates, no hidden fees. Airport transfers, base transport, local services. Check our price list.",
+    keywords: "taxi prices Slovakia, Lešť taxi rates, airport transfer prices, military taxi cost, transparent pricing",
+    canonical: "https://lesttaxi.com/price-list"
+  });
+
   const destinations = [
     { name: "Sliač Airport", distance: "15 km", price: 55, time: "40 min" },
     { name: "Zvolen City Center", distance: "20 km", price: 45, time: "30 min" },

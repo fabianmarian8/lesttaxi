@@ -2,8 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MessageCircle, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSEO } from "@/hooks/useSEO";
 
 const FAQ = () => {
+  useSEO({
+    title: "FAQ - Frequently Asked Questions | LEST TAXI",
+    description: "Get answers to common questions about our military taxi service. Booking, pricing, vehicle types, service areas, and more.",
+    keywords: "taxi FAQ Slovakia, military taxi questions, booking help, service information",
+    canonical: "https://lesttaxi.com/faq"
+  });
+
   const faqs = [
     {
       question: "How do I book a taxi from Lešť Military Base?",

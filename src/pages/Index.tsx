@@ -3,9 +3,30 @@ import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle } from "lucide-reac
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { BookingForm } from "@/components/BookingForm";
+import { useSEO } from "@/hooks/useSEO";
 
 
 const Index = () => {
+  useSEO({
+    title: "LEST TAXI - Military Base Transport & Airport Transfers Slovakia",
+    description: "Professional 24/7 taxi service for US military personnel at Lešť Base. Airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
+    keywords: "Lest taxi, military taxi Slovakia, airport transfer Sliac, US military transport, gate pickup service, taxi Lešť, taxi near me, Sliač airport transfer",
+    canonical: "https://lesttaxi.com",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "LEST TAXI",
+      "url": "https://lesttaxi.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://lesttaxi.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  });
 
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
@@ -26,11 +47,14 @@ const Index = () => {
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
-          <img 
-            src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
-            alt="FRANKO TAXI Logo" 
-            className="h-20 w-20 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30 pulse-glow"
-          />
+              <img 
+                src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+                alt="LEST TAXI Logo - Professional Military Taxi Service Slovakia" 
+                className="h-20 w-20 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30 pulse-glow"
+                width="80"
+                height="80"
+                loading="eager"
+              />
           <Link to="/help">
             <button className="glass-effect px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 neon-glow">
               <HelpCircle className="h-4 w-4 mr-2 inline" />
@@ -45,7 +69,7 @@ const Index = () => {
         <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-left slide-up">
-              <h1 className="text-6xl lg:text-7xl font-black mb-8 combat-text leading-tight">
+              <h1 className="text-6xl lg:text-7xl font-black mb-8 combat-text leading-tight" itemProp="name">
                 TAXI SERVICE
                 <span className="block text-4xl lg:text-5xl font-bold text-[hsl(var(--accent))]">
                   for military
@@ -80,8 +104,11 @@ const Index = () => {
               <div className="tactical-card p-4">
                 <img 
                   src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
-                  alt="FRANKO TAXI Elite Service" 
+                  alt="LEST TAXI professional military taxi service at Lešť Base Slovakia - airport transfers and base transport" 
                   className="rounded-xl w-full shadow-2xl"
+                  loading="eager"
+                  width="600"
+                  height="400"
                 />
               </div>
             </div>
