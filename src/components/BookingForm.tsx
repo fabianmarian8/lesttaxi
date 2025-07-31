@@ -51,11 +51,18 @@ export function BookingForm() {
         throw error;
       }
 
-      // Success
-      toast({
-        title: "Booking Received",
-        description: "Thanks, we'll confirm within 10 minutes.",
-      });
+      // Success - show appropriate toast based on email status
+      if (data?.emailSent) {
+        toast({
+          title: "Booking Received ✔︎",
+          description: "Email sent ✔︎ - We'll confirm within 10 minutes.",
+        });
+      } else {
+        toast({
+          title: "Booking Received",
+          description: "Thanks, we'll confirm within 10 minutes.",
+        });
+      }
 
       // Reset form
       setFormData({
@@ -67,13 +74,23 @@ export function BookingForm() {
         message: "",
       });
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Booking error:', error);
-      toast({
-        title: "Booking Failed",
-        description: "Please WhatsApp +421 919 040 118.",
-        variant: "destructive",
-      });
+      
+      // Show domain verification banner if email failed due to domain issues
+      if (error.message?.includes('domain') || error.message?.includes('verified')) {
+        toast({
+          title: "Domain Verification Required",
+          description: "Please verify lesttaxi.com domain in Resend settings.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Booking Failed",
+          description: "Please WhatsApp +421 919 040 118.",
+          variant: "destructive",
+        });
+      }
     } finally {
       setIsLoading(false);
     }

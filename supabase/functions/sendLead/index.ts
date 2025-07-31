@@ -74,6 +74,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email via Resend
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    let emailSuccess = false;
+    
     if (resendApiKey) {
       const resend = new Resend(resendApiKey);
 
@@ -94,17 +96,26 @@ const handler = async (req: Request): Promise<Response> => {
         });
 
         console.log("Email sent successfully:", emailResponse);
-      } catch (emailError) {
-        console.error("Email error:", emailError);
-        // Don't fail the entire request if email fails
+        emailSuccess = true;
+      } catch (emailError: any) {
+        console.error("Resend email error details:", {
+          message: emailError.message,
+          name: emailError.name,
+          stack: emailError.stack,
+          response: emailError.response
+        });
+        emailSuccess = false;
       }
+    } else {
+      console.log("RESEND_API_KEY not configured, skipping email");
     }
 
     return new Response(
       JSON.stringify({ 
         success: true, 
         message: "Booking received successfully",
-        id: leadData.id 
+        id: leadData.id,
+        emailSent: emailSuccess
       }),
       {
         status: 200,
