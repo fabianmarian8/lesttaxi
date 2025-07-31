@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { BookingForm } from "@/components/BookingForm";
@@ -189,6 +189,17 @@ const Index = () => {
                 <Mail className="h-8 w-8 text-white" />
               </div>
               <span className="text-lg font-bold text-[hsl(var(--tactical-orange))]">Email</span>
+            </a>
+            <a 
+              href="https://www.facebook.com/profile.php?id=100090644550474"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
+            >
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Facebook className="h-8 w-8 text-white" />
+              </div>
+              <span className="text-lg font-bold text-blue-600">Facebook</span>
             </a>
           </div>
         </div>
