@@ -23,3 +23,6 @@ enabled = true
 
 [functions.send-contact-email]
 verify_jwt = false
+
+[functions.sendLead]
+verify_jwt = false

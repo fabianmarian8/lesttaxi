@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import ContactForm from "@/components/ContactForm";
+import { BookingForm } from "@/components/BookingForm";
 
 
 const Index = () => {
@@ -130,7 +130,7 @@ const Index = () => {
             CONTACT US
           </h2>
           <div className="max-w-2xl mx-auto mb-16">
-            <ContactForm />
+            <BookingForm />
           </div>
           
           <div className="flex justify-center gap-6">
