@@ -152,7 +152,7 @@ export function BookingForm() {
                 name="pickup"
                 value={formData.pickup}
                 onChange={handleInputChange}
-                placeholder="e.g. Bratislava Airport"
+                placeholder="e.g. Budapest Airport"
                 required
               />
             </div>
