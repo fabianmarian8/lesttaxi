@@ -17,19 +17,33 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className,
   priority = false
 }) => {
-  // Get base filename without extension
-  const baseSrc = src.replace(/\.[^/.]+$/, "");
-  const extension = src.split('.').pop()?.toLowerCase();
+  // Only optimize images from assets folder that have WebP versions
+  const isAssetImage = src.includes('/assets/');
   
-  // Create WebP and AVIF versions
+  if (!isAssetImage) {
+    // For non-asset images (like lovable-uploads), use regular img tag
+    return (
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={className}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        fetchPriority={priority ? "high" : "auto"}
+      />
+    );
+  }
+  
+  // Get base filename without extension for asset images
+  const baseSrc = src.replace(/\.[^/.]+$/, "");
+  
+  // Create WebP version (only for assets that have them)
   const webpSrc = `${baseSrc}.webp`;
-  const avifSrc = `${baseSrc}.avif`;
   
   return (
     <picture>
-      {/* AVIF format for modern browsers */}
-      <source srcSet={avifSrc} type="image/avif" />
-      
       {/* WebP format for better compression */}
       <source srcSet={webpSrc} type="image/webp" />
       
