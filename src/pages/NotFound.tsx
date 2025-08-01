@@ -2,20 +2,21 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Home, Phone, MessageCircle, Car } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const NotFound = () => {
   const location = useLocation();
+
+  useSEO({
+    title: "404 - Page Not Found | LEST TAXI",
+    description: "Sorry, the page you are looking for does not exist. Return to LEST TAXI homepage for military transport services.",
+    canonical: "https://www.lesttaxi.com/404"
+  });
 
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:",
       location.pathname
-    );
-    // Update page title for SEO
-    document.title = "404 - Page Not Found | LEST TAXI";
-    document.querySelector('meta[name="description"]')?.setAttribute(
-      'content', 
-      'Sorry, the page you are looking for does not exist. Return to LEST TAXI homepage for military transport services.'
     );
   }, [location.pathname]);
 
@@ -30,7 +31,7 @@ const NotFound = () => {
         <div className="text-center max-w-2xl mx-auto">
           {/* Logo */}
           <img 
-            src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+            src="/lovable-uploads/758fb881-536a-4397-b8c7-7dffcc95bbd9.png" 
             alt="LEST TAXI Logo" 
             className="h-24 w-24 mx-auto mb-8 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30"
           />

@@ -1,5 +1,11 @@
 # URL canonicalization - redirect non-www to www
 https://lesttaxi.com/* https://www.lesttaxi.com/:splat 301!
 
+# Common URL fixes and redirects
+/home /
+/about /
+/services /
+/contact /
+
 # 404 fallback
 /* /index.html 200

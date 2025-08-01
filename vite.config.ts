@@ -29,6 +29,9 @@ export default defineConfig(({ mode }) => ({
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', 'lucide-react'],
+          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
+          charts: ['recharts'],
+          utils: ['clsx', 'tailwind-merge', 'class-variance-authority']
         },
         // Add hash to filenames for cache busting
         entryFileNames: 'assets/[name].[hash].js',
@@ -36,8 +39,11 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name].[hash].[ext]'
       }
     },
-    // Enable compression
-    minify: 'esbuild'
+    // Enable compression and optimization
+    minify: 'esbuild',
+    cssMinify: true,
+    reportCompressedSize: false,
+    sourcemap: false
   },
   base: './',
 }));
