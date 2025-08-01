@@ -137,6 +137,7 @@ const Index = () => {
                   href="https://wa.me/421919040118"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => window.gtag?.('event', 'whatsapp_click')}
                   className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
                 >
                   <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
@@ -144,6 +145,7 @@ const Index = () => {
                 </a>
                 <a 
                   href="tel:+421919040118"
+                  onClick={() => window.gtag?.('event', 'call_now_click')}
                   className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
                 >
                   <Phone className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
@@ -214,6 +216,7 @@ const Index = () => {
           <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-6">
             <a 
               href="tel:+421919040118"
+              onClick={() => window.gtag?.('event', 'call_now_click')}
               className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
             >
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -225,6 +228,7 @@ const Index = () => {
               href="https://wa.me/421919040118"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => window.gtag?.('event', 'whatsapp_click')}
               className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
             >
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
