@@ -261,7 +261,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--military-gold))_0%,transparent_70%)] opacity-20" />
         <div className="container mx-auto text-center relative z-10">
-          <p className="text-xl font-semibold text-[hsl(var(--military-gold))] tracking-wider">
+          <p className="text-sm sm:text-base lg:text-lg font-semibold text-[hsl(var(--military-gold))] tracking-wider">
             © 2024 FRANKO TAXI | Professional Transportation Service
           </p>
         </div>
