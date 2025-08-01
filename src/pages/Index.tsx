@@ -211,46 +211,46 @@ const Index = () => {
             <BookingForm />
           </div>
           
-          <div className="flex justify-center gap-6">
+          <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-6">
             <a 
               href="tel:+421919040118"
-              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Phone className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-black" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Phone className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-black" />
               </div>
-              <span className="text-lg font-bold text-[hsl(var(--military-gold))]">Call Now</span>
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--military-gold))] text-center">Call Now</span>
             </a>
             <a 
               href="https://wa.me/421919040118"
               target="_blank"
               rel="noopener noreferrer"
-              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
-              <span className="text-lg font-bold text-[hsl(var(--whatsapp-green))]">WhatsApp</span>
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--whatsapp-green))] text-center">WhatsApp</span>
             </a>
             <a 
               href="mailto:fabianmarian8@gmail.com"
-              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Mail className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Mail className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
-              <span className="text-lg font-bold text-[hsl(var(--tactical-orange))]">Email</span>
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--tactical-orange))] text-center">Email</span>
             </a>
             <a 
               href="https://www.facebook.com/profile.php?id=100090644550474"
               target="_blank"
               rel="noopener noreferrer"
-              className="tactical-card group flex flex-col items-center gap-4 p-8 min-w-[120px]"
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Facebook className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Facebook className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
-              <span className="text-lg font-bold text-blue-600">Facebook</span>
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-blue-600 text-center">Facebook</span>
             </a>
           </div>
         </div>
