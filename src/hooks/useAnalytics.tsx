@@ -65,7 +65,7 @@ export const useAnalytics = () => {
 
     // Track page view
     const trackPageView = () => {
-      window.gtag?.('config', 'G-XXXXXXXXXX', {
+      window.gtag?.('config', 'G-9HLRQ0J9S3', {
         page_title: document.title,
         page_location: window.location.href,
       });
