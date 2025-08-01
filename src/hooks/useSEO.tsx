@@ -14,7 +14,7 @@ export const useSEO = ({
   description, 
   keywords, 
   canonical, 
-  ogImage = "https://lesttaxi.com/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png",
+  ogImage = "https://www.lesttaxi.com/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png",
   jsonLd 
 }: SEOProps) => {
   useEffect(() => {
@@ -35,15 +35,17 @@ export const useSEO = ({
       }
     }
     
-    // Update canonical URL if provided
+    // Update canonical URL if provided (remove any existing first)
     if (canonical) {
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
+      // Remove all existing canonical links to prevent duplicates
+      const existingCanonicals = document.querySelectorAll('link[rel="canonical"]');
+      existingCanonicals.forEach(link => link.remove());
+      
+      // Add the new canonical link
+      const canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
       canonicalLink.setAttribute('href', canonical);
+      document.head.appendChild(canonicalLink);
     }
     
     // Update Open Graph tags

@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HolidayStatusWidget } from "@/components/HolidayStatusWidget";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import Index from "./pages/Index";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
@@ -23,11 +24,11 @@ import MilitaryAccommodation from "./pages/MilitaryAccommodation";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+const AppContent = () => {
+  useAnalytics();
+  
+  return (
+    <>
       <HolidayStatusWidget />
       <BrowserRouter>
         <Routes>
@@ -50,6 +51,16 @@ const App = () => (
           <Route path="*" element={<Index />} />
         </Routes>
       </BrowserRouter>
+    </>
+  );
+};
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <AppContent />
     </TooltipProvider>
   </QueryClientProvider>
 );
