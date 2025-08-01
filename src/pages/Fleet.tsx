@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Car, Users, Luggage, Shield, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 const Fleet = () => {
   useSEO({
@@ -66,10 +67,12 @@ const Fleet = () => {
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
-            <img 
+            <OptimizedImage 
               src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
-              alt="FRANKO TAXI Logo" 
+              alt="LEST TAXI Logo - Professional Military Transport Service" 
               className="h-12 w-12 rounded-full bg-white p-1"
+              width={48}
+              height={48}
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>
@@ -144,21 +147,23 @@ const Fleet = () => {
           {/* Real Fleet Images */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
-                alt="FRANKO TAXI Fleet - Professional Toyota Vehicles for military transport" 
+                alt="LEST TAXI Fleet - Professional Toyota Vehicles for military transport" 
                 className="rounded-lg shadow-xl w-full mb-4"
-                loading="lazy"
+                width={600}
+                height={400}
               />
               <h4 className="text-xl font-semibold mb-2">Professional Fleet</h4>
               <p className="text-muted-foreground">Clean, modern vehicles maintained to the highest standards</p>
             </div>
             <div className="text-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.png" 
-                alt="FRANKO TAXI at Europa Shopping Center - reliable local transport" 
+                alt="LEST TAXI at Europa Shopping Center - reliable local transport" 
                 className="rounded-lg shadow-xl w-full mb-4"
-                loading="lazy"
+                width={600}
+                height={400}
               />
               <h4 className="text-xl font-semibold mb-2">Local Expertise</h4>
               <p className="text-muted-foreground">We know every route and destination in Slovakia</p>

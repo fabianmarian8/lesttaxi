@@ -5,11 +5,12 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 
 const Index = () => {
   useSEO({
-    title: "LEST TAXI - Military Base Transport & Airport Transfers Slovakia",
+    title: "LEST TAXI - Military Taxi & Airport Transfer Slovakia",
     description: "Professional 24/7 taxi service for US military personnel at Lešť Base. Airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
     keywords: "Lest taxi, military taxi Slovakia, airport transfer Sliac, US military transport, gate pickup service, taxi Lešť, taxi near me, Sliač airport transfer",
     canonical: "https://lesttaxi.com",
@@ -96,13 +97,13 @@ const Index = () => {
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
                 alt="LEST TAXI Logo - Professional Military Taxi Service Slovakia" 
                 className="h-20 w-20 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30 pulse-glow"
-                width="80"
-                height="80"
-                loading="eager"
+                width={80}
+                height={80}
+                priority={true}
               />
           
           <div className="flex items-center space-x-4">
@@ -152,13 +153,13 @@ const Index = () => {
             </div>
             <div className="floating">
               <div className="tactical-card p-4">
-                <img 
+                <OptimizedImage 
                   src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
                   alt="LEST TAXI professional military taxi service at Lešť Base Slovakia - airport transfers and base transport" 
                   className="rounded-xl w-full shadow-2xl"
-                  loading="eager"
-                  width="600"
-                  height="400"
+                  width={600}
+                  height={400}
+                  priority={true}
                 />
               </div>
             </div>
