@@ -18,6 +18,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sans': ['Inter', 'Roboto', 'Arial', 'sans-serif'],
+				'body': ['Inter', 'Roboto', 'Arial', 'sans-serif'],
+				'heading': ['Roboto', 'Inter', 'Arial', 'sans-serif'],
+			},
+			fontSize: {
+				'xs': ['12px', { lineHeight: '1.5' }],
+				'sm': ['14px', { lineHeight: '1.5' }],
+				'base': ['16px', { lineHeight: '1.6' }], // WCAG compliant base size
+				'lg': ['18px', { lineHeight: '1.6' }],
+				'xl': ['20px', { lineHeight: '1.5' }],
+				'2xl': ['24px', { lineHeight: '1.4' }],
+				'3xl': ['30px', { lineHeight: '1.3' }],
+				'4xl': ['36px', { lineHeight: '1.2' }],
+				'5xl': ['48px', { lineHeight: '1.1' }],
+				'6xl': ['60px', { lineHeight: '1.0' }],
+				'7xl': ['72px', { lineHeight: '1.0' }],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +70,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Accessible military theme colors
+				'military-gold': 'hsl(var(--military-gold))',
+				'military-green': 'hsl(var(--military-green))',
+				'military-bronze': 'hsl(var(--military-bronze))',
+				'whatsapp-green': 'hsl(var(--whatsapp-green))',
+				'elite-gold': 'hsl(var(--elite-gold))',
+				'combat-green': 'hsl(var(--combat-green))',
+				'tactical-orange': 'hsl(var(--tactical-orange))',
+				'stealth-gray': 'hsl(var(--stealth-gray))',
+				'night-ops': 'hsl(var(--night-ops))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
