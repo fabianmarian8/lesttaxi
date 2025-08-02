@@ -6,20 +6,20 @@ import { MessageCircle, Phone, Plane, Clock, MapPin, Shield, Users, Calendar } f
 const AirportMilitary = () => {
   useSEO({
     title: "Airport Transfers for US Military - Bratislava Vienna Budapest | LEST TAXI",
-    description: "Specialized airport transfer service for American soldiers at Lešť Base. Direct transport to Bratislava, Vienna, and Budapest airports for leave and vacation travel. Military-friendly scheduling.",
+    description: "Specialized airport transfer service for American soldiers at Lest Base. Direct transport to Bratislava, Vienna, and Budapest airports for leave and vacation travel. Military-friendly scheduling.",
     keywords: "military airport transfer Slovakia, Bratislava Vienna Budapest airport US soldiers, leave transport military, vacation airport transfer Lest base, US military taxi airport",
     canonical: "https://lesttaxi.com/airport-military",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "Airport Transfers for US Military",
-      "description": "Specialized airport transfer service for American soldiers at Lešť Base to major European airports",
+      "description": "Specialized airport transfer service for American soldiers at Lest Base to major European airports",
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
         "telephone": "+421 948 141 414"
       },
-      "areaServed": "Lešť Military Base, Slovakia",
+      "areaServed": "Lest Military Base, Slovakia",
       "serviceType": "Airport Transfer Service",
       "audience": {
         "@type": "Audience",
@@ -99,11 +99,11 @@ const AirportMilitary = () => {
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Heading home for leave or taking a European vacation? We provide reliable airport transfers 
-            from Lešť base to Bratislava, Vienna, and Budapest airports. Military-friendly scheduling and rates.
+            from Lest base to Bratislava, Vienna, and Budapest airports. Military-friendly scheduling and rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-              <a href="https://wa.me/421948141414?text=Hi! I need airport transfer from Lešť base." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/421948141414?text=Hi! I need airport transfer from Lest base." target="_blank" rel="noopener noreferrer">
                 <Plane className="mr-2 h-5 w-5" />
                 Book Airport Transfer
               </a>
@@ -223,7 +223,7 @@ const AirportMilitary = () => {
                 2
               </div>
               <h3 className="font-semibold mb-2">Base Pickup</h3>
-              <p className="text-sm text-muted-foreground">We pick you up at Lešť base gate</p>
+              <p className="text-sm text-muted-foreground">We pick you up at Lest base gate</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
@@ -277,7 +277,7 @@ const AirportMilitary = () => {
             safely and on time. Book your military-friendly airport transfer now.
           </p>
           <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-            <a href="https://wa.me/421948141414?text=Hi! I need airport transfer from Lešť base." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421948141414?text=Hi! I need airport transfer from Lest base." target="_blank" rel="noopener noreferrer">
               <Plane className="mr-2 h-5 w-5" />
               Book Airport Transfer Now
             </a>

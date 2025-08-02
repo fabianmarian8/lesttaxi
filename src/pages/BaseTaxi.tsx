@@ -6,15 +6,15 @@ import { useSEO } from "@/hooks/useSEO";
 
 const BaseTaxi = () => {
   useSEO({
-    title: "Base Taxi Lešť - Military Transport Service | LEST TAXI",
-    description: "Specialized base taxi service for US military personnel at Lešť Base. 24/7 gate pickup, security clearance, fixed rates. Book now via WhatsApp +421 919 040 118",
-    keywords: "base taxi Lešť, military transport Slovakia, Lešť base pickup, gate service, US military taxi, base transport",
+    title: "Base Taxi Lest - Military Transport Service | LEST TAXI",
+    description: "Specialized base taxi service for US military personnel at Lest Base. 24/7 gate pickup, security clearance, fixed rates. Book now via WhatsApp +421 919 040 118",
+    keywords: "base taxi Lest, military transport Slovakia, Lest base pickup, gate service, US military taxi, base transport",
     canonical: "https://lesttaxi.com/base-taxi",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Base Taxi Lešť",
-      "description": "Specialized base taxi service for US military personnel at Lešť Base",
+      "name": "Base Taxi Lest",
+      "description": "Specialized base taxi service for US military personnel at Lest Base",
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
@@ -22,17 +22,17 @@ const BaseTaxi = () => {
       },
       "areaServed": {
         "@type": "Place",
-        "name": "Lešť Base, Slovakia"
+        "name": "Lest Base, Slovakia"
       },
       "serviceType": "Military Base Transportation"
     }
   });
 
   const priceList = [
-    { destination: "Lešť Base to Sliač Airport", price: "€55", time: "40 min" },
-    { destination: "Lešť Base to Zvolen City Center", price: "€45", time: "30 min" },
-    { destination: "Lešť Base to Banská Bystrica", price: "€70", time: "45 min" },
-    { destination: "Lešť Base to Budapest Airport", price: "€200", time: "2.5 hours" },
+    { destination: "Lest Base to Sliač Airport", price: "€55", time: "40 min" },
+    { destination: "Lest Base to Zvolen City Center", price: "€45", time: "30 min" },
+    { destination: "Lest Base to Banská Bystrica", price: "€70", time: "45 min" },
+    { destination: "Lest Base to Budapest Airport", price: "€200", time: "2.5 hours" },
     { destination: "Gate Pick-up Service", price: "", time: "30-45 min" },
   ];
 
@@ -96,10 +96,10 @@ const BaseTaxi = () => {
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-5xl font-bold mb-6 text-foreground">
-                Taxi to Lešť Military Base 24/7
+                Taxi to Lest Military Base 24/7
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Reliable transportation service for American military personnel stationed at Lešť Base. 
+                Reliable transportation service for American military personnel stationed at Lest Base. 
                 We understand military schedules, base protocols, and provide secure, professional transport 
                 24 hours a day, 7 days a week.
               </p>
@@ -228,7 +228,7 @@ const BaseTaxi = () => {
           <div className="container mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready for Transport?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Book your ride now for immediate or scheduled pickup from Lešť Military Base
+              Book your ride now for immediate or scheduled pickup from Lest Military Base
             </p>
             <Button 
               variant="secondary" 

@@ -5,21 +5,21 @@ import { MessageCircle, Phone, Shield, Clock, MapPin, Users, Star, CheckCircle }
 
 const MilitaryBasePickup = () => {
   useSEO({
-    title: "Base Gate Pickup Service for US Military - Lešť Base Slovakia | LEST TAXI",
-    description: "Specialized base gate pickup and transport service for American soldiers at Lešť Base. 24/7 availability, security clearance, English-speaking drivers. Reliable transport for US military personnel.",
+    title: "Base Gate Pickup Service for US Military - Lest Base Slovakia | LEST TAXI",
+    description: "Specialized base gate pickup and transport service for American soldiers at Lest Base. 24/7 availability, security clearance, English-speaking drivers. Reliable transport for US military personnel.",
     keywords: "Lest base gate pickup, US military taxi Slovakia, base transport service, American soldiers transport, military base pickup, Lest army base taxi",
     canonical: "https://lesttaxi.com/military-base-pickup",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "Base Gate Pickup Service for US Military",
-      "description": "Specialized pickup and transport service for American soldiers at Lešť Military Base Slovakia",
+      "description": "Specialized pickup and transport service for American soldiers at Lest Military Base Slovakia",
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
         "telephone": "+421 948 141 414"
       },
-      "areaServed": "Lešť Military Base, Slovakia",
+      "areaServed": "Lest Military Base, Slovakia",
       "serviceType": "Military Base Transport Service",
       "audience": {
         "@type": "Audience",
@@ -49,7 +49,7 @@ const MilitaryBasePickup = () => {
   const pickupLocations = [
     {
       name: "Main Gate",
-      description: "Primary entrance to Lešť Military Base",
+      description: "Primary entrance to Lest Military Base",
       features: ["Most common pickup point", "Easy identification", "Quick access"]
     },
     {
@@ -95,12 +95,12 @@ const MilitaryBasePickup = () => {
             Base Gate Pickup Service
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Reliable pickup service directly from Lešť Military Base gates. We understand military schedules, 
+            Reliable pickup service directly from Lest Military Base gates. We understand military schedules, 
             security protocols, and provide 24/7 transport for American soldiers stationed in Slovakia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-green-600 hover:bg-green-700 text-white">
-              <a href="https://wa.me/421948141414?text=Hi! I need pickup from Lešť base gate." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421948141414?text=Hi! I need pickup from Lest base gate." target="_blank" rel="noopener noreferrer">
                 <Shield className="mr-2 h-5 w-5" />
                 Request Base Pickup
               </a>
@@ -299,7 +299,7 @@ const MilitaryBasePickup = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Need a Ride from Base?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Whether it's for duty, personal time, or emergency transport, we're your reliable 
-            partner for all transportation needs from Lešť Military Base.
+            partner for all transportation needs from Lest Military Base.
           </p>
           <Button size="lg" asChild className="bg-green-600 hover:bg-green-700 text-white">
             <a href="https://wa.me/421948141414?text=Hi! I need pickup from Lešť base gate." target="_blank" rel="noopener noreferrer">

@@ -14,7 +14,7 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "How do I book a taxi from Lešť Military Base?",
+      question: "How do I book a taxi from Lest Military Base?",
       answer: "Booking is easy! Contact us via WhatsApp at +421 919 040 118 or call us directly. We recommend booking 30 minutes in advance. We'll meet you at the tennis court parking area near the upper gate."
     },
     {

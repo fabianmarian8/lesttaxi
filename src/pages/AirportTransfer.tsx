@@ -7,14 +7,14 @@ import { useSEO } from "@/hooks/useSEO";
 const AirportTransfer = () => {
   useSEO({
     title: "Airport Transfer Slovakia - Sliač, Bratislava, Vienna | LEST TAXI",
-    description: "Professional airport transfer service from Lešť Base to major airports. Fixed rates, flight tracking, 24/7 service. Book via WhatsApp +421 919 040 118",
+    description: "Professional airport transfer service from Lest Base to major airports. Fixed rates, flight tracking, 24/7 service. Book via WhatsApp +421 919 040 118",
     keywords: "airport transfer Slovakia, Sliač airport taxi, Bratislava airport transfer, Vienna airport transport, military airport taxi",
     canonical: "https://lesttaxi.com/airport-transfer",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "Airport Transfer Service",
-      "description": "Professional airport transfer service from Lešť Base to major airports",
+      "description": "Professional airport transfer service from Lest Base to major airports",
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
@@ -61,7 +61,7 @@ const AirportTransfer = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Professional airport transfer service for military personnel. We track your flights, 
               provide buffer time for delays, and offer flat rates with no surprises. 
-              From Lešť Base to any major airport in Central Europe.
+              From Lest Base to any major airport in Central Europe.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button 
@@ -100,7 +100,7 @@ const AirportTransfer = () => {
                 <CardContent>
                   <div className="flex justify-between items-center">
                     <div className="text-sm text-muted-foreground">
-                      Direct transfer from Lešť Base
+                      Direct transfer from Lest Base
                     </div>
                     <div className="text-2xl font-bold text-[hsl(var(--military-gold))]">
                       {airport.price}
@@ -163,7 +163,7 @@ const AirportTransfer = () => {
       {/* Google Map Section */}
       <section className="py-16 px-6">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Route: Sliač Airport ↔ Lešť Base</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Route: Sliač Airport ↔ Lest Base</h2>
           <div className="max-w-4xl mx-auto">
             <Card>
               <CardContent className="p-0">
@@ -176,7 +176,7 @@ const AirportTransfer = () => {
                     allowFullScreen={true}
                     loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Route from Sliač Airport to Lešť Military Base"
+                    title="Route from Sliač Airport to Lest Military Base"
                   />
                 </div>
               </CardContent>

@@ -5,21 +5,21 @@ import { MessageCircle, Phone, Clock, MapPin, Shield, Star } from "lucide-react"
 
 const KFCDelivery = () => {
   useSEO({
-    title: "KFC Delivery for US Military - Lešť Base Slovakia | LEST TAXI",
-    description: "Fast KFC delivery and pickup service for American soldiers at Lešť Base. Order your favorite KFC meals - we'll pick up and deliver to base gate. Available 24/7 for US military personnel.",
+    title: "KFC Delivery for US Military - Lest Base Slovakia | LEST TAXI",
+    description: "Fast KFC delivery and pickup service for American soldiers at Lest Base. Order your favorite KFC meals - we'll pick up and deliver to base gate. Available 24/7 for US military personnel.",
     keywords: "KFC delivery Lest base, KFC pickup Slovakia military, American fast food delivery, US soldiers KFC, military base food delivery, KFC Zvolen delivery",
     canonical: "https://lesttaxi.com/kfc-delivery",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "KFC Delivery for US Military",
-      "description": "Specialized KFC delivery and pickup service for American soldiers at Lešť Base Slovakia",
+      "description": "Specialized KFC delivery and pickup service for American soldiers at Lest Base Slovakia",
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
         "telephone": "+421 948 141 414"
       },
-      "areaServed": "Lešť Military Base, Slovakia",
+      "areaServed": "Lest Military Base, Slovakia",
       "serviceType": "Food Delivery Service",
       "audience": {
         "@type": "Audience",
@@ -47,7 +47,7 @@ const KFCDelivery = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Base Gate Delivery",
-      description: "Direct delivery to Lešť base main gate for easy pickup"
+      description: "Direct delivery to Lest base main gate for easy pickup"
     }
   ];
 
@@ -76,12 +76,12 @@ const KFCDelivery = () => {
             KFC Delivery for US Military
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Craving KFC? We'll pick up your favorite meals from nearby KFC locations and deliver directly to Lešť base gate. 
+            Craving KFC? We'll pick up your favorite meals from nearby KFC locations and deliver directly to Lest base gate. 
             Fast, reliable service for American soldiers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-red-600 hover:bg-red-700 text-white">
-              <a href="https://wa.me/421948141414?text=Hi! I'd like to order KFC delivery to Lešť base." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/421948141414?text=Hi! I'd like to order KFC delivery to Lest base." target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Order KFC via WhatsApp
               </a>
@@ -187,10 +187,10 @@ const KFCDelivery = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Some KFC?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Don't let hunger wait. Order your favorite KFC meals now and we'll deliver them fresh to Lešť base gate.
+            Don't let hunger wait. Order your favorite KFC meals now and we'll deliver them fresh to Lest base gate.
           </p>
           <Button size="lg" asChild className="bg-red-600 hover:bg-red-700 text-white">
-            <a href="https://wa.me/421948141414?text=Hi! I'd like to order KFC delivery to Lešť base." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421948141414?text=Hi! I'd like to order KFC delivery to Lest base." target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-5 w-5" />
               Order KFC Now via WhatsApp
             </a>

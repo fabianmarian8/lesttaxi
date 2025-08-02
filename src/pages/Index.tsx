@@ -11,8 +11,8 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 const Index = () => {
   useSEO({
     title: "LEST TAXI - Military Taxi & Airport Transfer Slovakia",
-    description: "Professional 24/7 taxi service for US military personnel at Lešť Base. Airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
-    keywords: "Lest taxi, military taxi Slovakia, airport transfer Sliac, US military transport, gate pickup service, taxi Lešť, taxi near me, Sliač airport transfer",
+    description: "Professional 24/7 taxi service for US military personnel at Lest Base. Airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
+    keywords: "Lest taxi, military taxi Slovakia, airport transfer Sliac, US military transport, gate pickup service, taxi Lest, taxi near me, Sliač airport transfer",
     canonical: "https://lesttaxi.com",
     jsonLd: {
       "@context": "https://schema.org",
@@ -23,8 +23,8 @@ const Index = () => {
       "email": "fabianmarian8@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Lešť Military Base Area",
-        "addressLocality": "Lešť",
+        "streetAddress": "Lest Military Base Area",
+        "addressLocality": "Lest",
         "addressRegion": "Banská Bystrica Region",
         "postalCode": "96223",
         "addressCountry": "SK"
@@ -53,7 +53,7 @@ const Index = () => {
             "itemOffered": {
               "@type": "Service",
               "name": "Airport Transfer Service",
-              "description": "Professional airport transfers from Lešť Base to Budapest, Vienna, and Bratislava airports"
+              "description": "Professional airport transfers from Lest Base to Budapest, Vienna, and Bratislava airports"
             }
           },
           {
@@ -61,7 +61,7 @@ const Index = () => {
             "itemOffered": {
               "@type": "Service",
               "name": "Military Base Transport",
-              "description": "Specialized transportation for US military personnel at Lešť Base"
+              "description": "Specialized transportation for US military personnel at Lest Base"
             }
           },
           {
@@ -74,7 +74,7 @@ const Index = () => {
           }
         ]
       },
-      "description": "Professional 24/7 taxi service for US military personnel at Lešť Base Slovakia. Specializing in airport transfers, base transport, and city travel with fixed rates and military protocol understanding."
+      "description": "Professional 24/7 taxi service for US military personnel at Lest Base Slovakia. Specializing in airport transfers, base transport, and city travel with fixed rates and military protocol understanding."
     }
   });
 
@@ -164,14 +164,14 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10" />
         <div className="container mx-auto relative z-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-black text-center mb-4 sm:mb-8 lg:mb-12 combat-text">
-            Military Transportation Services at Lešť Base
+            Military Transportation Services at Lest Base
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             <div className="tactical-card text-center group p-4 sm:p-6">
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <Car className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-black" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--military-gold))] text-wrap-mobile">Airport Transfers from Lešť Base</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--military-gold))] text-wrap-mobile">Airport Transfers from Lest Base</h3>
               <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
             </div>
             <div className="tactical-card text-center group p-4 sm:p-6">

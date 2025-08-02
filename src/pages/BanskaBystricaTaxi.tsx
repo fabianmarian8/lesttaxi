@@ -6,15 +6,15 @@ import { useSEO } from "@/hooks/useSEO";
 const BanskaBystricaTaxi = () => {
   useSEO({
     title: "Military Taxi Banská Bystrica | US Soldiers Transport | FRANKO TAXI",
-    description: "Professional taxi service from Lešť Military Base to Banská Bystrica. 24/7 transport for US military personnel. English speaking drivers, fixed rates, reliable service.",
-    keywords: "Banská Bystrica taxi military, US soldiers transport Banská Bystrica, Lešť base to Banská Bystrica, military taxi Slovakia, American soldiers taxi",
+    description: "Professional taxi service from Lest Military Base to Banská Bystrica. 24/7 transport for US military personnel. English speaking drivers, fixed rates, reliable service.",
+    keywords: "Banská Bystrica taxi military, US soldiers transport Banská Bystrica, Lest base to Banská Bystrica, military taxi Slovakia, American soldiers taxi",
     canonical: "https://lesttaxi.com/banska-bystrica-military-taxi",
     ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "TaxiService",
       "name": "FRANKO TAXI - Banská Bystrica Military Transport",
-      "description": "Specialized taxi service from Lešť Military Base to Banská Bystrica for US military personnel",
+      "description": "Specialized taxi service from Lest Military Base to Banská Bystrica for US military personnel",
       "serviceArea": {
         "@type": "Place",
         "name": "Banská Bystrica, Slovakia"
@@ -31,7 +31,7 @@ const BanskaBystricaTaxi = () => {
         "@type": "Offer",
         "price": "40",
         "priceCurrency": "EUR",
-        "description": "Transport from Lešť Base to Banská Bystrica"
+        "description": "Transport from Lest Base to Banská Bystrica"
       }
     }
   });
@@ -125,7 +125,7 @@ const BanskaBystricaTaxi = () => {
             Military Taxi to Banská Bystrica
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Professional transport service from Lešť Military Base to Banská Bystrica. 
+            Professional transport service from Lest Military Base to Banská Bystrica. 
             Reliable, safe, and comfortable rides for US military personnel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -231,7 +231,7 @@ const BanskaBystricaTaxi = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Travel to Banská Bystrica?</h2>
           <p className="text-xl mb-8">
-            Book your reliable transport from Lešť Military Base to Banská Bystrica today
+            Book your reliable transport from Lest Military Base to Banská Bystrica today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

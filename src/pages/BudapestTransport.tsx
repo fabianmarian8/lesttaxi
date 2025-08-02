@@ -5,16 +5,16 @@ import { useSEO } from "@/hooks/useSEO";
 
 const BudapestTransport = () => {
   useSEO({
-    title: "Budapest Transport for US Military | Lešť Base to Budapest | FRANKO TAXI",
-    description: "Professional long-distance transport from Lešť Military Base to Budapest, Hungary. Airport transfers, city tours, business trips for US military personnel. English speaking drivers.",
-    keywords: "Budapest transport military, US soldiers Budapest taxi, Lešť to Budapest, military transport Hungary, American soldiers Budapest transfer",
+    title: "Budapest Transport for US Military | Lest Base to Budapest | FRANKO TAXI",
+    description: "Professional long-distance transport from Lest Military Base to Budapest, Hungary. Airport transfers, city tours, business trips for US military personnel. English speaking drivers.",
+    keywords: "Budapest transport military, US soldiers Budapest taxi, Lest to Budapest, military transport Hungary, American soldiers Budapest transfer",
     canonical: "https://lesttaxi.com/budapest-military-transport",
     ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "TaxiService", 
       "name": "FRANKO TAXI - Budapest Military Transport",
-      "description": "Long-distance transport service from Lešť Military Base to Budapest, Hungary for US military personnel",
+      "description": "Long-distance transport service from Lest Military Base to Budapest, Hungary for US military personnel",
       "serviceArea": {
         "@type": "Place",
         "name": "Budapest, Hungary"
@@ -31,7 +31,7 @@ const BudapestTransport = () => {
         "@type": "Offer",
         "price": "180",
         "priceCurrency": "EUR",
-        "description": "Transport from Lešť Base to Budapest"
+        "description": "Transport from Lest Base to Budapest"
       }
     }
   });
@@ -140,7 +140,7 @@ const BudapestTransport = () => {
             Military Transport to Budapest
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Professional long-distance transport from Lešť Military Base to Budapest, Hungary. 
+            Professional long-distance transport from Lest Military Base to Budapest, Hungary. 
             Experience the beautiful capital city with our reliable military transport service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -298,7 +298,7 @@ const BudapestTransport = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready for Your Budapest Adventure?</h2>
           <p className="text-xl mb-8">
-            Book your comfortable and reliable transport from Lešť Military Base to Budapest today
+            Book your comfortable and reliable transport from Lest Military Base to Budapest today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

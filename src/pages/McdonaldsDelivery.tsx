@@ -5,21 +5,21 @@ import { MessageCircle, Phone, Clock, MapPin, Shield, Star } from "lucide-react"
 
 const McdonaldsDelivery = () => {
   useSEO({
-    title: "McDonald's Delivery for US Soldiers - Lešť Base Slovakia | LEST TAXI",
-    description: "McDonald's delivery and pickup service for American military at Lešť Base. Fast, reliable McDonald's food delivery to base gate. 24/7 service for US soldiers in Slovakia.",
+    title: "McDonald's Delivery for US Soldiers - Lest Base Slovakia | LEST TAXI",
+    description: "McDonald's delivery and pickup service for American military at Lest Base. Fast, reliable McDonald's food delivery to base gate. 24/7 service for US soldiers in Slovakia.",
     keywords: "McDonalds delivery military base, McDonalds pickup Lest, American food Slovakia, US soldiers McDonalds, military base food delivery, McDonalds Zvolen delivery",
     canonical: "https://lesttaxi.com/mcdonalds-delivery",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "McDonald's Delivery for US Military",
-      "description": "Specialized McDonald's delivery and pickup service for American soldiers at Lešť Base Slovakia",
+      "description": "Specialized McDonald's delivery and pickup service for American soldiers at Lest Base Slovakia",
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
         "telephone": "+421 948 141 414"
       },
-      "areaServed": "Lešť Military Base, Slovakia",
+      "areaServed": "Lest Military Base, Slovakia",
       "serviceType": "Food Delivery Service",
       "audience": {
         "@type": "Audience",
@@ -82,12 +82,12 @@ const McdonaldsDelivery = () => {
             McDonald's Delivery for US Soldiers
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Missing that taste of home? We'll bring McDonald's straight to Lešť base gate. 
+            Missing that taste of home? We'll bring McDonald's straight to Lest base gate. 
             Order your favorite Big Mac, McNuggets, or any McDonald's meal - we've got you covered!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-              <a href="https://wa.me/421948141414?text=Hi! I'd like to order McDonald's delivery to Lešť base." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/421948141414?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Order McDonald's via WhatsApp
               </a>
@@ -194,7 +194,7 @@ const McdonaldsDelivery = () => {
                 3
               </div>
               <h3 className="font-semibold mb-2">Quick Delivery</h3>
-              <p className="text-sm text-muted-foreground">Fast delivery to Lešť base gate</p>
+              <p className="text-sm text-muted-foreground">Fast delivery to Lest base gate</p>
             </div>
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
@@ -215,7 +215,7 @@ const McdonaldsDelivery = () => {
             Get that taste of home delivered right to your base. Fast, reliable McDonald's delivery service for US military personnel.
           </p>
           <Button size="lg" asChild className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-            <a href="https://wa.me/421948141414?text=Hi! I'd like to order McDonald's delivery to Lešť base." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421948141414?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-5 w-5" />
               Order McDonald's Now
             </a>
