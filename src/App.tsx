@@ -23,10 +23,6 @@ import BudapestTransport from "./pages/BudapestTransport";
 import MilitaryAccommodation from "./pages/MilitaryAccommodation";
 import Feedback from "./pages/Feedback";
 import Artemis from "./pages/Artemis";
-import TaxiBratislava from "./pages/TaxiBratislava";
-import TaxiStareMesto from "./pages/TaxiStareMesto";
-import TaxiBudapestAirport from "./pages/TaxiBudapestAirport";
-import TaxiViennaAirport from "./pages/TaxiViennaAirport";
 
 const queryClient = new QueryClient();
 
@@ -55,11 +51,6 @@ const AppContent = () => {
           <Route path="/military-accommodation-transport" element={<MilitaryAccommodation />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/artemis" element={<Artemis />} />
-          {/* New Local Landing Pages */}
-          <Route path="/taxi-bratislava" element={<TaxiBratislava />} />
-          <Route path="/taxi-stare-mesto" element={<TaxiStareMesto />} />
-          <Route path="/taxi-budapest-airport" element={<TaxiBudapestAirport />} />
-          <Route path="/taxi-vienna-airport" element={<TaxiViennaAirport />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,5 +1,5 @@
-/* WCAG Accessible Design System */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+/* Modern Military-Inspired Design System */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,109 +7,111 @@
 
 @layer base {
   :root {
-    /* WCAG AA Compliant Military Color Palette - Balanced */
-    --background: 88 20% 8%;          /* Dark military green background */
-    --foreground: 43 50% 85%;         /* Readable gold text */
+    /* Enhanced Color Palette */
+    --background: 8 8% 7%;
+    --foreground: 43 96% 90%;
 
-    --card: 88 20% 12%;               /* Subtle green for cards */
-    --card-foreground: 43 50% 85%;
+    --card: 12 10% 12%;
+    --card-foreground: 43 96% 88%;
 
-    --popover: 88 20% 10%;            /* Dark green popover */
-    --popover-foreground: 43 50% 85%;
+    --popover: 10 8% 10%;
+    --popover-foreground: 43 96% 88%;
 
-    --primary: 43 65% 60%;            /* Balanced gold for primary elements */
-    --primary-foreground: 88 20% 8%;  /* Dark green text on gold */
+    --primary: 43 96% 56%;
+    --primary-foreground: 12 10% 8%;
 
-    --secondary: 88 20% 18%;          /* Muted green for secondary */
-    --secondary-foreground: 43 50% 85%;
+    --secondary: 88 45% 20%;
+    --secondary-foreground: 43 96% 88%;
 
-    --muted: 88 15% 15%;              /* Muted green background */
-    --muted-foreground: 43 40% 75%;   /* Soft gold text */
+    --muted: 15 15% 18%;
+    --muted-foreground: 43 30% 65%;
 
-    --accent: 43 70% 55%;             /* Balanced accent gold */
-    --accent-foreground: 88 20% 8%;
+    --accent: 35 100% 65%;
+    --accent-foreground: 12 10% 8%;
 
-    /* Military Theme Colors - Balanced */
-    --military-gold: 43 65% 60%;      /* Balanced military gold */
-    --military-green: 88 20% 8%;      /* Dark military green */
-    --military-bronze: 35 60% 50%;    /* Balanced bronze */
-    --whatsapp-green: 145 85% 47%;    /* Bright WhatsApp green #25D366 */
-    --call-orange: 38 100% 60%;       /* Bright call button orange #FFA500 */
+    /* Military Theme Colors */
+    --military-gold: 43 96% 56%;
+    --military-green: 88 45% 20%;
+    --military-bronze: 35 85% 45%;
+    --whatsapp-green: 142 70% 49%;
 
-    /* Elite Military Colors - Balanced */
-    --elite-gold: 48 70% 65%;         /* Balanced elite gold */
-    --combat-green: 88 20% 12%;       /* Balanced combat green */
-    --tactical-orange: 25 65% 55%;    /* Balanced orange */
-    --stealth-gray: 0 0% 25%;         /* Accessible gray */
-    --night-ops: 0 0% 20%;            /* Dark operations color */
+    /* Elite Military Colors */
+    --elite-gold: 48 100% 67%;
+    --combat-green: 94 50% 15%;
+    --tactical-orange: 25 95% 62%;
 
-    --destructive: 0 75% 55%;         /* High contrast red */
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 88 25% 25%;             /* Visible green border */
-    --input: 88 40% 12%;              /* Dark green input background */
-    --ring: 43 85% 65%;               /* Gold focus ring */
+    --border: 20 20% 25%;
+    --input: 15 15% 18%;
+    --ring: 43 96% 56%;
 
     --radius: 0.75rem;
 
-    /* Military Gradients - Accessible versions */
+    /* Advanced Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--military-gold)) 0%, hsl(var(--elite-gold)) 50%, hsl(var(--tactical-orange)) 100%);
     --gradient-combat: linear-gradient(180deg, hsl(var(--combat-green)) 0%, hsl(var(--military-green)) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
     
-    /* Military Shadows */
-    --shadow-neon: 0 0 20px hsl(var(--military-gold) / 0.4), 0 0 40px hsl(var(--military-gold) / 0.2);
-    --shadow-tactical: 0 8px 32px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.3);
-    --shadow-elite: 0 20px 60px rgba(0,0,0,0.7), 0 0 40px hsl(var(--elite-gold) / 0.2);
+    /* Advanced Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--military-gold) / 0.3), 0 0 40px hsl(var(--military-gold) / 0.1);
+    --shadow-tactical: 0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.2);
+    --shadow-elite: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px hsl(var(--elite-gold) / 0.2);
 
-    --sidebar-background: 88 40% 10%;
-    --sidebar-foreground: 43 85% 85%;
-    --sidebar-primary: 43 85% 65%;
-    --sidebar-primary-foreground: 88 45% 8%;
-    --sidebar-accent: 88 30% 15%;
-    --sidebar-accent-foreground: 43 85% 85%;
-    --sidebar-border: 88 25% 25%;
-    --sidebar-ring: 43 85% 65%;
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Dark mode: Even darker for true night operations feel */
-    --background: 88 55% 5%;          /* Very dark military green */
-    --foreground: 43 90% 90%;         /* Very bright gold text */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 88 50% 8%;                /* Dark green cards */
-    --card-foreground: 43 90% 90%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 88 50% 6%;             /* Very dark popover */
-    --popover-foreground: 43 90% 90%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 43 90% 70%;            /* Very bright gold */
-    --primary-foreground: 88 55% 5%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 88 40% 15%;          /* Dark secondary green */
-    --secondary-foreground: 43 90% 90%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 88 35% 10%;              /* Very muted green */
-    --muted-foreground: 43 70% 75%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 43 95% 65%;             /* Bright accent gold */
-    --accent-foreground: 88 55% 5%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 80% 60%;         /* Bright red for visibility */
-    --destructive-foreground: 43 90% 90%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 88 30% 20%;             /* Visible dark green border */
-    --input: 88 45% 8%;               /* Dark input background */
-    --ring: 43 90% 70%;               /* Bright gold focus ring */
-
-    --sidebar-background: 88 50% 6%;
-    --sidebar-foreground: 43 90% 90%;
-    --sidebar-primary: 43 90% 70%;
-    --sidebar-primary-foreground: 88 55% 5%;
-    --sidebar-accent: 88 35% 10%;
-    --sidebar-accent-foreground: 43 90% 90%;
-    --sidebar-border: 88 30% 20%;
-    --sidebar-ring: 43 90% 70%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -119,65 +121,20 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', 'Roboto', Arial, sans-serif;
-    font-size: 16px; /* WCAG minimum base font size */
-    line-height: 1.6; /* Improved readability */
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, sans-serif;
   }
 
-  /* Accessible Typography */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', 'Inter', Arial, sans-serif;
+  h1, h2, h3 {
+    font-family: 'Orbitron', monospace;
     font-weight: 700;
-    line-height: 1.3;
-  }
-
-  /* Enhanced text sizes for accessibility - Override all small text */
-  p, div, span, .text-sm, .text-xs {
-    font-size: 16px !important; /* Force minimum 16px for all text */
-    line-height: 1.6;
-  }
-
-  /* Only allow smaller text for truly decorative elements */
-  .text-xs-allowed {
-    font-size: 14px !important;
-    line-height: 1.5;
-  }
-
-  /* Accessible link styles - distinguishable by more than color */
-  a {
-    @apply text-primary font-medium underline decoration-2 underline-offset-2;
-    transition: all 0.2s ease;
-  }
-
-  a:hover {
-    @apply text-primary/80;
-    text-decoration-thickness: 3px;
-  }
-
-  a:focus {
-    @apply outline-2 outline-primary outline-offset-2;
-    outline-style: solid;
-  }
-
-  /* Button focus indicators for accessibility */
-  button:focus-visible {
-    @apply outline-2 outline-primary outline-offset-2;
-    outline-style: solid;
-  }
-
-  /* Enhanced form input accessibility */
-  input:focus, textarea:focus, select:focus {
-    @apply outline-2 outline-primary outline-offset-2;
-    outline-style: solid;
   }
 }
 
 @layer components {
   .glass-effect {
-    @apply backdrop-blur-xl border;
-    background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
-    border-color: hsl(var(--military-gold) / 0.3);
+    @apply backdrop-blur-xl bg-white/10 border border-white/20;
+    background: var(--gradient-glass);
   }
 
   .text-wrap-mobile {
@@ -194,8 +151,6 @@
   .tactical-card {
     @apply glass-effect rounded-xl p-6 transition-all duration-500;
     box-shadow: var(--shadow-tactical);
-    border: 1px solid hsl(var(--military-gold) / 0.2);
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
   }
 
   .tactical-card:hover {
@@ -208,8 +163,6 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Accessible fallback maintains military gold */
-    color: hsl(var(--military-gold));
   }
 
   .pulse-glow {
@@ -246,84 +199,6 @@
     to {
       opacity: 1;
       transform: translateY(0);
-    }
-  }
-
-  /* Accessible color variations with proper contrast - Military theme */
-  .stealth-gray {
-    color: hsl(var(--stealth-gray));
-  }
-
-  .night-ops {
-    color: hsl(var(--night-ops));
-  }
-
-  /* High contrast variants for important elements - Military styling */
-  /* High contrast variants for important elements - Military styling */
-  .high-contrast-text {
-    color: hsl(var(--military-gold));
-    font-weight: 600;
-  }
-
-  .high-contrast-bg {
-    background-color: hsl(var(--combat-green));
-    color: hsl(var(--military-gold));
-  }
-
-  /* Hover scale utility for interactive elements */
-  .hover-scale {
-    transition: transform 0.2s ease;
-  }
-
-  .hover-scale:hover {
-    transform: scale(1.05);
-  }
-
-  /* Ensure all Tailwind text size classes meet WCAG standards */
-  .text-xs { font-size: 16px !important; }
-  .text-sm { font-size: 16px !important; }
-  .text-base { font-size: 16px !important; }
-  .text-lg { font-size: 18px !important; }
-  .text-xl { font-size: 20px !important; }
-
-  /* Enhanced focus indicators for better accessibility */
-  *:focus-visible {
-    outline: 2px solid hsl(var(--primary)) !important;
-    outline-offset: 2px !important;
-  }
-
-  /* Ensure sufficient contrast for placeholder text */
-  input::placeholder,
-  textarea::placeholder {
-    color: hsl(var(--muted-foreground)) !important;
-    opacity: 1 !important;
-  }
-
-  /* High contrast mode support - Maintain military aesthetic */
-  @media (prefers-contrast: high) {
-    :root {
-      --background: 88 60% 5%;        /* Very dark military green */
-      --foreground: 43 100% 95%;      /* Very bright gold */
-      --primary: 43 100% 80%;         /* Ultra bright gold */
-      --primary-foreground: 88 60% 5%;
-    }
-
-    .dark {
-      --background: 88 70% 3%;        /* Ultra dark green */
-      --foreground: 43 100% 98%;      /* Pure bright gold */
-      --primary: 43 100% 85%;         /* Maximum brightness gold */
-      --primary-foreground: 88 70% 3%;
-    }
-  }
-
-  /* Reduced motion support for accessibility */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
     }
   }
 }
