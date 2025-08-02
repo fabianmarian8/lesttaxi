@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook, Star, Quote } from "lucide-react";
+import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook, Star, Quote, Plane } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExchangeRateWidget from "@/components/ExchangeRateWidget";
@@ -384,6 +384,50 @@ const Index = () => {
             </p>
             <meta itemProp="bestRating" content="5" />
             <meta itemProp="worstRating" content="1" />
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section */}
+      <section className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-center mb-8 sm:mb-12 lg:mb-16 combat-text">
+            Our Service Areas
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link to="/taxi-bratislava" className="tactical-card group hover-scale transition-all duration-300">
+              <div className="text-center p-4">
+                <MapPin className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <h3 className="text-lg font-bold mb-2 text-[hsl(var(--military-gold))]">Bratislava</h3>
+                <p className="text-sm text-muted-foreground">Complete city taxi services</p>
+              </div>
+            </Link>
+            
+            <Link to="/taxi-stare-mesto" className="tactical-card group hover-scale transition-all duration-300">
+              <div className="text-center p-4">
+                <Car className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <h3 className="text-lg font-bold mb-2 text-[hsl(var(--military-gold))]">Staré Mesto</h3>
+                <p className="text-sm text-muted-foreground">Historic center transport</p>
+              </div>
+            </Link>
+            
+            <Link to="/taxi-budapest-airport" className="tactical-card group hover-scale transition-all duration-300">
+              <div className="text-center p-4">
+                <Plane className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <h3 className="text-lg font-bold mb-2 text-[hsl(var(--military-gold))]">Budapest Airport</h3>
+                <p className="text-sm text-muted-foreground">Ferenc Liszt International</p>
+              </div>
+            </Link>
+            
+            <Link to="/taxi-vienna-airport" className="tactical-card group hover-scale transition-all duration-300">
+              <div className="text-center p-4">
+                <Plane className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <h3 className="text-lg font-bold mb-2 text-[hsl(var(--military-gold))]">Vienna Airport</h3>
+                <p className="text-sm text-muted-foreground">Schwechat International</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
