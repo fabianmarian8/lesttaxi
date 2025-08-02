@@ -18,9 +18,9 @@ const Feedback = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useSEO({
-    title: "Spätná väzba a sťažnosti | Military Taxi Slovakia",
-    description: "Zanechajte nám spätnú väzbu alebo sťažnosť. Cíníme si každú spätnú väzbu a snažíme sa neustále zlepšovať naše služby.",
-    keywords: "spätná väzba, sťažnosť, hodnotenie, military taxi, Slovakia"
+    title: "Feedback and Complaints | Military Taxi Slovakia",
+    description: "Leave us feedback or complaints. We value every feedback and continuously strive to improve our services.",
+    keywords: "feedback, complaint, review, military taxi, Slovakia"
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,10 +32,10 @@ const Feedback = () => {
       // For now, we'll just show a success message
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      toast.success("Vaša spätná väzba bola odoslaná!");
+      toast.success("Your feedback has been sent!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      toast.error("Nastala chyba pri odosielaní. Skúste to prosím znovu.");
+      toast.error("An error occurred while sending. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -56,24 +56,24 @@ const Feedback = () => {
           className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
         >
           <ArrowLeft className="h-4 w-4" />
-          Späť na hlavnú stránku
+          Back to homepage
         </Link>
 
         <div className="max-w-2xl mx-auto">
           <Card className="tactical-card">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] bg-clip-text text-transparent">
-                Spätná väzba a sťažnosti
+                Feedback and Complaints
               </CardTitle>
               <CardDescription className="text-base sm:text-lg text-muted-foreground mt-4">
-                Ak ste boli s vodičom alebo jazdou nespokojní, alebo máte návrh na zlepšenie, napíšte nám. 
-                Cíníme si každú spätnú väzbu.
+                If you were dissatisfied with the driver or ride or have suggestions for improvement, please write to us. 
+                We value every feedback.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Meno</Label>
+                  <Label htmlFor="name">Your Name</Label>
                   <Input
                     id="name"
                     name="name"
@@ -82,12 +82,12 @@ const Feedback = () => {
                     onChange={handleChange}
                     required
                     className="tactical-input"
-                    placeholder="Vaše meno"
+                    placeholder="Your name"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="email">Your Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -96,12 +96,12 @@ const Feedback = () => {
                     onChange={handleChange}
                     required
                     className="tactical-input"
-                    placeholder="vas.email@example.com"
+                    placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Správa</Label>
+                  <Label htmlFor="message">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -109,7 +109,7 @@ const Feedback = () => {
                     onChange={handleChange}
                     required
                     className="tactical-input min-h-[120px]"
-                    placeholder="Opíšte vašu spätnú väzbu alebo sťažnosť..."
+                    placeholder="Describe your feedback or complaint..."
                   />
                 </div>
 
@@ -119,7 +119,7 @@ const Feedback = () => {
                   className="w-full tactical-card bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] hover:scale-105 transition-all duration-300"
                 >
                   <Send className="h-4 w-4 mr-2" />
-                  {isSubmitting ? "Odosielam..." : "Odoslať"}
+                  {isSubmitting ? "Sending..." : "Submit"}
                 </Button>
               </form>
             </CardContent>
