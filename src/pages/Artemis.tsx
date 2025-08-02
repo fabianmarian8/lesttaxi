@@ -16,9 +16,9 @@ const Artemis = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useSEO({
-    title: "Artemis Group - Web Development Services",
-    description: "Professional web development services by Artemis Group. Contact us for modern, responsive websites tailored to your business needs.",
-    keywords: "web development, website design, Artemis Group, Slovakia, professional websites"
+    title: "Artemis Group - Tvorba webových stránok",
+    description: "Profesionálne služby tvorby webových stránok od Artemis Group. Kontaktujte nás pre moderné, responzívne webové stránky šité na mieru vašim potrebám.",
+    keywords: "tvorba webových stránok, dizajn webových stránok, Artemis Group, Slovensko, profesionálne webové stránky"
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,10 +29,10 @@ const Artemis = () => {
       // Here you would typically send the data to your backend
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      toast.success("Your message has been sent! We will contact you soon.");
+      toast.success("Vaša správa bola odoslaná! Čoskoro vás budeme kontaktovať.");
       setFormData({ email: "", message: "" });
     } catch (error) {
-      toast.error("An error occurred while sending. Please try again.");
+      toast.error("Nastala chyba pri odosielaní. Skúste to prosím znova.");
     } finally {
       setIsSubmitting(false);
     }
@@ -54,7 +54,7 @@ const Artemis = () => {
           style={{ fontFamily: 'Courier New, monospace' }}
         >
           <ArrowLeft className="h-4 w-4" />
-          Back to homepage
+          Späť na hlavnú stránku
         </Link>
 
         <div className="max-w-2xl mx-auto">
@@ -67,7 +67,7 @@ const Artemis = () => {
                 </h1>
               </div>
               <p className="text-base sm:text-lg text-green-500" style={{ fontFamily: 'Courier New, monospace' }}>
-                {'>'} Interested in a website like this? Leave us a message.
+                {'>'} Mali by ste záujem o takýto web? Zanechajte nám správu.
               </p>
             </div>
             
@@ -99,7 +99,7 @@ const Artemis = () => {
                   className="text-green-500"
                   style={{ fontFamily: 'Courier New, monospace' }}
                 >
-                  Message:
+                  Správa:
                 </Label>
                 <Textarea
                   id="message"
@@ -109,7 +109,7 @@ const Artemis = () => {
                   required
                   className="bg-black border-green-500 text-green-500 placeholder:text-green-700 focus:border-green-400 min-h-[120px]"
                   style={{ fontFamily: 'Courier New, monospace' }}
-                  placeholder="Describe your project or requirements..."
+                  placeholder="Opíšte váš projekt alebo požiadavky..."
                 />
               </div>
 
@@ -120,7 +120,7 @@ const Artemis = () => {
                 style={{ fontFamily: 'Courier New, monospace' }}
               >
                 <Send className="h-4 w-4 mr-2" />
-                {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
+                {isSubmitting ? "ODOSIELAM..." : "ODOSLAŤ SPRÁVU"}
               </Button>
             </form>
           </div>
