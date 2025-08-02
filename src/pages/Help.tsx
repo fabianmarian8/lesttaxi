@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, MapPin, Heart, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { OptimizedImage } from "@/components/OptimizedImage";
 
 const Help = () => {
   return (
@@ -29,12 +28,10 @@ const Help = () => {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <OptimizedImage 
+            <img 
               src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
               alt="FRANKO TAXI Logo" 
               className="h-10 w-10 rounded-full bg-white p-1"
-              width={40}
-              height={40}
             />
             <h1 className="text-xl font-bold tracking-wider">FRANKO TAXI</h1>
           </div>

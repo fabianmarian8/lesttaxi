@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Plane, Clock, MapPin, Phone, MessageCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
-import { OptimizedImage } from "@/components/OptimizedImage";
 
 const AirportTransfer = () => {
   useSEO({
@@ -38,12 +37,10 @@ const AirportTransfer = () => {
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
-            <OptimizedImage 
+            <img 
               src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
               alt="FRANKO TAXI Logo" 
               className="h-12 w-12 rounded-full bg-white p-1"
-              width={48}
-              height={48}
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>
