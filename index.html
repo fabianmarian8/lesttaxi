@@ -12,24 +12,35 @@
     <meta name="geo.placename" content="Lešť, Slovakia" />
     <meta name="geo.position" content="48.638889;19.134444" />
     <meta name="ICBM" content="48.638889, 19.134444" />
-    <link rel="canonical" href="https://www.lesttaxi.com" />
-    <link rel="alternate" hreflang="sk" href="https://www.lesttaxi.com" />
-    <link rel="alternate" hreflang="en" href="https://www.lesttaxi.com/en" />
+    <link rel="canonical" href="https://lesttaxi.com" />
+    <link rel="alternate" hreflang="sk" href="https://lesttaxi.com" />
+    <link rel="alternate" hreflang="en" href="https://lesttaxi.com/en" />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+    
+    <!-- Optimized font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" /></noscript>
+    
+    <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="//plausible.io" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" as="image">
     <link rel="preload" href="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" as="image">
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/src/index.css" as="style" />
 
     <meta property="og:title" content="LEST TAXI - Military Base Transport & Airport Transfers" />
     <meta property="og:description" content="Professional 24/7 taxi service for US military personnel at Lešť Base. Fixed rates, airport transfers, gate pickup." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.lesttaxi.com" />
+    <meta property="og:url" content="https://lesttaxi.com" />
     <meta property="og:image" content="https://lesttaxi.com/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -37,17 +48,32 @@
     <meta name="twitter:description" content="Professional 24/7 taxi service for US military personnel at Lešť Base" />
     <meta name="twitter:image" content="https://lesttaxi.com/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" />
     
-    <!-- Google Analytics 4 -->
-    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-9HLRQ0J9S3"></script>
+  </head>
+
+  <body>
+    <!-- Hidden form for Netlify Forms -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="phone" />
+      <input type="text" name="pickup" />
+      <input type="text" name="destination" />
+      <input type="date" name="date" />
+      <input type="time" name="time" />
+      <input type="number" name="passengers" />
+      <textarea name="message"></textarea>
+    </form>
+    <div id="root"></div>
+    <script type="module" defer src="/src/main.tsx"></script>
+    
+    <!-- Analytics scripts moved to end for non-blocking load -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-9HLRQ0J9S3');
     </script>
-    
-    <!-- Plausible Analytics (backup) -->
-    <script defer src="https://plausible.io/js/script.js" data-domain="lesttaxi.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HLRQ0J9S3"></script>
+    <script async src="https://plausible.io/js/script.js" data-domain="lesttaxi.com"></script>
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -86,21 +112,5 @@
       }
     }
     </script>
-  </head>
-
-  <body>
-    <!-- Hidden form for Netlify Forms -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="phone" />
-      <input type="text" name="pickup" />
-      <input type="text" name="destination" />
-      <input type="date" name="date" />
-      <input type="time" name="time" />
-      <input type="number" name="passengers" />
-      <textarea name="message"></textarea>
-    </form>
-    <div id="root"></div>
-    <script type="module" defer src="/src/main.tsx"></script>
   </body>
 </html>
