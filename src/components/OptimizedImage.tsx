@@ -17,11 +17,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className,
   priority = false
 }) => {
-  // Only optimize images from assets folder that have WebP versions
+  // Optimize images from assets folder and lovable-uploads with WebP versions
   const isAssetImage = src.includes('/assets/');
+  const isUploadImage = src.includes('/lovable-uploads/');
   
-  if (!isAssetImage) {
-    // For non-asset images (like lovable-uploads), use regular img tag
+  if (!isAssetImage && !isUploadImage) {
+    // For other images, use regular img tag
     return (
       <img
         src={src}
