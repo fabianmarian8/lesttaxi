@@ -7,110 +7,108 @@
 
 @layer base {
   :root {
-    /* WCAG AA Compliant Color Palette - All combinations meet 4.5:1 contrast ratio */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
+    /* WCAG AA Compliant Military Color Palette - Maintains brand aesthetic */
+    --background: 88 45% 8%;          /* Dark military green background */
+    --foreground: 43 85% 85%;         /* Light gold text for contrast */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card: 88 40% 12%;               /* Slightly lighter green for cards */
+    --card-foreground: 43 85% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover: 88 40% 10%;            /* Dark green popover */
+    --popover-foreground: 43 85% 85%;
 
-    --primary: 43 74% 49%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 43 85% 65%;            /* Bright gold for primary elements */
+    --primary-foreground: 88 45% 8%;  /* Dark green text on gold */
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 88 35% 20%;          /* Medium green for secondary */
+    --secondary-foreground: 43 85% 85%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 88 30% 15%;              /* Muted green background */
+    --muted-foreground: 43 60% 70%;   /* Muted gold text */
 
-    --accent: 43 74% 49%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 90% 60%;             /* Accent gold */
+    --accent-foreground: 88 45% 8%;
 
-    /* Accessible Military Theme Colors - High Contrast */
-    --military-gold: 43 74% 49%;
-    --military-green: 88 50% 25%;
-    --military-bronze: 35 85% 35%;
-    --whatsapp-green: 142 70% 35%;
+    /* Military Theme Colors - High Contrast Versions */
+    --military-gold: 43 85% 65%;      /* Bright accessible gold */
+    --military-green: 88 45% 8%;      /* Dark military green */
+    --military-bronze: 35 75% 55%;    /* Accessible bronze */
+    --whatsapp-green: 142 70% 45%;    /* Darker WhatsApp green for contrast */
 
     /* Elite Military Colors - Enhanced Contrast */
-    --elite-gold: 48 100% 45%;
-    --combat-green: 94 50% 20%;
-    --tactical-orange: 25 95% 45%;
+    --elite-gold: 48 90% 70%;         /* Very bright gold */
+    --combat-green: 88 50% 12%;       /* Combat green */
+    --tactical-orange: 25 85% 60%;    /* High contrast orange */
+    --stealth-gray: 0 0% 25%;         /* Accessible gray */
+    --night-ops: 0 0% 20%;            /* Dark operations color */
 
-    /* Accessible UI Colors */
-    --stealth-gray: 0 0% 20%;
-    --night-ops: 0 0% 15%;
-    --military-bronze: 35 85% 35%;
-
-    --destructive: 0 84% 45%;
+    --destructive: 0 75% 55%;         /* High contrast red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 89%;
-    --input: 0 0% 100%;
-    --ring: 43 74% 49%;
+    --border: 88 25% 25%;             /* Visible green border */
+    --input: 88 40% 12%;              /* Dark green input background */
+    --ring: 43 85% 65%;               /* Gold focus ring */
 
     --radius: 0.75rem;
 
-    /* Accessible Gradients */
+    /* Military Gradients - Accessible versions */
     --gradient-hero: linear-gradient(135deg, hsl(var(--military-gold)) 0%, hsl(var(--elite-gold)) 50%, hsl(var(--tactical-orange)) 100%);
     --gradient-combat: linear-gradient(180deg, hsl(var(--combat-green)) 0%, hsl(var(--military-green)) 100%);
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
     
-    /* Accessible Shadows */
-    --shadow-neon: 0 0 20px hsl(var(--military-gold) / 0.3), 0 0 40px hsl(var(--military-gold) / 0.1);
-    --shadow-tactical: 0 8px 32px rgba(0,0,0,0.15), 0 2px 8px rgba(0,0,0,0.1);
-    --shadow-elite: 0 20px 60px rgba(0,0,0,0.2), 0 0 40px hsl(var(--elite-gold) / 0.1);
+    /* Military Shadows */
+    --shadow-neon: 0 0 20px hsl(var(--military-gold) / 0.4), 0 0 40px hsl(var(--military-gold) / 0.2);
+    --shadow-tactical: 0 8px 32px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.3);
+    --shadow-elite: 0 20px 60px rgba(0,0,0,0.7), 0 0 40px hsl(var(--elite-gold) / 0.2);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 9%;
-    --sidebar-primary: 43 74% 49%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 9%;
-    --sidebar-border: 0 0% 89%;
-    --sidebar-ring: 43 74% 49%;
+    --sidebar-background: 88 40% 10%;
+    --sidebar-foreground: 43 85% 85%;
+    --sidebar-primary: 43 85% 65%;
+    --sidebar-primary-foreground: 88 45% 8%;
+    --sidebar-accent: 88 30% 15%;
+    --sidebar-accent-foreground: 43 85% 85%;
+    --sidebar-border: 88 25% 25%;
+    --sidebar-ring: 43 85% 65%;
   }
 
   .dark {
-    --background: 0 0% 9%;
-    --foreground: 0 0% 98%;
+    /* Dark mode: Even darker for true night operations feel */
+    --background: 88 55% 5%;          /* Very dark military green */
+    --foreground: 43 90% 90%;         /* Very bright gold text */
 
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 98%;
+    --card: 88 50% 8%;                /* Dark green cards */
+    --card-foreground: 43 90% 90%;
 
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 88 50% 6%;             /* Very dark popover */
+    --popover-foreground: 43 90% 90%;
 
-    --primary: 43 74% 59%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 43 90% 70%;            /* Very bright gold */
+    --primary-foreground: 88 55% 5%;
 
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 88 40% 15%;          /* Dark secondary green */
+    --secondary-foreground: 43 90% 90%;
 
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 64%;
+    --muted: 88 35% 10%;              /* Very muted green */
+    --muted-foreground: 43 70% 75%;
 
-    --accent: 43 74% 59%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 43 95% 65%;             /* Bright accent gold */
+    --accent-foreground: 88 55% 5%;
 
-    --destructive: 0 84% 55%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 80% 60%;         /* Bright red for visibility */
+    --destructive-foreground: 43 90% 90%;
 
-    --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 43 74% 59%;
+    --border: 88 30% 20%;             /* Visible dark green border */
+    --input: 88 45% 8%;               /* Dark input background */
+    --ring: 43 90% 70%;               /* Bright gold focus ring */
 
-    --sidebar-background: 0 0% 9%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 43 74% 59%;
-    --sidebar-primary-foreground: 0 0% 9%;
-    --sidebar-accent: 0 0% 14%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 14%;
-    --sidebar-ring: 43 74% 59%;
+    --sidebar-background: 88 50% 6%;
+    --sidebar-foreground: 43 90% 90%;
+    --sidebar-primary: 43 90% 70%;
+    --sidebar-primary-foreground: 88 55% 5%;
+    --sidebar-accent: 88 35% 10%;
+    --sidebar-accent-foreground: 43 90% 90%;
+    --sidebar-border: 88 30% 20%;
+    --sidebar-ring: 43 90% 70%;
   }
 }
 
@@ -176,8 +174,9 @@
 
 @layer components {
   .glass-effect {
-    @apply backdrop-blur-xl bg-white/95 border border-gray-200;
-    background: var(--gradient-glass);
+    @apply backdrop-blur-xl border;
+    background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+    border-color: hsl(var(--military-gold) / 0.3);
   }
 
   .text-wrap-mobile {
@@ -194,7 +193,8 @@
   .tactical-card {
     @apply glass-effect rounded-xl p-6 transition-all duration-500;
     box-shadow: var(--shadow-tactical);
-    border: 2px solid hsl(var(--border));
+    border: 1px solid hsl(var(--military-gold) / 0.2);
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
   }
 
   .tactical-card:hover {
@@ -207,8 +207,8 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Fallback for accessibility */
-    color: hsl(var(--primary));
+    /* Accessible fallback maintains military gold */
+    color: hsl(var(--military-gold));
   }
 
   .pulse-glow {
@@ -248,7 +248,7 @@
     }
   }
 
-  /* Accessible color variations with proper contrast */
+  /* Accessible color variations with proper contrast - Military theme */
   .stealth-gray {
     color: hsl(var(--stealth-gray));
   }
@@ -257,15 +257,16 @@
     color: hsl(var(--night-ops));
   }
 
-  /* High contrast variants for important elements */
+  /* High contrast variants for important elements - Military styling */
+  /* High contrast variants for important elements - Military styling */
   .high-contrast-text {
-    color: hsl(var(--foreground));
+    color: hsl(var(--military-gold));
     font-weight: 600;
   }
 
   .high-contrast-bg {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    background-color: hsl(var(--combat-green));
+    color: hsl(var(--military-gold));
   }
 
   /* Ensure all Tailwind text size classes meet WCAG standards */
@@ -288,20 +289,20 @@
     opacity: 1 !important;
   }
 
-  /* High contrast mode support */
+  /* High contrast mode support - Maintain military aesthetic */
   @media (prefers-contrast: high) {
     :root {
-      --background: 0 0% 100%;
-      --foreground: 0 0% 0%;
-      --primary: 0 0% 0%;
-      --primary-foreground: 0 0% 100%;
+      --background: 88 60% 5%;        /* Very dark military green */
+      --foreground: 43 100% 95%;      /* Very bright gold */
+      --primary: 43 100% 80%;         /* Ultra bright gold */
+      --primary-foreground: 88 60% 5%;
     }
 
     .dark {
-      --background: 0 0% 0%;
-      --foreground: 0 0% 100%;
-      --primary: 0 0% 100%;
-      --primary-foreground: 0 0% 0%;
+      --background: 88 70% 3%;        /* Ultra dark green */
+      --foreground: 43 100% 98%;      /* Pure bright gold */
+      --primary: 43 100% 85%;         /* Maximum brightness gold */
+      --primary-foreground: 88 70% 3%;
     }
   }
 

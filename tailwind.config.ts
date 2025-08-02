@@ -70,7 +70,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Accessible military theme colors
+				// Accessible military theme colors - restored brand aesthetic
 				'military-gold': 'hsl(var(--military-gold))',
 				'military-green': 'hsl(var(--military-green))',
 				'military-bronze': 'hsl(var(--military-bronze))',
