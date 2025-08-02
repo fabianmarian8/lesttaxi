@@ -273,6 +273,58 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Local Services Section */}
+      <section className="py-16 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/5 to-[hsl(var(--military-gold))]/5" />
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-center mb-8 sm:mb-12 combat-text">
+            Local Transportation Services
+          </h2>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <Link 
+              to="/taxi-bratislava"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
+                Taxi Bratislava
+              </h3>
+              <p className="text-sm text-muted-foreground">Professional transport to Slovakia's capital</p>
+            </Link>
+            
+            <Link 
+              to="/taxi-stare-mesto"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
+                Staré Mesto Tours
+              </h3>
+              <p className="text-sm text-muted-foreground">Explore Bratislava's historic Old Town</p>
+            </Link>
+            
+            <Link 
+              to="/taxi-budapest-airport"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
+                Budapest Airport
+              </h3>
+              <p className="text-sm text-muted-foreground">Direct transfers to Budapest BUD</p>
+            </Link>
+            
+            <Link 
+              to="/taxi-vienna-airport"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
+                Vienna Airport
+              </h3>
+              <p className="text-sm text-muted-foreground">Premium transfers to Vienna VIE</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Command Footer */}
       <footer className="relative py-12 px-6">
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] opacity-90" />
