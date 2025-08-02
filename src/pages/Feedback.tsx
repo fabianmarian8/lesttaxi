@@ -8,6 +8,7 @@ import { ArrowLeft, Send } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Feedback = () => {
   const [formData, setFormData] = useState({
@@ -28,14 +29,25 @@ const Feedback = () => {
     setIsSubmitting(true);
 
     try {
-      // Here you would typically send the data to your backend
-      // For now, we'll just show a success message
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { data, error } = await supabase.functions.invoke('sendFeedback', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
       
       toast.success("Your feedback has been sent!");
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      toast.error("An error occurred while sending. Please try again.");
+    } catch (error: any) {
+      console.error('Error submitting feedback:', error);
+      let errorMessage = "An error occurred while sending. Please try again.";
+      
+      if (error.message?.includes('domain verification')) {
+        errorMessage = "Email service configuration needed. Please contact support.";
+      }
+      
+      toast.error(errorMessage);
     } finally {
       setIsSubmitting(false);
     }

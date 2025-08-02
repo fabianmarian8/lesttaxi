@@ -7,6 +7,7 @@ import { ArrowLeft, Send, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Artemis = () => {
   const [formData, setFormData] = useState({
@@ -26,13 +27,25 @@ const Artemis = () => {
     setIsSubmitting(true);
 
     try {
-      // Here you would typically send the data to your backend
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { data, error } = await supabase.functions.invoke('sendInquiry', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
       
       toast.success("Vaša správa bola odoslaná! Čoskoro vás budeme kontaktovať.");
       setFormData({ email: "", message: "" });
-    } catch (error) {
-      toast.error("Nastala chyba pri odosielaní. Skúste to prosím znova.");
+    } catch (error: any) {
+      console.error('Error submitting inquiry:', error);
+      let errorMessage = "Nastala chyba pri odosielaní. Skúste to prosím znova.";
+      
+      if (error.message?.includes('domain verification')) {
+        errorMessage = "Problém s konfiguráciou e-mailovej služby. Kontaktujte podporu.";
+      }
+      
+      toast.error(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
