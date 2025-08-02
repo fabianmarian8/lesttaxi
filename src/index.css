@@ -7,38 +7,38 @@
 
 @layer base {
   :root {
-    /* WCAG AA Compliant Military Color Palette - Maintains brand aesthetic */
-    --background: 88 45% 8%;          /* Dark military green background */
-    --foreground: 43 85% 85%;         /* Light gold text for contrast */
+    /* WCAG AA Compliant Military Color Palette - Balanced Saturation */
+    --background: 88 25% 6%;          /* Deep military green background */
+    --foreground: 43 40% 85%;         /* Soft gold text for contrast */
 
-    --card: 88 40% 12%;               /* Slightly lighter green for cards */
-    --card-foreground: 43 85% 85%;
+    --card: 88 20% 10%;               /* Subtle green for cards */
+    --card-foreground: 43 40% 85%;
 
-    --popover: 88 40% 10%;            /* Dark green popover */
-    --popover-foreground: 43 85% 85%;
+    --popover: 88 25% 8%;             /* Dark green popover */
+    --popover-foreground: 43 40% 85%;
 
-    --primary: 43 85% 65%;            /* Bright gold for primary elements */
-    --primary-foreground: 88 45% 8%;  /* Dark green text on gold */
+    --primary: 43 45% 60%;            /* Balanced gold for primary elements */
+    --primary-foreground: 88 25% 6%;  /* Dark green text on gold */
 
-    --secondary: 88 35% 20%;          /* Medium green for secondary */
-    --secondary-foreground: 43 85% 85%;
+    --secondary: 88 20% 18%;          /* Muted green for secondary */
+    --secondary-foreground: 43 40% 85%;
 
-    --muted: 88 30% 15%;              /* Muted green background */
-    --muted-foreground: 43 60% 70%;   /* Muted gold text */
+    --muted: 88 15% 13%;              /* Very muted green background */
+    --muted-foreground: 43 30% 70%;   /* Soft gold text */
 
-    --accent: 43 90% 60%;             /* Accent gold */
-    --accent-foreground: 88 45% 8%;
+    --accent: 43 50% 55%;             /* Subtle accent gold */
+    --accent-foreground: 88 25% 6%;
 
-    /* Military Theme Colors - High Contrast Versions */
-    --military-gold: 43 85% 65%;      /* Bright accessible gold */
-    --military-green: 88 45% 8%;      /* Dark military green */
-    --military-bronze: 35 75% 55%;    /* Accessible bronze */
-    --whatsapp-green: 142 70% 45%;    /* Darker WhatsApp green for contrast */
+    /* Military Theme Colors - Balanced Saturation */
+    --military-gold: 43 45% 60%;      /* Balanced accessible gold */
+    --military-green: 88 25% 6%;      /* Deep military green */
+    --military-bronze: 35 35% 50%;    /* Muted bronze */
+    --whatsapp-green: 142 40% 40%;    /* Balanced WhatsApp green */
 
-    /* Elite Military Colors - Enhanced Contrast */
-    --elite-gold: 48 90% 70%;         /* Very bright gold */
-    --combat-green: 88 50% 12%;       /* Combat green */
-    --tactical-orange: 25 85% 60%;    /* High contrast orange */
+    /* Elite Military Colors - Reduced Saturation */
+    --elite-gold: 48 50% 65%;         /* Toned down gold */
+    --combat-green: 88 25% 10%;       /* Subtle combat green */
+    --tactical-orange: 25 45% 55%;    /* Balanced orange */
     --stealth-gray: 0 0% 25%;         /* Accessible gray */
     --night-ops: 0 0% 20%;            /* Dark operations color */
 
