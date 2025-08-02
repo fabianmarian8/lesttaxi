@@ -269,6 +269,15 @@
     color: hsl(var(--military-gold));
   }
 
+  /* Hover scale utility for interactive elements */
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
   /* Ensure all Tailwind text size classes meet WCAG standards */
   .text-xs { font-size: 16px !important; }
   .text-sm { font-size: 16px !important; }

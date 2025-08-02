@@ -307,7 +307,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Review 1 */}
-            <div className="tactical-card group" itemScope itemType="https://schema.org/Review">
+            <div className="tactical-card group hover-scale animate-fade-in" itemScope itemType="https://schema.org/Review">
               <div className="flex items-center mb-4">
                 <div className="flex items-center gap-1 mr-4">
                   {[...Array(5)].map((_, i) => (
@@ -338,7 +338,7 @@ const Index = () => {
             </div>
 
             {/* Review 2 */}
-            <div className="tactical-card group" itemScope itemType="https://schema.org/Review">
+            <div className="tactical-card group hover-scale animate-fade-in" itemScope itemType="https://schema.org/Review" style={{ animationDelay: "0.2s" }}>
               <div className="flex items-center mb-4">
                 <div className="flex items-center gap-1 mr-4">
                   {[...Array(5)].map((_, i) => (
