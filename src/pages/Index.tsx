@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook, Star, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExchangeRateWidget from "@/components/ExchangeRateWidget";
@@ -74,6 +74,43 @@ const Index = () => {
           }
         ]
       },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "2",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "US Military Personnel"
+          },
+          "reviewBody": "Great and reliable service. The driver was punctual and professional.",
+          "datePublished": "2024-01-15"
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "American Soldier"
+          },
+          "reviewBody": "Excellent ride, comfortable car and friendly driver. Highly recommended!",
+          "datePublished": "2024-01-20"
+        }
+      ],
       "description": "Professional 24/7 taxi service for US military personnel at Lešť Base Slovakia. Specializing in airport transfers, base transport, and city travel with fixed rates and military protocol understanding."
     }
   });
@@ -256,6 +293,97 @@ const Index = () => {
               </div>
               <span className="text-sm sm:text-base lg:text-lg font-bold text-blue-600 text-center">Facebook</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews Section */}
+      <section className="py-20 px-6 relative" itemScope itemType="https://schema.org/Organization">
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--military-green))]/10 to-[hsl(var(--combat-green))]/10" />
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-center mb-8 sm:mb-12 lg:mb-16 combat-text">
+            What Our Military Customers Say
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Review 1 */}
+            <div className="tactical-card group" itemScope itemType="https://schema.org/Review">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center gap-1 mr-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-[hsl(var(--military-gold))] text-[hsl(var(--military-gold))]" />
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-[hsl(var(--military-gold))]">Google Review</span>
+              </div>
+              
+              <div className="mb-4">
+                <Quote className="h-8 w-8 text-[hsl(var(--military-gold))]/30 mb-2" />
+                <blockquote className="text-lg leading-relaxed text-foreground" itemProp="reviewBody">
+                  "Great and reliable service. The driver was punctual and professional."
+                </blockquote>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div itemProp="author" itemScope itemType="https://schema.org/Person">
+                  <span className="font-semibold text-[hsl(var(--military-gold))]" itemProp="name">US Military Personnel</span>
+                  <p className="text-sm text-muted-foreground">Verified Customer</p>
+                </div>
+                <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+                  <meta itemProp="ratingValue" content="5" />
+                  <meta itemProp="bestRating" content="5" />
+                </div>
+              </div>
+              <meta itemProp="datePublished" content="2024-01-15" />
+            </div>
+
+            {/* Review 2 */}
+            <div className="tactical-card group" itemScope itemType="https://schema.org/Review">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center gap-1 mr-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-[hsl(var(--military-gold))] text-[hsl(var(--military-gold))]" />
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-[hsl(var(--military-gold))]">Google Review</span>
+              </div>
+              
+              <div className="mb-4">
+                <Quote className="h-8 w-8 text-[hsl(var(--military-gold))]/30 mb-2" />
+                <blockquote className="text-lg leading-relaxed text-foreground" itemProp="reviewBody">
+                  "Excellent ride, comfortable car and friendly driver. Highly recommended!"
+                </blockquote>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div itemProp="author" itemScope itemType="https://schema.org/Person">
+                  <span className="font-semibold text-[hsl(var(--military-gold))]" itemProp="name">American Soldier</span>
+                  <p className="text-sm text-muted-foreground">Verified Customer</p>
+                </div>
+                <div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+                  <meta itemProp="ratingValue" content="5" />
+                  <meta itemProp="bestRating" content="5" />
+                </div>
+              </div>
+              <meta itemProp="datePublished" content="2024-01-20" />
+            </div>
+          </div>
+
+          {/* Aggregate Rating Display */}
+          <div className="text-center mt-12" itemScope itemType="https://schema.org/AggregateRating">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 fill-[hsl(var(--military-gold))] text-[hsl(var(--military-gold))]" />
+                ))}
+              </div>
+              <span className="text-2xl font-bold text-[hsl(var(--military-gold))]" itemProp="ratingValue">5.0</span>
+            </div>
+            <p className="text-muted-foreground">
+              Based on <span itemProp="reviewCount">2</span> Google Reviews
+            </p>
+            <meta itemProp="bestRating" content="5" />
+            <meta itemProp="worstRating" content="1" />
           </div>
         </div>
       </section>
