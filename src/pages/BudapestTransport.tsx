@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Clock, DollarSign, Phone, MessageCircle, Car, Shield, Star, Plane } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 const BudapestTransport = () => {
   useSEO({
@@ -119,10 +120,12 @@ const BudapestTransport = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img 
+            <OptimizedImage 
               src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
               alt="FRANKO TAXI Logo" 
               className="h-12 w-auto"
+              width={48}
+              height={48}
             />
             <span className="text-2xl font-bold text-primary">FRANKO TAXI</span>
           </div>

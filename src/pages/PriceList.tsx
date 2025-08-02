@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 const PriceList = () => {
   useSEO({
@@ -37,10 +38,12 @@ const PriceList = () => {
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
-            <img 
+            <OptimizedImage 
               src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
               alt="FRANKO TAXI Logo" 
               className="h-12 w-12 rounded-full bg-white p-1"
+              width={48}
+              height={48}
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>
