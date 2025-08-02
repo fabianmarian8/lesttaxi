@@ -159,7 +159,7 @@ const Index = () => {
       </section>
 
       {/* Elite Services Section */}
-      <section className="py-20 px-6 relative">
+      <section className="py-8 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10" />
         <div className="container mx-auto relative z-10">
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-center mb-8 sm:mb-12 lg:mb-16 combat-text">
