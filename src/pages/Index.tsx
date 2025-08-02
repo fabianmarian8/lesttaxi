@@ -82,14 +82,6 @@ const Index = () => {
     <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Enhanced Military Pattern Background */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-3"
-          style={{
-            backgroundImage: `url('/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png')`,
-            backgroundSize: '150px 150px',
-            backgroundRepeat: 'repeat'
-          }}
-        />
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-[hsl(var(--combat-green))] opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--military-gold))_0%,transparent_70%)] opacity-10" />
       </div>
