@@ -260,6 +260,19 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Feedback Section */}
+      <section className="py-16 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--stealth-gray))] to-[hsl(var(--night-ops))] opacity-95" />
+        <div className="container mx-auto text-center relative z-10">
+          <Link 
+            to="/feedback"
+            className="tactical-card inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
+          >
+            Spätná väzba / Sťažnosť
+          </Link>
+        </div>
+      </section>
+
       {/* Command Footer */}
       <footer className="relative py-12 px-6">
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] opacity-90" />
@@ -268,6 +281,14 @@ const Index = () => {
           <p className="text-sm sm:text-base lg:text-lg font-semibold text-[hsl(var(--military-gold))] tracking-wider">
             © 2024 FRANKO TAXI | Professional Transportation Service
           </p>
+          <div className="mt-4">
+            <Link 
+              to="/artemis" 
+              className="text-xs text-muted-foreground hover:text-[hsl(var(--military-gold))] transition-colors"
+            >
+              Powered by Artemis Group
+            </Link>
+          </div>
         </div>
       </footer>
       
