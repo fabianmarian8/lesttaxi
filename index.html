@@ -53,73 +53,37 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "LEST TAXI",
-      "description": "Professional 24/7 taxi service for US military personnel at Lešť Base",
-      "url": "https://www.lesttaxi.com",
-      "telephone": "+421919040118",
-      "email": "fabianmarian8@gmail.com",
+      "@type": ["TaxiService", "LocalBusiness"],
+      "@id": "https://lesttaxi.com/#taxi",
+      "name": "Lest Taxi",
+      "description": "Lokálna taxi služba v Pliesovciach a okolí",
+      "url": "https://lesttaxi.com/",
+      "telephone": "+421 919 040 118",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "SK",
-        "addressRegion": "Banská Bystrica",
-        "addressLocality": "Lešť"
+        "streetAddress": "Cesta armady 1",
+        "addressLocality": "Pliesovce",
+        "postalCode": "96263",
+        "addressCountry": "SK"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 48.638889,
-        "longitude": 19.134444
+        "latitude": 48.42,
+        "longitude": 19.17
       },
-      "openingHours": "Mo-Su 00:00-23:59",
-      "priceRange": "€€",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Taxi Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Airport Transfer",
-              "description": "Professional airport transfer service to major airports"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Base Transport",
-              "description": "Specialized transport for military personnel"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "City Transport",
-              "description": "Urban transportation across Slovakia"
-            }
-          }
-        ]
-      },
-      "areaServed": [
+      "openingHoursSpecification": [
         {
-          "@type": "City",
-          "name": "Lešť"
-        },
-        {
-          "@type": "City", 
-          "name": "Sliač"
-        },
-        {
-          "@type": "City",
-          "name": "Zvolen"
-        },
-        {
-          "@type": "City",
-          "name": "Banská Bystrica"
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "24:00"
         }
-      ]
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "2"
+      }
     }
     </script>
   </head>
