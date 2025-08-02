@@ -32,7 +32,7 @@ const NotFound = () => {
         <div className="text-center max-w-2xl mx-auto">
           {/* Logo */}
           <OptimizedImage 
-            src="/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.png" 
+            src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
             alt="LEST TAXI Logo" 
             width={96}
             height={96}

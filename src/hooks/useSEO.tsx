@@ -14,7 +14,7 @@ export const useSEO = ({
   description, 
   keywords, 
   canonical, 
-  ogImage = "https://www.lesttaxi.com/lovable-uploads/e5f860de-9887-4ae3-a77f-12fbc6f9c851.png",
+  ogImage = "https://www.lesttaxi.com/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png",
   jsonLd 
 }: SEOProps) => {
   useEffect(() => {
