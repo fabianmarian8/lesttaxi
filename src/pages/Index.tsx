@@ -123,7 +123,7 @@ const Index = () => {
                 Professional Transportation Service for American Military Personnel
               </p>
               <p className="text-xs sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8 leading-relaxed break-words">
-                🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🛍️ Food delivery
+                🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🥡 Food delivery
               </p>
               <div className="flex gap-3 sm:gap-4 lg:gap-6 flex-wrap justify-center sm:justify-start">
                 <a 
