@@ -117,7 +117,7 @@ const Index = () => {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="text-center sm:text-left slide-up w-full">
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words" itemProp="name">
-                Professional Taxi Service for US Military at Lešť Base Slovakia
+                Professional Taxi Service for US Military at Lest Base Slovakia
               </h1>
               <p className="text-sm sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium break-words">
                 Professional Transportation Service for American Military Personnel
@@ -149,7 +149,7 @@ const Index = () => {
             <div className="flex justify-center lg:justify-center">
               <OptimizedImage 
                 src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" 
-                alt="Professional taxi vehicle for military transport at Lešť Base" 
+                alt="Professional taxi vehicle for military transport at Lest Base" 
                 className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
                 width={400}
                 height={300}
