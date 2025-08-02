@@ -6,6 +6,8 @@ import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+
+
 const Index = () => {
   useSEO({
     title: "LEST TAXI - Military Taxi & Airport Transfer Slovakia",
@@ -45,40 +47,49 @@ const Index = () => {
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Military Transportation Services",
-        "itemListElement": [{
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Airport Transfer Service",
-            "description": "Professional airport transfers from Lešť Base to Budapest, Vienna, and Bratislava airports"
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Airport Transfer Service",
+              "description": "Professional airport transfers from Lešť Base to Budapest, Vienna, and Bratislava airports"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Military Base Transport",
+              "description": "Specialized transportation for US military personnel at Lešť Base"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "City Transport Slovakia",
+              "description": "Urban transportation to Slovak cities and shopping centers"
+            }
           }
-        }, {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Military Base Transport",
-            "description": "Specialized transportation for US military personnel at Lešť Base"
-          }
-        }, {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "City Transport Slovakia",
-            "description": "Urban transportation to Slovak cities and shopping centers"
-          }
-        }]
+        ]
       },
       "description": "Professional 24/7 taxi service for US military personnel at Lešť Base Slovakia. Specializing in airport transfers, base transport, and city travel with fixed rates and military protocol understanding."
     }
   });
-  return <main className="min-h-screen bg-background relative overflow-hidden">
+
+  return (
+    <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Enhanced Military Pattern Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-3" style={{
-        backgroundImage: `url('/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png')`,
-        backgroundSize: '150px 150px',
-        backgroundRepeat: 'repeat'
-      }} />
+        <div 
+          className="absolute inset-0 opacity-3"
+          style={{
+            backgroundImage: `url('/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png')`,
+            backgroundSize: '150px 150px',
+            backgroundRepeat: 'repeat'
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-[hsl(var(--combat-green))] opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--military-gold))_0%,transparent_70%)] opacity-10" />
       </div>
@@ -86,7 +97,14 @@ const Index = () => {
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
-              <OptimizedImage src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" alt="LEST TAXI Logo - Professional Military Taxi Service Slovakia" className="h-20 w-20 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30 pulse-glow" width={80} height={80} priority={true} />
+              <OptimizedImage 
+                src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+                alt="LEST TAXI Logo - Professional Military Taxi Service Slovakia" 
+                className="h-20 w-20 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30 pulse-glow"
+                width={80}
+                height={80}
+                priority={true}
+              />
           
           <div className="flex items-center space-x-4">
             <ExchangeRateWidget />
@@ -115,18 +133,37 @@ const Index = () => {
                 🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🍕 Food delivery
               </p>
               <div className="flex gap-4 sm:gap-6 flex-wrap">
-                <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow">
+                <a 
+                  href="https://wa.me/421919040118"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => window.gtag?.('event', 'whatsapp_click')}
+                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
+                >
                   <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
                   Book on WhatsApp
                 </a>
-                <a href="tel:+421919040118" onClick={() => window.gtag?.('event', 'call_now_click')} className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300">
+                <a 
+                  href="tel:+421919040118"
+                  onClick={() => window.gtag?.('event', 'call_now_click')}
+                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
+                >
                   <Phone className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
                   Direct Call
                 </a>
               </div>
             </div>
             <div className="floating">
-              
+              <div className="tactical-card p-4">
+                <OptimizedImage 
+                  src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
+                  alt="LEST TAXI professional military taxi service at Lešť Base Slovakia - airport transfers and base transport" 
+                  className="rounded-xl w-full shadow-2xl"
+                  width={600}
+                  height={400}
+                  priority={true}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -177,25 +214,43 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-6">
-            <a href="tel:+421919040118" onClick={() => window.gtag?.('event', 'call_now_click')} className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
+            <a 
+              href="tel:+421919040118"
+              onClick={() => window.gtag?.('event', 'call_now_click')}
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
+            >
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Phone className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-black" />
               </div>
               <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--military-gold))] text-center">Call Now</span>
             </a>
-            <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
+            <a 
+              href="https://wa.me/421919040118"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => window.gtag?.('event', 'whatsapp_click')}
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
+            >
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
               <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--whatsapp-green))] text-center">WhatsApp</span>
             </a>
-            <a href="mailto:fabianmarian8@gmail.com" className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
+            <a 
+              href="mailto:fabianmarian8@gmail.com"
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
+            >
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Mail className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
               <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--tactical-orange))] text-center">Email</span>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100090644550474" target="_blank" rel="noopener noreferrer" className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
+            <a 
+              href="https://www.facebook.com/profile.php?id=100090644550474"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]"
+            >
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Facebook className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
@@ -209,7 +264,10 @@ const Index = () => {
       <section className="py-16 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--stealth-gray))] to-[hsl(var(--night-ops))] opacity-95" />
         <div className="container mx-auto text-center relative z-10">
-          <Link to="/feedback" className="tactical-card inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-orange-700 text-white hover:bg-orange-800 hover:scale-110 transition-all duration-300">
+          <Link 
+            to="/feedback"
+            className="tactical-card inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-orange-700 text-white hover:bg-orange-800 hover:scale-110 transition-all duration-300"
+          >
             Feedback / Complaint
           </Link>
         </div>
@@ -224,28 +282,40 @@ const Index = () => {
           </h2>
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <Link to="/taxi-bratislava" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
+            <Link 
+              to="/taxi-bratislava"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
               <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Taxi Bratislava
               </h3>
               <p className="text-sm text-muted-foreground">Professional transport to Slovakia's capital</p>
             </Link>
             
-            <Link to="/taxi-stare-mesto" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
+            <Link 
+              to="/taxi-stare-mesto"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
               <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Staré Mesto Tours
               </h3>
               <p className="text-sm text-muted-foreground">Explore Bratislava's historic Old Town</p>
             </Link>
             
-            <Link to="/taxi-budapest-airport" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
+            <Link 
+              to="/taxi-budapest-airport"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
               <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Budapest Airport
               </h3>
               <p className="text-sm text-muted-foreground">Direct transfers to Budapest BUD</p>
             </Link>
             
-            <Link to="/taxi-vienna-airport" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
+            <Link 
+              to="/taxi-vienna-airport"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
               <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Vienna Airport
               </h3>
@@ -264,7 +334,10 @@ const Index = () => {
             © 2024 FRANKO TAXI | Professional Transportation Service
           </p>
           <div className="mt-4">
-            <Link to="/artemis" className="text-xs text-muted-foreground hover:text-[hsl(var(--military-gold))] transition-colors">
+            <Link 
+              to="/artemis" 
+              className="text-xs text-muted-foreground hover:text-[hsl(var(--military-gold))] transition-colors"
+            >
               Powered by Artemis Group
             </Link>
           </div>
@@ -272,6 +345,8 @@ const Index = () => {
       </footer>
       
       <FloatingWhatsApp />
-    </main>;
+    </main>
+  );
 };
+
 export default Index;
