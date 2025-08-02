@@ -183,7 +183,7 @@ const Index = () => {
                 <a 
                   href="tel:+421919040118"
                   onClick={() => window.gtag?.('event', 'call_now_click')}
-                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
+                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-[hsl(var(--call-orange))] text-white hover:bg-[hsl(var(--call-orange))]/90 hover:scale-110 transition-all duration-300"
                 >
                   <Phone className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
                   Direct Call

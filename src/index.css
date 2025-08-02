@@ -29,11 +29,12 @@
     --accent: 43 50% 55%;             /* Subtle accent gold */
     --accent-foreground: 88 25% 6%;
 
-    /* Military Theme Colors - Balanced Saturation */
+    /* Military Theme Colors - Vibrant Accents */
     --military-gold: 43 45% 60%;      /* Balanced accessible gold */
     --military-green: 88 25% 6%;      /* Deep military green */
     --military-bronze: 35 35% 50%;    /* Muted bronze */
-    --whatsapp-green: 142 40% 40%;    /* Balanced WhatsApp green */
+    --whatsapp-green: 145 85% 47%;    /* Bright WhatsApp green #25D366 */
+    --call-orange: 38 100% 60%;       /* Bright call button orange #FFA500 */
 
     /* Elite Military Colors - Reduced Saturation */
     --elite-gold: 48 50% 65%;         /* Toned down gold */
