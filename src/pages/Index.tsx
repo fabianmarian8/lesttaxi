@@ -112,44 +112,44 @@ const Index = () => {
       </header>
 
       {/* Enhanced Hero Section */}
-      <section className="relative py-8 sm:py-12 md:py-16 lg:py-32 px-4 sm:px-6">
-        <div className="container mx-auto relative z-10">
+      <section className="relative py-6 sm:py-12 md:py-16 lg:py-32 px-3 sm:px-6 overflow-hidden">
+        <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
-            <div className="text-left slide-up">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words hyphens-auto" itemProp="name">
+            <div className="text-center sm:text-left slide-up w-full">
+              <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words" itemProp="name">
                 Professional Taxi Service for US Military at Lešť Base Slovakia
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium">
+              <p className="text-sm sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium break-words">
                 Professional Transportation Service for American Military Personnel
               </p>
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8 leading-relaxed break-words">
+              <p className="text-xs sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8 leading-relaxed break-words">
                 🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🍕 Food delivery
               </p>
-              <div className="flex gap-3 sm:gap-4 lg:gap-6 flex-wrap">
+              <div className="flex gap-3 sm:gap-4 lg:gap-6 flex-wrap justify-center sm:justify-start">
                 <a 
                   href="https://wa.me/421919040118"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => window.gtag?.('event', 'whatsapp_click')}
-                  className="tactical-card px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
+                  className="tactical-card px-3 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-base lg:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
                 >
-                  <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 mr-1 sm:mr-2 lg:mr-3 inline" />
+                  <MessageCircle className="h-3 w-3 sm:h-5 sm:w-5 lg:h-6 lg:w-6 mr-1 sm:mr-2 lg:mr-3 inline" />
                   <span className="hidden sm:inline">Book on </span>WhatsApp
                 </a>
                 <a 
                   href="tel:+421919040118"
                   onClick={() => window.gtag?.('event', 'call_now_click')}
-                  className="tactical-card px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
+                  className="tactical-card px-3 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
                 >
-                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 mr-1 sm:mr-2 lg:mr-3 inline" />
+                  <Phone className="h-3 w-3 sm:h-5 sm:w-5 lg:h-6 lg:w-6 mr-1 sm:mr-2 lg:mr-3 inline" />
                   <span className="hidden sm:inline">Direct </span>Call
                 </a>
               </div>
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8 flex justify-center sm:justify-start">
                 <OptimizedImage 
                   src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" 
                   alt="Professional taxi vehicle for military transport at Lešť Base" 
-                  className="rounded-xl max-w-md mx-auto shadow-2xl"
+                  className="rounded-xl w-full max-w-xs sm:max-w-md shadow-2xl"
                   width={400}
                   height={300}
                 />
