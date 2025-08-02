@@ -87,23 +87,24 @@ const Index = () => {
       </div>
       
       {/* Enhanced Header with Glass Effect */}
-      <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
+      <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
               <OptimizedImage 
                 src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
                 alt="LEST TAXI Logo - Professional Military Taxi Service Slovakia" 
-                className="h-20 w-20 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30 pulse-glow"
+                className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full bg-white/10 p-1 sm:p-2 backdrop-blur-sm border border-white/30 pulse-glow"
                 width={80}
                 height={80}
                 priority={true}
               />
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <ExchangeRateWidget />
             <Link to="/help">
-              <button className="glass-effect px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 neon-glow bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
-                <HelpCircle className="h-4 w-4 mr-2 inline" />
-                Need help?
+              <button className="glass-effect px-2 py-1 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 neon-glow bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
+                <HelpCircle className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 inline" />
+                <span className="hidden sm:inline">Need help?</span>
+                <span className="sm:hidden">Help</span>
               </button>
             </Link>
           </div>
@@ -111,37 +112,37 @@ const Index = () => {
       </header>
 
       {/* Enhanced Hero Section */}
-      <section className="relative py-12 sm:py-16 lg:py-32 px-6">
+      <section className="relative py-8 sm:py-12 md:py-16 lg:py-32 px-4 sm:px-6">
         <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="text-left slide-up">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 lg:mb-8 combat-text leading-tight break-words" itemProp="name">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words hyphens-auto" itemProp="name">
                 Professional Taxi Service for US Military at Lešť Base Slovakia
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-foreground/90 mb-4 sm:mb-6 font-medium">
+              <p className="text-base sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium">
                 Professional Transportation Service for American Military Personnel
               </p>
-              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8 leading-relaxed break-words">
                 🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🍕 Food delivery
               </p>
-              <div className="flex gap-4 sm:gap-6 flex-wrap">
+              <div className="flex gap-3 sm:gap-4 lg:gap-6 flex-wrap">
                 <a 
                   href="https://wa.me/421919040118"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => window.gtag?.('event', 'whatsapp_click')}
-                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
+                  className="tactical-card px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow"
                 >
-                  <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
-                  Book on WhatsApp
+                  <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 mr-1 sm:mr-2 lg:mr-3 inline" />
+                  <span className="hidden sm:inline">Book on </span>WhatsApp
                 </a>
                 <a 
                   href="tel:+421919040118"
                   onClick={() => window.gtag?.('event', 'call_now_click')}
-                  className="tactical-card px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
+                  className="tactical-card px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
                 >
-                  <Phone className="h-5 w-5 sm:h-6 sm:w-6 mr-2 sm:mr-3 inline" />
-                  Direct Call
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 mr-1 sm:mr-2 lg:mr-3 inline" />
+                  <span className="hidden sm:inline">Direct </span>Call
                 </a>
               </div>
               <div className="mt-8">
