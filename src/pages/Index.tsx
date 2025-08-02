@@ -114,8 +114,8 @@ const Index = () => {
       {/* Enhanced Hero Section */}
       <section className="relative py-6 sm:py-12 md:py-16 lg:py-32 px-3 sm:px-6 overflow-hidden">
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
-            <div className="text-center sm:text-left slide-up w-full">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center justify-center lg:justify-between">
+            <div className="text-center sm:text-left lg:text-left slide-up w-full lg:mx-0 mx-auto lg:max-w-none max-w-lg">
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words" itemProp="name">
                 Professional Taxi Service for US Military at Lešť Base Slovakia
               </h1>
