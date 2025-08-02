@@ -156,7 +156,7 @@ const Index = () => {
             <div className="floating">
               <div className="tactical-card p-4">
                 <OptimizedImage 
-                  src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
+                  src="/lovable-uploads/e5f860de-9887-4ae3-a77f-12fbc6f9c851.png" 
                   alt="LEST TAXI professional military taxi service at Lešť Base Slovakia - airport transfers and base transport" 
                   className="rounded-xl w-full shadow-2xl"
                   width={600}
