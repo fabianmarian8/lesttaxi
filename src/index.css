@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Enhanced Color Palette */
-    --background: 8 8% 7%;
+    --background: 0 0% 0%;
     --foreground: 43 96% 90%;
 
     --card: 12 10% 12%;
