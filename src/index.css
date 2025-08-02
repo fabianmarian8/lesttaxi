@@ -7,39 +7,39 @@
 
 @layer base {
   :root {
-    /* WCAG AA Compliant Military Color Palette - Vibrant and Rich */
-    --background: 88 35% 6%;          /* Rich military green background */
-    --foreground: 43 80% 85%;         /* Vibrant gold text for contrast */
+    /* WCAG AA Compliant Military Color Palette - Balanced */
+    --background: 88 20% 8%;          /* Dark military green background */
+    --foreground: 43 50% 85%;         /* Readable gold text */
 
-    --card: 88 30% 10%;               /* Rich green for cards */
-    --card-foreground: 43 80% 85%;
+    --card: 88 20% 12%;               /* Subtle green for cards */
+    --card-foreground: 43 50% 85%;
 
-    --popover: 88 35% 8%;             /* Rich dark green popover */
-    --popover-foreground: 43 80% 85%;
+    --popover: 88 20% 10%;            /* Dark green popover */
+    --popover-foreground: 43 50% 85%;
 
-    --primary: 43 85% 65%;            /* Vibrant gold for primary elements */
-    --primary-foreground: 88 35% 6%;  /* Rich green text on gold */
+    --primary: 43 65% 60%;            /* Balanced gold for primary elements */
+    --primary-foreground: 88 20% 8%;  /* Dark green text on gold */
 
-    --secondary: 88 30% 18%;          /* Rich green for secondary */
-    --secondary-foreground: 43 80% 85%;
+    --secondary: 88 20% 18%;          /* Muted green for secondary */
+    --secondary-foreground: 43 50% 85%;
 
-    --muted: 88 25% 13%;              /* Rich muted green background */
-    --muted-foreground: 43 70% 75%;   /* Vibrant gold text */
+    --muted: 88 15% 15%;              /* Muted green background */
+    --muted-foreground: 43 40% 75%;   /* Soft gold text */
 
-    --accent: 43 90% 60%;             /* Vibrant accent gold */
-    --accent-foreground: 88 35% 6%;
+    --accent: 43 70% 55%;             /* Balanced accent gold */
+    --accent-foreground: 88 20% 8%;
 
-    /* Military Theme Colors - Vibrant and Rich */
-    --military-gold: 43 85% 65%;      /* Vibrant military gold */
-    --military-green: 88 35% 6%;      /* Rich military green */
-    --military-bronze: 35 75% 55%;    /* Rich bronze */
+    /* Military Theme Colors - Balanced */
+    --military-gold: 43 65% 60%;      /* Balanced military gold */
+    --military-green: 88 20% 8%;      /* Dark military green */
+    --military-bronze: 35 60% 50%;    /* Balanced bronze */
     --whatsapp-green: 145 85% 47%;    /* Bright WhatsApp green #25D366 */
     --call-orange: 38 100% 60%;       /* Bright call button orange #FFA500 */
 
-    /* Elite Military Colors - Rich and Vibrant */
-    --elite-gold: 48 80% 70%;         /* Rich elite gold */
-    --combat-green: 88 35% 10%;       /* Rich combat green */
-    --tactical-orange: 25 75% 60%;    /* Vibrant orange */
+    /* Elite Military Colors - Balanced */
+    --elite-gold: 48 70% 65%;         /* Balanced elite gold */
+    --combat-green: 88 20% 12%;       /* Balanced combat green */
+    --tactical-orange: 25 65% 55%;    /* Balanced orange */
     --stealth-gray: 0 0% 25%;         /* Accessible gray */
     --night-ops: 0 0% 20%;            /* Dark operations color */
 
