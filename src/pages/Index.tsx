@@ -152,6 +152,15 @@ const Index = () => {
                   Direct Call
                 </a>
               </div>
+              <div className="mt-8">
+                <OptimizedImage 
+                  src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" 
+                  alt="Professional taxi vehicle for military transport at Lešť Base" 
+                  className="rounded-xl max-w-md mx-auto shadow-2xl"
+                  width={400}
+                  height={300}
+                />
+              </div>
             </div>
           </div>
         </div>
