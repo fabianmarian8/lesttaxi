@@ -266,7 +266,7 @@ const Index = () => {
         <div className="container mx-auto text-center relative z-10">
           <Link 
             to="/feedback"
-            className="tactical-card inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black hover:scale-110 transition-all duration-300"
+            className="tactical-card inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-orange-700 text-white hover:bg-orange-800 hover:scale-110 transition-all duration-300"
           >
             Feedback / Complaint
           </Link>
