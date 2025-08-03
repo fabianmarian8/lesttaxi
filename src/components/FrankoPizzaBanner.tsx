@@ -25,29 +25,24 @@ const FrankoPizzaBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div
-      className={`fixed bottom-24 right-4 z-40 cursor-pointer transition-all duration-700 ease-out bg-white rounded-xl shadow-2xl p-2 border-2 border-orange-500 ${
+    <img
+      src="/lovable-uploads/6b139532-be46-4e61-972c-ee47d106909b.png"
+      alt="Franko Pizza delivery"
+      className={`fixed bottom-24 right-4 z-40 cursor-pointer w-20 h-14 object-cover rounded-lg transition-all duration-700 ease-out ${
         shouldHide 
           ? 'transform translate-x-full rotate-45 opacity-0' 
-          : 'transform translate-x-0 rotate-0 opacity-100 hover:scale-105'
+          : 'transform translate-x-0 rotate-0 opacity-100 hover:scale-105 drop-shadow-2xl hover:drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]'
       }`}
       onClick={handleClick}
       style={{
-        animation: shouldHide ? 'none' : 'slideInFromRight 0.6s ease-out'
+        animation: shouldHide ? 'none' : 'slideInFromRight 0.6s ease-out',
+        filter: shouldHide ? 'none' : 'drop-shadow(0 8px 16px rgba(0,0,0,0.2))'
       }}
-    >
-      <div className="relative">
-        <img
-          src="/lovable-uploads/6b139532-be46-4e61-972c-ee47d106909b.png"
-          alt="Franko Pizza delivery"
-          className="w-20 h-14 object-cover rounded-lg"
-          onError={(e) => {
-            console.log('Failed to load banner image');
-            e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="56"><rect width="80" height="56" fill="%23f97316"/><text x="40" y="30" text-anchor="middle" fill="white" font-size="12">Pizza</text></svg>';
-          }}
-        />
-      </div>
-    </div>
+      onError={(e) => {
+        console.log('Failed to load banner image');
+        e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="56"><rect width="80" height="56" fill="%23f97316"/><text x="40" y="30" text-anchor="middle" fill="white" font-size="12">Pizza</text></svg>';
+      }}
+    />
   );
 };
 
