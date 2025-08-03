@@ -10,7 +10,7 @@ const Help = () => {
       <div 
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `url('/src/assets/logo-main.webp')`,
+          backgroundImage: `url('/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png')`,
           backgroundSize: '200px 200px',
           backgroundRepeat: 'repeat'
         }}
@@ -29,7 +29,7 @@ const Help = () => {
           </div>
           <div className="flex items-center gap-4">
             <img 
-              src="/src/assets/logo-main.webp" 
+              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
               alt="LEST TAXI Professional Military Transport Service" 
               className="h-10 w-10 rounded-full bg-white p-1"
             />
