@@ -5,14 +5,14 @@ const FrankoPizzaBanner = () => {
   const [shouldHide, setShouldHide] = useState(false);
 
   useEffect(() => {
-    // After 5 seconds, start hiding animation
+    // After 4 seconds, start hiding animation
     const hideTimer = setTimeout(() => {
       setShouldHide(true);
       // Completely remove after animation
       setTimeout(() => {
         setIsVisible(false);
       }, 800);
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(hideTimer);
   }, []);
@@ -28,9 +28,9 @@ const FrankoPizzaBanner = () => {
     <img
       src="/lovable-uploads/6b139532-be46-4e61-972c-ee47d106909b.png"
       alt="Franko Pizza delivery"
-      className={`fixed top-32 right-24 z-40 cursor-pointer w-20 h-14 object-cover rounded-lg transition-all duration-700 ease-out ${
+      className={`fixed top-32 right-4 z-40 cursor-pointer w-20 h-14 object-cover rounded-lg transition-all duration-700 ease-out ${
         shouldHide 
-          ? 'transform translate-x-full rotate-45 opacity-0' 
+          ? 'transform translate-x-full rotate-[50deg] opacity-0' 
           : 'transform translate-x-0 rotate-0 opacity-100 hover:scale-105 drop-shadow-2xl hover:drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]'
       }`}
       onClick={handleClick}
