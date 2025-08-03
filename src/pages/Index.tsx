@@ -90,7 +90,7 @@ const Index = () => {
       <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
               <OptimizedImage 
-                src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+                src="/lovable-uploads/2ad8f836-e1ce-40fc-9862-88769a6f124f.png"
                 alt="LEST TAXI Logo - Professional Military Taxi Service Slovakia" 
                 className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full bg-white/10 p-1 sm:p-2 backdrop-blur-sm border border-white/30 pulse-glow"
                 width={80}
