@@ -5,14 +5,14 @@ const FrankoPizzaBanner = () => {
   const [shouldHide, setShouldHide] = useState(false);
 
   useEffect(() => {
-    // After 4 seconds, start hiding animation
+    // After 10 seconds, start hiding animation
     const hideTimer = setTimeout(() => {
       setShouldHide(true);
       // Completely remove after animation
       setTimeout(() => {
         setIsVisible(false);
       }, 800);
-    }, 4000);
+    }, 10000);
 
     return () => clearTimeout(hideTimer);
   }, []);
