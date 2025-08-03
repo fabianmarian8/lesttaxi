@@ -110,27 +110,29 @@ const Help = () => {
 
           {/* Standalone Contact Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              variant="whatsapp" 
-              size="lg" 
-              className="text-lg px-8 py-4 bg-green-600 hover:bg-green-700 text-white shadow-2xl"
-              onClick={handleWhatsAppClick}
-              type="button"
+            <a 
+              href="https://wa.me/421919040118"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => window.gtag?.('event', 'whatsapp_click')}
+              className="tactical-card group flex items-center gap-4 p-6 lg:p-8 min-w-[200px]"
             >
-              <MessageCircle className="h-6 w-6 mr-2" />
-              Chat on WhatsApp
-            </Button>
+              <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MessageCircle className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
+              </div>
+              <span className="text-lg lg:text-xl font-bold text-[hsl(var(--whatsapp-green))]">Chat on WhatsApp</span>
+            </a>
 
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black shadow-2xl"
-              onClick={handlePhoneClick}
-              type="button"
+            <a 
+              href="tel:+421919040118"
+              onClick={() => window.gtag?.('event', 'call_now_click')}
+              className="tactical-card group flex items-center gap-4 p-6 lg:p-8 min-w-[200px]"
             >
-              <Phone className="h-6 w-6 mr-2" />
-              Call +421 919 040 118
-            </Button>
+              <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Phone className="h-6 w-6 lg:h-8 lg:w-8 text-black" />
+              </div>
+              <span className="text-lg lg:text-xl font-bold text-[hsl(var(--military-gold))]">Call +421 919 040 118</span>
+            </a>
           </div>
 
           <p className="text-center text-gray-300 mt-8">
