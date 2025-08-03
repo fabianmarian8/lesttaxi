@@ -5,14 +5,14 @@ const FrankoPizzaBanner = () => {
   const [shouldHide, setShouldHide] = useState(false);
 
   useEffect(() => {
-    // After 3 seconds, start hiding animation
+    // After 5 seconds, start hiding animation
     const hideTimer = setTimeout(() => {
       setShouldHide(true);
       // Completely remove after animation
       setTimeout(() => {
         setIsVisible(false);
       }, 800);
-    }, 3000);
+    }, 5000);
 
     return () => clearTimeout(hideTimer);
   }, []);
@@ -46,9 +46,6 @@ const FrankoPizzaBanner = () => {
             e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="56"><rect width="80" height="56" fill="%23f97316"/><text x="40" y="30" text-anchor="middle" fill="white" font-size="12">Pizza</text></svg>';
           }}
         />
-        <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
-          !
-        </div>
       </div>
     </div>
   );
