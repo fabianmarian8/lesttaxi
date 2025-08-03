@@ -1,21 +1,31 @@
 import { useState, useEffect } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const FrankoPizzaBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [shouldHide, setShouldHide] = useState(false);
+  const [showPermanentPartial, setShowPermanentPartial] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    // After 10 seconds, start hiding animation
+    // Mobile: 5 seconds, Desktop: 10 seconds
+    const duration = isMobile ? 5000 : 10000;
+    
     const hideTimer = setTimeout(() => {
       setShouldHide(true);
-      // Completely remove after animation
+      // After hide animation, show permanent partial on mobile
       setTimeout(() => {
-        setIsVisible(false);
+        if (isMobile) {
+          setShowPermanentPartial(true);
+          setShouldHide(false);
+        } else {
+          setIsVisible(false);
+        }
       }, 800);
-    }, 10000);
+    }, duration);
 
     return () => clearTimeout(hideTimer);
-  }, []);
+  }, [isMobile]);
 
   const handleClick = () => {
     window.gtag?.('event', 'franko_pizza_banner_click');
@@ -24,18 +34,31 @@ const FrankoPizzaBanner = () => {
 
   if (!isVisible) return null;
 
+  // Get the appropriate styling based on current state
+  const getClassName = () => {
+    const baseSize = isMobile ? 'w-18 h-12' : 'w-30 h-21'; // 40% smaller on mobile
+    const baseClasses = `fixed top-80 z-40 cursor-pointer object-cover rounded-lg transition-all duration-700 ease-out ${baseSize}`;
+    
+    if (showPermanentPartial) {
+      // Permanently visible, 40% showing from right
+      return `${baseClasses} right-[-60%] opacity-80 hover:right-[-50%] hover:opacity-100`;
+    }
+    
+    if (shouldHide) {
+      return `${baseClasses} right-4 transform translate-x-full rotate-[50deg] opacity-0`;
+    }
+    
+    return `${baseClasses} right-4 transform translate-x-0 rotate-0 opacity-100 hover:scale-105 drop-shadow-2xl hover:drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]`;
+  };
+
   return (
     <img
       src="/lovable-uploads/6b139532-be46-4e61-972c-ee47d106909b.png"
       alt="Franko Pizza delivery"
-      className={`fixed top-80 right-4 z-40 cursor-pointer w-30 h-21 object-cover rounded-lg transition-all duration-700 ease-out ${
-        shouldHide 
-          ? 'transform translate-x-full rotate-[50deg] opacity-0' 
-          : 'transform translate-x-0 rotate-0 opacity-100 hover:scale-105 drop-shadow-2xl hover:drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]'
-      }`}
+      className={getClassName()}
       onClick={handleClick}
       style={{
-        animation: shouldHide ? 'none' : 'slideInFromRight 0.6s ease-out',
+        animation: shouldHide || showPermanentPartial ? 'none' : 'slideInFromRight 0.6s ease-out',
         filter: shouldHide ? 'none' : 'drop-shadow(0 8px 16px rgba(0,0,0,0.2))'
       }}
       onError={(e) => {
