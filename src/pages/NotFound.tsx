@@ -11,7 +11,7 @@ const NotFound = () => {
   useSEO({
     title: "404 - Page Not Found | LEST TAXI",
     description: "Sorry, the page you are looking for does not exist. Return to LEST TAXI homepage for military transport services.",
-    canonical: "https://www.lesttaxi.com/404"
+    canonical: "https://lesttaxi.com/404"
   });
 
   useEffect(() => {
