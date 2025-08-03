@@ -1,27 +1,20 @@
 import { useState, useEffect } from 'react';
 
 const FrankoPizzaBanner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isHiding, setIsHiding] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [shouldHide, setShouldHide] = useState(false);
 
   useEffect(() => {
-    // Show banner after component mounts
-    const showTimer = setTimeout(() => {
-      setIsVisible(true);
-    }, 500);
-
-    // Hide banner after 3 seconds
+    // After 3 seconds, start hiding animation
     const hideTimer = setTimeout(() => {
-      setIsHiding(true);
+      setShouldHide(true);
+      // Completely remove after animation
       setTimeout(() => {
         setIsVisible(false);
-      }, 600); // Wait for animation to complete
-    }, 3500);
+      }, 800);
+    }, 3000);
 
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
-    };
+    return () => clearTimeout(hideTimer);
   }, []);
 
   const handleClick = () => {
@@ -33,27 +26,29 @@ const FrankoPizzaBanner = () => {
 
   return (
     <div
-      className={`fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-40 cursor-pointer transition-all duration-500 ${
-        isHiding ? 'franko-banner-hide' : 'franko-banner-show'
+      className={`fixed bottom-24 right-4 z-40 cursor-pointer transition-all duration-700 ease-out bg-white rounded-xl shadow-2xl p-2 border-2 border-orange-500 ${
+        shouldHide 
+          ? 'transform translate-x-full rotate-45 opacity-0' 
+          : 'transform translate-x-0 rotate-0 opacity-100 hover:scale-105'
       }`}
       onClick={handleClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          handleClick();
-        }
+      style={{
+        animation: shouldHide ? 'none' : 'slideInFromRight 0.6s ease-out'
       }}
-      aria-label="Franko Pizza delivery banner - click to order"
     >
-      <div className="relative group">
+      <div className="relative">
         <img
           src="/lovable-uploads/87d275c5-0f04-4fdc-893b-a932d305c7f0.png"
-          alt="Franko Pizza delivery service"
-          className="w-16 h-12 sm:w-20 sm:h-15 object-cover rounded-lg shadow-2xl group-hover:scale-110 transition-transform duration-300"
-          loading="lazy"
+          alt="Franko Pizza delivery"
+          className="w-20 h-14 object-cover rounded-lg"
+          onError={(e) => {
+            console.log('Failed to load banner image');
+            e.currentTarget.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="56"><rect width="80" height="56" fill="%23f97316"/><text x="40" y="30" text-anchor="middle" fill="white" font-size="12">Pizza</text></svg>';
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg group-hover:from-black/30 transition-all duration-300" />
+        <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+          !
+        </div>
       </div>
     </div>
   );
