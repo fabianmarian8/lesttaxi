@@ -17,11 +17,36 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className,
   priority = false
 }) => {
-  // Only optimize images from assets folder that have WebP versions
+  // Check if WebP version exists for lovable-uploads
+  const isLovableUpload = src.includes('/lovable-uploads/');
   const isAssetImage = src.includes('/assets/');
   
+  if (isLovableUpload) {
+    // For lovable-uploads, try WebP version
+    const webpSrc = src.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+    
+    return (
+      <picture>
+        {/* WebP format for better compression */}
+        <source srcSet={webpSrc} type="image/webp" />
+        
+        {/* Fallback to original format */}
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={className}
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+          fetchPriority={priority ? "high" : "auto"}
+        />
+      </picture>
+    );
+  }
+  
   if (!isAssetImage) {
-    // For non-asset images (like lovable-uploads), use regular img tag
+    // For other non-asset images, use regular img tag
     return (
       <img
         src={src}
