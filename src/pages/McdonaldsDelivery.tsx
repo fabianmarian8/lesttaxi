@@ -17,7 +17,7 @@ const McdonaldsDelivery = () => {
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
-        "telephone": "+421 948 141 414"
+        "telephone": "+421 919 040 118"
       },
       "areaServed": "Lest Military Base, Slovakia",
       "serviceType": "Food Delivery Service",
@@ -67,7 +67,7 @@ const McdonaldsDelivery = () => {
             <span className="text-2xl font-bold text-foreground">TAXI</span>
           </div>
           <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-            <a href="https://wa.me/421948141414" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-4 w-4" />
               WhatsApp
             </a>
@@ -87,15 +87,15 @@ const McdonaldsDelivery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-              <a href="https://wa.me/421948141414?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/421919040118?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Order McDonald's via WhatsApp
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="tel:+421948141414">
+              <a href="tel:+421919040118">
                 <Phone className="mr-2 h-5 w-5" />
-                Call +421 948 141 414
+                Call +421 919 040 118
               </a>
             </Button>
           </div>
@@ -215,7 +215,7 @@ const McdonaldsDelivery = () => {
             Get that taste of home delivered right to your base. Fast, reliable McDonald's delivery service for US military personnel.
           </p>
           <Button size="lg" asChild className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-            <a href="https://wa.me/421948141414?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421919040118?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-5 w-5" />
               Order McDonald's Now
             </a>
