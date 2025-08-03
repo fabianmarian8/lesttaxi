@@ -8,7 +8,7 @@ export const FrankoPizzaBanner = () => {
   };
 
   return (
-    <div className="fixed top-60 right-2 z-30 sm:top-32 sm:right-4">
+    <div className="fixed top-72 right-2 z-30 sm:top-40 sm:right-4">
       <button
         onClick={handleClick}
         className="group transition-all duration-300 hover:scale-105"
