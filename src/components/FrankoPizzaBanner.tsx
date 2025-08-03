@@ -8,7 +8,7 @@ export const FrankoPizzaBanner = () => {
   };
 
   return (
-    <div className="fixed top-16 right-4 z-40">
+    <div className="fixed top-24 right-4 z-30">
       <button
         onClick={handleClick}
         className="group relative overflow-hidden rounded-lg bg-military-900/90 border border-military-700/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -16,7 +16,7 @@ export const FrankoPizzaBanner = () => {
       >
         <div className="p-2">
           <OptimizedImage
-            src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png"
+            src="/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e.png"
             alt="Franko Pizza - Order Now"
             width={80}
             height={60}
