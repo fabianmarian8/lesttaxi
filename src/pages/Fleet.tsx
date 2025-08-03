@@ -68,7 +68,7 @@ const Fleet = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
             <OptimizedImage 
-              src="/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.png" 
+              src="/src/assets/logo-main.webp" 
               alt="LEST TAXI Professional Military Transport Service" 
               className="h-12 w-12 rounded-full bg-white p-1"
               width={48}
