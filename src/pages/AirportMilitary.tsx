@@ -83,7 +83,7 @@ const AirportMilitary = () => {
             <span className="text-2xl font-bold text-foreground">TAXI</span>
           </div>
           <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-            <a href="https://wa.me/421948141414" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-4 w-4" />
               WhatsApp
             </a>
@@ -103,15 +103,15 @@ const AirportMilitary = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-              <a href="https://wa.me/421948141414?text=Hi! I need airport transfer from Lest base." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/421919040118?text=Hi! I need airport transfer from Lest base." target="_blank" rel="noopener noreferrer">
                 <Plane className="mr-2 h-5 w-5" />
                 Book Airport Transfer
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="tel:+421948141414">
+              <a href="tel:+421919040118">
                 <Phone className="mr-2 h-5 w-5" />
-                Call +421 948 141 414
+                Call +421 919 040 118
               </a>
             </Button>
           </div>
@@ -277,7 +277,7 @@ const AirportMilitary = () => {
             safely and on time. Book your military-friendly airport transfer now.
           </p>
           <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-            <a href="https://wa.me/421948141414?text=Hi! I need airport transfer from Lest base." target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/421919040118?text=Hi! I need airport transfer from Lest base." target="_blank" rel="noopener noreferrer">
               <Plane className="mr-2 h-5 w-5" />
               Book Airport Transfer Now
             </a>
