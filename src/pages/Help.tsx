@@ -30,8 +30,8 @@ const Help = () => {
           </div>
           <div className="flex items-center gap-4">
             <OptimizedImage 
-              src="/lovable-uploads/2ad88f36-e1ce-40fc-9062-88769a6f124f.png" 
-              alt="FRANKO TAXI Professional Military Transport Service"
+              src="/lovable-uploads/8d5848ba-5ee0-46b0-b699-8924fd4a0597.png" 
+              alt="US Army FRANKO TAXI Professional Military Transport Service"
               className="h-10 w-10 rounded-full bg-white p-1"
             />
             <h1 className="text-xl font-bold tracking-wider">FRANKO TAXI</h1>

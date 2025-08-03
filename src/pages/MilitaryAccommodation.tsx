@@ -132,8 +132,8 @@ const MilitaryAccommodation = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <OptimizedImage 
-              src="/lovable-uploads/2ad88f36-e1ce-40fc-9062-88769a6f124f.png" 
-              alt="FRANKO TAXI Logo"
+              src="/lovable-uploads/8d5848ba-5ee0-46b0-b699-8924fd4a0597.png" 
+              alt="US Army FRANKO TAXI Logo"
               className="h-12 w-auto"
             />
             <span className="text-2xl font-bold text-primary">FRANKO TAXI</span>

@@ -40,6 +40,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           loading={priority ? "eager" : "lazy"}
           decoding="async"
           fetchPriority={priority ? "high" : "auto"}
+          onError={(e) => {
+            const img = e.target as HTMLImageElement;
+            if (img.src.includes('.webp')) {
+              img.src = src;
+            }
+          }}
         />
       </picture>
     );
@@ -82,6 +88,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         loading={priority ? "eager" : "lazy"}
         decoding="async"
         fetchPriority={priority ? "high" : "auto"}
+        onError={(e) => {
+          const img = e.target as HTMLImageElement;
+          if (img.src.includes('.webp')) {
+            img.src = src;
+          }
+        }}
       />
     </picture>
   );
