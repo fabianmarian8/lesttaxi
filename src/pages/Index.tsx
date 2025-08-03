@@ -90,8 +90,8 @@ const Index = () => {
       <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
               <OptimizedImage 
-                src="/lovable-uploads/logo.webp" 
-                alt="US Army FRANKO TAXI Logo - Professional Military Taxi Service Slovakia"
+                src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+                alt="LEST TAXI Logo - Professional Military Taxi Service Slovakia" 
                 className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full bg-white/10 p-1 sm:p-2 backdrop-blur-sm border border-white/30 pulse-glow"
                 width={80}
                 height={80}
@@ -148,8 +148,8 @@ const Index = () => {
             </div>
             <div className="flex justify-center lg:justify-center">
               <OptimizedImage 
-                src="/lovable-uploads/56f5d610-da24-4683-a4b1-293db14ae7e8.png" 
-                alt="Toyota RAV4 Hybrid - Professional military transport vehicle for Lest Base"
+                src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" 
+                alt="Professional taxi vehicle for military transport at Lest Base" 
                 className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
                 width={400}
                 height={300}

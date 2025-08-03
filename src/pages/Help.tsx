@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, MapPin, Heart, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { OptimizedImage } from "@/components/OptimizedImage";
 
 const Help = () => {
   return (
@@ -11,7 +10,7 @@ const Help = () => {
       <div 
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `url('/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.webp')`,
+          backgroundImage: `url('/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.png')`,
           backgroundSize: '200px 200px',
           backgroundRepeat: 'repeat'
         }}
@@ -29,9 +28,9 @@ const Help = () => {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <OptimizedImage 
-              src="/lovable-uploads/8d5848ba-5ee0-46b0-b699-8924fd4a0597.png" 
-              alt="US Army FRANKO TAXI Professional Military Transport Service"
+            <img 
+              src="/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.png" 
+              alt="LEST TAXI Professional Military Transport Service" 
               className="h-10 w-10 rounded-full bg-white p-1"
             />
             <h1 className="text-xl font-bold tracking-wider">FRANKO TAXI</h1>

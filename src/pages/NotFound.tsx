@@ -32,8 +32,8 @@ const NotFound = () => {
         <div className="text-center max-w-2xl mx-auto">
           {/* Logo */}
           <OptimizedImage 
-            src="/lovable-uploads/logo.webp" 
-            alt="US Army FRANKO TAXI Logo"
+            src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.png" 
+            alt="LEST TAXI Logo" 
             width={96}
             height={96}
             className="h-24 w-24 mx-auto mb-8 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30"

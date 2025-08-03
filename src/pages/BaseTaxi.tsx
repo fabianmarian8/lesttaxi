@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MapPin, Clock, Shield, Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
-import { OptimizedImage } from "@/components/OptimizedImage";
 
 const BaseTaxi = () => {
   useSEO({
@@ -78,7 +77,7 @@ const BaseTaxi = () => {
         <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
           <div className="container mx-auto flex justify-between items-center">
             <Link to="/" className="flex items-center gap-3">
-              <OptimizedImage 
+              <img 
                 src="/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.png" 
                 alt="LEST TAXI Professional Military Transport Service" 
                 className="h-12 w-12 rounded-full bg-white p-1"
