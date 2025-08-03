@@ -51,6 +51,7 @@ const FrankoPizzaBanner = () => {
           src="/lovable-uploads/87d275c5-0f04-4fdc-893b-a932d305c7f0.png"
           alt="Franko Pizza delivery service"
           className="w-16 h-12 sm:w-20 sm:h-15 object-cover rounded-lg shadow-2xl group-hover:scale-110 transition-transform duration-300"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg group-hover:from-black/30 transition-all duration-300" />
       </div>
