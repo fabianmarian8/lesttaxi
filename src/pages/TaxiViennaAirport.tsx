@@ -7,7 +7,7 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 
 const TaxiViennaAirport = () => {
   useSEO({
-    title: "Taxi Vienna Airport - Premium Transfer from Lešť Military Base",
+    title: "Taxi letisko Viedeň – prémiový transfer z Lešť",
     description: "Professional taxi service from Lešť Military Base to Vienna International Airport (VIE). Premium transfers, reliable service, military rates. WhatsApp +421 919 040 118",
     keywords: "taxi Vienna airport, Lešť to Vienna VIE, airport transfer Austria, military taxi Vienna, premium transfers",
     canonical: "https://lesttaxi.com/taxi-vienna-airport",
