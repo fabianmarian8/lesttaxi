@@ -6,6 +6,7 @@ import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
 
 
 const Index = () => {
@@ -85,6 +86,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-[hsl(var(--combat-green))] opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--military-gold))_0%,transparent_70%)] opacity-10" />
       </div>
+      
+      {/* Franko Pizza Banner */}
+      <FrankoPizzaBanner />
       
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
