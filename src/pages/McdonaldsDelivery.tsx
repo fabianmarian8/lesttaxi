@@ -29,9 +29,9 @@ const McdonaldsDelivery = () => {
   });
 
   const mcdonaldsLocations = [
-    { name: "McDonald's Zvolen", distance: "40 km", time: "18 min", address: "Zvolen Shopping Center" },
-    { name: "McDonald's Banská Bystrica", distance: "70 km", time: "30 min", address: "Europa Shopping Center" },
-    { name: "McDonald's Highway A1", distance: "45 km", time: "25 min", address: "Highway Rest Stop" },
+    { name: "McDonald's Zvolen", distance: "40 km", time: "30 min", address: "Zvolen Shopping Center" },
+    { name: "McDonald's Banská Bystrica", distance: "70 km", time: "45 min", address: "Europa Shopping Center" },
+    { name: "McDonald's Highway A1", distance: "45 km", time: "35 min", address: "Highway Rest Stop" },
   ];
 
   const features = [
