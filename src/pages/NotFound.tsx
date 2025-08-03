@@ -32,7 +32,7 @@ const NotFound = () => {
         <div className="text-center max-w-2xl mx-auto">
           {/* Logo */}
           <OptimizedImage 
-            src="/lovable-uploads/8d5848ba-5ee0-46b0-b699-8924fd4a0597.png" 
+            src="/lovable-uploads/logo.webp" 
             alt="US Army FRANKO TAXI Logo"
             width={96}
             height={96}

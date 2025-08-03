@@ -121,7 +121,7 @@ const BudapestTransport = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <OptimizedImage 
-              src="/lovable-uploads/8d5848ba-5ee0-46b0-b699-8924fd4a0597.png" 
+              src="/lovable-uploads/logo.webp" 
               alt="US Army FRANKO TAXI Logo"
               className="h-12 w-auto"
             />
