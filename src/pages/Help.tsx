@@ -11,7 +11,7 @@ const Help = () => {
       <div 
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `url('/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.png')`,
+          backgroundImage: `url('/lovable-uploads/482d3699-3421-4177-9fdd-3c3efbd47138.webp')`,
           backgroundSize: '200px 200px',
           backgroundRepeat: 'repeat'
         }}
