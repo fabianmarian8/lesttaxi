@@ -38,7 +38,7 @@ const FrankoPizzaBanner = () => {
     >
       <div className="relative">
         <img
-          src="/lovable-uploads/87d275c5-0f04-4fdc-893b-a932d305c7f0.png"
+          src="/lovable-uploads/6b139532-be46-4e61-972c-ee47d106909b.png"
           alt="Franko Pizza delivery"
           className="w-20 h-14 object-cover rounded-lg"
           onError={(e) => {
