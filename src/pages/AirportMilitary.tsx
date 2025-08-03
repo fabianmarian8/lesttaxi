@@ -33,7 +33,7 @@ const AirportMilitary = () => {
       name: "Bratislava Airport (BTS)",
       distance: "180 km",
       time: "2h 15min",
-      price: "€120",
+      price: "€220",
       description: "Slovakia's main international airport with budget airlines",
       airlines: ["Ryanair", "Wizz Air", "Austrian Airlines"]
     },
@@ -41,7 +41,7 @@ const AirportMilitary = () => {
       name: "Vienna Airport (VIE)",
       distance: "220 km", 
       time: "2h 45min",
-      price: "€150",
+      price: "€290",
       description: "Major European hub with worldwide connections",
       airlines: ["Austrian Airlines", "Lufthansa", "Emirates", "Turkish Airlines"]
     },
@@ -49,7 +49,7 @@ const AirportMilitary = () => {
       name: "Budapest Airport (BUD)",
       distance: "200 km",
       time: "2h 30min", 
-      price: "€140",
+      price: "€200",
       description: "Great connections to USA and Europe",
       airlines: ["Wizz Air", "Lufthansa", "Turkish Airlines", "Delta (seasonal)"]
     }
