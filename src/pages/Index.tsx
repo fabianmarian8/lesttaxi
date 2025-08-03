@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import FrankoPizzaBanner from "@/components/FrankoPizzaBanner";
 import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
@@ -336,7 +335,6 @@ const Index = () => {
       </footer>
       
       <FloatingWhatsApp />
-      <FrankoPizzaBanner />
     </main>
   );
 };

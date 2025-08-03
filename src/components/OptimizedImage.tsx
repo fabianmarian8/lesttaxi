@@ -31,7 +31,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={className}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        {...(priority ? { fetchPriority: "high" as const } : {})}
+        fetchPriority={priority ? "high" : "auto"}
       />
     );
   }
@@ -56,7 +56,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={className}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        {...(priority ? { fetchPriority: "high" as const } : {})}
+        fetchPriority={priority ? "high" : "auto"}
       />
     </picture>
   );
