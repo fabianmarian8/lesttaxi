@@ -8,7 +8,7 @@ export const FrankoPizzaBanner = () => {
   };
 
   return (
-    <div className="fixed top-24 right-4 z-30">
+    <div className="fixed top-24 right-4 z-30 sm:top-24 sm:right-4 top-40 right-2">{/* Mobile: lower position, Desktop: original position */}
       <button
         onClick={handleClick}
         className="group relative overflow-hidden rounded-lg bg-military-900/90 border border-military-700/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
