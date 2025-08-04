@@ -39,7 +39,7 @@ const FAQ = () => {
     }
   ];
 
-  // JSON-LD structured data for FAQ
+  // Enhanced JSON-LD structured data for FAQ
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -53,11 +53,73 @@ const FAQ = () => {
     }))
   };
 
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lesttaxi.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "FAQ",
+        "item": "https://lesttaxi.com/faq"
+      }
+    ]
+  };
+
+  // LocalBusiness schema for better local SEO
+  const businessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LEST TAXI",
+    "description": "Professional taxi service for military personnel in Slovakia",
+    "telephone": "+421919040118",
+    "url": "https://lesttaxi.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SK",
+      "addressRegion": "Banská Bystrica",
+      "addressLocality": "Lešť"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.7164,
+      "longitude": 19.1494
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "serviceArea": {
+      "@type": "Place",
+      "name": "Slovakia and surrounding countries"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+421919040118",
+        "contactType": "customer support",
+        "availableLanguage": ["English", "Slovak", "German"]
+      }
+    ]
+  };
+
   return (
     <>
       <script 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
       />
       
       <div className="min-h-screen bg-background">

@@ -4,6 +4,32 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, Phone, Plane, Clock, MapPin, Shield, Users, Calendar } from "lucide-react";
 
 const AirportMilitary = () => {
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lesttaxi.com"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Services",
+        "item": "https://lesttaxi.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Airport Transfers",
+        "item": "https://lesttaxi.com/airport-transfer"
+      }
+    ]
+  };
+
   useSEO({
     title: "Military Airport Transfers | LEST TAXI",
     description: "Airport transfers for US soldiers. Bratislava, Vienna, Budapest airports. Military-friendly scheduling for leave and vacation.",
@@ -74,7 +100,13 @@ const AirportMilitary = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      
+      <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -283,8 +315,9 @@ const AirportMilitary = () => {
             </a>
           </Button>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

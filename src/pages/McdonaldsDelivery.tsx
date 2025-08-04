@@ -4,28 +4,68 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MessageCircle, Phone, Clock, MapPin, Shield, Star } from "lucide-react";
 
 const McdonaldsDelivery = () => {
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lesttaxi.com"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Food Delivery",
+        "item": "https://lesttaxi.com/delivery"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "McDonald's Delivery",
+        "item": "https://lesttaxi.com/mcdonalds-delivery"
+      }
+    ]
+  };
+
+  // DeliveryService schema
+  const deliveryServiceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "DeliveryService",
+    "name": "McDonald's Delivery for US Military",
+    "description": "Specialized McDonald's delivery and pickup service for American soldiers at Lest Base Slovakia",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "LEST TAXI",
+      "telephone": "+421 919 040 118",
+      "url": "https://lesttaxi.com"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Lest Military Base, Slovakia"
+    },
+    "serviceType": "Food Delivery Service",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "US Military Personnel"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "45",
+      "priceCurrency": "EUR",
+      "description": "McDonald's delivery service to military base"
+    },
+    "hoursAvailable": "Mo-Su 00:00-23:59"
+  };
+
   useSEO({
     title: "McDonald's Delivery | LEST TAXI",
     description: "McDonald's delivery for US soldiers at Lest Base. 24/7 delivery to base gate. Order your favorites via WhatsApp.",
     keywords: "McDonalds delivery military base, McDonalds pickup Lest, American food Slovakia, US soldiers McDonalds, military base food delivery, McDonalds Zvolen delivery",
     canonical: "https://lesttaxi.com/mcdonalds-delivery",
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "McDonald's Delivery for US Military",
-      "description": "Specialized McDonald's delivery and pickup service for American soldiers at Lest Base Slovakia",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "LEST TAXI",
-        "telephone": "+421 919 040 118"
-      },
-      "areaServed": "Lest Military Base, Slovakia",
-      "serviceType": "Food Delivery Service",
-      "audience": {
-        "@type": "Audience",
-        "audienceType": "US Military Personnel"
-      }
-    }
+    jsonLd: deliveryServiceJsonLd
   });
 
   const mcdonaldsLocations = [
@@ -58,7 +98,13 @@ const McdonaldsDelivery = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      
+      <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -221,8 +267,9 @@ const McdonaldsDelivery = () => {
             </a>
           </Button>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

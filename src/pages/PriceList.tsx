@@ -31,8 +31,99 @@ const PriceList = () => {
     { service: "Waiting One Hour", price: 20, description: "Driver waiting time per hour" },
   ];
 
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lesttaxi.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://lesttaxi.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Price List",
+        "item": "https://lesttaxi.com/price-list"
+      }
+    ]
+  };
+
+  // Service schemas for each destination
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Military Taxi Transport Services",
+    "description": "Professional taxi services for military personnel with transparent pricing",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "LEST TAXI",
+      "telephone": "+421919040118"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Slovakia and Central Europe"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Taxi Service Destinations",
+      "itemListElement": destinations.map(dest => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": `Taxi to ${dest.name}`,
+          "description": `Professional taxi service from Lešť Base to ${dest.name}`
+        },
+        "price": dest.price,
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": dest.price,
+          "priceCurrency": "EUR",
+          "description": `Fixed rate transport to ${dest.name} - ${dest.distance}, approximately ${dest.time}`
+        }
+      }))
+    }
+  };
+
+  // PriceSpecification for main services
+  const priceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "PriceSpecification",
+    "description": "Transparent taxi pricing for military transport services",
+    "priceCurrency": "EUR",
+    "valueAddedTaxIncluded": true,
+    "priceRange": "€20-€290",
+    "eligibleRegion": {
+      "@type": "Place",
+      "name": "Slovakia"
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(priceJsonLd) }}
+      />
+      
+      <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
@@ -240,8 +331,9 @@ const PriceList = () => {
             Get Quote on WhatsApp
           </Button>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 

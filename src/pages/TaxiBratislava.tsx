@@ -6,15 +6,79 @@ import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 
 const TaxiBratislava = () => {
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lesttaxi.com"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Taxi Services",
+        "item": "https://lesttaxi.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Bratislava Taxi",
+        "item": "https://lesttaxi.com/taxi-bratislava"
+      }
+    ]
+  };
+
+  // Service schema for Bratislava route
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Taxi Service to Bratislava",
+    "description": "Professional taxi transport from Lešť Military Base to Bratislava with fixed rates",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "LEST TAXI",
+      "telephone": "+421919040118",
+      "url": "https://lesttaxi.com"
+    },
+    "serviceType": "Taxi Transport",
+    "offers": {
+      "@type": "Offer",
+      "price": "220",
+      "priceCurrency": "EUR",
+      "description": "Fixed rate taxi service from Lešť Base to Bratislava - 235km, 2.5 hours"
+    },
+    "areaServed": [
+      {
+        "@type": "Place",
+        "name": "Lešť Military Base, Slovakia"
+      },
+      {
+        "@type": "Place",
+        "name": "Bratislava, Slovakia"
+      }
+    ]
+  };
+
   useSEO({
     title: "Bratislava Taxi | LEST TAXI",
     description: "Professional taxi from Lešť Base to Bratislava. Fixed rates, 24/7 service. Book via WhatsApp +421 919 040 118.",
     keywords: "taxi Bratislava, Lešť to Bratislava, military taxi Slovakia, airport transfer Bratislava, professional transport",
     canonical: "https://lesttaxi.com/taxi-bratislava",
+    jsonLd: serviceJsonLd
   });
 
   return (
-    <main className="min-h-screen bg-background">
+    <>
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      
+      <main className="min-h-screen bg-background">
       {/* Header */}
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
@@ -182,6 +246,7 @@ const TaxiBratislava = () => {
 
       <FloatingWhatsApp />
     </main>
+    </>
   );
 };
 

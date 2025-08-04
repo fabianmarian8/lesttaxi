@@ -14,8 +14,82 @@ const Help = () => {
     window.open('tel:+421919040118');
   };
 
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lesttaxi.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Support",
+        "item": "https://lesttaxi.com/support"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Help",
+        "item": "https://lesttaxi.com/help"
+      }
+    ]
+  };
+
+  // LocalBusiness with enhanced contact options
+  const helpServiceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "LEST TAXI Support",
+    "description": "24/7 support and local guidance for military personnel in Slovakia",
+    "serviceType": "Customer Support and Local Information Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "LEST TAXI"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+421919040118",
+        "contactType": "customer support",
+        "availableLanguage": ["English", "Slovak", "German"],
+        "hoursAvailable": "Mo-Su 00:00-23:59"
+      }
+    ],
+    "serviceArea": {
+      "@type": "Place",
+      "name": "Slovakia and surrounding areas"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Travel Planning Assistance",
+        "description": "Expert local knowledge for trip planning and recommendations"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Local Services Information",
+        "description": "Connecting military personnel with trusted local businesses and services"
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <>
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(helpServiceJsonLd) }}
+      />
+      
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Military Pattern Background */}
       <div 
         className="absolute inset-0 opacity-5"
@@ -141,6 +215,7 @@ const Help = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

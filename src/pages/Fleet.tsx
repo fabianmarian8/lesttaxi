@@ -61,8 +61,109 @@ const Fleet = () => {
     "Emergency Communication Systems"
   ];
 
+  // BreadcrumbList structured data
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lesttaxi.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://lesttaxi.com/about"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Fleet",
+        "item": "https://lesttaxi.com/fleet"
+      }
+    ]
+  };
+
+  // Product schemas for each vehicle
+  const vehicleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "LEST TAXI Vehicle Fleet",
+    "description": "Professional taxi vehicles for military transport",
+    "itemListElement": vehicles.map((vehicle, index) => ({
+      "@type": "Product",
+      "position": index + 1,
+      "name": vehicle.name,
+      "description": `${vehicle.type} - ${vehicle.description}`,
+      "category": "Vehicle",
+      "brand": {
+        "@type": "Brand",
+        "name": "Toyota"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "EUR",
+        "description": `Available for taxi service - ${vehicle.passengers} passengers, ${vehicle.luggage}`
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Passenger Capacity",
+          "value": vehicle.passengers
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Luggage Capacity",
+          "value": vehicle.luggage
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Vehicle Type",
+          "value": vehicle.type
+        }
+      ]
+    }))
+  };
+
+  // Organization schema
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LEST TAXI",
+    "description": "Professional taxi service specializing in military transport with modern fleet",
+    "url": "https://lesttaxi.com",
+    "logo": "https://lesttaxi.com/src/assets/logo-main.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+421919040118",
+      "contactType": "customer service"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Military Base Access Clearance"
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(vehicleJsonLd) }}
+      />
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      
+      <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
@@ -272,8 +373,9 @@ const Fleet = () => {
             Book Your Ride
           </Button>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
