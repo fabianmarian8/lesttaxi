@@ -175,7 +175,7 @@ const Fleet = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
             <OptimizedImage 
-              src="/src/assets/logo-main.webp"
+              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png"
               alt="LEST TAXI circular logo with military taxi car icon" 
               className="h-12 w-12 rounded-full bg-white p-1"
               width={48}

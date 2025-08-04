@@ -64,8 +64,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const baseSrc = src.replace(/\.[^/.]+$/, "");
   const extension = src.split('.').pop() || 'webp';
   
-  // For lovable-uploads, check if it's already WebP, otherwise create WebP version
-  const webpSrc = isLovableUpload && extension === 'webp' ? src : `${baseSrc}.webp`;
+  // For lovable-uploads, try WebP version if original is PNG
+  const webpSrc = isLovableUpload && extension === 'png' ? `${baseSrc}.webp` : src;
   
   // Generate srcsets for responsive images
   const webpSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'webp') : undefined;
@@ -78,12 +78,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   
   return (
     <picture>
-      {/* WebP format for better compression */}
-      <source 
-        srcSet={webpSrcSet || webpSrc} 
-        type="image/webp"
-        {...(shouldUseResponsive && { sizes: defaultSizes })}
-      />
+      {/* WebP format for better compression - only if different from src */}
+      {webpSrc !== src && (
+        <source 
+          srcSet={webpSrcSet || webpSrc} 
+          type="image/webp"
+          {...(shouldUseResponsive && { sizes: defaultSizes })}
+        />
+      )}
       
       {/* Fallback to original format */}
       <img
