@@ -8,6 +8,9 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   loading?: 'lazy' | 'eager';
+  responsive?: boolean;
+  sizes?: string;
+  breakpoints?: number[];
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -17,12 +20,28 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className,
   priority = false,
-  loading
+  loading,
+  responsive = false,
+  sizes,
+  breakpoints = [320, 640, 800, 1200, 1600]
 }) => {
   // Determine loading strategy
   const imageLoading = loading || (priority ? "eager" : "lazy");
   // Only optimize images from assets folder that have WebP versions
   const isAssetImage = src.includes('/assets/');
+  
+  // Generate srcset for responsive images
+  const generateSrcSet = (basePath: string, extension: string) => {
+    if (!responsive || !width) return undefined;
+    
+    return breakpoints
+      .filter(bp => bp <= (width * 2)) // Don't generate sizes larger than 2x original
+      .map(bp => `${basePath}-${bp}w.${extension} ${bp}w`)
+      .join(', ');
+  };
+  
+  // Auto-enable responsive for large images
+  const shouldUseResponsive = responsive || (width && width > 400);
   
   if (!isAssetImage) {
     // For non-asset images (like lovable-uploads), use regular img tag
@@ -42,14 +61,28 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   
   // Get base filename without extension for asset images
   const baseSrc = src.replace(/\.[^/.]+$/, "");
+  const extension = src.split('.').pop() || 'webp';
   
   // Create WebP version (only for assets that have them)
   const webpSrc = `${baseSrc}.webp`;
   
+  // Generate srcsets for responsive images
+  const webpSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'webp') : undefined;
+  const fallbackSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, extension) : undefined;
+  
+  // Default sizes attribute for responsive images
+  const defaultSizes = shouldUseResponsive && !sizes 
+    ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    : sizes;
+  
   return (
     <picture>
       {/* WebP format for better compression */}
-      <source srcSet={webpSrc} type="image/webp" />
+      <source 
+        srcSet={webpSrcSet || webpSrc} 
+        type="image/webp"
+        {...(shouldUseResponsive && { sizes: defaultSizes })}
+      />
       
       {/* Fallback to original format */}
       <img
@@ -61,6 +94,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         loading={imageLoading}
         decoding="async"
         {...(priority && { fetchPriority: "high" })}
+        {...(fallbackSrcSet && { srcSet: fallbackSrcSet })}
+        {...(shouldUseResponsive && { sizes: defaultSizes })}
       />
     </picture>
   );

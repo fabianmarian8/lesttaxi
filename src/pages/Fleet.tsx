@@ -169,7 +169,7 @@ const Fleet = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
             <OptimizedImage 
-              src="/src/assets/logo-main.webp" 
+              src="/src/assets/logo-main.webp"
               alt="LEST TAXI circular logo with military taxi car icon" 
               className="h-12 w-12 rounded-full bg-white p-1"
               width={48}
@@ -256,6 +256,8 @@ const Fleet = () => {
                 width={600}
                 height={400}
                 loading="lazy"
+                responsive={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <h4 className="text-xl font-semibold mb-2">Professional Fleet</h4>
               <p className="text-muted-foreground">Clean, modern vehicles maintained to the highest standards</p>
@@ -268,6 +270,8 @@ const Fleet = () => {
                 width={600}
                 height={400}
                 loading="lazy"
+                responsive={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <h4 className="text-xl font-semibold mb-2">Local Expertise</h4>
               <p className="text-muted-foreground">We know every route and destination in Slovakia</p>
