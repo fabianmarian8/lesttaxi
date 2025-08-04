@@ -5,6 +5,7 @@ import { Car, Users, Luggage, Shield, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
 
 const Fleet = () => {
   useSEO({
@@ -164,6 +165,9 @@ const Fleet = () => {
       />
       
       <div className="min-h-screen bg-background">
+      {/* Breadcrumb Navigation */}
+      <BreadcrumbNavigation />
+      
       {/* Header */}
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
 
 const TaxiViennaAirport = () => {
   useSEO({
@@ -15,6 +16,9 @@ const TaxiViennaAirport = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      {/* Breadcrumb Navigation */}
+      <BreadcrumbNavigation />
+      
       {/* Header */}
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
