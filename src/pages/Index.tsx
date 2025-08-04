@@ -154,7 +154,7 @@ const Index = () => {
               <OptimizedImage 
                 src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" 
                 alt="Professional white Toyota taxi vehicle ready for military personnel transport at Lest Base" 
-                className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
+                className="rav4-image rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
                 width={600}
                 height={450}
                 priority={true}
