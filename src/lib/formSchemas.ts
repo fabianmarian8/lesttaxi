@@ -23,8 +23,8 @@ export const bookingSchema = z.object({
     .regex(/^[a-zA-ZÀ-ž\s'-]+$/, "Name can only contain letters, spaces, hyphens and apostrophes"),
   phone: z.string()
     .min(10, "Phone number must be at least 10 digits")
-    .max(20, "Phone number is too long")
-    .regex(/^[\+]?[0-9\s\-\(\)]+$/, "Please enter a valid phone number"),
+    .max(15, "Phone number is too long")
+    .regex(/^[\+]?[1]?[\s\-\(]?[0-9]{3}[\s\-\)]?[0-9]{3}[\s\-]?[0-9]{4}$/, "Please enter a valid US phone number"),
   email: z.string()
     .email("Please enter a valid email address")
     .min(5, "Email is too short")

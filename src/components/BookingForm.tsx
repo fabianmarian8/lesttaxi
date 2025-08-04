@@ -163,7 +163,7 @@ export function BookingForm() {
                     name="phone"
                     label="Phone Number"
                     type="tel"
-                    placeholder="+421 900 000 000"
+                    placeholder="+1 (555) 123-4567"
                     value={watchedFields.phone || ""}
                     error={errors.phone?.message}
                     isValid={!errors.phone && touchedFields.phone}
