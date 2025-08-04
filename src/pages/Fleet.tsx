@@ -263,9 +263,9 @@ const Fleet = () => {
             </div>
             <div className="text-center">
               <OptimizedImage 
-                src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.png" 
+                src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.webp" 
                 alt="LEST TAXI white Toyota sedan parked at Europa Shopping Center parking area" 
-                className="rounded-lg shadow-xl w-full mb-4"
+                className="rounded-lg shadow-xl w-full mb-4 mix-blend-mode-multiply filter contrast-105 brightness-98"
                 width={600}
                 height={400}
                 loading="lazy"

@@ -27,8 +27,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   // Determine loading strategy
   const imageLoading = loading || (priority ? "eager" : "lazy");
-  // Only optimize images from assets folder that have WebP versions
+  // Only optimize images from assets folder or lovable-uploads that have WebP versions
   const isAssetImage = src.includes('/assets/');
+  const isLovableUpload = src.includes('/lovable-uploads/');
   
   // Generate srcset for responsive images
   const generateSrcSet = (basePath: string, extension: string) => {
@@ -43,8 +44,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Auto-enable responsive for large images
   const shouldUseResponsive = responsive || (width && width > 400);
   
-  if (!isAssetImage) {
-    // For non-asset images (like lovable-uploads), use regular img tag
+  if (!isAssetImage && !isLovableUpload) {
+    // For external images, use regular img tag
     return (
       <img
         src={src}
@@ -59,12 +60,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
   
-  // Get base filename without extension for asset images
+  // Get base filename without extension for optimized images
   const baseSrc = src.replace(/\.[^/.]+$/, "");
   const extension = src.split('.').pop() || 'webp';
   
-  // Create WebP version (only for assets that have them)
-  const webpSrc = `${baseSrc}.webp`;
+  // For lovable-uploads, check if it's already WebP, otherwise create WebP version
+  const webpSrc = isLovableUpload && extension === 'webp' ? src : `${baseSrc}.webp`;
   
   // Generate srcsets for responsive images
   const webpSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'webp') : undefined;
