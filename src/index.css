@@ -8,7 +8,7 @@
   :root {
     /* Enhanced Color Palette */
     --background: 0 0% 0%;
-    --foreground: 43 96% 90%;
+    --foreground: 43 96% 92%;
 
     --card: 12 10% 12%;
     --card-foreground: 43 96% 88%;
@@ -16,20 +16,22 @@
     --popover: 10 8% 10%;
     --popover-foreground: 43 96% 88%;
 
-    --primary: 43 96% 56%;
+    --primary: 43 96% 70%;
     --primary-foreground: 12 10% 8%;
 
     --secondary: 88 45% 20%;
     --secondary-foreground: 43 96% 88%;
 
     --muted: 15 15% 18%;
-    --muted-foreground: 43 30% 65%;
+    --muted-foreground: 43 30% 70%;
 
     --accent: 35 100% 65%;
     --accent-foreground: 12 10% 8%;
 
-    /* Military Theme Colors */
-    --military-gold: 43 96% 56%;
+    /* Military Theme Colors - Improved Contrast */
+    --military-gold: 43 96% 70%;
+    --military-gold-light: 43 96% 80%;
+    --military-gold-accessible: 43 96% 85%;
     --military-green: 88 45% 20%;
     --military-bronze: 35 85% 45%;
     --whatsapp-green: 142 70% 49%;
@@ -44,7 +46,7 @@
 
     --border: 20 20% 25%;
     --input: 15 15% 18%;
-    --ring: 43 96% 56%;
+    --ring: 43 96% 70%;
 
     --radius: 0.75rem;
 
@@ -141,6 +143,23 @@
     overflow-wrap: break-word;
     hyphens: auto;
     max-width: 100%;
+  }
+
+  /* Accessibility Focus Styles */
+  .focus-accessible {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .link-accessible {
+    @apply focus-accessible transition-colors duration-200;
+  }
+
+  .link-accessible:hover {
+    color: hsl(var(--military-gold-light));
+  }
+
+  .link-accessible:focus-visible {
+    color: hsl(var(--military-gold-accessible));
   }
 
   .neon-glow {
