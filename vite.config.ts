@@ -36,14 +36,28 @@ export default defineConfig(({ mode }) => ({
         // Add hash to filenames for cache busting
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]'
+        assetFileNames: (assetInfo) => {
+          // Separate CSS chunks for better caching
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'assets/css/[name].[hash][extname]';
+          }
+          return 'assets/[name].[hash][extname]';
+        }
       }
     },
     // Enable compression and optimization
     minify: 'esbuild',
     cssMinify: true,
     reportCompressedSize: false,
-    sourcemap: false
+    sourcemap: false,
+    // CSS code splitting
+    cssCodeSplit: true,
+    // Optimize assets
+    assetsInlineLimit: 4096,
+    // Preload optimizations
+    modulePreload: {
+      polyfill: false
+    }
   },
   base: './',
 }));

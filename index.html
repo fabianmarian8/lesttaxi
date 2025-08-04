@@ -29,13 +29,43 @@
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="//plausible.io" />
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/src/assets/hero-image-optimized.webp" as="image">
     <link rel="preload" href="/src/assets/logo-main.webp" as="image">
     
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="/src/index.css" as="style" />
+    <!-- Critical CSS inline for above-the-fold content -->
+    <style>
+      /* Critical path CSS - inline for immediate rendering */
+      :root {
+        --background: 220 17% 7%;
+        --foreground: 213 31% 91%;
+        --primary: 47 96% 53%;
+        --primary-foreground: 220 17% 7%;
+        --border: 217 19% 27%;
+        --input: 217 19% 27%;
+        --radius: 0.5rem;
+      }
+      body { 
+        font-family: Inter, system-ui, sans-serif; 
+        background: hsl(var(--background)); 
+        color: hsl(var(--foreground)); 
+        margin: 0; 
+        line-height: 1.5;
+      }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+      .glass-effect { 
+        background: rgba(255, 255, 255, 0.05); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255, 255, 255, 0.1); 
+      }
+    </style>
+    
+    <!-- Preload and async load non-critical CSS -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
 
     <meta property="og:title" content="LEST TAXI - Military Base Transport & Airport Transfers" />
     <meta property="og:description" content="Professional 24/7 taxi service for US military personnel at Lest Base. Fixed rates, airport transfers, gate pickup." />

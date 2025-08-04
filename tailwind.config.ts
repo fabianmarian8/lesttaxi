@@ -2,11 +2,36 @@ import type { Config } from "tailwindcss";
 
 export default {
 	darkMode: ["class"],
-	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+	content: {
+		files: [
+			"./index.html",
+			"./src/**/*.{js,ts,jsx,tsx}",
+			"./src/pages/**/*.{js,ts,jsx,tsx}",
+			"./src/components/**/*.{js,ts,jsx,tsx}",
+		],
+		extract: {
+			tsx: (content) => content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
+		},
+	},
+	safelist: [
+		// Core utility patterns that are dynamically generated
+		{
+			pattern: /^(bg|text|border)-(primary|secondary|accent|military)(\/(10|20|30|40|50|60|70|80|90|95))?$/,
+		},
+		{
+			pattern: /^(glass-effect|neon-glow|tactical-card|combat-text)$/,
+		},
+		// Animation classes
+		'animate-pulse',
+		'animate-bounce',
+		'slide-up',
+		'floating',
+		'pulse-glow',
+		// Responsive utilities
+		'sm:block',
+		'md:grid-cols-2',
+		'lg:grid-cols-3',
+		'xl:grid-cols-4',
 	],
 	prefix: "",
 	theme: {
