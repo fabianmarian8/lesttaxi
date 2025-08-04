@@ -27,9 +27,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   // Determine loading strategy
   const imageLoading = loading || (priority ? "eager" : "lazy");
-  // Only optimize images from assets folder or lovable-uploads that have WebP versions
+  // Only optimize images from assets folder that have WebP versions
   const isAssetImage = src.includes('/assets/');
-  const isLovableUpload = src.includes('/lovable-uploads/');
   
   // Generate srcset for responsive images
   const generateSrcSet = (basePath: string, extension: string) => {
@@ -44,8 +43,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Auto-enable responsive for large images
   const shouldUseResponsive = responsive || (width && width > 400);
   
-  if (!isAssetImage && !isLovableUpload) {
-    // For external images, use regular img tag
+  if (!isAssetImage) {
+    // For non-asset images (like lovable-uploads), use regular img tag
     return (
       <img
         src={src}
@@ -60,12 +59,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
   
-  // Get base filename without extension for optimized images
+  // Get base filename without extension for asset images
   const baseSrc = src.replace(/\.[^/.]+$/, "");
   const extension = src.split('.').pop() || 'webp';
   
-  // For lovable-uploads, try WebP version if original is PNG
-  const webpSrc = isLovableUpload && extension === 'png' ? `${baseSrc}.webp` : src;
+  // Create WebP version (only for assets that have them)
+  const webpSrc = `${baseSrc}.webp`;
   
   // Generate srcsets for responsive images
   const webpSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'webp') : undefined;
@@ -78,14 +77,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   
   return (
     <picture>
-      {/* WebP format for better compression - only if different from src */}
-      {webpSrc !== src && (
-        <source 
-          srcSet={webpSrcSet || webpSrc} 
-          type="image/webp"
-          {...(shouldUseResponsive && { sizes: defaultSizes })}
-        />
-      )}
+      {/* WebP format for better compression */}
+      <source 
+        srcSet={webpSrcSet || webpSrc} 
+        type="image/webp"
+        {...(shouldUseResponsive && { sizes: defaultSizes })}
+      />
       
       {/* Fallback to original format */}
       <img
