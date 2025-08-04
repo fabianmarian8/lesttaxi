@@ -7,6 +7,7 @@ import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
+import { DefringeProcessor } from "@/components/DefringeProcessor";
 
 
 const Index = () => {
@@ -90,6 +91,18 @@ const Index = () => {
       {/* Franko Pizza Banner */}
       <FrankoPizzaBanner />
       
+      {/* Debug: Defringe Processor */}
+      <div className="fixed bottom-4 right-4 z-50">
+        <details>
+          <summary className="cursor-pointer bg-gray-800 text-white px-2 py-1 rounded text-xs">
+            🔧 Process RAV4
+          </summary>
+          <div className="absolute bottom-full right-0 mb-2">
+            <DefringeProcessor />
+          </div>
+        </details>
+      </div>
+      
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
@@ -152,16 +165,11 @@ const Index = () => {
             </div>
             <div className="flex justify-center lg:justify-center">
               <OptimizedImage 
-                src="/lovable-uploads/8e6321e9-f3aa-4d36-b7fe-e5cf6597efc4.png" 
-                alt="Professional white Toyota SUV taxi vehicle for military personnel transport at Lest Base" 
-                className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
-                style={{ 
-                  mixBlendMode: 'multiply',
-                  filter: 'contrast(1.05) brightness(0.98)',
-                  backdropFilter: 'blur(0.5px)'
-                }}
-                width={600}
-                height={450}
+                src="/rav4_clean_processed.webp" 
+                alt="Professional white Toyota RAV4 SUV taxi vehicle for military personnel transport at Lest Base" 
+                className="w-full"
+                width={1600}
+                height={1200}
                 priority={true}
                 responsive={true}
                 sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw"
