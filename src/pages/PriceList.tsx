@@ -7,8 +7,8 @@ import { useSEO } from "@/hooks/useSEO";
 
 const PriceList = () => {
   useSEO({
-    title: "Taxi Prices Slovakia - Transparent Rates | LEST TAXI",
-    description: "Transparent taxi pricing for military transport in Slovakia. Fixed rates, no hidden fees. Airport transfers, base transport, local services. Check our price list.",
+    title: "Taxi Prices | LEST TAXI",
+    description: "Transparent taxi pricing for military transport. Fixed rates, no hidden fees. Airport transfers and local services.",
     keywords: "taxi prices Slovakia, Lešť taxi rates, airport transfer prices, military taxi cost, transparent pricing",
     canonical: "https://lesttaxi.com/price-list"
   });

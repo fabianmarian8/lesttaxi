@@ -5,8 +5,8 @@ import { MessageCircle, Phone, Shield, Clock, MapPin, Users, Star, CheckCircle }
 
 const MilitaryBasePickup = () => {
   useSEO({
-    title: "Base Gate Pickup Service for US Military - Lest Base Slovakia | LEST TAXI",
-    description: "Specialized base gate pickup and transport service for American soldiers at Lest Base. 24/7 availability, security clearance, English-speaking drivers. Reliable transport for US military personnel.",
+    title: "Base Gate Pickup | LEST TAXI",
+    description: "Base gate pickup for US soldiers at Lest Base. 24/7 availability, security cleared drivers. Reliable military transport.",
     keywords: "Lest base gate pickup, US military taxi Slovakia, base transport service, American soldiers transport, military base pickup, Lest army base taxi",
     canonical: "https://lesttaxi.com/military-base-pickup",
     jsonLd: {

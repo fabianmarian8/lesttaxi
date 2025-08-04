@@ -7,8 +7,8 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 
 const TaxiBudapestAirport = () => {
   useSEO({
-    title: "Taxi Budapest Airport - Direct Transfer from Lešť Military Base",
-    description: "Professional taxi service from Lešť Military Base to Budapest Airport (BUD). Flight-timed transfers, reliable service, military rates. WhatsApp +421 919 040 118",
+    title: "Budapest Airport Transfer | LEST TAXI",
+    description: "Direct transfers from Lešť Base to Budapest Airport (BUD). Flight-timed service. Book via WhatsApp +421 919 040 118.",
     keywords: "taxi Budapest airport, Lešť to Budapest BUD, airport transfer Hungary, military taxi Budapest, flight transfers",
     canonical: "https://lesttaxi.com/taxi-budapest-airport",
   });

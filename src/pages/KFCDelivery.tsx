@@ -5,8 +5,8 @@ import { MessageCircle, Phone, Clock, MapPin, Shield, Star } from "lucide-react"
 
 const KFCDelivery = () => {
   useSEO({
-    title: "KFC Delivery for US Military - Lest Base Slovakia | LEST TAXI",
-    description: "Fast KFC delivery and pickup service for American soldiers at Lest Base. Order your favorite KFC meals - we'll pick up and deliver to base gate. Available 24/7 for US military personnel.",
+    title: "KFC Delivery | LEST TAXI",
+    description: "KFC delivery for US soldiers at Lest Base. Fast pickup and delivery to base gate. Order via WhatsApp.",
     keywords: "KFC delivery Lest base, KFC pickup Slovakia military, American fast food delivery, US soldiers KFC, military base food delivery, KFC Zvolen delivery",
     canonical: "https://lesttaxi.com/kfc-delivery",
     jsonLd: {

@@ -5,8 +5,8 @@ import { MessageCircle, Phone, ShoppingBag, MapPin, Clock, Dumbbell, Shield } fr
 
 const MilitaryShopping = () => {
   useSEO({
-    title: "Shopping Transport for US Military - Europa Shopping Center & More | LEST TAXI",
-    description: "Shopping transport service for American soldiers at Lešť Base. Get rides to Europa Shopping Center, fitness stores, protein supplements, and more. Military-friendly shopping trips in Slovakia.",
+    title: "Shopping Transport | LEST TAXI",
+    description: "Shopping transport for US soldiers. Europa Shopping Center, fitness stores, protein supplements. Military-friendly trips.",
     keywords: "Europa Shopping Center transport military, shopping taxi Lest base, protein supplements delivery Slovakia, fitness shopping military, US soldiers shopping transport, military discount shopping",
     canonical: "https://lesttaxi.com/military-shopping",
     jsonLd: {

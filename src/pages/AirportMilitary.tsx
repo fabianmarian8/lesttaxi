@@ -5,8 +5,8 @@ import { MessageCircle, Phone, Plane, Clock, MapPin, Shield, Users, Calendar } f
 
 const AirportMilitary = () => {
   useSEO({
-    title: "Airport Transfers for US Military - Bratislava Vienna Budapest | LEST TAXI",
-    description: "Specialized airport transfer service for American soldiers at Lest Base. Direct transport to Bratislava, Vienna, and Budapest airports for leave and vacation travel. Military-friendly scheduling.",
+    title: "Military Airport Transfers | LEST TAXI",
+    description: "Airport transfers for US soldiers. Bratislava, Vienna, Budapest airports. Military-friendly scheduling for leave and vacation.",
     keywords: "military airport transfer Slovakia, Bratislava Vienna Budapest airport US soldiers, leave transport military, vacation airport transfer Lest base, US military taxi airport",
     canonical: "https://lesttaxi.com/airport-military",
     jsonLd: {

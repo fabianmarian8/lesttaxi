@@ -5,8 +5,8 @@ import { MessageCircle, Phone, Clock, MapPin, Shield, Star } from "lucide-react"
 
 const McdonaldsDelivery = () => {
   useSEO({
-    title: "McDonald's Delivery for US Soldiers - Lest Base Slovakia | LEST TAXI",
-    description: "McDonald's delivery and pickup service for American military at Lest Base. Fast, reliable McDonald's food delivery to base gate. 24/7 service for US soldiers in Slovakia.",
+    title: "McDonald's Delivery | LEST TAXI",
+    description: "McDonald's delivery for US soldiers at Lest Base. 24/7 delivery to base gate. Order your favorites via WhatsApp.",
     keywords: "McDonalds delivery military base, McDonalds pickup Lest, American food Slovakia, US soldiers McDonalds, military base food delivery, McDonalds Zvolen delivery",
     canonical: "https://lesttaxi.com/mcdonalds-delivery",
     jsonLd: {

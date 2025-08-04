@@ -7,8 +7,8 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 
 const TaxiBratislava = () => {
   useSEO({
-    title: "Taxi Bratislava - Professional Transport Service from Lešť Base",
-    description: "Reliable taxi service from Lešť Military Base to Bratislava. Fixed rates, 24/7 availability, professional drivers. Book via WhatsApp +421 919 040 118",
+    title: "Bratislava Taxi | LEST TAXI",
+    description: "Professional taxi from Lešť Base to Bratislava. Fixed rates, 24/7 service. Book via WhatsApp +421 919 040 118.",
     keywords: "taxi Bratislava, Lešť to Bratislava, military taxi Slovakia, airport transfer Bratislava, professional transport",
     canonical: "https://lesttaxi.com/taxi-bratislava",
   });

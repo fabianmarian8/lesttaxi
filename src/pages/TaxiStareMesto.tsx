@@ -7,8 +7,8 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 
 const TaxiStareMesto = () => {
   useSEO({
-    title: "Taxi Staré Mesto Bratislava - Historic Center Transport from Lešť",
-    description: "Professional taxi service from Lešť Military Base to Bratislava's historic Old Town (Staré Mesto). Historic center tours, shopping, dining. WhatsApp +421 919 040 118",
+    title: "Staré Mesto Taxi | LEST TAXI",
+    description: "Transport to Bratislava's historic Old Town from Lešť Base. Explore the historic center. Book via WhatsApp +421 919 040 118.",
     keywords: "taxi Staré Mesto, Bratislava Old Town taxi, historic center transport, military taxi Slovakia, Lešť to Bratislava center",
     canonical: "https://lesttaxi.com/taxi-stare-mesto",
   });
