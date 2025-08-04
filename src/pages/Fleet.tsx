@@ -170,10 +170,11 @@ const Fleet = () => {
           <Link to="/" className="flex items-center gap-3">
             <OptimizedImage 
               src="/src/assets/logo-main.webp" 
-              alt="LEST TAXI Professional Military Transport Service" 
+              alt="LEST TAXI circular logo with military taxi car icon" 
               className="h-12 w-12 rounded-full bg-white p-1"
               width={48}
               height={48}
+              loading="eager"
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>
@@ -250,10 +251,11 @@ const Fleet = () => {
             <div className="text-center">
               <OptimizedImage 
                 src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
-                alt="LEST TAXI Fleet - Professional Toyota Vehicles for military transport" 
+                alt="Professional white Toyota taxi vehicles lined up in formation ready for military transport service" 
                 className="rounded-lg shadow-xl w-full mb-4"
                 width={600}
                 height={400}
+                loading="lazy"
               />
               <h4 className="text-xl font-semibold mb-2">Professional Fleet</h4>
               <p className="text-muted-foreground">Clean, modern vehicles maintained to the highest standards</p>
@@ -261,10 +263,11 @@ const Fleet = () => {
             <div className="text-center">
               <OptimizedImage 
                 src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.png" 
-                alt="LEST TAXI at Europa Shopping Center - reliable local transport" 
+                alt="LEST TAXI white Toyota sedan parked at Europa Shopping Center parking area" 
                 className="rounded-lg shadow-xl w-full mb-4"
                 width={600}
                 height={400}
+                loading="lazy"
               />
               <h4 className="text-xl font-semibold mb-2">Local Expertise</h4>
               <p className="text-muted-foreground">We know every route and destination in Slovakia</p>

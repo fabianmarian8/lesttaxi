@@ -7,6 +7,7 @@ interface OptimizedImageProps {
   height?: number;
   className?: string;
   priority?: boolean;
+  loading?: 'lazy' | 'eager';
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -15,8 +16,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   className,
-  priority = false
+  priority = false,
+  loading
 }) => {
+  // Determine loading strategy
+  const imageLoading = loading || (priority ? "eager" : "lazy");
   // Only optimize images from assets folder that have WebP versions
   const isAssetImage = src.includes('/assets/');
   
@@ -29,7 +33,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         width={width}
         height={height}
         className={className}
-        loading={priority ? "eager" : "lazy"}
+        loading={imageLoading}
         decoding="async"
         {...(priority && { fetchPriority: "high" })}
       />
@@ -54,7 +58,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         width={width}
         height={height}
         className={className}
-        loading={priority ? "eager" : "lazy"}
+        loading={imageLoading}
         decoding="async"
         {...(priority && { fetchPriority: "high" })}
       />
