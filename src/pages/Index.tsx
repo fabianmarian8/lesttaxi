@@ -151,7 +151,21 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center lg:justify-center">
-              {/* SUV image removed */}
+              <OptimizedImage 
+                src="/lovable-uploads/8e6321e9-f3aa-4d36-b7fe-e5cf6597efc4.png" 
+                alt="Professional white Toyota SUV taxi vehicle for military personnel transport at Lest Base" 
+                className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
+                style={{ 
+                  mixBlendMode: 'multiply',
+                  filter: 'contrast(1.05) brightness(0.98)',
+                  backdropFilter: 'blur(0.5px)'
+                }}
+                width={600}
+                height={450}
+                priority={true}
+                responsive={true}
+                sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw"
+              />
             </div>
           </div>
         </div>
