@@ -1,5 +1,12 @@
 # Cache headers for static assets - Optimized for performance
 
+# Favicon files - long cache (1 year)
+/favicon.ico
+  Cache-Control: public, max-age=31536000
+
+/favicon.png
+  Cache-Control: public, max-age=31536000
+
 # Critical files - shorter cache for frequent updates
 /index.html
   Cache-Control: public, max-age=3600
