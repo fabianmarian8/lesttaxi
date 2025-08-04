@@ -152,7 +152,7 @@ const Index = () => {
             </div>
             <div className="flex justify-center lg:justify-center">
               <OptimizedImage 
-                src="/rav4-flattened.webp" 
+                src="/rav4-gradient-bg.webp" 
                 alt="Professional white Toyota SUV taxi vehicle for military personnel transport at Lest Base" 
                 className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg"
                 width={600}
