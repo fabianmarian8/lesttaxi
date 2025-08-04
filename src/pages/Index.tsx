@@ -178,7 +178,7 @@ const Index = () => {
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <Car className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-black" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-military-gold text-wrap-mobile">Airport Transfers from Lest Base</h3>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--military-gold))] text-wrap-mobile">Airport Transfers from Lest Base</h3>
               <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
             </div>
             <div className="tactical-card text-center group p-4 sm:p-6">
@@ -190,7 +190,7 @@ const Index = () => {
             </div>
             <div className="tactical-card text-center group p-4 sm:p-6">
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-                <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-military-gold" />
+                <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-[hsl(var(--military-gold))]" />
               </div>
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--combat-green))] text-wrap-mobile">Slovakia City Transport</h3>
               <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Convenient urban transportation to cities, shopping centers, and important destinations across Slovakia.</p>
@@ -219,7 +219,7 @@ const Index = () => {
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Phone className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-black" />
               </div>
-              <span className="text-sm sm:text-base lg:text-lg font-bold text-military-gold text-center">Call Now</span>
+              <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--military-gold))] text-center">Call Now</span>
             </a>
             <a 
               href="https://wa.me/421919040118"
@@ -283,7 +283,7 @@ const Index = () => {
               to="/taxi-bratislava"
               className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
             >
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-military-gold group-hover:text-elite-gold">
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Taxi Bratislava
               </h3>
               <p className="text-sm text-muted-foreground">Professional transport to Slovakia's capital</p>
@@ -293,7 +293,7 @@ const Index = () => {
               to="/taxi-stare-mesto"
               className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
             >
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-military-gold group-hover:text-elite-gold">
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Staré Mesto Tours
               </h3>
               <p className="text-sm text-muted-foreground">Explore Bratislava's historic Old Town</p>
@@ -303,7 +303,7 @@ const Index = () => {
               to="/taxi-budapest-airport"
               className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
             >
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-military-gold group-hover:text-elite-gold">
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Budapest Airport
               </h3>
               <p className="text-sm text-muted-foreground">Direct transfers to Budapest BUD</p>
@@ -313,7 +313,7 @@ const Index = () => {
               to="/taxi-vienna-airport"
               className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
             >
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-military-gold group-hover:text-elite-gold">
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
                 Vienna Airport
               </h3>
               <p className="text-sm text-muted-foreground">Premium transfers to Vienna VIE</p>
@@ -327,13 +327,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--military-gold))_0%,transparent_70%)] opacity-20" />
         <div className="container mx-auto text-center relative z-10">
-          <p className="text-sm sm:text-base lg:text-lg font-semibold text-military-gold tracking-wider">
+          <p className="text-sm sm:text-base lg:text-lg font-semibold text-[hsl(var(--military-gold))] tracking-wider">
             © 2024 FRANKO TAXI | Professional Transportation Service
           </p>
           <div className="mt-4">
             <Link 
               to="/artemis" 
-              className="text-xs text-muted-foreground hover:text-military-gold-light focus-visible:text-military-gold-accessible link-accessible"
+              className="text-xs text-muted-foreground hover:text-[hsl(var(--military-gold))] transition-colors"
             >
               Powered by Artemis Group
             </Link>

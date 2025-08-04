@@ -58,8 +58,7 @@ export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ clas
                       <BreadcrumbLink asChild>
                         <Link 
                           to={item.href} 
-                          className="text-muted-foreground hover:text-foreground focus-visible:text-foreground link-accessible"
-                          aria-label={`Navigate to ${item.label}`}
+                          className="text-muted-foreground hover:text-foreground transition-colors"
                         >
                           {item.label}
                         </Link>

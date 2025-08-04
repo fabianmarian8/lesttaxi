@@ -39,7 +39,7 @@ const NotFound = () => {
             className="h-24 w-24 mx-auto mb-8 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30"
           />
           
-          <h1 className="text-8xl font-black mb-6 combat-text text-military-gold">404</h1>
+          <h1 className="text-8xl font-black mb-6 combat-text text-[hsl(var(--military-gold))]">404</h1>
           <h2 className="text-3xl font-bold mb-4 text-foreground">Page Not Found</h2>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
             Sorry, the page you are looking for does not exist or has been moved. 
@@ -50,7 +50,7 @@ const NotFound = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             <Link to="/">
               <Button className="tactical-card w-full p-6 flex flex-col items-center gap-3 h-auto">
-                <Home className="h-8 w-8 text-military-gold" />
+                <Home className="h-8 w-8 text-[hsl(var(--military-gold))]" />
                 <span className="font-semibold">Home</span>
               </Button>
             </Link>
@@ -81,16 +81,16 @@ const NotFound = () => {
           <div className="text-sm text-muted-foreground">
             <p className="mb-4">Popular pages:</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/airport-transfer" className="hover:text-military-gold-light focus-visible:text-military-gold-accessible link-accessible underline">
+              <Link to="/airport-transfer" className="hover:text-[hsl(var(--military-gold))] underline">
                 Airport Transfer
               </Link>
-              <Link to="/price-list" className="hover:text-military-gold-light focus-visible:text-military-gold-accessible link-accessible underline">
+              <Link to="/price-list" className="hover:text-[hsl(var(--military-gold))] underline">
                 Price List
               </Link>
-              <Link to="/fleet" className="hover:text-military-gold-light focus-visible:text-military-gold-accessible link-accessible underline">
+              <Link to="/fleet" className="hover:text-[hsl(var(--military-gold))] underline">
                 Fleet
               </Link>
-              <Link to="/faq" className="hover:text-military-gold-light focus-visible:text-military-gold-accessible link-accessible underline">
+              <Link to="/faq" className="hover:text-[hsl(var(--military-gold))] underline">
                 FAQ
               </Link>
             </div>

@@ -61,16 +61,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				military: {
-					gold: 'hsl(var(--military-gold))',
-					'gold-light': 'hsl(var(--military-gold-light))',
-					'gold-accessible': 'hsl(var(--military-gold-accessible))',
-					green: 'hsl(var(--military-green))',
-					bronze: 'hsl(var(--military-bronze))'
-				},
-				elite: {
-					gold: 'hsl(var(--elite-gold))'
 				}
 			},
 			borderRadius: {
