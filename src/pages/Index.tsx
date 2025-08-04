@@ -152,9 +152,14 @@ const Index = () => {
             </div>
             <div className="flex justify-center lg:justify-center">
               <OptimizedImage 
-                src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" 
+                src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.png" 
                 alt="Professional white Toyota taxi vehicle ready for military personnel transport at Lest Base" 
                 className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
+                style={{ 
+                  mixBlendMode: 'multiply',
+                  filter: 'contrast(1.05) brightness(0.98)',
+                  backdropFilter: 'blur(0.5px)'
+                }}
                 width={600}
                 height={450}
                 priority={true}

@@ -6,6 +6,7 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
+  style?: React.CSSProperties;
   priority?: boolean;
   loading?: 'lazy' | 'eager';
   responsive?: boolean;
@@ -19,6 +20,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   className,
+  style,
   priority = false,
   loading,
   responsive = false,
@@ -52,9 +54,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         width={width}
         height={height}
         className={className}
+        style={style}
         loading={imageLoading}
         decoding="async"
-        {...(priority && { fetchPriority: "high" })}
+        {...(priority && { fetchpriority: "high" })}
       />
     );
   }
@@ -91,9 +94,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         width={width}
         height={height}
         className={className}
+        style={style}
         loading={imageLoading}
         decoding="async"
-        {...(priority && { fetchPriority: "high" })}
+        {...(priority && { fetchpriority: "high" })}
         {...(fallbackSrcSet && { srcSet: fallbackSrcSet })}
         {...(shouldUseResponsive && { sizes: defaultSizes })}
       />
