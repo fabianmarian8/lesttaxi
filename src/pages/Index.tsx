@@ -1,19 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
-import { BackgroundRemover } from "@/components/BackgroundRemover";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
 
 
 const Index = () => {
-  const [showImageProcessor, setShowImageProcessor] = useState(false);
-  
   useSEO({
     title: "LEST TAXI - Military Taxi & Airport Transfer Slovakia",
     description: "Professional 24/7 taxi service for US military personnel at Lest Base. Airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
@@ -155,54 +151,21 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center lg:justify-center">
-              <div className="relative">
-                <OptimizedImage 
-                  src="/lovable-uploads/8e6321e9-f3aa-4d36-b7fe-e5cf6597efc4.png" 
-                  alt="Professional white Toyota SUV taxi vehicle for military personnel transport at Lest Base" 
-                  className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
-                  style={{ 
-                    filter: 'contrast(1.1) brightness(1.02)',
-                    imageRendering: 'crisp-edges'
-                  }}
-                  width={600}
-                  height={450}
-                  priority={true}
-                  responsive={true}
-                  sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw"
-                />
-                
-                {/* Debug/Admin: Image processor toggle */}
-                <button 
-                  onClick={() => setShowImageProcessor(!showImageProcessor)}
-                  className="absolute top-2 right-2 opacity-20 hover:opacity-100 text-xs bg-primary/10 px-2 py-1 rounded"
-                >
-                  🔧
-                </button>
-              </div>
-              
-              {/* Enhanced Background Remover for SUV processing */}
-              {showImageProcessor && (
-                <div className="mt-8 p-6 bg-card/50 rounded-xl border border-border/50">
-                  <h3 className="text-lg font-semibold mb-4 text-foreground">
-                    🚗 Enhanced SUV Image Processor
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Upload SUV image to remove ghost edges and optimize transparency
-                  </p>
-                  <BackgroundRemover 
-                    onImageProcessed={(blob) => {
-                      // Auto-download the processed image
-                      const url = URL.createObjectURL(blob);
-                      const a = document.createElement('a');
-                      a.href = url;
-                      a.download = 'enhanced-suv-clean.png';
-                      a.click();
-                      URL.revokeObjectURL(url);
-                    }}
-                    className="border-2 border-dashed border-primary/30 rounded-lg"
-                  />
-                </div>
-              )}
+              <OptimizedImage 
+                src="/lovable-uploads/8e6321e9-f3aa-4d36-b7fe-e5cf6597efc4.png" 
+                alt="Professional white Toyota SUV taxi vehicle for military personnel transport at Lest Base" 
+                className="rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
+                style={{ 
+                  mixBlendMode: 'multiply',
+                  filter: 'contrast(1.05) brightness(0.98)',
+                  backdropFilter: 'blur(0.5px)'
+                }}
+                width={600}
+                height={450}
+                priority={true}
+                responsive={true}
+                sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw"
+              />
             </div>
           </div>
         </div>
