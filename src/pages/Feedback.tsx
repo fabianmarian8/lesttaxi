@@ -1,22 +1,33 @@
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { AnimatedButton } from "@/components/ui/animated-button";
+import { AnimatedFormField } from "@/components/ui/form-field-animated";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Send } from "lucide-react";
+import { ArrowLeft, Send, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import { feedbackSchema, type FeedbackFormData } from "@/lib/formSchemas";
 
 const Feedback = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid, touchedFields },
+    reset,
+    watch
+  } = useForm<FeedbackFormData>({
+    resolver: zodResolver(feedbackSchema),
+    mode: "onChange"
+  });
+  
+  const watchedFields = watch();
 
   useSEO({
     title: "Feedback and Complaints | Military Taxi Slovakia",
@@ -24,21 +35,27 @@ const Feedback = () => {
     keywords: "feedback, complaint, review, military taxi, Slovakia"
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: FeedbackFormData) => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('sendFeedback', {
-        body: formData
+      const { error } = await supabase.functions.invoke('sendFeedback', {
+        body: data
       });
 
       if (error) {
         throw error;
       }
       
+      setIsSuccess(true);
       toast.success("Your feedback has been sent!");
-      setFormData({ name: "", email: "", message: "" });
+      
+      // Reset form after success animation
+      setTimeout(() => {
+        reset();
+        setIsSuccess(false);
+      }, 4000);
+      
     } catch (error: any) {
       console.error('Error submitting feedback:', error);
       let errorMessage = "An error occurred while sending. Please try again.";
@@ -51,13 +68,6 @@ const Feedback = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
   };
 
   return (
@@ -83,57 +93,102 @@ const Feedback = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Your Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="tactical-input"
-                    placeholder="Your name"
-                  />
-                </div>
+              <AnimatePresence mode="wait">
+                {isSuccess ? (
+                  <motion.div
+                    key="success"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    className="text-center space-y-6 p-8"
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1, rotate: 360 }}
+                      transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+                      className="mx-auto w-20 h-20 bg-red-100 rounded-full flex items-center justify-center"
+                    >
+                      <Heart className="h-10 w-10 text-red-600" />
+                    </motion.div>
+                    <motion.h3
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 }}
+                      className="text-2xl font-bold text-red-700"
+                    >
+                      Thank You for Your Feedback!
+                    </motion.h3>
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
+                      className="text-muted-foreground text-lg"
+                    >
+                      We value every feedback and continuously strive to improve our services.
+                    </motion.p>
+                  </motion.div>
+                ) : (
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                    <AnimatedFormField
+                      id="name"
+                      name="name"
+                      label="Your Name"
+                      placeholder="Your name"
+                      value={watchedFields.name || ""}
+                      error={errors.name?.message}
+                      isValid={!errors.name && touchedFields.name}
+                      required
+                      className="tactical-input"
+                      {...register("name")}
+                    />
 
-                <div className="space-y-2">
-                  <Label htmlFor="email">Your Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="tactical-input"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
+                    <AnimatedFormField
+                      id="email"
+                      name="email"
+                      label="Your Email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      value={watchedFields.email || ""}
+                      error={errors.email?.message}
+                      isValid={!errors.email && touchedFields.email}
+                      required
+                      className="tactical-input"
+                      {...register("email")}
+                    />
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    className="tactical-input min-h-[120px]"
-                    placeholder="Describe your feedback or complaint..."
-                  />
-                </div>
+                    <AnimatedFormField
+                      id="message"
+                      name="message"
+                      label="Message"
+                      placeholder="Describe your feedback or complaint..."
+                      value={watchedFields.message || ""}
+                      error={errors.message?.message}
+                      isValid={!errors.message && touchedFields.message}
+                      rows={5}
+                      required
+                      className="tactical-input"
+                      {...register("message")}
+                    />
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full tactical-card bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] hover:scale-105 transition-all duration-300"
-                >
-                  <Send className="h-4 w-4 mr-2" />
-                  {isSubmitting ? "Sending..." : "Submit"}
-                </Button>
-              </form>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      <AnimatedButton
+                        type="submit"
+                        className="w-full tactical-card bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] hover:scale-105 transition-all duration-300"
+                        loading={isSubmitting}
+                        disabled={!isValid || isSubmitting}
+                        loadingText="Sending..."
+                      >
+                        <Send className="h-4 w-4 mr-2" />
+                        Submit Feedback
+                      </AnimatedButton>
+                    </motion.div>
+                  </form>
+                )}
+              </AnimatePresence>
             </CardContent>
           </Card>
         </div>
