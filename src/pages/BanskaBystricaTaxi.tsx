@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Clock, DollarSign, Phone, MessageCircle, Car, Shield, Star } from "lucide-react";
+import { MapPin, Clock, DollarSign, Phone, MessageCircle, Car, Shield, Star, ShoppingBag } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { StandardHero } from "@/components/StandardHero";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 const BanskaBystricaTaxi = () => {
   useSEO({
@@ -122,37 +124,14 @@ const BanskaBystricaTaxi = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Military Taxi to Banská Bystrica
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Professional transport service from Lest Military Base to Banská Bystrica. 
-            Reliable, safe, and comfortable rides for US military personnel.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              onClick={openWhatsApp}
-              className="bg-green-600 hover:bg-green-700 text-lg px-8 py-4"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Book via WhatsApp
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={callPhone}
-              className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now
-            </Button>
-          </div>
-        </div>
-      </section>
+      <StandardHero
+        title="Military Taxi to Banská Bystrica"
+        description="Professional transport service from Lest Military Base to Banská Bystrica. Reliable, safe, and comfortable rides for US military personnel."
+        primaryButtonText="Book via WhatsApp"
+        secondaryButtonText="Call Now"
+        onPrimaryClick={openWhatsApp}
+        onSecondaryClick={callPhone}
+      />
 
       {/* Destinations */}
       <section className="py-16 bg-gray-50">
@@ -164,6 +143,7 @@ const BanskaBystricaTaxi = () => {
             {destinations.map((destination, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardHeader>
+                  <ServiceIcon Icon={destination.name.includes('Mall') || destination.name.includes('Shopping') ? ShoppingBag : MapPin} size="md" className="mx-auto mb-2" />
                   <CardTitle className="text-lg">{destination.name}</CardTitle>
                   <CardDescription>{destination.description}</CardDescription>
                 </CardHeader>
@@ -199,7 +179,7 @@ const BanskaBystricaTaxi = () => {
             {features.map((feature, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <feature.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <ServiceIcon Icon={feature.icon} className="mx-auto mb-4" />
                   <CardTitle>{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>

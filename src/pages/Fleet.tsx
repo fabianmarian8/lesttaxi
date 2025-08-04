@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
+import { StandardHero } from "@/components/StandardHero";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 const Fleet = () => {
   useSEO({
@@ -189,21 +191,14 @@ const Fleet = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 via-background to-[hsl(var(--military-green))]/10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6 text-foreground">
-            Our Vehicles & Equipment
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Modern, well-maintained fleet specifically chosen for military personnel comfort and safety. 
-            From solo airport runs to group transport, we have the right vehicle for every journey.
-          </p>
-          <Badge variant="secondary" className="text-lg px-6 py-2 bg-[hsl(var(--military-gold))]/20">
-            All vehicles under 5 years old • Professional maintenance
-          </Badge>
-        </div>
-      </section>
+      <StandardHero
+        title="Our Vehicles & Equipment"
+        description="Modern, well-maintained fleet specifically chosen for military personnel comfort and safety. From solo airport runs to group transport, we have the right vehicle for every journey."
+      >
+        <Badge variant="secondary" className="text-lg px-6 py-2 bg-[hsl(var(--military-gold))]/20 mt-4">
+          All vehicles under 5 years old • Professional maintenance
+        </Badge>
+      </StandardHero>
 
       {/* Fleet Gallery */}
       <section className="py-16 px-6">
@@ -218,7 +213,7 @@ const Fleet = () => {
                       <CardTitle className="text-xl">{vehicle.name}</CardTitle>
                       <CardDescription>{vehicle.type}</CardDescription>
                     </div>
-                    <Car className="h-8 w-8 text-[hsl(var(--military-gold))]" />
+                    <ServiceIcon Icon={Car} size="md" />
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">

@@ -4,6 +4,7 @@ import { MessageCircle, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { StandardHero } from "@/components/StandardHero";
 
 const FAQ = () => {
   useSEO({
@@ -145,22 +146,15 @@ const FAQ = () => {
           </div>
         </header>
 
-        {/* Hero Section */}
-        <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 via-background to-[hsl(var(--military-green))]/10">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 text-foreground">
-              Questions Soldiers Ask Most
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Get quick answers to the most common questions about our taxi service for military personnel. 
-              Can't find what you're looking for? Contact us directly for personalized assistance.
-            </p>
-            <div className="flex items-center justify-center gap-2 text-muted-foreground">
-              <HelpCircle className="h-5 w-5" />
-              <span>Last updated: January 2025</span>
-            </div>
+        <StandardHero
+          title="Questions Soldiers Ask Most"
+          description="Get quick answers to the most common questions about our taxi service for military personnel. Can't find what you're looking for? Contact us directly for personalized assistance."
+        >
+          <div className="flex items-center justify-center gap-2 text-muted-foreground mt-4">
+            <HelpCircle className="h-5 w-5" />
+            <span>Last updated: January 2025</span>
           </div>
-        </section>
+        </StandardHero>
 
         {/* FAQ Section */}
         <section className="py-16 px-6">

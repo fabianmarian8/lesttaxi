@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
+import { StandardHero } from "@/components/StandardHero";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 const AirportTransfer = () => {
   useSEO({
@@ -59,35 +61,11 @@ const AirportTransfer = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 via-background to-[hsl(var(--military-green))]/10">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl font-bold mb-6 text-foreground">
-              Sliač Airport Taxi & Shuttle
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Professional airport transfer service for military personnel. We track your flights, 
-              provide buffer time for delays, and offer flat rates with no surprises. 
-              From Lest Base to any major airport in Central Europe.
-            </p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Button 
-                variant="whatsapp" 
-                size="lg" 
-                onClick={() => window.open('https://wa.me/421919040118', '_blank')}
-              >
-                <MessageCircle className="h-5 w-5 mr-2" />
-                Book Airport Transfer
-              </Button>
-              <Button variant="secondary" size="lg">
-                <Phone className="h-5 w-5 mr-2" />
-                Call +421 919 040 118
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <StandardHero
+        title="Sliač Airport Taxi & Shuttle"
+        description="Professional airport transfer service for military personnel. We track your flights, provide buffer time for delays, and offer flat rates with no surprises. From Lest Base to any major airport in Central Europe."
+        primaryButtonText="Book Airport Transfer"
+      />
 
       {/* Airport Options */}
       <section className="py-16 px-6">
@@ -98,7 +76,7 @@ const AirportTransfer = () => {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <Plane className="h-8 w-8 text-[hsl(var(--military-gold))]" />
+                    <ServiceIcon Icon={Plane} size="md" />
                     <div>
                       <CardTitle className="text-xl">{airport.name}</CardTitle>
                       <CardDescription>{airport.distance} • {airport.time}</CardDescription>
@@ -128,7 +106,7 @@ const AirportTransfer = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center">
               <CardHeader>
-                <Clock className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <ServiceIcon Icon={Clock} className="mx-auto mb-4" />
                 <CardTitle>Flight Tracking</CardTitle>
                 <CardDescription>We monitor your flight status</CardDescription>
               </CardHeader>
@@ -141,7 +119,7 @@ const AirportTransfer = () => {
 
             <Card className="text-center">
               <CardHeader>
-                <Shield className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <ServiceIcon Icon={Shield} className="mx-auto mb-4" />
                 <CardTitle>Arrival Buffer Time</CardTitle>
                 <CardDescription>Extra time for unexpected delays</CardDescription>
               </CardHeader>
@@ -154,7 +132,7 @@ const AirportTransfer = () => {
 
             <Card className="text-center">
               <CardHeader>
-                <MapPin className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <ServiceIcon Icon={MapPin} className="mx-auto mb-4" />
                 <CardTitle>Flat Rate Pricing</CardTitle>
                 <CardDescription>No meter, no surprises</CardDescription>
               </CardHeader>

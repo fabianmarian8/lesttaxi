@@ -5,6 +5,8 @@ import { MapPin, Users, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { StandardHero } from "@/components/StandardHero";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 const PriceList = () => {
   useSEO({
@@ -146,21 +148,14 @@ const PriceList = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 via-background to-[hsl(var(--military-green))]/10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6 text-foreground">
-            Transparent Pricing – No Hidden Fees
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Fixed rates for all destinations. What we quote is what you pay – including fuel, tolls, and professional service. 
-            Special military discounts available for bulk bookings.
-          </p>
-          <Badge variant="secondary" className="text-lg px-6 py-2 bg-[hsl(var(--military-gold))]/20">
-            All prices in EUR
-          </Badge>
-        </div>
-      </section>
+      <StandardHero
+        title="Transparent Pricing – No Hidden Fees"
+        description="Fixed rates for all destinations. What we quote is what you pay – including fuel, tolls, and professional service. Special military discounts available for bulk bookings."
+      >
+        <Badge variant="secondary" className="text-lg px-6 py-2 bg-[hsl(var(--military-gold))]/20 mt-4">
+          All prices in EUR
+        </Badge>
+      </StandardHero>
 
       {/* Main Destinations */}
       <section className="py-16 px-6">
@@ -170,7 +165,7 @@ const PriceList = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <MapPin className="h-6 w-6 text-[hsl(var(--military-gold))]" />
+                  <ServiceIcon Icon={MapPin} size="sm" />
                   Long Distance Transport
                 </CardTitle>
                 <CardDescription>Fixed rates to major cities and airports</CardDescription>
@@ -216,7 +211,7 @@ const PriceList = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Users className="h-6 w-6 text-[hsl(var(--military-gold))]" />
+                  <ServiceIcon Icon={Users} size="sm" />
                   Base Services
                 </CardTitle>
                 <CardDescription>Quick local transport and delivery services</CardDescription>
@@ -250,7 +245,7 @@ const PriceList = () => {
           <div className="max-w-4xl mx-auto">
             <Card className="bg-gradient-to-r from-[hsl(var(--military-gold))]/10 to-[hsl(var(--military-green))]/10">
               <CardHeader className="text-center">
-                <Star className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                <ServiceIcon Icon={Star} className="mx-auto mb-4" />
                 <CardTitle className="text-2xl">Professional Taxi Service</CardTitle>
                 <CardDescription>Reliable transport you can count on</CardDescription>
               </CardHeader>

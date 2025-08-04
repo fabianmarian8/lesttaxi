@@ -4,6 +4,8 @@ import { MapPin, Clock, Shield, Phone, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { StandardHero } from "@/components/StandardHero";
+import { ServiceIcon } from "@/components/ServiceIcon";
 
 const BaseTaxi = () => {
   useSEO({
@@ -95,35 +97,10 @@ const BaseTaxi = () => {
           </div>
         </header>
 
-        {/* Hero Section */}
-        <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 via-background to-[hsl(var(--military-green))]/10">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h1 className="text-5xl font-bold mb-6 text-foreground">
-                Taxi to Lest Military Base 24/7
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Reliable transportation service for American military personnel stationed at Lest Base. 
-                We understand military schedules, base protocols, and provide secure, professional transport 
-                24 hours a day, 7 days a week.
-              </p>
-              <div className="flex gap-4 justify-center flex-wrap">
-                <Button 
-                  variant="whatsapp" 
-                  size="lg" 
-                  onClick={() => window.open('https://wa.me/421919040118', '_blank')}
-                >
-                  <MessageCircle className="h-5 w-5 mr-2" />
-                  Book on WhatsApp
-                </Button>
-                <Button variant="secondary" size="lg">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call +421 919 040 118
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <StandardHero
+          title="Taxi to Lest Military Base 24/7"
+          description="Reliable transportation service for American military personnel stationed at Lest Base. We understand military schedules, base protocols, and provide secure, professional transport 24 hours a day, 7 days a week."
+        />
 
         {/* Features Section */}
         <section className="py-16 px-6">
@@ -132,7 +109,7 @@ const BaseTaxi = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <Card className="text-center">
                 <CardHeader>
-                  <Clock className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                  <ServiceIcon Icon={Clock} className="mx-auto mb-4" />
                   <CardTitle>24/7 Availability</CardTitle>
                   <CardDescription>Always ready for your military schedule</CardDescription>
                 </CardHeader>
@@ -145,7 +122,7 @@ const BaseTaxi = () => {
 
               <Card className="text-center">
                 <CardHeader>
-                  <Shield className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                  <ServiceIcon Icon={Shield} className="mx-auto mb-4" />
                   <CardTitle>Base Security Clearance</CardTitle>
                   <CardDescription>Familiar with military protocols</CardDescription>
                 </CardHeader>
@@ -158,7 +135,7 @@ const BaseTaxi = () => {
 
               <Card className="text-center">
                 <CardHeader>
-                  <MapPin className="h-12 w-12 text-[hsl(var(--military-gold))] mx-auto mb-4" />
+                  <ServiceIcon Icon={MapPin} className="mx-auto mb-4" />
                   <CardTitle>Tennis Court Pickup</CardTitle>
                   <CardDescription>Meeting point near upper gate</CardDescription>
                 </CardHeader>
