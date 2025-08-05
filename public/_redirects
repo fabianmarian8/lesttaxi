@@ -1,7 +1,7 @@
-# URL canonicalization - redirect all versions to https://lesttaxi.com
-https://www.lesttaxi.com/* https://lesttaxi.com/:splat 301!
-http://lesttaxi.com/* https://lesttaxi.com/:splat 301!
-http://www.lesttaxi.com/* https://lesttaxi.com/:splat 301!
+# URL canonicalization - redirect all versions to https://www.lesttaxi.com
+https://lesttaxi.com/* https://www.lesttaxi.com/:splat 301!
+http://lesttaxi.com/* https://www.lesttaxi.com/:splat 301!
+http://www.lesttaxi.com/* https://www.lesttaxi.com/:splat 301!
 
 # Common URL fixes and redirects
 /home /
