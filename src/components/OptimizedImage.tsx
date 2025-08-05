@@ -54,7 +54,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={className}
         loading={imageLoading}
         decoding="async"
-        {...(priority && { fetchPriority: "high" })}
+        {...(priority && { fetchpriority: "high" })}
       />
     );
   }
@@ -93,7 +93,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={className}
         loading={imageLoading}
         decoding="async"
-        {...(priority && { fetchPriority: "high" })}
+        {...(priority && { fetchpriority: "high" })}
         {...(fallbackSrcSet && { srcSet: fallbackSrcSet })}
         {...(shouldUseResponsive && { sizes: defaultSizes })}
       />
