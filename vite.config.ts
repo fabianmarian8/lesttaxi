@@ -66,5 +66,5 @@ export default defineConfig(({ mode }) => ({
     target: 'esnext',
     manifest: true
   },
-  base: './',
+  base: '/',
 }));
