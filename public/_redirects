@@ -1,12 +1,2 @@
-# URL canonicalization - redirect all versions to https://www.lesttaxi.com
-
-
-# Common URL fixes and redirects
-/home /
-/about /
-/services /
-/contact /
-
-# 404 fallback
 /404      /404.html   404
 /*        /404.html   404
