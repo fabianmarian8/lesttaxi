@@ -1,10 +1,10 @@
+import React, { lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
-import { lazy, Suspense } from "react";
 
 // Lazy load non-critical components for better performance
 const ExchangeRateWidget = lazy(() => import("@/components/ExchangeRateWidget"));
