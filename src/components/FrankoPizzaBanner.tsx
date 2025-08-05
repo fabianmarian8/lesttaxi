@@ -1,7 +1,7 @@
 import React from 'react';
 import { OptimizedImage } from '@/components/OptimizedImage';
 
-const FrankoPizzaBanner = () => {
+export const FrankoPizzaBanner = () => {
   const handleClick = () => {
     window.gtag?.('event', 'franko_pizza_click');
     window.open('https://franko-pizza.sk/?18868_product_cat%5B0%5D=73', '_blank');
@@ -25,5 +25,3 @@ const FrankoPizzaBanner = () => {
     </div>
   );
 };
-
-export default FrankoPizzaBanner;

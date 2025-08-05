@@ -1,7 +1,0 @@
-{
-  "scripts": {
-    "optimize-images": "node scripts/optimize-images.js",
-    "optimize-images:assets": "node scripts/optimize-images.js --dir=src/assets",
-    "optimize-images:uploads": "node scripts/optimize-images.js --dir=public/lovable-uploads"
-  }
-}

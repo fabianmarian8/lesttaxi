@@ -24,36 +24,22 @@ export default defineConfig(({ mode }) => ({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        // Optimized code splitting for mobile performance
-        manualChunks: (id) => {
-          // Core React chunks
-          if (id.includes('react') || id.includes('react-dom')) return 'react-core';
-          if (id.includes('react-router')) return 'router';
-          
-          // UI library chunks
-          if (id.includes('@radix-ui') || id.includes('lucide-react')) return 'ui-lib';
-          if (id.includes('react-hook-form') || id.includes('zod')) return 'forms';
-          
-          // Feature chunks (lazy loaded)
-          if (id.includes('ExchangeRateWidget') || id.includes('FloatingWhatsApp') || id.includes('FrankoPizzaBanner')) return 'features';
-          
-          // Utility chunks
-          if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('class-variance-authority')) return 'utils';
-          
-          // Node modules vendor chunk
-          if (id.includes('node_modules')) return 'vendor';
+        // Better code splitting for performance
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', 'lucide-react'],
+          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
+          charts: ['recharts'],
+          utils: ['clsx', 'tailwind-merge', 'class-variance-authority']
         },
         // Add hash to filenames for cache busting
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: (assetInfo) => {
-          // Separate CSS and image chunks for better caching
+          // Separate CSS chunks for better caching
           if (assetInfo.name?.endsWith('.css')) {
             return 'assets/css/[name].[hash][extname]';
-          }
-          // Optimize image asset handling
-          if (assetInfo.name?.match(/\.(avif|webp|jpg|jpeg|png|svg)$/)) {
-            return 'assets/images/[name].[hash][extname]';
           }
           return 'assets/[name].[hash][extname]';
         }
@@ -66,15 +52,12 @@ export default defineConfig(({ mode }) => ({
     sourcemap: false,
     // CSS code splitting
     cssCodeSplit: true,
-    // Optimize assets - reduce inline limit for better caching
-    assetsInlineLimit: 2048,
+    // Optimize assets
+    assetsInlineLimit: 4096,
     // Preload optimizations
     modulePreload: {
       polyfill: false
-    },
-    // Image optimization settings
-    target: 'esnext',
-    manifest: true
+    }
   },
   base: './',
 }));

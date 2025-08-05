@@ -1,12 +1,12 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
-import ExchangeRateWidget from "@/components/ExchangeRateWidget";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import FrankoPizzaBanner from "@/components/FrankoPizzaBanner";
+import { OptimizedImage } from "@/components/OptimizedImage";
+import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
 
 
 const Index = () => {
@@ -93,11 +93,13 @@ const Index = () => {
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
                 alt="LEST TAXI circular logo with military taxi car icon" 
                 className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full bg-white/10 p-1 sm:p-2 backdrop-blur-sm border border-white/30 pulse-glow"
-                loading="eager"
+                width={80}
+                height={80}
+                priority={true}
               />
           
           <div className="flex items-center gap-2 sm:gap-4">
@@ -149,11 +151,15 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center lg:justify-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" 
                 alt="Professional white Toyota taxi vehicle ready for military personnel transport at Lest Base" 
                 className="rav4-image rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl"
-                loading="eager"
+                width={600}
+                height={450}
+                priority={true}
+                responsive={true}
+                sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw"
               />
             </div>
           </div>
@@ -335,7 +341,7 @@ const Index = () => {
         </div>
       </footer>
       
-        <FloatingWhatsApp />
+      <FloatingWhatsApp />
     </main>
   );
 };

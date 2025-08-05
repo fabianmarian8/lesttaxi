@@ -10,6 +10,7 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   responsive?: boolean;
   sizes?: string;
+  breakpoints?: number[];
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -21,37 +22,26 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   loading,
   responsive = false,
-  sizes
+  sizes,
+  breakpoints = [320, 640, 800, 1200, 1600]
 }) => {
   // Determine loading strategy
   const imageLoading = loading || (priority ? "eager" : "lazy");
-  
-  // Only optimize images from assets folder
+  // Only optimize images from assets folder that have WebP versions
   const isAssetImage = src.includes('/assets/');
-  
-  // Mobile-first breakpoints for better performance
-  const mobileBreakpoints = [240, 320, 480, 640];
-  const desktopBreakpoints = [800, 1200, 1600];
-  
-  // Detect if likely mobile (simple heuristic) - safe for SSR
-  const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
-  
-  // Use mobile-optimized breakpoints for smaller screens
-  const breakpoints = isMobile ? mobileBreakpoints : [...mobileBreakpoints, ...desktopBreakpoints];
   
   // Generate srcset for responsive images
   const generateSrcSet = (basePath: string, extension: string) => {
     if (!responsive || !width) return undefined;
     
-    const maxSize = isMobile ? Math.min(width * 2, 960) : width * 2;
     return breakpoints
-      .filter(bp => bp <= maxSize)
+      .filter(bp => bp <= (width * 2)) // Don't generate sizes larger than 2x original
       .map(bp => `${basePath}-${bp}w.${extension} ${bp}w`)
       .join(', ');
   };
   
-  // Auto-enable responsive for larger images
-  const shouldUseResponsive = responsive || (width && width > 300);
+  // Auto-enable responsive for large images
+  const shouldUseResponsive = responsive || (width && width > 400);
   
   if (!isAssetImage) {
     // For non-asset images (like lovable-uploads), use regular img tag
@@ -73,60 +63,20 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const baseSrc = src.replace(/\.[^/.]+$/, "");
   const extension = src.split('.').pop() || 'webp';
   
-  // Create modern format versions
-  const avifSrc = `${baseSrc}.avif`;
+  // Create WebP version (only for assets that have them)
   const webpSrc = `${baseSrc}.webp`;
   
   // Generate srcsets for responsive images
-  const avifSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'avif') : undefined;
   const webpSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'webp') : undefined;
   const fallbackSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, extension) : undefined;
   
-  // Mobile-optimized sizes attribute
+  // Default sizes attribute for responsive images
   const defaultSizes = shouldUseResponsive && !sizes 
-    ? isMobile 
-      ? "(max-width: 480px) 100vw, (max-width: 768px) 90vw, 50vw"
-      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
     : sizes;
   
-  // For mobile, prefer WebP over AVIF for faster decoding
-  if (isMobile) {
-    return (
-      <picture>
-        {/* WebP format for mobile - faster decoding */}
-        <source 
-          srcSet={webpSrcSet || webpSrc} 
-          type="image/webp"
-          {...(shouldUseResponsive && { sizes: defaultSizes })}
-        />
-        
-        {/* Fallback to original format */}
-        <img
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className={className}
-          loading={imageLoading}
-          decoding="async"
-          {...(priority && { fetchpriority: "high" })}
-          {...(fallbackSrcSet && { srcSet: fallbackSrcSet })}
-          {...(shouldUseResponsive && { sizes: defaultSizes })}
-        />
-      </picture>
-    );
-  }
-  
-  // Desktop version with AVIF support
   return (
     <picture>
-      {/* AVIF format for desktop - best compression */}
-      <source 
-        srcSet={avifSrcSet || avifSrc} 
-        type="image/avif"
-        {...(shouldUseResponsive && { sizes: defaultSizes })}
-      />
-      
       {/* WebP format for better compression */}
       <source 
         srcSet={webpSrcSet || webpSrc} 
