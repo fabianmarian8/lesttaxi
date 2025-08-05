@@ -118,9 +118,8 @@
       }
     </style>
     
-    <!-- Preload and async load non-critical CSS -->
-    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    <!-- Load CSS synchronously to prevent race conditions -->
+    <link rel="stylesheet" href="/src/index.css">
 
     <meta property="og:title" content="LEST TAXI - Military Base Transport & Airport Transfers" />
     <meta property="og:description" content="Professional 24/7 taxi service for US military personnel at Lest Base. Fixed rates, airport transfers, gate pickup." />
