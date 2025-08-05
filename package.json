@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "cp public/_redirects dist/_redirects 2>/dev/null || true && cp public/_headers dist/_headers 2>/dev/null || true && cp public/404.html dist/404.html 2>/dev/null || true"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -38,7 +39,6 @@
     "@radix-ui/react-toast": "^1.2.1",
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-toggle-group": "^1.1.0",
-    "@radix-ui/react-tooltip": "^1.1.4",
     "@supabase/supabase-js": "^2.53.0",
     "@tanstack/react-query": "^5.56.2",
     "class-variance-authority": "^0.7.1",
