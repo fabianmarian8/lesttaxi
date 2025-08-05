@@ -37,9 +37,13 @@ export default defineConfig(({ mode }) => ({
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: (assetInfo) => {
-          // Separate CSS chunks for better caching
+          // Separate CSS and image chunks for better caching
           if (assetInfo.name?.endsWith('.css')) {
             return 'assets/css/[name].[hash][extname]';
+          }
+          // Optimize image asset handling
+          if (assetInfo.name?.match(/\.(avif|webp|jpg|jpeg|png|svg)$/)) {
+            return 'assets/images/[name].[hash][extname]';
           }
           return 'assets/[name].[hash][extname]';
         }
@@ -52,12 +56,15 @@ export default defineConfig(({ mode }) => ({
     sourcemap: false,
     // CSS code splitting
     cssCodeSplit: true,
-    // Optimize assets
-    assetsInlineLimit: 4096,
+    // Optimize assets - reduce inline limit for better caching
+    assetsInlineLimit: 2048,
     // Preload optimizations
     modulePreload: {
       polyfill: false
-    }
+    },
+    // Image optimization settings
+    target: 'esnext',
+    manifest: true
   },
   base: './',
 }));

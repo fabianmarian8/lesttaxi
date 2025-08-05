@@ -63,10 +63,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const baseSrc = src.replace(/\.[^/.]+$/, "");
   const extension = src.split('.').pop() || 'webp';
   
-  // Create WebP version (only for assets that have them)
+  // Create modern format versions
+  const avifSrc = `${baseSrc}.avif`;
   const webpSrc = `${baseSrc}.webp`;
   
   // Generate srcsets for responsive images
+  const avifSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'avif') : undefined;
   const webpSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'webp') : undefined;
   const fallbackSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, extension) : undefined;
   
@@ -77,6 +79,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   
   return (
     <picture>
+      {/* AVIF format for best compression */}
+      <source 
+        srcSet={avifSrcSet || avifSrc} 
+        type="image/avif"
+        {...(shouldUseResponsive && { sizes: defaultSizes })}
+      />
+      
       {/* WebP format for better compression */}
       <source 
         srcSet={webpSrcSet || webpSrc} 
