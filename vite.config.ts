@@ -24,14 +24,24 @@ export default defineConfig(({ mode }) => ({
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        // Better code splitting for performance
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', 'lucide-react'],
-          forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
-          charts: ['recharts'],
-          utils: ['clsx', 'tailwind-merge', 'class-variance-authority']
+        // Optimized code splitting for mobile performance
+        manualChunks: (id) => {
+          // Core React chunks
+          if (id.includes('react') || id.includes('react-dom')) return 'react-core';
+          if (id.includes('react-router')) return 'router';
+          
+          // UI library chunks
+          if (id.includes('@radix-ui') || id.includes('lucide-react')) return 'ui-lib';
+          if (id.includes('react-hook-form') || id.includes('zod')) return 'forms';
+          
+          // Feature chunks (lazy loaded)
+          if (id.includes('ExchangeRateWidget') || id.includes('FloatingWhatsApp') || id.includes('FrankoPizzaBanner')) return 'features';
+          
+          // Utility chunks
+          if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('class-variance-authority')) return 'utils';
+          
+          // Node modules vendor chunk
+          if (id.includes('node_modules')) return 'vendor';
         },
         // Add hash to filenames for cache busting
         entryFileNames: 'assets/[name].[hash].js',

@@ -28,11 +28,15 @@
     <!-- Apple touch icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
     
-    <!-- Optimized font loading -->
+    <!-- Optimized font loading with mobile-first performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" /></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" />
+    </noscript>
     
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="//plausible.io" />
@@ -44,9 +48,9 @@
     <link rel="preload" href="/src/assets/hero-image-optimized.webp" as="image">
     <link rel="preload" href="/src/assets/logo-main.webp" as="image">
     
-    <!-- Critical CSS inline for above-the-fold content -->
+    <!-- Critical CSS inline for mobile-first performance -->
     <style>
-      /* Critical path CSS - inline for immediate rendering */
+      /* Critical path CSS - mobile-optimized inline rendering */
       :root {
         --background: 220 15% 8%;
         --foreground: 43 96% 90%;
@@ -59,19 +63,58 @@
         --border: 217 19% 27%;
         --input: 217 19% 27%;
         --radius: 0.5rem;
+        --whatsapp-green: 120 95% 40%;
       }
       body { 
-        font-family: Inter, system-ui, sans-serif; 
+        font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif; 
         background: hsl(var(--background)); 
         color: hsl(var(--foreground)); 
         margin: 0; 
-        line-height: 1.5;
+        line-height: 1.4;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeSpeed;
       }
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+      .container { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 0.75rem; 
+      }
+      @media (min-width: 640px) {
+        .container { padding: 0 1rem; }
+      }
       .glass-effect { 
         background: rgba(255, 255, 255, 0.05); 
         backdrop-filter: blur(10px); 
         border: 1px solid rgba(255, 255, 255, 0.1); 
+      }
+      /* Mobile-first loading placeholders */
+      .loading-placeholder { 
+        background: hsl(var(--stealth-gray)); 
+        animation: pulse 1.5s ease-in-out infinite; 
+      }
+      @keyframes pulse { 
+        0%, 100% { opacity: 1; } 
+        50% { opacity: 0.6; } 
+      }
+      /* Critical layout for hero section */
+      .hero-section { 
+        min-height: 50vh; 
+        display: flex; 
+        align-items: center; 
+        padding: 1rem 0.75rem;
+      }
+      @media (min-width: 768px) {
+        .hero-section { 
+          min-height: 60vh; 
+          padding: 2rem 1rem;
+        }
+      }
+      /* Tactical card base for mobile */
+      .tactical-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        transition: transform 0.2s ease;
       }
     </style>
     

@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
-import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
+import { lazy, Suspense } from "react";
+
+// Lazy load non-critical components for better performance
+const ExchangeRateWidget = lazy(() => import("@/components/ExchangeRateWidget"));
+const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
+const FrankoPizzaBanner = lazy(() => import("@/components/FrankoPizzaBanner").then(module => ({ default: module.FrankoPizzaBanner })));
 
 
 const Index = () => {
@@ -88,7 +91,9 @@ const Index = () => {
       </div>
       
       {/* Franko Pizza Banner */}
-      <FrankoPizzaBanner />
+      <Suspense fallback={<div />}>
+        <FrankoPizzaBanner />
+      </Suspense>
       
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
@@ -103,7 +108,9 @@ const Index = () => {
               />
           
           <div className="flex items-center gap-2 sm:gap-4">
-            <ExchangeRateWidget />
+            <Suspense fallback={<div className="w-32 h-8 bg-muted animate-pulse rounded" />}>
+              <ExchangeRateWidget />
+            </Suspense>
             <Link to="/help">
               <button className="glass-effect px-2 py-1 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 neon-glow bg-red-600 hover:bg-red-700 text-white border border-red-500/50">
                 <HelpCircle className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 inline" />
@@ -341,7 +348,9 @@ const Index = () => {
         </div>
       </footer>
       
-      <FloatingWhatsApp />
+        <Suspense fallback={<div />}>
+          <FloatingWhatsApp />
+        </Suspense>
     </main>
   );
 };
