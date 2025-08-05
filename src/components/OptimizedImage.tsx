@@ -10,7 +10,6 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   responsive?: boolean;
   sizes?: string;
-  breakpoints?: number[];
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -22,26 +21,37 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   loading,
   responsive = false,
-  sizes,
-  breakpoints = [320, 640, 800, 1200, 1600]
+  sizes
 }) => {
   // Determine loading strategy
   const imageLoading = loading || (priority ? "eager" : "lazy");
-  // Only optimize images from assets folder that have WebP versions
+  
+  // Only optimize images from assets folder
   const isAssetImage = src.includes('/assets/');
+  
+  // Mobile-first breakpoints for better performance
+  const mobileBreakpoints = [240, 320, 480, 640];
+  const desktopBreakpoints = [800, 1200, 1600];
+  
+  // Detect if likely mobile (simple heuristic)
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+  
+  // Use mobile-optimized breakpoints for smaller screens
+  const breakpoints = isMobile ? mobileBreakpoints : [...mobileBreakpoints, ...desktopBreakpoints];
   
   // Generate srcset for responsive images
   const generateSrcSet = (basePath: string, extension: string) => {
     if (!responsive || !width) return undefined;
     
+    const maxSize = isMobile ? Math.min(width * 2, 960) : width * 2;
     return breakpoints
-      .filter(bp => bp <= (width * 2)) // Don't generate sizes larger than 2x original
+      .filter(bp => bp <= maxSize)
       .map(bp => `${basePath}-${bp}w.${extension} ${bp}w`)
       .join(', ');
   };
   
-  // Auto-enable responsive for large images
-  const shouldUseResponsive = responsive || (width && width > 400);
+  // Auto-enable responsive for larger images
+  const shouldUseResponsive = responsive || (width && width > 300);
   
   if (!isAssetImage) {
     // For non-asset images (like lovable-uploads), use regular img tag
@@ -72,14 +82,45 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const webpSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, 'webp') : undefined;
   const fallbackSrcSet = shouldUseResponsive ? generateSrcSet(baseSrc, extension) : undefined;
   
-  // Default sizes attribute for responsive images
+  // Mobile-optimized sizes attribute
   const defaultSizes = shouldUseResponsive && !sizes 
-    ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+    ? isMobile 
+      ? "(max-width: 480px) 100vw, (max-width: 768px) 90vw, 50vw"
+      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
     : sizes;
   
+  // For mobile, prefer WebP over AVIF for faster decoding
+  if (isMobile) {
+    return (
+      <picture>
+        {/* WebP format for mobile - faster decoding */}
+        <source 
+          srcSet={webpSrcSet || webpSrc} 
+          type="image/webp"
+          {...(shouldUseResponsive && { sizes: defaultSizes })}
+        />
+        
+        {/* Fallback to original format */}
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={className}
+          loading={imageLoading}
+          decoding="async"
+          {...(priority && { fetchpriority: "high" })}
+          {...(fallbackSrcSet && { srcSet: fallbackSrcSet })}
+          {...(shouldUseResponsive && { sizes: defaultSizes })}
+        />
+      </picture>
+    );
+  }
+  
+  // Desktop version with AVIF support
   return (
     <picture>
-      {/* AVIF format for best compression */}
+      {/* AVIF format for desktop - best compression */}
       <source 
         srcSet={avifSrcSet || avifSrc} 
         type="image/avif"

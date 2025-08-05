@@ -19,13 +19,15 @@ const CONFIG = {
     path.join(__dirname, '../src/assets'),
     path.join(__dirname, '../public/lovable-uploads')
   ],
-  breakpoints: [320, 640, 800, 1200, 1600],
-  formats: ['avif', 'webp'],
+  // Mobile-first breakpoints for better performance
+  breakpoints: [240, 320, 480, 640, 800, 1200],
+  // WebP first for mobile compatibility
+  formats: ['webp', 'avif'],
   quality: {
-    avif: 50,
-    webp: 80,
-    jpeg: 85,
-    png: 95
+    avif: 55,     // Optimized for mobile
+    webp: 75,     // Better mobile performance
+    jpeg: 80,     // Reduced for faster loading
+    png: 85       // Better compression
   },
   extensions: ['.jpg', '.jpeg', '.png']
 };
