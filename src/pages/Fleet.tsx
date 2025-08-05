@@ -73,19 +73,19 @@ const Fleet = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://lesttaxi.com"
+        "item": "https://www.lesttaxi.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": "https://lesttaxi.com/about"
+        "item": "https://www.lesttaxi.com/about"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Fleet",
-        "item": "https://lesttaxi.com/fleet"
+        "item": "https://www.lesttaxi.com/fleet"
       }
     ]
   };
@@ -138,8 +138,8 @@ const Fleet = () => {
     "@type": "Organization",
     "name": "LEST TAXI",
     "description": "Professional taxi service specializing in military transport with modern fleet",
-    "url": "https://lesttaxi.com",
-    "logo": "https://lesttaxi.com/src/assets/logo-main.webp",
+    "url": "https://www.lesttaxi.com",
+    "logo": "https://www.lesttaxi.com/src/assets/logo-main.webp",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+421919040118",

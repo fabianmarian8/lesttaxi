@@ -13,19 +13,19 @@ const AirportMilitary = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://lesttaxi.com"
+        "item": "https://www.lesttaxi.com"
       },
       {
-        "@type": "ListItem", 
+        "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://lesttaxi.com/services"
+        "item": "https://www.lesttaxi.com/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Airport Transfers",
-        "item": "https://lesttaxi.com/airport-transfer"
+        "item": "https://www.lesttaxi.com/airport-transfer"
       }
     ]
   };

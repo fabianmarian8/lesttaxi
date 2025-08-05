@@ -64,13 +64,13 @@ const FAQ = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://lesttaxi.com"
+        "item": "https://www.lesttaxi.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "FAQ",
-        "item": "https://lesttaxi.com/faq"
+        "item": "https://www.lesttaxi.com/faq"
       }
     ]
   };
@@ -82,7 +82,7 @@ const FAQ = () => {
     "name": "LEST TAXI",
     "description": "Professional taxi service for military personnel in Slovakia",
     "telephone": "+421919040118",
-    "url": "https://lesttaxi.com",
+    "url": "https://www.lesttaxi.com",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "SK",

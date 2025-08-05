@@ -43,19 +43,19 @@ const PriceList = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://lesttaxi.com"
+        "item": "https://www.lesttaxi.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://lesttaxi.com/services"
+        "item": "https://www.lesttaxi.com/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Price List",
-        "item": "https://lesttaxi.com/price-list"
+        "item": "https://www.lesttaxi.com/price-list"
       }
     ]
   };

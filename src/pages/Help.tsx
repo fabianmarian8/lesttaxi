@@ -24,19 +24,19 @@ const Help = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://lesttaxi.com"
+        "item": "https://www.lesttaxi.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Support",
-        "item": "https://lesttaxi.com/support"
+        "item": "https://www.lesttaxi.com/support"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Help",
-        "item": "https://lesttaxi.com/help"
+        "item": "https://www.lesttaxi.com/help"
       }
     ]
   };

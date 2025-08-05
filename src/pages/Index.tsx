@@ -19,7 +19,7 @@ const Index = () => {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "LEST TAXI - Professional Military Transportation",
-      "url": "https://lesttaxi.com",
+      "url": "https://www.lesttaxi.com",
       "telephone": "+421919040118",
       "email": "fabianmarian8@gmail.com",
       "address": {

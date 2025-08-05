@@ -13,19 +13,19 @@ const McdonaldsDelivery = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://lesttaxi.com"
+        "item": "https://www.lesttaxi.com"
       },
       {
-        "@type": "ListItem", 
+        "@type": "ListItem",
         "position": 2,
         "name": "Food Delivery",
-        "item": "https://lesttaxi.com/delivery"
+        "item": "https://www.lesttaxi.com/delivery"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "McDonald's Delivery",
-        "item": "https://lesttaxi.com/mcdonalds-delivery"
+        "item": "https://www.lesttaxi.com/mcdonalds-delivery"
       }
     ]
   };
@@ -40,7 +40,7 @@ const McdonaldsDelivery = () => {
       "@type": "LocalBusiness",
       "name": "LEST TAXI",
       "telephone": "+421 919 040 118",
-      "url": "https://lesttaxi.com"
+      "url": "https://www.lesttaxi.com"
     },
     "areaServed": {
       "@type": "Place",

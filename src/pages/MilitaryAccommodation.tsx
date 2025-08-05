@@ -24,7 +24,7 @@ const MilitaryAccommodation = () => {
         "@type": "LocalBusiness",
         "name": "FRANKO TAXI",
         "telephone": "+421-XXX-XXX-XXX",
-        "url": "https://lesttaxi.com",
+        "url": "https://www.lesttaxi.com",
         "serviceArea": "Slovakia"
       },
       "availableLanguage": ["English", "Slovak"],

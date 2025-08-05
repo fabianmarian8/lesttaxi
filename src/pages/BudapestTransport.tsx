@@ -24,7 +24,7 @@ const BudapestTransport = () => {
         "@type": "LocalBusiness",
         "name": "FRANKO TAXI",
         "telephone": "+421-XXX-XXX-XXX",
-        "url": "https://lesttaxi.com",
+        "url": "https://www.lesttaxi.com",
         "serviceArea": "Slovakia, Hungary"
       },
       "availableLanguage": ["English", "Slovak"],
