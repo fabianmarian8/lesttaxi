@@ -11,14 +11,14 @@ import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
 
 const Index = () => {
   useSEO({
-    title: "LEST TAXI - Military Taxi & Airport Transfer Slovakia",
-    description: "Professional 24/7 taxi service for US military personnel at Lest Base. Airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
+    title: "Taxi Lest (Lešť) – 24/7 Base Transport & Airport Transfers | LEST TAXI",
+    description: "24/7 taxi service for U.S. personnel at Lešť (Lest) Military Training Area. Professional airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
     keywords: "Lest taxi, military taxi Slovakia, airport transfer Sliac, US military transport, gate pickup service, taxi Lest, taxi near me, Sliač airport transfer",
     canonical: "https://www.lesttaxi.com",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "LEST TAXI - Professional Military Transportation",
+      "name": "Taxi Lest",
       "url": "https://www.lesttaxi.com",
       "telephone": "+421919040118",
       "email": "fabianmarian8@gmail.com",
@@ -121,10 +121,10 @@ const Index = () => {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="text-center sm:text-left slide-up w-full">
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words" itemProp="name">
-                Professional Taxi Service for US Military at Lest Base Slovakia
+                Taxi Lest – 24/7
               </h1>
               <p className="text-sm sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium break-words">
-                Professional Transportation Service for American Military Personnel
+                24/7 taxi service for U.S. personnel at Lešť (Lest) Military Training Area – fixed rates, gate pickup, and airport transfers.
               </p>
               <p className="text-xs sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8 leading-relaxed break-words">
                 🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🥡 Food delivery
