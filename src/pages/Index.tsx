@@ -6,10 +6,10 @@ import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 
-// Lazy load non-critical components for better performance
-const ExchangeRateWidget = lazy(() => import("@/components/ExchangeRateWidget"));
-const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
-const FrankoPizzaBanner = lazy(() => import("@/components/FrankoPizzaBanner"));
+// Import components directly for debugging
+import ExchangeRateWidget from "@/components/ExchangeRateWidget";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FrankoPizzaBanner from "@/components/FrankoPizzaBanner";
 
 
 const Index = () => {

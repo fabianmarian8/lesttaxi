@@ -33,8 +33,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const mobileBreakpoints = [240, 320, 480, 640];
   const desktopBreakpoints = [800, 1200, 1600];
   
-  // Detect if likely mobile (simple heuristic)
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+  // Detect if likely mobile (simple heuristic) - safe for SSR
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth <= 768 : false;
   
   // Use mobile-optimized breakpoints for smaller screens
   const breakpoints = isMobile ? mobileBreakpoints : [...mobileBreakpoints, ...desktopBreakpoints];
