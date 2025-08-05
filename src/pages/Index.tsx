@@ -9,7 +9,7 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 // Lazy load non-critical components for better performance
 const ExchangeRateWidget = lazy(() => import("@/components/ExchangeRateWidget"));
 const FloatingWhatsApp = lazy(() => import("@/components/FloatingWhatsApp"));
-const FrankoPizzaBanner = lazy(() => import("@/components/FrankoPizzaBanner").then(module => ({ default: module.FrankoPizzaBanner })));
+const FrankoPizzaBanner = lazy(() => import("@/components/FrankoPizzaBanner"));
 
 
 const Index = () => {
