@@ -9,7 +9,7 @@ const BudapestTransport = () => {
     title: "Budapest Transport for US Military | Lest Base to Budapest | FRANKO TAXI",
     description: "Professional long-distance transport from Lest Military Base to Budapest, Hungary. Airport transfers, city tours, business trips for US military personnel. English speaking drivers.",
     keywords: "Budapest transport military, US soldiers Budapest taxi, Lest to Budapest, military transport Hungary, American soldiers Budapest transfer",
-    canonical: "https://lesttaxi.com/budapest-military-transport",
+    canonical: "https://www.lesttaxi.com/budapest-military-transport",
     ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png",
     jsonLd: {
       "@context": "https://schema.org",

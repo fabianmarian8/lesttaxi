@@ -14,7 +14,7 @@ const Index = () => {
     title: "LEST TAXI - Military Taxi & Airport Transfer Slovakia",
     description: "Professional 24/7 taxi service for US military personnel at Lest Base. Airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
     keywords: "Lest taxi, military taxi Slovakia, airport transfer Sliac, US military transport, gate pickup service, taxi Lest, taxi near me, Sliač airport transfer",
-    canonical: "https://lesttaxi.com",
+    canonical: "https://www.lesttaxi.com",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",

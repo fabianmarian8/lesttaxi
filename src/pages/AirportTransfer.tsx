@@ -13,7 +13,7 @@ const AirportTransfer = () => {
     title: "Airport Transfer Slovakia - Sliač, Bratislava, Vienna | LEST TAXI",
     description: "Professional airport transfer service from Lest Base to major airports. Fixed rates, flight tracking, 24/7 service. Book via WhatsApp +421 919 040 118",
     keywords: "airport transfer Slovakia, Sliač airport taxi, Bratislava airport transfer, Vienna airport transport, military airport taxi",
-    canonical: "https://lesttaxi.com/airport-transfer",
+    canonical: "https://www.lesttaxi.com/airport-transfer",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",

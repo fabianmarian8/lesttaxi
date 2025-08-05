@@ -10,7 +10,7 @@ const TaxiStareMesto = () => {
     title: "Staré Mesto Taxi | LEST TAXI",
     description: "Transport to Bratislava's historic Old Town from Lešť Base. Explore the historic center. Book via WhatsApp +421 919 040 118.",
     keywords: "taxi Staré Mesto, Bratislava Old Town taxi, historic center transport, military taxi Slovakia, Lešť to Bratislava center",
-    canonical: "https://lesttaxi.com/taxi-stare-mesto",
+    canonical: "https://www.lesttaxi.com/taxi-stare-mesto",
   });
 
   return (

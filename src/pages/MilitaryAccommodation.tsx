@@ -9,7 +9,7 @@ const MilitaryAccommodation = () => {
     title: "Hotel Transfers | FRANKO TAXI",
     description: "Hotel transport for US military in Slovakia. Airport pickups, accommodation transfers. English-speaking drivers 24/7.",
     keywords: "military accommodation transport, US soldiers hotel transfers, military housing Slovakia, American military hotel service, accommodation transport Lest",
-    canonical: "https://lesttaxi.com/military-accommodation-transport",
+    canonical: "https://www.lesttaxi.com/military-accommodation-transport",
     ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png",
     jsonLd: {
       "@context": "https://schema.org",

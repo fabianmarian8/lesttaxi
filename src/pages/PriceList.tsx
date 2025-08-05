@@ -13,7 +13,7 @@ const PriceList = () => {
     title: "Taxi Prices | LEST TAXI",
     description: "Transparent taxi pricing for military transport. Fixed rates, no hidden fees. Airport transfers and local services.",
     keywords: "taxi prices Slovakia, Lešť taxi rates, airport transfer prices, military taxi cost, transparent pricing",
-    canonical: "https://lesttaxi.com/price-list"
+    canonical: "https://www.lesttaxi.com/price-list"
   });
 
   const destinations = [

@@ -12,7 +12,7 @@ const BaseTaxi = () => {
     title: "Base Taxi Lest - Military Transport Service | LEST TAXI",
     description: "Specialized base taxi service for US military personnel at Lest Base. 24/7 gate pickup, security clearance, fixed rates. Book now via WhatsApp +421 919 040 118",
     keywords: "base taxi Lest, military transport Slovakia, Lest base pickup, gate service, US military taxi, base transport",
-    canonical: "https://lesttaxi.com/base-taxi",
+    canonical: "https://www.lesttaxi.com/base-taxi",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",

@@ -14,7 +14,7 @@ const Fleet = () => {
     title: "Our Fleet - Professional Taxi Vehicles | LEST TAXI",
     description: "Modern and safe taxi fleet for military personnel. Sedans, SUVs, minivans available. Air conditioning, GPS tracking, professional drivers.",
     keywords: "taxi fleet Slovakia, military taxi vehicles, professional cars, safe transport, modern fleet",
-    canonical: "https://lesttaxi.com/fleet"
+    canonical: "https://www.lesttaxi.com/fleet"
   });
 
   const vehicles = [

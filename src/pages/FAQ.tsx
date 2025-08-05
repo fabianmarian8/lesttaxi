@@ -11,7 +11,7 @@ const FAQ = () => {
     title: "FAQ - Frequently Asked Questions | LEST TAXI",
     description: "Get answers to common questions about our military taxi service. Booking, pricing, vehicle types, service areas, and more.",
     keywords: "taxi FAQ Slovakia, military taxi questions, booking help, service information",
-    canonical: "https://lesttaxi.com/faq"
+    canonical: "https://www.lesttaxi.com/faq"
   });
 
   const faqs = [

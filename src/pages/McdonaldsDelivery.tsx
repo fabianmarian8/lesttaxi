@@ -64,7 +64,7 @@ const McdonaldsDelivery = () => {
     title: "McDonald's Delivery | LEST TAXI",
     description: "McDonald's delivery for US soldiers at Lest Base. 24/7 delivery to base gate. Order your favorites via WhatsApp.",
     keywords: "McDonalds delivery military base, McDonalds pickup Lest, American food Slovakia, US soldiers McDonalds, military base food delivery, McDonalds Zvolen delivery",
-    canonical: "https://lesttaxi.com/mcdonalds-delivery",
+    canonical: "https://www.lesttaxi.com/mcdonalds-delivery",
     jsonLd: deliveryServiceJsonLd
   });
 

@@ -8,7 +8,7 @@ const KFCDelivery = () => {
     title: "KFC Delivery | LEST TAXI",
     description: "KFC delivery for US soldiers at Lest Base. Fast pickup and delivery to base gate. Order via WhatsApp.",
     keywords: "KFC delivery Lest base, KFC pickup Slovakia military, American fast food delivery, US soldiers KFC, military base food delivery, KFC Zvolen delivery",
-    canonical: "https://lesttaxi.com/kfc-delivery",
+    canonical: "https://www.lesttaxi.com/kfc-delivery",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",

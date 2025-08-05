@@ -8,7 +8,7 @@ User-agent: *
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://lesttaxi.com/sitemap.xml
+Sitemap: https://www.lesttaxi.com/sitemap.xml
 
 # Host preference (canonical URL)
-Host: lesttaxi.com
+Host: www.lesttaxi.com

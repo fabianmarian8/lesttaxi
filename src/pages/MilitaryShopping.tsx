@@ -8,7 +8,7 @@ const MilitaryShopping = () => {
     title: "Shopping Transport | LEST TAXI",
     description: "Shopping transport for US soldiers. Europa Shopping Center, fitness stores, protein supplements. Military-friendly trips.",
     keywords: "Europa Shopping Center transport military, shopping taxi Lest base, protein supplements delivery Slovakia, fitness shopping military, US soldiers shopping transport, military discount shopping",
-    canonical: "https://lesttaxi.com/military-shopping",
+    canonical: "https://www.lesttaxi.com/military-shopping",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",

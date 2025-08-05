@@ -11,7 +11,7 @@ const BanskaBystricaTaxi = () => {
     title: "Military Taxi Banská Bystrica | US Soldiers Transport | FRANKO TAXI",
     description: "Professional taxi service from Lest Military Base to Banská Bystrica. 24/7 transport for US military personnel. English speaking drivers, fixed rates, reliable service.",
     keywords: "Banská Bystrica taxi military, US soldiers transport Banská Bystrica, Lest base to Banská Bystrica, military taxi Slovakia, American soldiers taxi",
-    canonical: "https://lesttaxi.com/banska-bystrica-military-taxi",
+    canonical: "https://www.lesttaxi.com/banska-bystrica-military-taxi",
     ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png",
     jsonLd: {
       "@context": "https://schema.org",

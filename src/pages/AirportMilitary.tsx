@@ -34,7 +34,7 @@ const AirportMilitary = () => {
     title: "Military Airport Transfers | LEST TAXI",
     description: "Airport transfers for US soldiers. Bratislava, Vienna, Budapest airports. Military-friendly scheduling for leave and vacation.",
     keywords: "military airport transfer Slovakia, Bratislava Vienna Budapest airport US soldiers, leave transport military, vacation airport transfer Lest base, US military taxi airport",
-    canonical: "https://lesttaxi.com/airport-military",
+    canonical: "https://www.lesttaxi.com/airport-military",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",

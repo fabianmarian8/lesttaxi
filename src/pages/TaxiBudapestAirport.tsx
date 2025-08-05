@@ -10,7 +10,7 @@ const TaxiBudapestAirport = () => {
     title: "Budapest Airport Transfer | LEST TAXI",
     description: "Direct transfers from Lešť Base to Budapest Airport (BUD). Flight-timed service. Book via WhatsApp +421 919 040 118.",
     keywords: "taxi Budapest airport, Lešť to Budapest BUD, airport transfer Hungary, military taxi Budapest, flight transfers",
-    canonical: "https://lesttaxi.com/taxi-budapest-airport",
+    canonical: "https://www.lesttaxi.com/taxi-budapest-airport",
   });
 
   return (

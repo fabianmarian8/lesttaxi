@@ -67,7 +67,7 @@ const TaxiBratislava = () => {
     title: "Bratislava Taxi | LEST TAXI",
     description: "Professional taxi from Lešť Base to Bratislava. Fixed rates, 24/7 service. Book via WhatsApp +421 919 040 118.",
     keywords: "taxi Bratislava, Lešť to Bratislava, military taxi Slovakia, airport transfer Bratislava, professional transport",
-    canonical: "https://lesttaxi.com/taxi-bratislava",
+    canonical: "https://www.lesttaxi.com/taxi-bratislava",
     jsonLd: serviceJsonLd
   });
 
