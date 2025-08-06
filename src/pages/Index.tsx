@@ -11,21 +11,21 @@ import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
 
 const Index = () => {
   useSEO({
-    title: "Taxi Lest (Lešť) – 24/7 Base Transport & Airport Transfers | LEST TAXI",
-    description: "24/7 taxi service for U.S. personnel at Lešť (Lest) Military Training Area. Professional airport transfers, gate pickup, food delivery. Fixed rates, no hidden fees. WhatsApp +421 919 040 118",
-    keywords: "Lest taxi, military taxi Slovakia, airport transfer Sliac, US military transport, gate pickup service, taxi Lest, taxi near me, Sliač airport transfer",
+    title: "Taxi Lešť | Lest Base Airport Transfer | 24/7 Slovakia Transport",
+    description: "Professional taxi Lešť service - airport transfers, Banská Bystrica transport, 24/7 availability. English-speaking drivers for US military personnel. Call +421 919 040 118",
+    keywords: "taxi lešť, taxi lest, taxi banská bystrica, taxi airport, slovakia taxi service, airport transfer slovakia, banská bystrica transport, lest base taxi",
     canonical: "https://www.lesttaxi.com",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Taxi Lest",
+      "name": "Taxi Lešť",
       "url": "https://www.lesttaxi.com",
       "telephone": "+421919040118",
       "email": "fabianmarian8@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Lest Military Base Area",
-        "addressLocality": "Lest",
+        "addressLocality": "Lešť",
         "addressRegion": "Banská Bystrica Region",
         "postalCode": "96223",
         "addressCountry": "SK"
@@ -54,7 +54,7 @@ const Index = () => {
             "itemOffered": {
               "@type": "Service",
               "name": "Airport Transfer Service",
-              "description": "Professional airport transfers from Lest Base to Budapest, Vienna, and Bratislava airports"
+              "description": "Professional airport transfers from Lešť Base to Budapest, Vienna, and Bratislava airports"
             }
           },
           {
@@ -62,20 +62,20 @@ const Index = () => {
             "itemOffered": {
               "@type": "Service",
               "name": "Military Base Transport",
-              "description": "Specialized transportation for US military personnel at Lest Base"
+              "description": "Specialized transportation for US military personnel at Lešť Base"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "City Transport Slovakia",
-              "description": "Urban transportation to Slovak cities and shopping centers"
+              "name": "Banská Bystrica Transport",
+              "description": "Urban transportation to Banská Bystrica and Slovak cities"
             }
           }
         ]
       },
-      "description": "Professional 24/7 taxi service for US military personnel at Lest Base Slovakia. Specializing in airport transfers, base transport, and city travel with fixed rates and military protocol understanding."
+      "description": "Professional 24/7 taxi service for US military personnel at Lešť Base Slovakia. Specializing in airport transfers, Banská Bystrica transport, and city travel with fixed rates and military protocol understanding."
     }
   });
 
@@ -121,7 +121,7 @@ const Index = () => {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="text-center sm:text-left slide-up w-full">
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words" itemProp="name">
-                Taxi Lest – 24/7
+                Taxi Lešť – 24/7 Airport Transfer Slovakia
               </h1>
               <p className="text-sm sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium break-words">
                 24/7 taxi service for U.S. personnel at Lešť (Lest) Military Training Area – fixed rates, gate pickup, and airport transfers.
@@ -317,6 +317,26 @@ const Index = () => {
                 Vienna Airport
               </h3>
               <p className="text-sm text-muted-foreground">Premium transfers to Vienna VIE</p>
+            </Link>
+            
+            <Link 
+              to="/taxi-banska-bystrica"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
+                Taxi Banská Bystrica
+              </h3>
+              <p className="text-sm text-muted-foreground">City transport to Banská Bystrica</p>
+            </Link>
+            
+            <Link 
+              to="/airport-transport-slovakia"
+              className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300"
+            >
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
+                Airport Transport
+              </h3>
+              <p className="text-sm text-muted-foreground">All Slovakia airport transfers</p>
             </Link>
           </div>
         </div>

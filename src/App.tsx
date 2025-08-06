@@ -27,6 +27,8 @@ import TaxiBratislava from "./pages/TaxiBratislava";
 import TaxiStareMesto from "./pages/TaxiStareMesto";
 import TaxiBudapestAirport from "./pages/TaxiBudapestAirport";
 import TaxiViennaAirport from "./pages/TaxiViennaAirport";
+import TaxiBanskaBystrica from "./pages/TaxiBanskaBystrica";
+import AirportTransportSlovakia from "./pages/AirportTransportSlovakia";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +61,8 @@ const AppContent = () => {
           <Route path="/taxi-stare-mesto" element={<TaxiStareMesto />} />
           <Route path="/taxi-budapest-airport" element={<TaxiBudapestAirport />} />
           <Route path="/taxi-vienna-airport" element={<TaxiViennaAirport />} />
+          <Route path="/taxi-banska-bystrica" element={<TaxiBanskaBystrica />} />
+          <Route path="/airport-transport-slovakia" element={<AirportTransportSlovakia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
