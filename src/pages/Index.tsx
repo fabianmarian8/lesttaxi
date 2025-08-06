@@ -254,6 +254,25 @@ const Index = () => {
               <span className="text-sm sm:text-base lg:text-lg font-bold text-blue-600 text-center">Facebook</span>
             </a>
           </div>
+          
+          {/* Google Maps Location */}
+          <div className="mt-12 lg:mt-16">
+            <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 text-[hsl(var(--military-gold))]">
+              Our Location in Lešť
+            </h3>
+            <div className="tactical-card p-4 mx-auto max-w-4xl">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10606.190694779916!2d19.30634581363969!3d48.34999898836313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476aace20de6e3b3%3A0x34f254bbfa7193c9!2s962%2063%20Lest&#39;!5e0!3m2!1ssk!2ssk!4v1754488714914!5m2!1ssk!2ssk" 
+                width="100%" 
+                height="300"
+                style={{ border: 0, borderRadius: 'var(--radius)' }}
+                allowFullScreen={true}
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Taxi Lešť Location"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
