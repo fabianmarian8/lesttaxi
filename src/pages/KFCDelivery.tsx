@@ -29,8 +29,8 @@ const KFCDelivery = () => {
   });
 
   const kfcLocations = [
-    { name: "KFC Zvolen", distance: "12 km", time: "15 min", address: "Zvolen City Center" },
-    { name: "KFC Banská Bystrica", distance: "25 km", time: "30 min", address: "Europa Shopping Center" },
+    { name: "KFC Zvolen", distance: "40 km", time: "15 min", address: "Zvolen City Center" },
+    { name: "KFC Banská Bystrica", distance: "60 km", time: "30 min", address: "Europa Shopping Center" },
   ];
 
   const features = [
