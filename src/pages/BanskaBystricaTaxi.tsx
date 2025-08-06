@@ -73,30 +73,30 @@ const BanskaBystricaTaxi = () => {
   const destinations = [
     {
       name: "Banská Bystrica City Center",
-      distance: "25 km",
-      time: "30 min",
-      price: "40€",
+      distance: "60 km",
+      time: "45 min",
+      price: "70€",
       description: "Shopping, restaurants, historic center"
     },
     {
       name: "Banská Bystrica Mall",
-      distance: "23 km", 
-      time: "28 min",
-      price: "38€",
+      distance: "60 km", 
+      time: "45 min",
+      price: "70€",
       description: "Shopping center, cinema, food court"
     },
     {
       name: "Banská Bystrica Train Station",
-      distance: "26 km",
-      time: "32 min", 
-      price: "42€",
+      distance: "62 km",
+      time: "48 min", 
+      price: "70€",
       description: "Railway connections to major cities"
     },
     {
       name: "Banská Bystrica Hospital",
-      distance: "24 km",
-      time: "29 min",
-      price: "39€",
+      distance: "67 km",
+      time: "55 min",
+      price: "75€",
       description: "Medical appointments and services"
     }
   ];
