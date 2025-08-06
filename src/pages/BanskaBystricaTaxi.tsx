@@ -192,16 +192,16 @@ const BanskaBystricaTaxi = () => {
       </section>
 
       {/* About Banská Bystrica */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">About Banská Bystrica</h2>
-            <p className="text-lg mb-6">
+            <h2 className="text-3xl font-bold mb-8 text-white">About Banská Bystrica</h2>
+            <p className="text-lg mb-6 text-gray-200">
               Banská Bystrica is a historic city in central Slovakia, known for its beautiful medieval old town, 
               vibrant cultural scene, and excellent shopping opportunities. The city offers modern amenities 
               including shopping centers, restaurants, medical facilities, and entertainment venues.
             </p>
-            <p className="text-lg mb-8">
+            <p className="text-lg mb-8 text-gray-200">
               Our reliable taxi service ensures US military personnel can easily access all that Banská Bystrica 
               has to offer, from business appointments to leisure activities, with the comfort of English-speaking 
               drivers who understand military schedules and requirements.
