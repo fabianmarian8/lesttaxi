@@ -70,7 +70,7 @@ const FloatingWhatsApp = () => {
         >
           <Car className="h-8 w-8" />
         </Button>
-        <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse-gentle"></div>
+        <div className="absolute bottom-1 left-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white animate-pulse-gentle"></div>
       </div>
     </div>
   );
