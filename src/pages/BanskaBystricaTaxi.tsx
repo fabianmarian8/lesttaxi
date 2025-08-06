@@ -25,7 +25,7 @@ const BanskaBystricaTaxi = () => {
       "provider": {
         "@type": "LocalBusiness",
         "name": "FRANKO TAXI",
-        "telephone": "+421-XXX-XXX-XXX",
+        "telephone": "+421919040118",
         "url": "https://www.lesttaxi.com",
         "serviceArea": "Slovakia"
       },
@@ -40,11 +40,11 @@ const BanskaBystricaTaxi = () => {
   });
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/421905123456?text=Hello,%20I%20need%20transport%20to%20Banská%20Bystrica", "_blank");
+    window.open("https://wa.me/421919040118?text=Hello,%20I%20need%20transport%20to%20Banská%20Bystrica", "_blank");
   };
 
   const callPhone = () => {
-    window.open("tel:+421905123456", "_self");
+    window.open("tel:+421919040118", "_self");
   };
 
   const features = [
@@ -233,7 +233,7 @@ const BanskaBystricaTaxi = () => {
               className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-4"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call +421 905 123 456
+              Call +421 919 040 118
             </Button>
           </div>
         </div>

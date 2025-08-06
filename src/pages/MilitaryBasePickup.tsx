@@ -17,7 +17,7 @@ const MilitaryBasePickup = () => {
       "provider": {
         "@type": "LocalBusiness",
         "name": "LEST TAXI",
-        "telephone": "+421 948 141 414"
+        "telephone": "+421919040118"
       },
       "areaServed": "Lest Military Base, Slovakia",
       "serviceType": "Military Base Transport Service",
