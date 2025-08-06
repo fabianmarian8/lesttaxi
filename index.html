@@ -34,7 +34,7 @@
     <!-- Optimized font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" as="style" media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" /></noscript>
     
     <!-- DNS prefetch for external resources -->
@@ -79,7 +79,7 @@
     </style>
     
     <!-- Preload main CSS for non-blocking render -->
-    <link rel="preload" href="/assets/css/index.[hash].css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/assets/css/index.[hash].css" as="style" media="print" onload="this.media='all';this.onload=null">
     <noscript><link rel="stylesheet" href="/assets/css/index.[hash].css"></noscript>
     
     <!-- Preload main app JavaScript -->
