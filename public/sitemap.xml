@@ -7,76 +7,40 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/airport-transfer</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.lesttaxi.com/airport-military</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.lesttaxi.com/taxi-bratislava</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.lesttaxi.com/taxi-budapest-airport</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.lesttaxi.com/taxi-stare-mesto</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.lesttaxi.com/taxi-vienna-airport</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.lesttaxi.com/budapest-military-transport</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.lesttaxi.com/banska-bystrica-military-taxi</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.lesttaxi.com/base-taxi</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/military-accommodation-transport</loc>
+    <loc>https://www.lesttaxi.com/airport-transfer</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/military-base-pickup</loc>
+    <loc>https://www.lesttaxi.com/price-list</loc>
     <lastmod>2025-08-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/military-shopping</loc>
+    <loc>https://www.lesttaxi.com/fleet</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/faq</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/help</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.lesttaxi.com/kfc-delivery</loc>
@@ -91,22 +55,40 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/fleet</loc>
+    <loc>https://www.lesttaxi.com/military-shopping</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/price-list</loc>
+    <loc>https://www.lesttaxi.com/airport-military</loc>
     <lastmod>2025-08-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/faq</loc>
+    <loc>https://www.lesttaxi.com/military-base-pickup</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/banska-bystrica-military-taxi</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/budapest-military-transport</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/military-accommodation-transport</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.lesttaxi.com/feedback</loc>
@@ -115,9 +97,33 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.lesttaxi.com/help</loc>
+    <loc>https://www.lesttaxi.com/artemis</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/taxi-bratislava</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/taxi-stare-mesto</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/taxi-budapest-airport</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.lesttaxi.com/taxi-vienna-airport</loc>
+    <lastmod>2025-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
