@@ -4,6 +4,8 @@ import { MessageCircle, Phone, Plane, Clock, Shield, MapPin } from "lucide-react
 import { useSEO } from "@/hooks/useSEO";
 import { StandardHero } from "@/components/StandardHero";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { SiteFooter } from "@/components/SiteFooter";
+import { RelatedServices } from "@/components/RelatedServices";
 
 const AirportTransportSlovakia = () => {
   useSEO({
@@ -11,6 +13,7 @@ const AirportTransportSlovakia = () => {
     description: "Professional airport transport Slovakia from Lešť Base. Taxi airport service to Budapest, Vienna, Bratislava. English-speaking drivers, fixed rates. Call +421 919 040 118",
     keywords: "taxi airport, airport transport slovakia, taxi lešť, budapest airport transfer, vienna airport transfer, bratislava airport taxi",
     canonical: "https://www.lesttaxi.com/airport-transport-slovakia",
+    ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "TaxiService",
@@ -247,6 +250,12 @@ const AirportTransportSlovakia = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Services */}
+      <RelatedServices currentService="/airport-transport-slovakia" category="airport" />
+
+      {/* Footer */}
+      <SiteFooter />
     </div>
   );
 };

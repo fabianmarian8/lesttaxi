@@ -62,6 +62,9 @@ export const useSEO = ({
     updateOGTag('og:title', title);
     updateOGTag('og:description', description);
     updateOGTag('og:image', ogImage);
+    updateOGTag('og:type', 'website');
+    updateOGTag('og:site_name', 'LEST TAXI');
+    updateOGTag('og:locale', 'sk_SK');
     if (canonical) updateOGTag('og:url', canonical);
     
     // Update Twitter Card tags
@@ -75,9 +78,11 @@ export const useSEO = ({
       twitterTag.setAttribute('content', content);
     };
     
+    updateTwitterTag('twitter:card', 'summary_large_image');
     updateTwitterTag('twitter:title', title);
     updateTwitterTag('twitter:description', description);
     updateTwitterTag('twitter:image', ogImage);
+    updateTwitterTag('twitter:site', '@lesttaxi');
     
     // Add JSON-LD structured data if provided
     if (jsonLd) {

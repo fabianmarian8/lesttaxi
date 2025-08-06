@@ -4,6 +4,8 @@ import { MessageCircle, Phone, MapPin, Clock, Shield, Car } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { StandardHero } from "@/components/StandardHero";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { SiteFooter } from "@/components/SiteFooter";
+import { RelatedServices } from "@/components/RelatedServices";
 
 const TaxiBanskaBystrica = () => {
   useSEO({
@@ -11,6 +13,7 @@ const TaxiBanskaBystrica = () => {
     description: "Professional taxi Banská Bystrica service from Lešť Base. English-speaking drivers, fixed rates, 24/7 availability. Airport transfers and city transport. Call +421 919 040 118",
     keywords: "taxi banská bystrica, taxi lešť, lest base transport, banská bystrica transport, slovakia taxi service, airport transfer banská bystrica",
     canonical: "https://www.lesttaxi.com/taxi-banska-bystrica",
+    ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "TaxiService",
@@ -211,6 +214,12 @@ const TaxiBanskaBystrica = () => {
           </div>
         </div>
       </section>
+
+      {/* Related Services */}
+      <RelatedServices currentService="/taxi-banska-bystrica" category="city" />
+
+      {/* Footer */}
+      <SiteFooter />
     </div>
   );
 };

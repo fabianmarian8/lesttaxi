@@ -7,6 +7,8 @@ import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
+import { SiteFooter } from "@/components/SiteFooter";
+import { RelatedServices } from "@/components/RelatedServices";
 
 
 const Index = () => {
@@ -15,6 +17,7 @@ const Index = () => {
     description: "Professional taxi Lešť service - airport transfers, Banská Bystrica transport, 24/7 availability. English-speaking drivers for US military personnel. Call +421 919 040 118",
     keywords: "taxi lešť, taxi lest, taxi banská bystrica, taxi airport, slovakia taxi service, airport transfer slovakia, banská bystrica transport, lest base taxi",
     canonical: "https://www.lesttaxi.com",
+    ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -361,26 +364,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Command Footer */}
-      <footer className="relative py-12 px-6">
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] opacity-90" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--military-gold))_0%,transparent_70%)] opacity-20" />
-        <div className="container mx-auto text-center relative z-10">
-          <p className="text-sm sm:text-base lg:text-lg font-semibold text-[hsl(var(--military-gold))] tracking-wider">
-            © 2024 FRANKO TAXI | Professional Transportation Service
-          </p>
-          <div className="mt-4">
-            <Link 
-              to="/artemis" 
-              className="text-xs text-muted-foreground hover:text-[hsl(var(--military-gold))] transition-colors"
-            >
-              Powered by Artemis Group
-            </Link>
-          </div>
-        </div>
-      </footer>
-      
+      {/* Related Services */}
+      <RelatedServices category="military" />
+
       <FloatingWhatsApp />
+      
+      {/* Footer */}
+      <SiteFooter />
     </main>
   );
 };

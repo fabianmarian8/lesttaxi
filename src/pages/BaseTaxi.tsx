@@ -6,6 +6,8 @@ import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { StandardHero } from "@/components/StandardHero";
 import { ServiceIcon } from "@/components/ServiceIcon";
+import { SiteFooter } from "@/components/SiteFooter";
+import { RelatedServices } from "@/components/RelatedServices";
 
 const BaseTaxi = () => {
   useSEO({
@@ -13,6 +15,7 @@ const BaseTaxi = () => {
     description: "Specialized base taxi service for US military personnel at Lest Base. 24/7 gate pickup, security clearance, fixed rates. Book now via WhatsApp +421 919 040 118",
     keywords: "base taxi Lest, military transport Slovakia, Lest base pickup, gate service, US military taxi, base transport",
     canonical: "https://www.lesttaxi.com/base-taxi",
+    ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -222,6 +225,12 @@ const BaseTaxi = () => {
             </Button>
           </div>
         </section>
+
+        {/* Related Services */}
+        <RelatedServices currentService="/base-taxi" category="military" />
+
+        {/* Footer */}
+        <SiteFooter />
       </div>
     </>
   );
