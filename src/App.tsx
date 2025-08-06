@@ -24,7 +24,6 @@ import MilitaryAccommodation from "./pages/MilitaryAccommodation";
 import Feedback from "./pages/Feedback";
 import Artemis from "./pages/Artemis";
 import TaxiBratislava from "./pages/TaxiBratislava";
-import TaxiLest from "./pages/TaxiLest";
 import TaxiStareMesto from "./pages/TaxiStareMesto";
 import TaxiBudapestAirport from "./pages/TaxiBudapestAirport";
 import TaxiViennaAirport from "./pages/TaxiViennaAirport";
@@ -60,7 +59,6 @@ const AppContent = () => {
           <Route path="/taxi-stare-mesto" element={<TaxiStareMesto />} />
           <Route path="/taxi-budapest-airport" element={<TaxiBudapestAirport />} />
           <Route path="/taxi-vienna-airport" element={<TaxiViennaAirport />} />
-          <Route path="/taxi-lest" element={<TaxiLest />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
