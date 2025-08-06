@@ -104,7 +104,7 @@ const BanskaBystricaTaxi = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-gray-900 shadow-sm border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <OptimizedImage 
@@ -115,7 +115,7 @@ const BanskaBystricaTaxi = () => {
               className="h-12 w-auto"
               loading="eager"
             />
-            <span className="text-2xl font-bold text-primary">FRANKO TAXI</span>
+            <span className="text-2xl font-bold text-white">FRANKO TAXI</span>
           </div>
           <Button onClick={openWhatsApp} className="bg-green-600 hover:bg-green-700">
             <MessageCircle className="w-4 h-4 mr-2" />
