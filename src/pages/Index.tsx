@@ -11,15 +11,15 @@ import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
 
 const Index = () => {
   useSEO({
-    title: "Taxi Lešť | Taxislužba Pliesovce | 24/7 preprava",
-    description: "Taxi Lešť - 24/7 taxislužba v Pliesovciach a okolí. Letiskové transfery, nákupy, lekár, úrady. Fixné ceny, žiadne skryté poplatky. Voľný taxi na zavolanie +421 919 040 118",
-    keywords: "taxi Lešť, taxi Pliesovce, taxi Zvolen, taxi Banská Bystrica, taxislužba Lešť, transfer letisko Sliač, taxi na zavolanie, taxi okolie Zvolen, preprava Lešť, taxi služba Lešť, taxi Slovensko",
+    title: "Taxi Lest | Airport Transport Slovakia | 24/7 Taxi Service",
+    description: "Professional taxi service in Lešť area - airport transfers, Banská Bystrica transport, 24/7 availability. Fixed prices, no hidden fees. Call +421 919 040 118",
+    keywords: "taxi Lešť, taxi Lest, taxi airport, taxi banská bystrica, Slovakia taxi service, airport transport Slovakia, taxi vienna airport, taxi budapest airport",
     canonical: "https://www.lesttaxi.com",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": ["TaxiService", "LocalBusiness"],
-      "name": "Taxi Lešť",
-      "alternateName": "Taxislužba Pliesovce", 
+      "name": "Taxi Lest",
+      "alternateName": "Professional Transport Slovakia",
       "url": "https://www.lesttaxi.com",
       "telephone": "+421919040118",
       "email": "fabianmarian8@gmail.com",
@@ -48,35 +48,35 @@ const Index = () => {
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Taxislužby Lešť",
+        "name": "Professional Taxi Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Letiskové transfery",
-              "description": "Profesionálne transfery na letisko Sliač, Viedeň, Budapešť"
+              "name": "Airport Transfers",
+              "description": "Professional transfers to Sliač, Vienna, Budapest airports"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Mestská preprava",
-              "description": "Preprava do Zvolena, Banskej Bystrice a okolitých obcí"
+              "name": "City Transport",
+              "description": "Transport to Zvolen, Banská Bystrica and surrounding areas"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Nákupy a služby",
-              "description": "Odvoz na nákupy, k lekárovi, na úrady"
+              "name": "Shopping & Services",
+              "description": "Transport for shopping, medical appointments, official errands"
             }
           }
         ]
       },
-      "description": "24/7 taxislužba v Pliesovciach a okolí. Letiskové transfery, mestská preprava, nákupy. Fixné ceny, spoľahlivá služba."
+      "description": "24/7 professional taxi service in Lešť area. Airport transfers, city transport, shopping services. Fixed prices, reliable service."
     }
   });
 
@@ -122,13 +122,13 @@ const Index = () => {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="text-center sm:text-left slide-up w-full">
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words" itemProp="name">
-                Taxi Lešť – Vaša spoľahlivá taxislužba
+                Taxi Lešť – Professional Transportation Service
               </h1>
               <p className="text-sm sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium break-words">
-                24/7 taxislužba v Pliesovciach a okolí – letiskové transfery, nákupy, lekár, úrady. Fixné ceny bez skrytých poplatkov.
+                24/7 professional taxi service in Lešť area – airport transfers, city transport, shopping services. Fixed prices, no hidden fees.
               </p>
               <p className="text-xs sm:text-base lg:text-lg text-muted-foreground mb-4 sm:mb-6 lg:mb-8 leading-relaxed break-words">
-                🚗 24h/7dní vždy pripravení • ⚡ overená a rýchla taxi • 🏥 Odvoz k lekárovi • 🛒 Nákupy a služby
+                🚗 24/7 Always Ready • ⚡ Verified & Fast Service • 🏥 Medical Appointments • 🛒 Shopping & Errands
               </p>
               <div className="flex gap-3 sm:gap-4 lg:gap-6 flex-wrap justify-center sm:justify-start">
                 <a 
@@ -172,29 +172,29 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10" />
         <div className="container mx-auto relative z-10">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-black text-center mb-4 sm:mb-8 lg:mb-12 combat-text">
-            Taxislužby Lešť - Vaše spoľahlivé prepravné služby
+            Elite Transportation Services
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             <div className="tactical-card text-center group p-4 sm:p-6">
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <Car className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-black" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--military-gold))] text-wrap-mobile">Letiskové transfery</h3>
-              <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Spoľahlivá preprava na letiská Sliač, Viedeň, Budapešť a Bratislava s profesionálnou presnosťou a bezpečnou službou.</p>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--military-gold))] text-wrap-mobile">Airport Transfers</h3>
+                <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Reliable transport to Sliač, Vienna, Budapest and Bratislava airports with professional precision and secure service.</p>
             </div>
             <div className="tactical-card text-center group p-4 sm:p-6">
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <MapPin className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-white" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))] text-wrap-mobile">Mestská preprava</h3>
-              <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Preprava do Zvolena, Banskej Bystrice a okolitých obcí s poznaním miestnych podmienok a spoľahlivosťou.</p>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))] text-wrap-mobile">City Transport</h3>
+                <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Transport to Zvolen, Banská Bystrica and surrounding areas with local knowledge and reliability.</p>
             </div>
             <div className="tactical-card text-center group p-4 sm:p-6">
               <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
                 <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-[hsl(var(--military-gold))]" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--combat-green))] text-wrap-mobile">Nákupy a služby</h3>
-              <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Pohodlná preprava na nákupy, k lekárovi, na úrady a k ďalším dôležitým destináciám v regióne.</p>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--combat-green))] text-wrap-mobile">Shopping & Services</h3>
+                <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Comfortable transport for shopping, medical appointments, official errands and other important destinations in the region.</p>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />
         <div className="container mx-auto relative z-10">
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-center mb-8 sm:mb-12 lg:mb-16 combat-text">
-            Kontakt Taxi Lešť - Objednajte si prepravu
+            Command Center Contact - Book Your Transport
           </h2>
           <div className="max-w-2xl mx-auto mb-16">
             <BookingForm />

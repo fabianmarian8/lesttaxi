@@ -47,9 +47,9 @@ const TaxiLest = () => {
   };
 
   useSEO({
-    title: "Taxi Lešť | Taxislužba Pliesovce | 24/7 preprava Zvolen",
-    description: "Taxi Lešť - spoľahlivá 24/7 taxislužba v Lešti, Pliesovciach a okolí. Letiskové transfery, mestská preprava, nákupy, lekár. Volajte +421 919 040 118",
-    keywords: "taxi Lešť, taxi Pliesovce, taxi Zvolen, taxislužba Lešť, preprava Lešť, taxi okolie Zvolen, letisko transfer, taxi na zavolanie Lešť",
+    title: "Taxi Lešť | Airport Transport Slovakia | Professional Service",
+    description: "Professional taxi service in Lešť, Pliesovce area. Airport transfers, city transport, shopping services. Fixed prices. Call +421 919 040 118",
+    keywords: "taxi Lešť, taxi Lest, taxi airport, taxi banská bystrica, Slovakia taxi service, airport transport Slovakia, taxi zvolen, professional taxi service",
     canonical: "https://www.lesttaxi.com/taxi-lest",
     jsonLd: structuredData
   });
@@ -57,29 +57,29 @@ const TaxiLest = () => {
   return (
     <main className="min-h-screen bg-background">
       <StandardHero
-        title="Taxi Lešť - Vaša lokálna taxislužba"
-        description="24/7 spoľahlivá taxislužba v Lešti, Pliesovciach a okolí. Profesionálne služby s fixnými cenami. Letiskové transfery, mestská preprava, nákupy."
-        primaryButtonText="Objednať na WhatsApp"
-        secondaryButtonText="Volať +421 919 040 118"
+        title="Taxi Lešť - Professional Transportation Service"
+        description="24/7 reliable taxi service in Lešť, Pliesovce and surrounding areas. Professional services with fixed prices. Airport transfers, city transport, shopping."
+        primaryButtonText="Book on WhatsApp"
+        secondaryButtonText="Call +421 919 040 118"
       />
 
       {/* Služby */}
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <h2 className="text-3xl lg:text-4xl font-black text-center mb-12 combat-text">
-            Naše taxislužby v Lešti
+            Our Taxi Services in Lešť
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="tactical-card">
               <CardContent className="p-6 text-center">
                 <Car className="h-12 w-12 mx-auto mb-4 text-[hsl(var(--military-gold))]" />
-                <h3 className="text-xl font-bold mb-4 text-[hsl(var(--military-gold))]">Letiskové transfery</h3>
+                <h3 className="text-xl font-bold mb-4 text-[hsl(var(--military-gold))]">Airport Transfers</h3>
                 <p className="text-muted-foreground mb-4">
-                  • Letisko Sliač - 25€<br/>
-                  • Bratislava airport - 120€<br/>
-                  • Viedeň airport - 150€<br/>
-                  • Budapešť airport - 140€
+                  • Sliač Airport - 25€<br/>
+                  • Bratislava Airport - 120€<br/>
+                  • Vienna Airport - 150€<br/>
+                  • Budapest Airport - 140€
                 </p>
               </CardContent>
             </Card>
@@ -87,12 +87,12 @@ const TaxiLest = () => {
             <Card className="tactical-card">
               <CardContent className="p-6 text-center">
                 <MapPin className="h-12 w-12 mx-auto mb-4 text-[hsl(var(--tactical-orange))]" />
-                <h3 className="text-xl font-bold mb-4 text-[hsl(var(--tactical-orange))]">Mestská preprava</h3>
+                <h3 className="text-xl font-bold mb-4 text-[hsl(var(--tactical-orange))]">City Transport</h3>
                 <p className="text-muted-foreground mb-4">
                   • Lešť - Zvolen - 8€<br/>
                   • Lešť - Banská Bystrica - 15€<br/>
                   • Lešť - Pliesovce - 5€<br/>
-                  • Okolité obce - podľa dohody
+                  • Surrounding areas - by agreement
                 </p>
               </CardContent>
             </Card>
@@ -100,12 +100,12 @@ const TaxiLest = () => {
             <Card className="tactical-card">
               <CardContent className="p-6 text-center">
                 <Clock className="h-12 w-12 mx-auto mb-4 text-[hsl(var(--combat-green))]" />
-                <h3 className="text-xl font-bold mb-4 text-[hsl(var(--combat-green))]">24/7 dostupnosť</h3>
+                <h3 className="text-xl font-bold mb-4 text-[hsl(var(--combat-green))]">24/7 Availability</h3>
                 <p className="text-muted-foreground mb-4">
-                  • Nákupy Tesco, Kaufland<br/>
-                  • Odvoz k lekárovi<br/>
-                  • Cesty na úrady<br/>
-                  • Osobné potreby
+                  • Shopping Tesco, Kaufland<br/>
+                  • Medical appointments<br/>
+                  • Official errands<br/>
+                  • Personal needs
                 </p>
               </CardContent>
             </Card>
@@ -117,7 +117,7 @@ const TaxiLest = () => {
       <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/10">
         <div className="container mx-auto">
           <h2 className="text-3xl lg:text-4xl font-black text-center mb-12 combat-text">
-            Cenník taxi služieb
+            Taxi Service Pricing
           </h2>
           
           <div className="max-w-4xl mx-auto">
@@ -127,35 +127,35 @@ const TaxiLest = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-[hsl(var(--military-gold))]">
                       <Euro className="inline h-5 w-5 mr-2" />
-                      Lokálne cesty
+                      Local Trips
                     </h3>
                     <ul className="space-y-2 text-muted-foreground">
                       <li>• Lešť - Pliesovce: 5€</li>
                       <li>• Lešť - Zvolen: 8€</li>
                       <li>• Lešť - Banská Bystrica: 15€</li>
-                      <li>• Nákupy v Zvolene: 10€</li>
-                      <li>• Lekár Zvolen: 12€</li>
+                      <li>• Shopping in Zvolen: 10€</li>
+                      <li>• Medical Zvolen: 12€</li>
                     </ul>
                   </div>
                   
                   <div>
                     <h3 className="text-xl font-bold mb-4 text-[hsl(var(--military-gold))]">
                       <Car className="inline h-5 w-5 mr-2" />
-                      Letiskové transfery
+                      Airport Transfers
                     </h3>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>• Letisko Sliač: 25€</li>
-                      <li>• Bratislava airport: 120€</li>
-                      <li>• Viedeň airport: 150€</li>
-                      <li>• Budapešť airport: 140€</li>
-                      <li>• Košice airport: 180€</li>
+                      <li>• Sliač Airport: 25€</li>
+                      <li>• Bratislava Airport: 120€</li>
+                      <li>• Vienna Airport: 150€</li>
+                      <li>• Budapest Airport: 140€</li>
+                      <li>• Košice Airport: 180€</li>
                     </ul>
                   </div>
                 </div>
                 
                 <div className="mt-8 p-4 bg-[hsl(var(--military-gold))]/10 rounded-lg">
                   <p className="text-center text-sm">
-                    <strong>Fixné ceny • Žiadne skryté poplatky • Platba v hotovosti alebo kartou</strong>
+                    <strong>Fixed Prices • No Hidden Fees • Cash or Card Payment</strong>
                   </p>
                 </div>
               </CardContent>
@@ -168,42 +168,42 @@ const TaxiLest = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <h2 className="text-3xl lg:text-4xl font-black text-center mb-12 combat-text">
-            Často kladené otázky - Taxi Lešť
+            Frequently Asked Questions - Taxi Lešť
           </h2>
           
           <div className="max-w-4xl mx-auto space-y-6">
             <Card className="tactical-card">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-2">Koľko stojí taxi z Lešti do Zvolena?</h3>
+                <h3 className="text-lg font-bold mb-2">How much does taxi from Lešť to Zvolen cost?</h3>
                 <p className="text-muted-foreground">
-                  Taxi z Lešti do Zvolena stojí 8€. Cena je fixná a nezávisí od času jazdy či dopravnej situácie.
+                  Taxi from Lešť to Zvolen costs 8€. The price is fixed and doesn't depend on travel time or traffic conditions.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="tactical-card">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-2">Ako si objednám taxi v Lešti?</h3>
+                <h3 className="text-lg font-bold mb-2">How to book taxi in Lešť?</h3>
                 <p className="text-muted-foreground">
-                  Taxi si môžete objednať telefonicky na +421 919 040 118 alebo cez WhatsApp. Sme dostupní 24/7.
+                  You can book taxi by calling +421 919 040 118 or via WhatsApp. We are available 24/7.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="tactical-card">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-2">Jazdia taxi z Lešti na letisko Sliač?</h3>
+                <h3 className="text-lg font-bold mb-2">Do you provide taxi from Lešť to Sliač Airport?</h3>
                 <p className="text-muted-foreground">
-                  Áno, poskytujeme transfery na letisko Sliač za 25€. Rezervácia vopred je odporúčaná.
+                  Yes, we provide transfers to Sliač Airport for 25€. Advance booking is recommended.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="tactical-card">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold mb-2">Môžem platiť kartou v taxi?</h3>
+                <h3 className="text-lg font-bold mb-2">Can I pay by card in the taxi?</h3>
                 <p className="text-muted-foreground">
-                  Áno, akceptujeme platby kartou aj hotovosť. Všetky ceny sú konečné bez dodatočných poplatkov.
+                  Yes, we accept both card and cash payments. All prices are final with no additional fees.
                 </p>
               </CardContent>
             </Card>
@@ -215,7 +215,7 @@ const TaxiLest = () => {
       <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-black mb-8 combat-text">
-            Kontakt - Taxi Lešť
+            Contact - Taxi Lešť
           </h2>
           
           <div className="flex justify-center gap-6 flex-wrap">
@@ -244,8 +244,8 @@ const TaxiLest = () => {
           
           <div className="mt-8">
             <p className="text-muted-foreground">
-              Sme k dispozícii 24 hodín denne, 7 dní v týždni<br/>
-              Obsluha v slovenčine, angličtine a češtine
+              Available 24 hours a day, 7 days a week<br/>
+              Service in Slovak, English and Czech
             </p>
           </div>
         </div>
