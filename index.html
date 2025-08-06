@@ -78,9 +78,16 @@
       }
     </style>
     
-    <!-- Preload and async load non-critical CSS -->
-    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    <!-- Preload main CSS for non-blocking render -->
+    <link rel="preload" href="/assets/css/index.[hash].css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/index.[hash].css"></noscript>
+    
+    <!-- Preload main app JavaScript -->
+    <link rel="preload" href="/assets/[name].[hash].js" as="script">
+    
+    <!-- Resource hints for better performance -->
+    <link rel="prefetch" href="/assets/vendor.[hash].js">
+    <link rel="prefetch" href="/assets/router.[hash].js">
 
     <meta property="og:title" content="Taxi Lešť | Airport Transfer Slovakia | Banská Bystrica Transport" />
     <meta property="og:description" content="Professional taxi Lešť service - airport transfers, Banská Bystrica transport, 24/7 availability. English-speaking drivers for US military personnel." />
