@@ -69,9 +69,16 @@
   Cache-Control: public, max-age=86400
   Vary: Accept-Encoding
 
+# XML files (sitemap, etc.) - proper content type and cache
 /*.xml
   Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
   Vary: Accept-Encoding
+
+# Specific sitemap optimization
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
 
 # Security and performance headers
 /*

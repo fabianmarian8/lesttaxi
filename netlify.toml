@@ -2,6 +2,28 @@
   command = "npm run build"
   publish = "dist"
 
+# Static files redirects - these must come BEFORE the SPA catch-all
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+[[redirects]]
+  from = "/ads.txt"
+  to = "/ads.txt"
+  status = 200
+
+[[redirects]]
+  from = "/.well-known/*"
+  to = "/.well-known/:splat"
+  status = 200
+
+# SPA catch-all redirect - must be LAST
 [[redirects]]
   from = "/*"
   to = "/index.html"
