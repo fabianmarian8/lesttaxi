@@ -8,7 +8,6 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
 import { StandardHero } from "@/components/StandardHero";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { TaxiRoofSign } from "@/components/TaxiRoofSign";
 
 const Fleet = () => {
   useSEO({
@@ -249,31 +248,23 @@ const Fleet = () => {
           {/* Real Fleet Images */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
-              <div className="relative inline-block">
-                <OptimizedImage 
-                  src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
-                  alt="Professional white Toyota taxi vehicles lined up in formation ready for military transport service" 
-                  className="rounded-lg shadow-xl w-full mb-4"
-                  width={600}
-                  height={400}
-                  loading="lazy"
-                  responsive={true}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                {/* Add taxi roof sign to the first SUV */}
-                <TaxiRoofSign 
-                  className="absolute top-[15%] left-[45%] transform -translate-x-1/2" 
-                  animated={true}
-                  size="md"
-                />
-              </div>
+              <OptimizedImage 
+                src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
+                alt="Professional white Toyota taxi vehicles lined up in formation ready for military transport service" 
+                className="rounded-lg shadow-xl w-full mb-4"
+                width={600}
+                height={400}
+                loading="lazy"
+                responsive={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
               <h4 className="text-xl font-semibold mb-2">Professional Fleet</h4>
               <p className="text-muted-foreground">Clean, modern vehicles maintained to the highest standards</p>
             </div>
             <div className="text-center">
               <OptimizedImage 
                 src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.png" 
-                alt="LEST TAXI white Toyota sedan parked at Europa Shopping Center parking area with yellow taxi roof sign" 
+                alt="LEST TAXI white Toyota sedan parked at Europa Shopping Center parking area" 
                 className="rounded-lg shadow-xl w-full mb-4"
                 width={600}
                 height={400}
