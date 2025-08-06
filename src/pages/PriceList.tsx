@@ -30,7 +30,7 @@ const PriceList = () => {
     { service: "McDonald's Delivery", price: 45, description: "Hot food delivery to base" },
     { service: "KFC Delivery", price: 45, description: "Fresh chicken delivery" },
     { service: "Europa Shopping Center", price: 45, description: "Shopping trip transport" },
-    { service: "Hourly Rate", price: 25, description: "Per hour for multiple stops" },
+    { service: "Hourly Rate", price: 20, description: "Per hour for multiple stops" },
     { service: "Waiting One Hour", price: 20, description: "Driver waiting time per hour" },
   ];
 
