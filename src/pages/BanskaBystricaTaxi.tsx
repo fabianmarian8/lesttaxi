@@ -134,28 +134,28 @@ const BanskaBystricaTaxi = () => {
       />
 
       {/* Destinations */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
             Banská Bystrica Destinations
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {destinations.map((destination, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-gray-800 border-gray-700 text-white">
                 <CardHeader>
-                  <ServiceIcon Icon={destination.name.includes('Mall') || destination.name.includes('Shopping') ? ShoppingBag : MapPin} size="md" className="mx-auto mb-2" />
-                  <CardTitle className="text-lg">{destination.name}</CardTitle>
-                  <CardDescription>{destination.description}</CardDescription>
+                  <ServiceIcon Icon={destination.name.includes('Mall') || destination.name.includes('Shopping') ? ShoppingBag : MapPin} size="md" className="mx-auto mb-2 text-primary" />
+                  <CardTitle className="text-lg text-white">{destination.name}</CardTitle>
+                  <CardDescription className="text-gray-300">{destination.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
                     <div className="flex items-center justify-center gap-2">
                       <MapPin className="w-4 h-4 text-primary" />
-                      <span>{destination.distance}</span>
+                      <span className="text-white">{destination.distance}</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
                       <Clock className="w-4 h-4 text-primary" />
-                      <span>{destination.time}</span>
+                      <span className="text-white">{destination.time}</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
                       <DollarSign className="w-4 h-4 text-primary" />
