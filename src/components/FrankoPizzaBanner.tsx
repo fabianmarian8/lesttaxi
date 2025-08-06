@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { OptimizedImage } from '@/components/OptimizedImage';
 import { X, Pizza } from 'lucide-react';
 
 export const FrankoPizzaBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 5000); // 5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleClick = () => {
     window.gtag?.('event', 'franko_pizza_click');
