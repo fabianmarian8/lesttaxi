@@ -31,22 +31,22 @@ const MilitaryShopping = () => {
   const shoppingDestinations = [
     {
       name: "Europa Shopping Center",
-      distance: "25 km",
-      time: "30 min",
+      distance: "60 km",
+      time: "45 min",
       description: "Largest shopping mall in region with clothing, electronics, and more",
       features: ["200+ stores", "Food court", "Electronics", "Fashion brands"]
     },
     {
       name: "Fitness & Nutrition Stores",
-      distance: "12-25 km",
-      time: "15-30 min",
+      distance: "40-60 km",
+      time: "30-45 min",
       description: "Specialized fitness stores for protein supplements and workout gear",
       features: ["Protein supplements", "Pre-workout", "Gym equipment", "Sports nutrition"]
     },
     {
       name: "Local Markets & Stores",
-      distance: "10-20 km",
-      time: "12-25 min",
+      distance: "30-45 km",
+      time: "30-60 min",
       description: "Local grocery stores and specialty shops",
       features: ["Groceries", "Local products", "Electronics", "Personal items"]
     }
