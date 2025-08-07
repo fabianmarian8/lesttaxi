@@ -71,33 +71,33 @@ const BudapestTransport = () => {
   const destinations = [
     {
       name: "Budapest Airport (BUD)",
-      distance: "280 km",
-      time: "3h 30min",
+      distance: "150 km",
+      time: "2h",
       price: "200€",
       description: "Flights, international connections",
       icon: Plane
     },
     {
       name: "Budapest City Center",
-      distance: "265 km", 
-      time: "3h 15min",
-      price: "180€",
+      distance: "140 km", 
+      time: "2h 15min",
+      price: "200€",
       description: "Parliament, Danube, historic districts",
       icon: MapPin
     },
     {
       name: "Business District",
-      distance: "270 km",
-      time: "3h 20min", 
-      price: "185€",
+      distance: "150 km",
+      time: "2h 20min", 
+      price: "200€",
       description: "Corporate meetings, embassies",
       icon: MapPin
     },
     {
       name: "Thermal Baths",
-      distance: "268 km",
-      time: "3h 18min",
-      price: "182€",
+      distance: "150 km",
+      time: "2h 10min",
+      price: "200€",
       description: "Széchenyi, Gellért famous spas",
       icon: MapPin
     }
