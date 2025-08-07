@@ -53,33 +53,33 @@ const AirportTransportSlovakia = () => {
     {
       name: "Budapest Airport (BUD)",
       country: "Hungary",
-      distance: "180 km",
+      distance: "150 km",
       time: "2 hours",
-      price: "€120",
+      price: "€200",
       description: "Ferenc Liszt International Airport - Major hub for Central Europe"
     },
     {
       name: "Vienna Airport (VIE)",
       country: "Austria", 
-      distance: "220 km",
-      time: "2.5 hours",
-      price: "€150",
+      distance: "265 km",
+      time: "3.5 hours",
+      price: "€290",
       description: "Vienna International Airport - Gateway to Austria and beyond"
     },
     {
       name: "Bratislava Airport (BTS)",
       country: "Slovakia",
-      distance: "160 km", 
-      time: "1.5 hours",
-      price: "€100",
+      distance: "240 km", 
+      time: "2 hours",
+      price: "€220",
       description: "M. R. Štefánik Airport - Slovakia's main international airport"
     },
     {
       name: "Košice Airport (KSC)",
       country: "Slovakia",
-      distance: "280 km",
+      distance: "208 km",
       time: "3 hours", 
-      price: "€180",
+      price: "€260",
       description: "Košice International Airport - Eastern Slovakia gateway"
     }
   ];
