@@ -14,7 +14,7 @@ const Index = () => {
     title: "Taxi Lešť | Lest Base Airport Transfer | 24/7 Slovakia Transport",
     description: "Professional taxi Lešť service - airport transfers, Banská Bystrica transport, 24/7 availability. English-speaking drivers for US military personnel. Call +421 919 040 118",
     keywords: "taxi lešť, taxi lest, taxi banská bystrica, taxi airport, slovakia taxi service, airport transfer slovakia, banská bystrica transport, lest base taxi",
-    canonical: "https://www.lesttaxi.com",
+    canonical: "https://www.lesttaxi.com/",
     ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
     jsonLd: {
       "@context": "https://schema.org",
