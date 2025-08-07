@@ -6,9 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    /* … existujúce skripty … */
-
-    // ➜ pridajte -----------------
     "postbuild": "node scripts/generate-sitemap.mjs"
     "dev": "vite",
     "build": "vite build",
