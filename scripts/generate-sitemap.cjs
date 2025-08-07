@@ -31,5 +31,5 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
 ${urls}
 </urlset>`;
 
-writeFileSync('public/sitemap.xml', xml.trim());
+writeFileSync('dist/sitemap.xml', xml.trim());
 console.log('✅  sitemap.xml generated', today);
