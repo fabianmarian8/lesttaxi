@@ -70,17 +70,17 @@ const MilitaryAccommodation = () => {
   const accommodationAreas = [
     {
       name: "Banská Bystrica Hotels",
-      distance: "25 km",
-      time: "30 min",
-      price: "40€",
+      distance: "60 km",
+      time: "45 min",
+      price: "70€",
       description: "City center hotels, business accommodations",
       icon: Hotel
     },
     {
       name: "Bratislava Hotels", 
-      distance: "180 km",
-      time: "2h 15min",
-      price: "120€",
+      distance: "240 km",
+      time: "2h",
+      price: "220€",
       description: "Capital city hotels, luxury accommodations",
       icon: Hotel
     },
@@ -88,8 +88,8 @@ const MilitaryAccommodation = () => {
       name: "Airport Hotels",
       distance: "Variable",
       time: "Variable", 
-      price: "From 35€",
-      description: "Sliač, Bratislava, Vienna airport hotels",
+      price: "From 200€",
+      description: "Bratislava, Vienna, Budapest airport hotels",
       icon: Hotel
     },
     {
