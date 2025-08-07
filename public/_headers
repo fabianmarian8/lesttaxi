@@ -69,6 +69,11 @@
   Cache-Control: public, max-age=86400
   Vary: Accept-Encoding
 
+/sitemap.xml
+  Cache-Control: public, max-age=60, must-revalidate
+  Vary: Accept-Encoding
+  Content-Type: application/xml; charset=utf-8
+
 /*.xml
   Cache-Control: public, max-age=86400
   Vary: Accept-Encoding
