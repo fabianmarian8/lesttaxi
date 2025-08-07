@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && node scripts/generate-sitemap.cjs || echo 'sitemap skipped'"
+  command = "npm run build && node scripts/generate-sitemap.cjs && cp public/sitemap.xml dist/ || echo 'sitemap skipped'"
   publish = "dist"
 
 [[redirects]]
