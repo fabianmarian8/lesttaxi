@@ -3,7 +3,7 @@ const { readdirSync, writeFileSync, statSync } = require('fs');
 const { join, relative } = require('path');
 
 const BASE  = 'https://www.lesttaxi.com';
-const today = new Date().toISOString().slice(0,10);           // YYYY-MM-DD
+const today = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Bratislava' });           // YYYY-MM-DD (local time for Bratislava)
 const htmls = [];
 
 (function walk(dir){
