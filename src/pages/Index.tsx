@@ -229,69 +229,30 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Local Services Section */}
-      <section className="py-16 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/5 to-[hsl(var(--military-gold))]/5" />
-        <div className="container mx-auto relative z-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-center mb-8 sm:mb-12 combat-text">
-            Local Transportation Services
+      {/* Call to Action Section (modeled after Taxi Banská Bystrica) */}
+      <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10 relative">
+        <div className="container mx-auto text-center relative z-10">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 combat-text">
+            Ready to Book Your Transport from Lešť?
           </h2>
-          
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <Link to="/taxi-bratislava" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
-                Taxi Bratislava
-              </h3>
-              <p className="text-sm text-muted-foreground">Professional transport to Slovakia's capital</p>
-            </Link>
-            
-            <Link to="/taxi-stare-mesto" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
-                Staré Mesto Tours
-              </h3>
-              <p className="text-sm text-muted-foreground">Explore Bratislava's historic Old Town</p>
-            </Link>
-            
-            <Link to="/taxi-budapest-airport" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
-                Budapest Airport
-              </h3>
-              <p className="text-sm text-muted-foreground">Direct transfers to Budapest BUD</p>
-            </Link>
-            
-            <Link to="/taxi-vienna-airport" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
-                Vienna Airport
-              </h3>
-              <p className="text-sm text-muted-foreground">Premium transfers to Vienna VIE</p>
-            </Link>
-            
-            <Link to="/taxi-banska-bystrica" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
-                Taxi Banská Bystrica
-              </h3>
-              <p className="text-sm text-muted-foreground">City transport to Banská Bystrica</p>
-            </Link>
-            
-            <Link to="/airport-transport-slovakia" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
-                Airport Transport
-              </h3>
-              <p className="text-sm text-muted-foreground">All Slovakia airport transfers</p>
-            </Link>
-            
-            <Link to="/budapest-military-transport" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
-              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
-                Budapest Transport
-              </h3>
-              <p className="text-sm text-muted-foreground">Complete Budapest transportation</p>
-            </Link>
+          <p className="text-base sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Professional military-friendly taxi service with English-speaking drivers, fixed rates and 24/7 availability. Book instantly via WhatsApp or call us now.
+          </p>
+          <div className="flex gap-4 sm:gap-6 justify-center">
+            <Button onClick={() => window.open('https://wa.me/421919040118?text=Hello,%20I%20need%20a%20taxi%20from%20Lešť%20Base', '_blank')} variant="whatsapp" size="lg">
+              <MessageCircle className="h-5 w-5 mr-2" />
+              Book on WhatsApp
+            </Button>
+            <Button onClick={() => window.open('tel:+421919040118', '_self')} variant="secondary" size="lg">
+              <Phone className="h-5 w-5 mr-2" />
+              Call +421 919 040 118
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Related Services */}
-      <RelatedServices category="military" />
+      <RelatedServices category="city" />
 
       <FloatingWhatsApp />
       
