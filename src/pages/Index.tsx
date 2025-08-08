@@ -77,7 +77,7 @@ const Index = () => {
   });
   return <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Enhanced Military Pattern Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-[#1e3a1e] opacity-90" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,#f4c430_0%,transparent_70%)] opacity-10" />
       </div>
@@ -252,12 +252,16 @@ const Index = () => {
       </section>
 
       {/* Related Services */}
-      <RelatedServices category="city" />
+      <div className="relative z-10">
+        <RelatedServices category="city" />
+      </div>
 
       <FloatingWhatsApp />
       
       {/* Footer */}
-      <SiteFooter />
+      <div className="relative z-10">
+        <SiteFooter />
+      </div>
     </main>;
 };
 export default Index;
