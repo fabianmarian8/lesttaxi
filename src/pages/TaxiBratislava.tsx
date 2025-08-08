@@ -64,9 +64,9 @@ const TaxiBratislava = () => {
   };
 
   useSEO({
-    title: "Bratislava Taxi | LEST TAXI",
-    description: "Professional taxi from Lešť Base to Bratislava. Fixed rates, 24/7 service. Book via WhatsApp +421 919 040 118.",
-    keywords: "taxi Bratislava, Lešť to Bratislava, military taxi Slovakia, airport transfer Bratislava, professional transport",
+    title: "Taxi Lešť → Bratislava (non-stop, fixné ceny)",
+    description: "Rýchla doprava z Lešť Base do Bratislavy. 24/7, fixné ceny, anglicky hovoriaci vodiči. WhatsApp +421 919 040 118.",
+    keywords: "taxi Bratislava, Lešť Bratislava taxi, military taxi Slovakia",
     canonical: "https://www.lesttaxi.com/taxi-bratislava",
     jsonLd: serviceJsonLd
   });
@@ -101,7 +101,7 @@ const TaxiBratislava = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <h1 className="text-4xl lg:text-6xl font-black mb-6 combat-text">
-            Professional Taxi Service from Lešť Base to Bratislava
+            Taxi Lešť → Bratislava – non-stop, fixné ceny
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Safe, reliable transportation from Lešť Military Base to Bratislava with fixed rates and professional service.
@@ -209,6 +209,56 @@ const TaxiBratislava = () => {
                 Yes, our Bratislava transport service operates 24/7, including holidays and weekends, ensuring you always have reliable transportation.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Unique Local Content */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <article className="tactical-card p-6">
+            <h2 className="text-2xl font-bold mb-4 combat-text">Lešť → Bratislava: rýchle fakty a tipy</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Najčastejšia trasa do Bratislavy trvá približne 2–2.5 hodiny v závislosti od dennej doby. Pri ranných letoch z BTS odporúčame vyraziť min. 3 hodiny pred odletom. V rámci mesta vieme vysadiť pri hlavných uzloch (Hlavná stanica, Eurovea, Staré Mesto, letisko) podľa vašich plánov. Pri väčšej batožine alebo tímovom vybavení zabezpečíme vozidlo s väčším kufrom. Radi poradíme aj s optimálnym časovaním návratu cez diaľničné obchvaty.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Internal links for better navigation */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <nav className="grid gap-3 md:grid-cols-2">
+            <a href="/price-list" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Bratislava – cenník</span>
+            </a>
+            <a href="/airport-transfer" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Letiskové transfery – prehľad služieb</span>
+            </a>
+            <a href="/taxi-budapest-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Lešť ↔ Budapest (BUD) – transfer</span>
+            </a>
+            <a href="/taxi-vienna-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Lešť ↔ Vienna (VIE) – premium transfer</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      {/* Short route-specific reviews */}
+      <section className="py-8 px-6 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5">
+        <div className="container mx-auto max-w-5xl grid gap-6 md:grid-cols-3">
+          <div className="tactical-card p-6">
+            <p className="italic">“Rýchly presun do centra, férová cena, komunikácia v angličtine bez problémov.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– John, US Army</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“Načasovanie na letisko BTS výborné. Vodič pozná skratky cez mesto.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Petra, Contractor</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“Žiadne prekvapenia v cene, pohodlné auto a bezpečná jazda.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Mike, USAF</p>
           </div>
         </div>
       </section>

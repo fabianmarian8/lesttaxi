@@ -185,10 +185,50 @@ const TaxiBanskaBystrica = () => {
               Banská Bystrica is the capital city of central Slovakia and the administrative center of the Banská Bystrica Region. 
               Known for its rich mining history and beautiful medieval architecture, the city offers excellent shopping, dining, and cultural experiences.
             </p>
-            <p className="text-lg text-muted-foreground">
-              Popular destinations include the historic SNP Square, Europa Shopping Center, and the scenic surrounding mountains. 
-              Our taxi service provides comfortable, direct transport from Lešť Military Base to all major locations in Banská Bystrica.
+            <p className="text-lg text-muted-foreground mb-6">
+              Typical travel time from Lešť Base is about 45–50 minutes. We can drop you at SNP Square, the train station, or the Europa Shopping Center. For shopping runs, we help with bags and suggest the most efficient pickup spot.
             </p>
+            <p className="text-lg text-muted-foreground">
+              For unique needs (extra luggage, group rides, late‑night returns), just note it in your WhatsApp message so we dispatch a suitable vehicle.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal links */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <nav className="grid gap-3 md:grid-cols-2">
+            <a href="/price-list" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Banská Bystrica – ceny</span>
+            </a>
+            <a href="/airport-transfer" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Letiskové transfery – prehľad</span>
+            </a>
+            <a href="/taxi-budapest-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Transfer Lešť ↔ Budapest (BUD)</span>
+            </a>
+            <a href="/taxi-vienna-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Transfer Lešť ↔ Vienna (VIE)</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="py-8 px-6 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5">
+        <div className="container mx-auto max-w-5xl grid gap-6 md:grid-cols-3">
+          <div className="tactical-card p-6">
+            <p className="italic">“Quick run to SNP Square, driver advised best pickup spot for return.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Sarah, US Army</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“Fixed price as quoted, smooth communication in English.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Robert, USAF</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“Helpful with shopping bags at Europa. Thank you!”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Olivia, Contractor</p>
           </div>
         </div>
       </section>

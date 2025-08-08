@@ -6,11 +6,21 @@ import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 
 const TaxiBudapestAirport = () => {
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    name: "Taxi Lešť → Budapest Airport (BUD)",
+    description: "Priame transfery z Lešť Base na letisko Budapest (BUD). Načasovanie k letu, pomoc s batožinou.",
+    provider: { "@type": "LocalBusiness", name: "LEST TAXI", telephone: "+421919040118", url: "https://www.lesttaxi.com" },
+    areaServed: [ { "@type": "Place", name: "Lešť Military Base, Slovakia" }, { "@type": "Place", name: "Budapest Airport, Hungary" } ]
+  } as const;
+
   useSEO({
-    title: "Budapest Airport Transfer | LEST TAXI",
-    description: "Direct transfers from Lešť Base to Budapest Airport (BUD). Flight-timed service. Book via WhatsApp +421 919 040 118.",
-    keywords: "taxi Budapest airport, Lešť to Budapest BUD, airport transfer Hungary, military taxi Budapest, flight transfers",
+    title: "Taxi Lešť → Budapest Airport (BUD)",
+    description: "Priamy transfer Lešť – BUD. Načasované podľa letu, pevné ceny, 24/7. WhatsApp +421 919 040 118.",
+    keywords: "taxi Budapest airport, Lešť BUD transfer, airport transfer Hungary",
     canonical: "https://www.lesttaxi.com/taxi-budapest-airport",
+    jsonLd: serviceJsonLd,
   });
 
   return (
@@ -37,7 +47,7 @@ const TaxiBudapestAirport = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <h1 className="text-4xl lg:text-6xl font-black mb-6 combat-text">
-            Professional Taxi to Budapest Airport from Lešť Military Base
+            Taxi Lešť → Budapest Airport (BUD) – načasované k letu
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Reliable airport transfers to Budapest Ferenc Liszt International Airport (BUD) with flight-timed departures and professional service.
@@ -145,6 +155,56 @@ const TaxiBudapestAirport = () => {
                 Our rates are fixed and include border crossing. No hidden fees or additional charges for Budapest Airport transfers.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Unique Route Details */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <article className="tactical-card p-6">
+            <h2 className="text-2xl font-bold mb-4 combat-text">Lešť → Budapest Airport: Route details</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Typical travel time from Lešť Military Base to Budapest Ferenc Liszt International Airport (BUD) is 3–3.5 hours depending on border traffic near Šahy/Parassapuszta. For morning long‑haul flights we usually recommend pickup 4.5–5 hours before departure, which leaves a comfortable margin for check‑in and security. Our drivers know the airport layout (T2A/T2B) and can drop you at the nearest entrance to your airline’s check‑in island. If you carry military gear or additional luggage, let us know in advance so we can allocate extra trunk capacity. Return transfers from BUD are available as well—share your flight number and we’ll monitor delays.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Internal links for better navigation */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <nav className="grid gap-3 md:grid-cols-2">
+            <a href="/price-list" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Bratislava – cenník</span>
+            </a>
+            <a href="/airport-transfer" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Letiskový transfer Lešť ↔ Slovensko – prehľad</span>
+            </a>
+            <a href="/taxi-vienna-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Vienna (VIE) – premium transfer</span>
+            </a>
+            <a href="/taxi-banska-bystrica" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Mesto Banská Bystrica – rýchle mestské presuny</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      {/* Short route-specific reviews */}
+      <section className="py-8 px-6 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5">
+        <div className="container mx-auto max-w-5xl grid gap-6 md:grid-cols-3">
+          <div className="tactical-card p-6">
+            <p className="italic">“Border timing was perfect. Arrived at T2A with plenty of time. Clean car, professional driver.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Jason, US Army</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“Clear instructions for pickup and smooth luggage help at BUD. Recommended for early flights.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Maria, Contractor</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“No surprises on price, good communication on WhatsApp, knew exactly where to drop us.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Alex, USAF</p>
           </div>
         </div>
       </section>

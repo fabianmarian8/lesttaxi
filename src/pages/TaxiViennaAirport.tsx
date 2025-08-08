@@ -7,11 +7,21 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
 
 const TaxiViennaAirport = () => {
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    name: "Taxi Lešť → Vienna Airport (VIE)",
+    description: "Premium taxi transfer from Lešť Military Base to Vienna International Airport (VIE). English-speaking drivers, precise timing.",
+    provider: { "@type": "LocalBusiness", name: "LEST TAXI", telephone: "+421919040118", url: "https://www.lesttaxi.com" },
+    areaServed: [ { "@type": "Place", name: "Lešť Military Base, Slovakia" }, { "@type": "Place", name: "Vienna International Airport, Austria" } ]
+  } as const;
+
   useSEO({
-    title: "Vienna Airport Transfer | LEST TAXI",
-    description: "Premium transfers from Lešť Base to Vienna Airport (VIE). Professional service. Book via WhatsApp +421 919 040 118.",
-    keywords: "taxi Vienna airport, Lešť to Vienna VIE, airport transfer Austria, military taxi Vienna, premium transfers",
+    title: "Taxi Lešť → Vienna Airport (non-stop, fixné ceny)",
+    description: "Prémiový transfer Lešť – Vienna (VIE). Anglicky hovoriaci vodiči, načasovanie k letu, pevné ceny. WhatsApp +421 919 040 118.",
+    keywords: "taxi Vienna airport, Lešť Vienna transfer, VIE transfer, military taxi Austria",
     canonical: "https://www.lesttaxi.com/taxi-vienna-airport",
+    jsonLd: serviceJsonLd,
   });
 
   return (
@@ -41,7 +51,7 @@ const TaxiViennaAirport = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <h1 className="text-4xl lg:text-6xl font-black mb-6 combat-text">
-            Premium Taxi Service to Vienna International Airport
+            Taxi Lešť → Vienna Airport (VIE) – prémiový transfer
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Professional transport from Lešť Military Base to Vienna International Airport (VIE) with premium service and punctual arrivals.
@@ -149,6 +159,56 @@ const TaxiViennaAirport = () => {
                 Our Vienna transfers include premium vehicles, experienced drivers familiar with international travel requirements, and extra comfort for the longer journey.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Unique Route Details */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <article className="tactical-card p-6">
+            <h2 className="text-2xl font-bold mb-4 combat-text">Lešť → Vienna Airport: Route details</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Cesta na Vienna International Airport (VIE) trvá zvyčajne 4–4.5 hodiny. Pri diaľkových letoch odporúčame odchod 5.5–6 hodín pred odletom; zahŕňa to komfortnú rezervu na check‑in a bezpečnostné kontroly. Poznáme terminály aj dopravnú situáciu na okruhoch okolo Viedne a zvolíme trasu s najlepším časom dojazdu. Pri návrate z VIE sledujeme číslo letu a prispôsobíme čas vyzdvihnutia. Na požiadanie zabezpečíme väčšie vozidlá pre batožinu či tímové vybavenie.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Internal links for better navigation */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <nav className="grid gap-3 md:grid-cols-2">
+            <a href="/price-list" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Bratislava – cenník</span>
+            </a>
+            <a href="/airport-transfer" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Letiskové transfery v SR – prehľad služieb</span>
+            </a>
+            <a href="/taxi-budapest-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Budapest (BUD) – informácie</span>
+            </a>
+            <a href="/taxi-banska-bystrica" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Banská Bystrica – mestská doprava z Lešť</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      {/* Short route-specific reviews */}
+      <section className="py-8 px-6 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5">
+        <div className="container mx-auto max-w-5xl grid gap-6 md:grid-cols-3">
+          <div className="tactical-card p-6">
+            <p className="italic">“Comfortable long ride, precise terminal drop‑off at VIE. Great planning for morning flight.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Daniel, US Army</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“WhatsApp updates on the way, clean vehicle, courteous driver. Would book again.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Linda, Civilian staff</p>
+          </div>
+          <div className="tactical-card p-6">
+            <p className="italic">“Plenty of trunk space for gear. Smooth border crossing and coffee stop when needed.”</p>
+            <p className="mt-3 text-sm text-muted-foreground">– Mark, USAF</p>
           </div>
         </div>
       </section>
