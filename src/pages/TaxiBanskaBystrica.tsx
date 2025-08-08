@@ -70,27 +70,27 @@ const TaxiBanskaBystrica = () => {
   const destinations = [
     {
       name: "Banská Bystrica City Center",
-      distance: "45 km",
-      time: "35 minutes",
-      price: "€35"
+      distance: "60 km",
+      time: "45 minutes",
+      price: "€70"
     },
     {
       name: "Banská Bystrica Train Station",
-      distance: "43 km", 
-      time: "33 minutes",
-      price: "€33"
+      distance: "63 km", 
+      time: "50 minutes",
+      price: "€70"
     },
     {
       name: "Europa Shopping Center",
-      distance: "47 km",
-      time: "37 minutes", 
-      price: "€37"
+      distance: "60 km",
+      time: "45 minutes", 
+      price: "€70"
     },
     {
       name: "SNP Square",
-      distance: "45 km",
-      time: "35 minutes",
-      price: "€35"
+      distance: "62 km",
+      time: "48 minutes",
+      price: "€70"
     }
   ];
 
