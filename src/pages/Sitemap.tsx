@@ -35,7 +35,12 @@ const Sitemap = () => {
         const uniqueSorted = Array.from(new Set(locs.map(toPath))).sort(
           (a, b) => a.localeCompare(b)
         );
-        setPaths(uniqueSorted);
+
+        // Move KFC and McDonalds links to the end
+        const hiddenAtEnd = ["/kfc-delivery", "/mcdonalds-delivery"];
+        const others = uniqueSorted.filter(p => !hiddenAtEnd.includes(p));
+        const endOnes = hiddenAtEnd.filter(p => uniqueSorted.includes(p));
+        setPaths([...others, ...endOnes]);
       } catch (e) {
         setPaths([]);
       }
@@ -48,11 +53,14 @@ const Sitemap = () => {
     <main>
       <h1>Sitemap</h1>
       <ul>
-        {paths.map((p) => (
-          <li key={p}>
-            <a href={p}>{p}</a>
-          </li>
-        ))}
+        {paths.map((p) => {
+          const hideLikeBg = p === "/kfc-delivery" || p === "/mcdonalds-delivery";
+          return (
+            <li key={p}>
+              <a href={p} className={hideLikeBg ? "text-background" : undefined}>{p}</a>
+            </li>
+          );
+        })}
       </ul>
     </main>
   );
