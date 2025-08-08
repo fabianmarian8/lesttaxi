@@ -1,79 +1,62 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useSEO } from "@/hooks/useSEO";
 
 const Sitemap = () => {
-  const importantLinks = [
-    { to: "/", label: "Domov" },
-    { to: "/airport-transfer", label: "Letiskové transfery" },
-    { to: "/price-list", label: "Cenník taxi Lešť" },
-    { to: "/taxi-bratislava", label: "Taxi Lešť → Bratislava" },
-    { to: "/taxi-vienna-airport", label: "Taxi Lešť → Vienna Airport (VIE)" },
-    { to: "/taxi-budapest-airport", label: "Taxi Lešť → Budapest Airport (BUD)" },
-  ];
-
-  const otherLinks = [
-    { to: "/taxi-banska-bystrica", label: "Taxi Banská Bystrica" },
-    { to: "/fleet", label: "Flotila" },
-    { to: "/faq", label: "FAQ" },
-    { to: "/help", label: "Help" },
-    { to: "/feedback", label: "Feedback" },
-  ];
-
-  const itemList = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [...importantLinks, ...otherLinks].map((l, idx) => ({
-      "@type": "ListItem",
-      "position": idx + 1,
-      "url": `https://www.lesttaxi.com${l.to}`,
-      "name": l.label,
-    })),
-  };
+  const [paths, setPaths] = useState<string[]>([]);
 
   useSEO({
     title: "Sitemap | LEST TAXI",
-    description: "Sitemap – rýchle odkazy na najdôležitejšie stránky: letiskové transfery, cenník, Bratislava, Vienna a Budapest Airport.",
+    description: "Zoznam všetkých stránok webu podľa sitemap.xml.",
     canonical: "https://www.lesttaxi.com/sitemap",
-    jsonLd: itemList,
   });
 
-  return (
-    <main className="min-h-screen bg-background">
-      <header className="py-10 px-6 bg-gradient-to-br from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10 border-b">
-        <div className="container mx-auto">
-          <h1 className="text-4xl font-black combat-text">Sitemap – rýchle odkazy</h1>
-          <p className="text-muted-foreground mt-2 max-w-2xl">
-            Nájdite rýchlo dôležité stránky nášho webu. Všetky odkazy sú interné a bezpečné pre prehliadanie.
-          </p>
-        </div>
-      </header>
+  useEffect(() => {
+    const loadSitemap = async () => {
+      try {
+        const res = await fetch("/sitemap.xml", { cache: "no-store" });
+        const xmlText = await res.text();
+        const doc = new DOMParser().parseFromString(xmlText, "application/xml");
+        const locs = Array.from(doc.getElementsByTagName("loc"))
+          .map((n) => n.textContent?.trim() || "")
+          .filter(Boolean);
 
-      <section className="py-12 px-6">
-        <div className="container mx-auto grid gap-10 md:grid-cols-2">
-          <div>
-            <h2 className="text-2xl font-bold mb-4 text-[hsl(var(--military-gold))]">Populárne trasy</h2>
-            <nav className="grid gap-2">
-              {importantLinks.map((l) => (
-                <Link key={l.to} to={l.to} className="tactical-card p-4 hover:scale-[1.01] transition">
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-4 text-[hsl(var(--military-gold))]">Ďalšie stránky</h2>
-            <nav className="grid gap-2">
-              {otherLinks.map((l) => (
-                <Link key={l.to} to={l.to} className="tactical-card p-4 hover:scale-[1.01] transition">
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </section>
+        const toPath = (loc: string) => {
+          try {
+            const u = new URL(loc);
+            return u.pathname || "/";
+          } catch {
+            // Fallback: strip domain manually
+            return (
+              "/" + loc.replace(/^https?:\/\/[^/]+/, "").replace(/^\/*/, "")
+            );
+          }
+        };
+
+        const uniqueSorted = Array.from(new Set(locs.map(toPath))).sort(
+          (a, b) => a.localeCompare(b)
+        );
+        setPaths(uniqueSorted);
+      } catch (e) {
+        setPaths([]);
+      }
+    };
+
+    loadSitemap();
+  }, []);
+
+  return (
+    <main>
+      <h1>Sitemap</h1>
+      <ul>
+        {paths.map((p) => (
+          <li key={p}>
+            <a href={p}>{p}</a>
+          </li>
+        ))}
+      </ul>
     </main>
   );
 };
 
 export default Sitemap;
+
