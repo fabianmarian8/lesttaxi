@@ -8,13 +8,13 @@ export const SiteFooter = () => {
     { title: "Base Taxi Service", href: "/base-taxi", description: "24/7 pickup from Lešť Base" },
     { title: "Airport Transport", href: "/airport-transport-slovakia", description: "Budapest, Vienna, Bratislava" },
     { title: "Taxi Banská Bystrica", href: "/taxi-banska-bystrica", description: "City center & shopping" },
-    { title: "Budapest Transport", href: "/budapest-transport", description: "Direct transfers to Budapest" },
+    { title: "Budapest Transport", href: "/budapest-military-transport", description: "Direct transfers to Budapest" },
   ];
 
   const militaryServices = [
     { title: "Military Base Pickup", href: "/military-base-pickup", description: "Gate pickup service" },
     { title: "Military Shopping", href: "/military-shopping", description: "Shopping assistance" },
-    { title: "Military Accommodation", href: "/military-accommodation", description: "Lodging transport" },
+    { title: "Military Accommodation", href: "/military-accommodation-transport", description: "Lodging transport" },
     { title: "Airport Military", href: "/airport-military", description: "Military airport transfers" },
   ];
 

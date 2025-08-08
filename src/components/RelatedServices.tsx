@@ -20,7 +20,7 @@ export const RelatedServices = ({ currentService, category = 'transport' }: Rela
     { title: "Base Taxi Service", href: "/base-taxi", description: "24/7 pickup from Lešť Military Base", category: "military" },
     { title: "Military Base Pickup", href: "/military-base-pickup", description: "Gate pickup service for military personnel", category: "military" },
     { title: "Military Shopping", href: "/military-shopping", description: "Shopping assistance and transport", category: "military" },
-    { title: "Military Accommodation", href: "/military-accommodation", description: "Transport to lodging facilities", category: "military" },
+    { title: "Military Accommodation", href: "/military-accommodation-transport", description: "Transport to lodging facilities", category: "military" },
     
     // Airport Services
     { title: "Airport Transport Slovakia", href: "/airport-transport-slovakia", description: "Professional airport transfers to all major airports", category: "airport" },
@@ -32,7 +32,7 @@ export const RelatedServices = ({ currentService, category = 'transport' }: Rela
     { title: "Taxi Banská Bystrica", href: "/taxi-banska-bystrica", description: "City center and shopping areas", category: "city" },
     { title: "Taxi Bratislava", href: "/taxi-bratislava", description: "Capital city transport services", category: "city" },
     { title: "Taxi Staré Mesto", href: "/taxi-stare-mesto", description: "Old Town Bratislava transport", category: "city" },
-    { title: "Budapest Transport", href: "/budapest-transport", description: "Complete Budapest transportation", category: "city" },
+    { title: "Budapest Transport", href: "/budapest-military-transport", description: "Complete Budapest transportation", category: "city" },
   ];
 
   // Filter services based on category and exclude current service

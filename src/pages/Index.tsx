@@ -279,6 +279,13 @@ const Index = () => {
               </h3>
               <p className="text-sm text-muted-foreground">All Slovakia airport transfers</p>
             </Link>
+            
+            <Link to="/budapest-military-transport" className="tactical-card group p-4 sm:p-6 text-center hover:scale-105 transition-all duration-300">
+              <h3 className="text-base sm:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] group-hover:text-[hsl(var(--elite-gold))]">
+                Budapest Transport
+              </h3>
+              <p className="text-sm text-muted-foreground">Complete Budapest transportation</p>
+            </Link>
           </div>
         </div>
       </section>
