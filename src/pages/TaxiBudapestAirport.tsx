@@ -12,7 +12,8 @@ const TaxiBudapestAirport = () => {
     name: "Taxi Lešť → Budapest Airport (BUD)",
     description: "Priame transfery z Lešť Base na letisko Budapest (BUD). Načasovanie k letu, pomoc s batožinou.",
     provider: { "@type": "LocalBusiness", name: "LEST TAXI", telephone: "+421919040118", url: "https://www.lesttaxi.com" },
-    areaServed: [ { "@type": "Place", name: "Lešť Military Base, Slovakia" }, { "@type": "Place", name: "Budapest Airport, Hungary" } ]
+    areaServed: [ { "@type": "Place", name: "Lešť Military Base, Slovakia" }, { "@type": "Place", name: "Budapest Airport, Hungary" } ],
+    offers: { "@type": "Offer", price: "200", priceCurrency: "EUR", description: "Lešť → Budapest Airport fixed fare" }
   } as const;
 
   useSEO({

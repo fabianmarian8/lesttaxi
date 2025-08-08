@@ -10,7 +10,7 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 
 const PriceList = () => {
   useSEO({
-    title: "Taxi Prices | LEST TAXI",
+    title: "Cenník Taxi Lešť – fixné ceny a letiskové transfery",
     description: "Transparent taxi pricing for military transport. Fixed rates, no hidden fees. Airport transfers and local services.",
     keywords: "taxi prices Slovakia, Lešť taxi rates, airport transfer prices, military taxi cost, transparent pricing",
     canonical: "https://www.lesttaxi.com/price-list"
@@ -149,7 +149,7 @@ const PriceList = () => {
       </header>
 
       <StandardHero
-        title="Transparent Pricing – No Hidden Fees"
+        title="Cenník Taxi Lešť – fixné ceny"
         description="Fixed rates for all destinations. What we quote is what you pay – including fuel, tolls, and professional service. Special military discounts available for bulk bookings."
       >
         <Badge variant="secondary" className="text-lg px-6 py-2 bg-[hsl(var(--military-gold))]/20 mt-4">
@@ -235,6 +235,44 @@ const PriceList = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Ako počítame ceny – unikátne vysvetlenie */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <article className="tactical-card p-6">
+            <h2 className="text-2xl font-bold mb-4 combat-text">Ako počítame ceny</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Naše ceny sú pevné a transparentné – v cene je zahrnuté mýto, palivo aj profesionálna služba. Pri diaľkových trasách vychádzame z reálnych časov a vzdialeností z Lešť Base: Budapest Airport (BUD) typicky €200, Vienna Airport (VIE) €290 a Bratislava (BTS) €220. Pri lokálnych presunoch uvádzame cenu za jazdu alebo hodinovú sadzbu (čakanie €20/h), aby ste presne vedeli, koľko zaplatíte.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Pri skorých ranných letoch plánujeme odchod s rezervou na check‑in a bezpečnostnú kontrolu. Ak potrebujete väčšie auto kvôli batožine alebo tímovej výbave, vieme ho zabezpečiť – stačí to uviesť pri objednávke. Komunikujeme v angličtine, máme skúsenosti s vojenským protokolom a prispôsobíme krátke zastávky (kaviareň, toaleta) podľa potreby.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Pri dlhších trasách odporúčame rezervovať dopredu, aby sme zladili rozpis a zabezpečili presný čas vyzdvihnutia. Vždy platí: čo naceníme, to zaplatíte – žiadne prekvapenia.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Interné odkazy – prehľad služieb */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <nav className="grid gap-3 md:grid-cols-2">
+            <Link to="/airport-transfer" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Letiskové transfery – všetky možnosti</span>
+            </Link>
+            <Link to="/taxi-vienna-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Vienna Airport (VIE)</span>
+            </Link>
+            <Link to="/taxi-budapest-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Budapest Airport (BUD)</span>
+            </Link>
+            <Link to="/taxi-bratislava" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Bratislava – informácie</span>
+            </Link>
+          </nav>
         </div>
       </section>
 

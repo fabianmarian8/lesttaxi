@@ -13,7 +13,8 @@ const TaxiViennaAirport = () => {
     name: "Taxi Lešť → Vienna Airport (VIE)",
     description: "Premium taxi transfer from Lešť Military Base to Vienna International Airport (VIE). English-speaking drivers, precise timing.",
     provider: { "@type": "LocalBusiness", name: "LEST TAXI", telephone: "+421919040118", url: "https://www.lesttaxi.com" },
-    areaServed: [ { "@type": "Place", name: "Lešť Military Base, Slovakia" }, { "@type": "Place", name: "Vienna International Airport, Austria" } ]
+    areaServed: [ { "@type": "Place", name: "Lešť Military Base, Slovakia" }, { "@type": "Place", name: "Vienna International Airport, Austria" } ],
+    offers: { "@type": "Offer", price: "290", priceCurrency: "EUR", description: "Lešť → Vienna Airport fixed fare" }
   } as const;
 
   useSEO({

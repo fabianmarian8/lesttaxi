@@ -197,6 +197,9 @@ export const SiteFooter = () => {
             <Link to="/terms-of-service" className="hover:text-[hsl(var(--military-gold))] transition-colors">
               Terms of Service
             </Link>
+            <Link to="/sitemap" className="hover:text-[hsl(var(--military-gold))] transition-colors">
+              Sitemap
+            </Link>
             <Link to="/feedback" className="hover:text-[hsl(var(--military-gold))] transition-colors">
               Feedback
             </Link>

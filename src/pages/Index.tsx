@@ -168,6 +168,30 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Popular Routes */}
+      <section className="py-12 px-6 relative">
+        <div className="container mx-auto relative z-10">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-center mb-8 combat-text">Populárne trasy</h2>
+          <nav className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link to="/airport-transfer" className="tactical-card p-5 hover:scale-[1.02] transition-all">
+              <span className="font-semibold">Letiskové transfery (BUD, VIE, BTS)</span>
+            </Link>
+            <Link to="/price-list" className="tactical-card p-5 hover:scale-[1.02] transition-all">
+              <span className="font-semibold">Cenník taxi Lešť – fixné ceny</span>
+            </Link>
+            <Link to="/taxi-bratislava" className="tactical-card p-5 hover:scale-[1.02] transition-all">
+              <span className="font-semibold">Taxi Lešť → Bratislava (non‑stop)</span>
+            </Link>
+            <Link to="/taxi-vienna-airport" className="tactical-card p-5 hover:scale-[1.02] transition-all">
+              <span className="font-semibold">Taxi Lešť → Vienna Airport (VIE)</span>
+            </Link>
+            <Link to="/taxi-budapest-airport" className="tactical-card p-5 hover:scale-[1.02] transition-all">
+              <span className="font-semibold">Taxi Lešť → Budapest Airport (BUD)</span>
+            </Link>
+          </nav>
+        </div>
+      </section>
+
       {/* Command Center Contact */}
       <section className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />

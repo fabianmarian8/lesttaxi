@@ -14,18 +14,32 @@ const AirportTransfer = () => {
     description: "Professional airport transfer service from Lest Base to major airports. Fixed rates, flight tracking, 24/7 service. Book via WhatsApp +421 919 040 118",
     keywords: "airport transfer Slovakia, Sliač airport taxi, Bratislava airport transfer, Vienna airport transport, military airport taxi",
     canonical: "https://www.lesttaxi.com/airport-transfer",
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "Airport Transfer Service",
-      "description": "Professional airport transfer service from Lest Base to major airports",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "LEST TAXI",
-        "telephone": "+421919040118"
-      },
-      "serviceType": "Airport Transportation"
-    }
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "Airport Transfer from Lešť Base",
+        "description": "Professional airport transfers from Lešť Base to Sliač (SLD), Budapest (BUD), Vienna (VIE) and Bratislava (BTS) with fixed pricing and flight tracking.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "LEST TAXI",
+          "telephone": "+421919040118",
+          "url": "https://www.lesttaxi.com"
+        },
+        "serviceType": "Airport Transportation",
+        "areaServed": [
+          { "@type": "Place", "name": "Lešť Military Base, Slovakia" },
+          { "@type": "Place", "name": "Sliač Airport (SLD)" },
+          { "@type": "Place", "name": "Budapest Airport (BUD)" },
+          { "@type": "Place", "name": "Vienna International Airport (VIE)" },
+          { "@type": "Place", "name": "Bratislava Airport (BTS)" }
+        ],
+        "offers": [
+          { "@type": "Offer", "price": "55", "priceCurrency": "EUR", "description": "Lešť → Sliač Airport fixed fare" },
+          { "@type": "Offer", "price": "200", "priceCurrency": "EUR", "description": "Lešť → Budapest Airport fixed fare" },
+          { "@type": "Offer", "price": "290", "priceCurrency": "EUR", "description": "Lešť → Vienna Airport fixed fare" },
+          { "@type": "Offer", "price": "220", "priceCurrency": "EUR", "description": "Lešť → Bratislava Airport fixed fare" }
+        ]
+      }
   });
 
   const airports = [
@@ -146,6 +160,40 @@ const AirportTransfer = () => {
         </div>
       </section>
 
+      {/* Unikátne miestne informácie pre letiskové transfery */}
+      <section className="py-12 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <article className="tactical-card p-6">
+            <h2 className="text-2xl font-bold mb-4 combat-text">Praktické informácie pre letiskové transfery</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Z Lešť Base zvyčajne vyzdvihujeme pri tenisových kurtoch alebo pri hornom vstupe (upper gate) podľa dohody s personálom. Pre skoré ranné lety odporúčame pripraviť sa pár minút skôr – auto čaká na dohodnutom bode a dá o sebe vedieť cez WhatsApp. Na Budapest Airport (BUD) rátame s časom 3–3,5 hodiny (hraničný prechod Šahy/Parassapuszta), Vienna Airport (VIE) 4–4,5 hodiny a Bratislava (BTS) zhruba 2,5 hodiny. Pri odchodoch plánujeme rezervu na check‑in, bezpečnostnú kontrolu aj prípadné zápchy.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Ceny sú pevné: príklady – Lešť → BUD €200, Lešť → VIE €290, Lešť → BTS €220, Lešť → Sliač €55. V cene je zahrnuté mýto aj palivo; nič neprekvapí pri dojazde. Ak máte viac batožiny alebo tímové vybavenie, dajte nám vedieť vopred – prispôsobíme typ vozidla a batožinový priestor. Pri návratových letoch sledujeme čísla letov a prispôsobíme čas vyzdvihnutia priamo k terminálu (T2A/T2B v Budapešti, terminály vo Viedni, BTS). 
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Ak potrebujete krátku zastávku cestou (kaviareň, toaleta, rýchly nákup), vodič sa prispôsobí. Komunikujeme v angličtine, sme dostupní 24/7 a máme skúsenosť s vojenským protokolom pri presunoch.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      {/* Súvisiace trasy */}
+      <section className="py-8 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <nav className="grid gap-3 md:grid-cols-2">
+            <Link to="/price-list" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Pozrite aj cenník – fixné ceny a podmienky</span>
+            </Link>
+            <Link to="/taxi-vienna-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Vienna Airport (VIE) – detaily</span>
+            </Link>
+            <Link to="/taxi-budapest-airport" className="tactical-card p-4 hover:scale-[1.01] transition">
+              <span className="font-semibold">Taxi Lešť ↔ Budapest Airport (BUD) – informácie</span>
+            </Link>
+          </nav>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--whatsapp-green))] to-[hsl(142,60%,45%)] text-white">
