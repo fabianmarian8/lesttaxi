@@ -29,7 +29,7 @@ const AirportTransfer = () => {
   });
 
   const airports = [
-    { name: "Sliač Airport (SLD)", distance: "15 km", time: "40 min", price: "€55" },
+    { name: "Sliač Airport (SLD)", distance: "48 km", time: "40 min", price: "€55" },
     { name: "Budapest Airport (BUD)", distance: "180 km", time: "2 hours", price: "€200" },
     { name: "Vienna Airport (VIE)", distance: "283 km", time: "3 hours", price: "€290" },
     { name: "Bratislava Airport (BTS)", distance: "235 km", time: "2.5 hours", price: "€220" },
@@ -170,7 +170,7 @@ const AirportTransfer = () => {
             <div className="mt-6 grid md:grid-cols-3 gap-4 text-center">
               <div>
                 <h4 className="font-semibold text-lg">Distance</h4>
-                <p className="text-[hsl(var(--military-gold))] font-bold">15 km</p>
+                <p className="text-[hsl(var(--military-gold))] font-bold">48 km</p>
               </div>
               <div>
                 <h4 className="font-semibold text-lg">Travel Time</h4>
