@@ -146,44 +146,6 @@ const AirportTransfer = () => {
         </div>
       </section>
 
-      {/* Google Map Section */}
-      <section className="py-16 px-6">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Route: Sliač Airport ↔ Lest Base</h2>
-          <div className="max-w-4xl mx-auto">
-            <Card>
-              <CardContent className="p-0">
-                <div className="aspect-video w-full">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d42736.97995!2d19.134!3d48.638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x4741c7d7d46969f3%3A0x1d4f3b7b3a8e9c2a!2sSlia%C4%8D%20Airport%2C%20Slovakia!3m2!1d48.6375!2d19.1341!4m5!1s0x4741c8a8a8a8a8a8%3A0x8a8a8a8a8a8a8a8a!2sLe%C5%A1%C5%A5%20Military%20Base%2C%20Slovakia!3m2!1d48.65!2d19.15!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Route from Sliač Airport to Lest Military Base"
-                  />
-                </div>
-              </CardContent>
-            </Card>
-            <div className="mt-6 grid md:grid-cols-3 gap-4 text-center">
-              <div>
-                <h4 className="font-semibold text-lg">Distance</h4>
-                <p className="text-[hsl(var(--military-gold))] font-bold">48 km</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg">Travel Time</h4>
-                <p className="text-[hsl(var(--military-gold))] font-bold">40 minutes</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg">Fixed Price</h4>
-                <p className="text-[hsl(var(--military-gold))] font-bold">€55</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--whatsapp-green))] to-[hsl(142,60%,45%)] text-white">
