@@ -269,7 +269,9 @@ const Index = () => {
               <li><a href="/price-list" className="text-base font-medium hover:underline">Price list</a></li>
               <li><a href="/taxi-bratislava" className="text-base font-medium hover:underline">Taxi Bratislava</a></li>
               <li><a href="/taxi-vienna-airport" className="text-base font-medium hover:underline">Taxi Vienna Airport</a></li>
-              <li><a href="/taxi-budapest-airport" className="text-base font-medium hover:underline">Taxi Budapest Airport</a></li>
+              <li><a href="/airport-transport-slovakia" className="text-base font-medium hover:underline">Airport transport Slovakia</a></li>
+              <li><a href="/taxi-banska-bystrica" className="text-base font-medium hover:underline">Taxi Banská Bystrica</a></li>
+              <li><a href="/banska-bystrica-military-taxi" className="text-base font-medium hover:underline">Banská Bystrica military taxi</a></li>
             </ul>
           </nav>
         </div>
