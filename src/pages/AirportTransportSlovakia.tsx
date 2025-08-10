@@ -42,7 +42,7 @@ const AirportTransportSlovakia = () => {
   });
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/421919040118?text=Hello, I need airport transport from Lešť Base', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=421919040118&text=Hello, I need airport transport from Lešť Base', '_blank');
   };
 
   const callPhone = () => {

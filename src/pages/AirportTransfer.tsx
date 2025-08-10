@@ -63,7 +63,7 @@ const AirportTransfer = () => {
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>
-          <Button variant="whatsapp" size="sm" onClick={() => window.open('https://wa.me/421919040118', '_blank')}>
+          <Button variant="whatsapp" size="sm" onClick={() => window.open('https://api.whatsapp.com/send?phone=421919040118', '_blank')}>
             <MessageCircle className="h-4 w-4 mr-2" />
             WhatsApp
           </Button>
@@ -201,7 +201,7 @@ const AirportTransfer = () => {
             variant="secondary" 
             size="lg" 
             className="text-xl px-12 py-6 h-auto bg-white text-[hsl(var(--whatsapp-green))] hover:bg-white/90"
-            onClick={() => window.open('https://wa.me/421919040118', '_blank')}
+            onClick={() => window.open('https://api.whatsapp.com/send?phone=421919040118', '_blank')}
           >
             <MessageCircle className="h-6 w-6 mr-3" />
             Book on WhatsApp

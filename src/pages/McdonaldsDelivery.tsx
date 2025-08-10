@@ -113,7 +113,7 @@ const McdonaldsDelivery = () => {
             <span className="text-2xl font-bold text-foreground">TAXI</span>
           </div>
           <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-            <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=421919040118" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-4 w-4" />
               WhatsApp
             </a>
@@ -133,7 +133,7 @@ const McdonaldsDelivery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-              <a href="https://wa.me/421919040118?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send?phone=421919040118&text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Order McDonald's via WhatsApp
               </a>
@@ -261,7 +261,7 @@ const McdonaldsDelivery = () => {
             Get that taste of home delivered right to your base. Fast, reliable McDonald's delivery service for US military personnel.
           </p>
           <Button size="lg" asChild className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-            <a href="https://wa.me/421919040118?text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=421919040118&text=Hi! I'd like to order McDonald's delivery to Lest base." target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-5 w-5" />
               Order McDonald's Now
             </a>

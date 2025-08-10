@@ -8,7 +8,7 @@ import { useSEO } from "@/hooks/useSEO";
 const Help = () => {
   const handleWhatsAppClick = () => {
     console.log("WhatsApp clicked");
-    window.open('https://wa.me/421919040118', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=421919040118', '_blank');
   };
 
   const handlePhoneClick = () => {
@@ -195,7 +195,7 @@ const Help = () => {
           {/* Standalone Contact Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a 
-              href="https://wa.me/421919040118"
+              href="https://api.whatsapp.com/send?phone=421919040118"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => window.gtag?.('event', 'whatsapp_click')}

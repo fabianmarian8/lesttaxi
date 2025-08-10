@@ -38,7 +38,7 @@ const BudapestTransport = () => {
   });
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/421919040118?text=Hello,%20I%20need%20transport%20to%20Budapest", "_blank");
+    window.open("https://api.whatsapp.com/send?phone=421919040118&text=Hello,%20I%20need%20transport%20to%20Budapest", "_blank");
   };
 
   const callPhone = () => {

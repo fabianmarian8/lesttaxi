@@ -64,7 +64,7 @@ const FloatingWhatsApp = () => {
           onClick={() => {
             playNotificationSound();
             window.gtag?.('event', 'whatsapp_click');
-            window.open('https://wa.me/421919040118', '_blank');
+            window.open('https://api.whatsapp.com/send?phone=421919040118', '_blank');
           }}
           aria-label="Contact us on WhatsApp"
         >

@@ -61,7 +61,7 @@ const KFCDelivery = () => {
             <span className="text-2xl font-bold text-foreground">TAXI</span>
           </div>
           <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-            <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=421919040118" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-4 w-4" />
               WhatsApp
             </a>
@@ -81,7 +81,7 @@ const KFCDelivery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild className="bg-red-600 hover:bg-red-700 text-white">
-              <a href="https://wa.me/421919040118?text=Hi! I'd like to order KFC delivery to Lest base." target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send?phone=421919040118&text=Hi! I'd like to order KFC delivery to Lest base." target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Order KFC via WhatsApp
               </a>
@@ -190,7 +190,7 @@ const KFCDelivery = () => {
             Don't let hunger wait. Order your favorite KFC meals now and we'll deliver them fresh to Lest base gate.
           </p>
           <Button size="lg" asChild className="bg-red-600 hover:bg-red-700 text-white">
-            <a href="https://wa.me/421919040118?text=Hi! I'd like to order KFC delivery to Lest base." target="_blank" rel="noopener noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=421919040118&text=Hi! I'd like to order KFC delivery to Lest base." target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-5 w-5" />
               Order KFC Now via WhatsApp
             </a>

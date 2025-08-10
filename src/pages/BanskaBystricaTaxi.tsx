@@ -40,7 +40,7 @@ const BanskaBystricaTaxi = () => {
   });
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/421919040118?text=Hello,%20I%20need%20transport%20to%20Banská%20Bystrica", "_blank");
+    window.open("https://api.whatsapp.com/send?phone=421919040118&text=Hello,%20I%20need%20transport%20to%20Banská%20Bystrica", "_blank");
   };
 
   const callPhone = () => {

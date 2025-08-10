@@ -37,7 +37,7 @@ const MilitaryAccommodation = () => {
   });
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/421919040118?text=Hello,%20I%20need%20accommodation%20transport%20service", "_blank");
+    window.open("https://api.whatsapp.com/send?phone=421919040118&text=Hello,%20I%20need%20accommodation%20transport%20service", "_blank");
   };
 
   const callPhone = () => {

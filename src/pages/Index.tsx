@@ -119,7 +119,7 @@ const Index = () => {
                 🚁 24h/7days always ready • ⚡ verified and fast taxi • 🎾 Tennis court pickup • 🥡 Food delivery
               </p>
               <div className="flex gap-3 sm:gap-4 lg:gap-6 flex-wrap justify-center sm:justify-start">
-                <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card px-3 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-base lg:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow">
+                <a href="https://api.whatsapp.com/send?phone=421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card px-3 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 text-xs sm:text-base lg:text-lg font-semibold bg-[hsl(var(--whatsapp-green))] text-white hover:scale-110 transition-all duration-300 neon-glow">
                   <MessageCircle className="h-3 w-3 sm:h-5 sm:w-5 lg:h-6 lg:w-6 mr-1 sm:mr-2 lg:mr-3 inline" />
                   <span className="hidden sm:inline">Book on </span>WhatsApp
                 </a>
@@ -188,7 +188,7 @@ const Index = () => {
               </div>
               <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--military-gold))] text-center">Call Now</span>
             </a>
-            <a href="https://wa.me/421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
+            <a href="https://api.whatsapp.com/send?phone=421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
               <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
@@ -241,7 +241,7 @@ const Index = () => {
             Professional military-friendly taxi service with English-speaking drivers, fixed rates and 24/7 availability. Book instantly via WhatsApp or call us now.
           </p>
           <div className="flex gap-4 sm:gap-6 justify-center">
-            <Button onClick={() => window.open('https://wa.me/421919040118?text=Hello,%20I%20need%20a%20taxi%20from%20Lešť%20Base', '_blank')} variant="whatsapp" size="lg">
+            <Button onClick={() => window.open('https://api.whatsapp.com/send?phone=421919040118&text=Hello,%20I%20need%20a%20taxi%20from%20Lešť%20Base', '_blank')} variant="whatsapp" size="lg">
               <MessageCircle className="h-5 w-5 mr-2" />
               Book on WhatsApp
             </Button>

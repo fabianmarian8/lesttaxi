@@ -18,7 +18,7 @@ export const StandardHero = ({
   description,
   primaryButtonText = "Book on WhatsApp",
   secondaryButtonText = "Call +421 919 040 118",
-  onPrimaryClick = () => window.open('https://wa.me/421919040118', '_blank'),
+  onPrimaryClick = () => window.open('https://api.whatsapp.com/send?phone=421919040118', '_blank'),
   onSecondaryClick = () => window.open('tel:+421919040118', '_self'),
   children,
   className = ""
