@@ -40,6 +40,8 @@ const normalizeCanonical = (input: string): string => {
     const u = new URL(input, base);
     // Force https
     u.protocol = 'https:';
+    // Remove only the app param (and then strip all query params for canonical)
+    u.searchParams.delete('app');
     // Strip query/hash for canonical
     u.search = '';
     u.hash = '';
