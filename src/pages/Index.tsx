@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
+import { useState } from "react";
 import ExchangeRateWidget from "@/components/ExchangeRateWidget";
 import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
@@ -76,6 +78,7 @@ const Index = () => {
       "description": "Professional 24/7 taxi service for US military personnel at Lešť Base Slovakia. Specializing in airport transfers, Banská Bystrica transport, and city travel with fixed rates and military protocol understanding."
     }
   });
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
   return <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Enhanced Military Pattern Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -175,7 +178,26 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-2xl mx-auto mb-16">
-            <BookingForm />
+            <Collapsible open={isBookingOpen} onOpenChange={setIsBookingOpen}>
+              <CollapsibleTrigger asChild>
+                <Button
+                  variant="taxi"
+                  size="lg"
+                  className="w-full justify-center h-auto px-6 py-4"
+                  onClick={() => {
+                    window.gtag?.('event', 'booking_form_toggle', { state: !isBookingOpen ? 'open' : 'close' });
+                  }}
+                  aria-expanded={isBookingOpen}
+                  aria-controls="booking-form-content"
+                >
+                  Book Your Ride
+                  <ChevronDown className={`ml-2 h-5 w-5 transition-transform ${isBookingOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent id="booking-form-content" className="mt-6">
+                <BookingForm />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
           
           <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-6">
