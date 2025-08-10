@@ -78,6 +78,7 @@ const Index = () => {
     }
   });
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [isMapOpen, setIsMapOpen] = useState(false);
   return <main className="min-h-screen bg-background relative overflow-hidden">
       {/* Enhanced Military Pattern Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -198,16 +199,7 @@ const Index = () => {
           </div>
           
           
-          {/* Google Maps Location */}
-          <div className="mt-12 lg:mt-16">
-            <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 text-[hsl(var(--military-gold))]">Your Location in Lešť</h3>
-            <div className="tactical-card p-4 mx-auto max-w-4xl">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10606.190694779916!2d19.30634581363969!3d48.34999898836313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476aace20de6e3b3%3A0x34f254bbfa7193c9!2s962%2063%20Lest&#39;!5e0!3m2!1ssk!2ssk!4v1754488714914!5m2!1ssk!2ssk" width="100%" height="300" style={{
-              border: 0,
-              borderRadius: 'var(--radius)'
-            }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Taxi Lešť Location" />
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -220,6 +212,32 @@ const Index = () => {
       <div className="relative z-10">
         <TextLinksSection />
       </div>
+
+      {/* Collapsible Google Maps Location */}
+      <section className="py-6 px-4 relative">
+        <div className="container mx-auto max-w-2xl">
+          <Collapsible open={isMapOpen} onOpenChange={setIsMapOpen}>
+            <CollapsibleTrigger asChild>
+              <Button variant="taxi" size="lg" className="w-full justify-center h-auto px-6 py-4" onClick={() => {
+                window.gtag?.('event', 'map_toggle', {
+                  state: !isMapOpen ? 'open' : 'close'
+                });
+              }} aria-expanded={isMapOpen} aria-controls="map-content">
+                Your Location in Lešť
+                <ChevronDown className={`ml-2 h-5 w-5 transition-transform ${isMapOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent id="map-content" className="mt-6">
+              <div className="tactical-card p-4 mx-auto max-w-4xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10606.190694779916!2d19.30634581363969!3d48.34999898836313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476aace20de6e3b3%3A0x34f254bbfa7193c9!2s962%2063%20Lest&#39;!5e0!3m2!1ssk!2ssk!4v1754488714914!5m2!1ssk!2ssk" width="100%" height="300" style={{
+                  border: 0,
+                  borderRadius: 'var(--radius)'
+                }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Taxi Lešť Location" />
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+        </div>
+      </section>
 
       {/* Related Services */}
       <div className="relative z-10">
