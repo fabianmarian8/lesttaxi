@@ -100,17 +100,22 @@ export const useSEO = ({
     if (canonical) {
       const normalized = normalizeCanonical(canonical);
       
-      // Remove all existing canonical and hreflang links
-      const existingLinks = document.querySelectorAll('link[rel="canonical"], link[rel="alternate"]');
-      existingLinks.forEach(link => link.remove());
+      // Ensure exactly one canonical link exists: update first if found, remove duplicates; else create
+      const canonicalLinks = document.head.querySelectorAll('link[rel="canonical"]') as NodeListOf<HTMLLinkElement>;
+      let canonicalLink: HTMLLinkElement | null = null;
+      if (canonicalLinks.length > 0) {
+        canonicalLink = canonicalLinks[0];
+        canonicalLink.setAttribute('href', normalized);
+        // Remove any extra canonical links
+        canonicalLinks.forEach((lnk, idx) => { if (idx > 0) lnk.remove(); });
+      } else {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        canonicalLink.setAttribute('href', normalized);
+        document.head.insertBefore(canonicalLink, document.head.firstChild);
+      }
 
-      // Add canonical link
-      const canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      canonicalLink.setAttribute('href', normalized);
-      document.head.insertBefore(canonicalLink, document.head.firstChild);
-
-      // Add og:url right after canonical
+      // Add or update og:url right after canonical
       let ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null;
       if (!ogUrl) {
         ogUrl = document.createElement('meta');
