@@ -14,7 +14,7 @@ const htmls = [];
   }
 })('dist');
 
-const urls = htmls.map(p=>{
+const urls = htmls.filter(p => !/(^|\/)404\.html$/.test(p)).map(p=>{
   let loc = '/' + p.replace(/index\.html$/,'').replace(/\.html$/,'');
   if(loc === '/') { loc = '/'; }
   return `

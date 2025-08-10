@@ -5,7 +5,7 @@ const BASE = 'https://www.lesttaxi.com';
 const today = new Date().toISOString().slice(0, 10);   // YYYY-MM-DD
 const pages = await globby('dist/**/*.html', { onlyFiles: true });
 
-const urls = pages.map(p => {
+const urls = pages.filter(p => !/(^|\/)404\.html$/.test(p)).map(p => {
   const loc = BASE + p.replace(/^dist/, '').replace(/index\.html$/, '')   // /sub/ → /sub/
                      .replace(/\.html$/, '');
   return `
