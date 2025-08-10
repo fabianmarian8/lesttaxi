@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -60,27 +61,27 @@ export const RelatedServices = ({ currentService, category = 'transport' }: Rela
   if (relatedServices.length === 0) return null;
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/5 to-[hsl(var(--combat-green))]/5">
+    <section className="py-6 px-4 bg-gradient-to-br from-[hsl(var(--military-gold))]/5 to-[hsl(var(--combat-green))]/5">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 combat-text">
+        <h2 className="text-lg sm:text-2xl font-bold text-center mb-4 combat-text">
           Related Transport Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {relatedServices.map((service, index) => (
-            <Card key={index} className="tactical-card group hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-lg group-hover:text-[hsl(var(--military-gold))] transition-colors">
+            <Card key={index} className="tactical-card group hover:shadow-lg transition-all duration-300 p-3">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm sm:text-base group-hover:text-[hsl(var(--military-gold))] transition-colors">
                   {service.title}
                 </CardTitle>
-                <CardDescription>{service.description}</CardDescription>
+                <CardDescription className="text-xs sm:text-sm">{service.description}</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pt-0 pb-2">
                 <Link 
                   to={service.href}
-                  className="inline-flex items-center text-sm font-medium text-[hsl(var(--military-gold))] hover:text-[hsl(var(--elite-gold))] transition-colors"
+                  className="inline-flex items-center text-xs font-medium text-[hsl(var(--military-gold))] hover:text-[hsl(var(--elite-gold))] transition-colors"
                 >
                   Learn More
-                  <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="h-3 w-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </CardContent>
             </Card>
@@ -88,10 +89,10 @@ export const RelatedServices = ({ currentService, category = 'transport' }: Rela
         </div>
         
         {/* View All Services Link */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-6">
           <Link 
             to="/price-list"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] text-black font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-sm"
           >
             View All Services & Prices
             <ArrowRight className="h-4 w-4 ml-2" />
