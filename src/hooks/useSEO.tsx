@@ -42,6 +42,9 @@ export const useSEO = ({
   jsonLd 
 }: SEOProps) => {
   useEffect(() => {
+    // Update HTML lang attribute
+    document.documentElement.lang = 'en';
+    
     // Update title
     document.title = title;
     
@@ -59,32 +62,45 @@ export const useSEO = ({
       }
     }
     
-    // Update canonical URL if provided (remove any existing first)
+    // Update canonical URL and hreflang if provided
     if (canonical) {
       const normalized = normalizeCanonical(canonical);
-      // Remove all existing canonical links to prevent duplicates (even if placed outside <head>)
-      const existingCanonicals = document.querySelectorAll('link[rel="canonical"]');
-      existingCanonicals.forEach(link => link.remove());
+      const isHomepage = normalized === 'https://www.lesttaxi.com' || normalized === 'https://www.lesttaxi.com/';
+      
+      // Remove all existing canonical and hreflang links
+      const existingLinks = document.querySelectorAll('link[rel="canonical"], link[rel="alternate"]');
+      existingLinks.forEach(link => link.remove());
 
-      // Add the new canonical link at the start of <head>
+      // Add canonical link
       const canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
       canonicalLink.setAttribute('href', normalized);
       document.head.insertBefore(canonicalLink, document.head.firstChild);
 
-      // Ensure og:url is present and matches canonical, placed right after canonical when created
+      // Add og:url right after canonical
       let ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null;
       if (!ogUrl) {
         ogUrl = document.createElement('meta');
         ogUrl.setAttribute('property', 'og:url');
-        ogUrl.setAttribute('content', normalized);
-        canonicalLink.insertAdjacentElement('afterend', ogUrl);
-      } else {
-        ogUrl.setAttribute('content', normalized);
-        // If og:url somehow ended up outside <head>, move it into <head>
-        if (ogUrl.parentElement !== document.head) {
-          document.head.appendChild(ogUrl);
-        }
+        document.head.appendChild(ogUrl);
+      }
+      ogUrl.setAttribute('content', normalized);
+      canonicalLink.insertAdjacentElement('afterend', ogUrl);
+
+      // Add hreflang="en" for all pages
+      const hreflangEn = document.createElement('link');
+      hreflangEn.setAttribute('rel', 'alternate');
+      hreflangEn.setAttribute('hreflang', 'en');
+      hreflangEn.setAttribute('href', normalized);
+      ogUrl.insertAdjacentElement('afterend', hreflangEn);
+
+      // Add hreflang="x-default" only for homepage
+      if (isHomepage) {
+        const hreflangDefault = document.createElement('link');
+        hreflangDefault.setAttribute('rel', 'alternate');
+        hreflangDefault.setAttribute('hreflang', 'x-default');
+        hreflangDefault.setAttribute('href', 'https://www.lesttaxi.com/');
+        hreflangEn.insertAdjacentElement('afterend', hreflangDefault);
       }
     }
     
@@ -104,8 +120,7 @@ export const useSEO = ({
     updateOGTag('og:image', ogImage);
     updateOGTag('og:type', 'website');
     updateOGTag('og:site_name', 'LEST TAXI');
-    updateOGTag('og:locale', 'sk_SK');
-    if (canonical) { /* og:url handled with canonical insertion above */ }
+    updateOGTag('og:locale', 'en_US');
     
     // Update Twitter Card tags
     const updateTwitterTag = (name: string, content: string) => {
