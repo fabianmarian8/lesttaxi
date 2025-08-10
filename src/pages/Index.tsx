@@ -113,7 +113,7 @@ const Index = () => {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="text-center sm:text-left slide-up w-full">
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-black mb-3 sm:mb-4 lg:mb-6 xl:mb-8 combat-text leading-tight break-words" itemProp="name">
-                Taxi Lešť – 24/7 Airport Transfer Slovakia
+                Taxi Lešť – 24/7 Transfer Slovakia
               </h1>
               <p className="text-sm sm:text-lg lg:text-xl text-foreground/90 mb-3 sm:mb-4 lg:mb-6 font-medium break-words">
                 24/7 taxi service for U.S. personnel at Lešť (Lest) Military Training Area – fixed rates, gate pickup, and airport transfers.
