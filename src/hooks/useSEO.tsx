@@ -22,7 +22,7 @@ const BUSINESS_ENTITY = {
     "@type": "PostalAddress",
     "streetAddress": "Zvolenská cesta 52",
     "addressLocality": "Lešť",
-    "postalCode": "962 63",
+    "postalCode": "96263",
     "addressCountry": "SK"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 48.349999, "longitude": 19.306345 },
@@ -86,10 +86,9 @@ export const useSEO = ({
       }
     }
     
-    // Update canonical URL and hreflang if provided
+    // Update canonical URL if provided
     if (canonical) {
       const normalized = normalizeCanonical(canonical);
-      const isHomepage = normalized === 'https://www.lesttaxi.com' || normalized === 'https://www.lesttaxi.com/';
       
       // Remove all existing canonical and hreflang links
       const existingLinks = document.querySelectorAll('link[rel="canonical"], link[rel="alternate"]');
@@ -110,22 +109,6 @@ export const useSEO = ({
       }
       ogUrl.setAttribute('content', normalized);
       canonicalLink.insertAdjacentElement('afterend', ogUrl);
-
-      // Add hreflang="en" for all pages
-      const hreflangEn = document.createElement('link');
-      hreflangEn.setAttribute('rel', 'alternate');
-      hreflangEn.setAttribute('hreflang', 'en');
-      hreflangEn.setAttribute('href', normalized);
-      ogUrl.insertAdjacentElement('afterend', hreflangEn);
-
-      // Add hreflang="x-default" only for homepage
-      if (isHomepage) {
-        const hreflangDefault = document.createElement('link');
-        hreflangDefault.setAttribute('rel', 'alternate');
-        hreflangDefault.setAttribute('hreflang', 'x-default');
-        hreflangDefault.setAttribute('href', 'https://www.lesttaxi.com/');
-        hreflangEn.insertAdjacentElement('afterend', hreflangDefault);
-      }
     }
     
     // Update Open Graph tags

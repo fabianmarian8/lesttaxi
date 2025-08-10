@@ -27,10 +27,9 @@ const Index = () => {
       "email": "fabianmarian8@gmail.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Lest Military Base Area",
+        "streetAddress": "Zvolenská cesta 52",
         "addressLocality": "Lešť",
-        "addressRegion": "Banská Bystrica Region",
-        "postalCode": "96223",
+        "postalCode": "96263",
         "addressCountry": "SK"
       },
       "geo": {
