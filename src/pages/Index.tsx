@@ -132,8 +132,11 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div className="flex justify-center lg:justify-center">
+            <div className="flex flex-col items-center lg:items-center text-center">
               <OptimizedImage src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" alt="Professional white Toyota taxi vehicle ready for military personnel transport at Lest Base" className="rav4-image rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl" width={600} height={450} priority={true} responsive={true} sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw" />
+              <p className="mt-3 sm:mt-4 max-w-2xl text-[0.8rem] sm:text-sm text-muted-foreground leading-relaxed">
+                LEST TAXI provides fast transfers between Lešť Base and Zvolen or Banská Bystrica, typically to Europa Shopping Center, SNP Square, and the bus/train station. We also operate longer routes to Bratislava, Vienna, and Budapest, including the airports VIE, BTS, BUD. Pricing is transparent with fixed fares on popular routes. We plan with buffer time, monitor traffic, and for airport rides adjust arrival to real conditions. If you don’t need a ride right now, we can buy and deliver what you need—groceries, supplies, goodies, small items—straight to the base or city. With LEST TAXI you’ll get where you’re going on time and safely.
+              </p>
             </div>
           </div>
         </div>
