@@ -4,7 +4,7 @@ import { MessageCircle, Phone, Plane, Clock, Shield, MapPin } from "lucide-react
 import { useSEO } from "@/hooks/useSEO";
 import { StandardHero } from "@/components/StandardHero";
 import { OptimizedImage } from "@/components/OptimizedImage";
-import { SiteFooter } from "@/components/SiteFooter";
+
 import { RelatedServices } from "@/components/RelatedServices";
 
 const AirportTransportSlovakia = () => {
@@ -254,8 +254,6 @@ const AirportTransportSlovakia = () => {
       {/* Related Services */}
       <RelatedServices currentService="/airport-transport-slovakia" category="airport" />
 
-      {/* Footer */}
-      <SiteFooter />
     </div>
   );
 };

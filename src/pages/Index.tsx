@@ -9,7 +9,7 @@ import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
-import { SiteFooter } from "@/components/SiteFooter";
+
 import { RelatedServices } from "@/components/RelatedServices";
 import { ServicesNavigation } from "@/components/ServicesNavigation";
 import { TextLinksSection } from "@/components/TextLinksSection";
@@ -316,10 +316,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <div className="relative z-10">
-        <SiteFooter />
-      </div>
     </main>;
 };
 export default Index;

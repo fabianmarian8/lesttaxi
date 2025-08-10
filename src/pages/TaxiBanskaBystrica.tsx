@@ -4,7 +4,7 @@ import { MessageCircle, Phone, MapPin, Clock, Shield, Car } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { StandardHero } from "@/components/StandardHero";
 import { OptimizedImage } from "@/components/OptimizedImage";
-import { SiteFooter } from "@/components/SiteFooter";
+
 import { RelatedServices } from "@/components/RelatedServices";
 
 const TaxiBanskaBystrica = () => {
@@ -258,8 +258,6 @@ const TaxiBanskaBystrica = () => {
       {/* Related Services */}
       <RelatedServices currentService="/taxi-banska-bystrica" category="city" />
 
-      {/* Footer */}
-      <SiteFooter />
     </div>
   );
 };

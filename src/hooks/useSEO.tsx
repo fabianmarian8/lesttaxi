@@ -17,7 +17,7 @@ const BUSINESS_ENTITY = {
   "@type": "LocalBusiness",
   "@id": BUSINESS_ID,
   "name": "Taxi Lešť",
-  "telephone": "+421 919 040 118",
+  "telephone": "+421919040118",
   "url": "https://www.lesttaxi.com/",
   "address": {
     "@type": "PostalAddress",

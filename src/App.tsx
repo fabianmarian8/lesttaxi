@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HolidayStatusWidget } from "@/components/HolidayStatusWidget";
 import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { Footer } from "@/components/Footer";
 import Index from "./pages/Index";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
@@ -74,6 +75,7 @@ const AppContent = () => {
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

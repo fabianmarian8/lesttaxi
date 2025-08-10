@@ -6,7 +6,7 @@ import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { StandardHero } from "@/components/StandardHero";
 import { ServiceIcon } from "@/components/ServiceIcon";
-import { SiteFooter } from "@/components/SiteFooter";
+
 import { RelatedServices } from "@/components/RelatedServices";
 
 const BaseTaxi = () => {
@@ -229,8 +229,6 @@ const BaseTaxi = () => {
         {/* Related Services */}
         <RelatedServices currentService="/base-taxi" category="military" />
 
-        {/* Footer */}
-        <SiteFooter />
       </div>
     </>
   );

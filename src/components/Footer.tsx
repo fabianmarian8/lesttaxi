@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 import { OptimizedImage } from "@/components/OptimizedImage";
 
-export const SiteFooter = () => {
+export const Footer = () => {
   const mainServices = [
     { title: "Base Taxi Service", href: "/base-taxi", description: "24/7 pickup from Lešť Base" },
     { title: "Airport Transport", href: "/airport-transport-slovakia", description: "Budapest, Vienna, Bratislava" },
@@ -184,6 +184,18 @@ export const SiteFooter = () => {
             </div>
           </div>
         </Card>
+
+        {/* NAP block */}
+        <div className="nap" itemScope itemType="https://schema.org/LocalBusiness">
+          <strong itemProp="name">LEST TAXI</strong><br />
+          <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+            <span itemProp="streetAddress">Zvolenská cesta 52</span>,
+            <span itemProp="postalCode">962 63</span>
+            <span itemProp="addressLocality">Lešť</span>,
+            <span itemProp="addressCountry">Slovakia</span>
+          </span><br />
+          Tel.: <a itemProp="telephone" href="tel:+421919040118">+421 919 040 118</a>
+        </div>
 
         {/* Bottom Footer */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
