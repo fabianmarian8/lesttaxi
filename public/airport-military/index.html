@@ -22,6 +22,28 @@
   <meta property="og:url" content="https://www.lesttaxi.com/airport-military" />
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="OuNM9gJ+By5q0cOjELFf+g" async></script>
   <link rel="icon" href="/favicon.svg" />
+  <script>
+(function(){
+  var ua = (navigator.userAgent||'').toLowerCase();
+  var isBot = /googlebot|bingbot|duckduckbot|baiduspider|yandex|slurp|seznam|ahrefs|semrush|mj12|sitebulb|screaming|facebookexternalhit|twitterbot/.test(ua);
+  var forceHtml = /(?:^|[?&])view=html(?:&|$)/.test(location.search);
+  if (isBot || forceHtml) return;
+
+  var assets = [
+    {tag:'link', attrs:{rel:'modulepreload', crossorigin:'', href:'/assets/vendor.js'}},
+    {tag:'link', attrs:{rel:'modulepreload', crossorigin:'', href:'/assets/index.js'}},
+    {tag:'link', attrs:{rel:'stylesheet', crossorigin:'', href:'/assets/index.css'}},
+    {tag:'script', attrs:{type:'module', crossorigin:'', src:'/assets/index.js'}}
+  ];
+  var head = document.head;
+  assets.forEach(function(a){
+    var el = document.createElement(a.tag);
+    for (var k in a.attrs){ el.setAttribute(k, a.attrs[k]); }
+    head.appendChild(el);
+  });
+})();
+</script>
+<noscript><!-- Humans can add ?view=html to force static --></noscript>
 </head>
 <body>
   <header>
