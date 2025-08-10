@@ -36,11 +36,10 @@ const Sitemap = () => {
           (a, b) => a.localeCompare(b)
         );
 
-        // Move KFC and McDonalds links to the end
-        const hiddenAtEnd = ["/kfc-delivery", "/mcdonalds-delivery"];
-        const others = uniqueSorted.filter(p => !hiddenAtEnd.includes(p));
-        const endOnes = hiddenAtEnd.filter(p => uniqueSorted.includes(p));
-        setPaths([...others, ...endOnes]);
+        // Remove certain paths from sitemap display
+        const excludedPaths = ["/kfc-delivery", "/mcdonalds-delivery", "/artemis"];
+        const filteredPaths = uniqueSorted.filter(p => !excludedPaths.includes(p));
+        setPaths(filteredPaths);
       } catch (e) {
         setPaths([]);
       }
