@@ -10,7 +10,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 const TaxiBanskaBystrica = () => {
   useSEO({
     title: "Taxi Banská Bystrica | Transport from Lešť Base | 24/7 Service",
-    description: "Professional taxi Banská Bystrica service from Lešť Base. English-speaking drivers, fixed rates, 24/7 availability. Airport transfers and city transport. Call +421 919 040 118",
+    description: "Professional taxi Lešť service - airport transfers, Banská Bystrica, Zvolen, Budapest or anywhere 24/7 availability",
     keywords: "taxi banská bystrica, taxi lešť, lest base transport, banská bystrica transport, slovakia taxi service, airport transfer banská bystrica",
     canonical: "https://www.lesttaxi.com/taxi-banska-bystrica",
     ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
