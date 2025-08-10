@@ -139,7 +139,7 @@ const Fleet = () => {
     "name": "LEST TAXI",
     "description": "Professional taxi service specializing in military transport with modern fleet",
     "url": "https://www.lesttaxi.com",
-    "logo": "https://www.lesttaxi.com/src/assets/logo-main.webp",
+    "logo": "https://www.lesttaxi.com/images/logo-main.webp",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+421919040118",
@@ -175,7 +175,7 @@ const Fleet = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
             <OptimizedImage 
-              src="/src/assets/logo-main.webp"
+              src="/images/logo-main.webp"
               alt="LEST TAXI circular logo with military taxi car icon" 
               className="h-12 w-12 rounded-full bg-white p-1"
               width={48}
