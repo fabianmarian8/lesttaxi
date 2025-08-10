@@ -200,32 +200,6 @@ const Index = () => {
             </Collapsible>
           </div>
           
-          <div className="grid grid-cols-2 sm:flex sm:justify-center gap-4 sm:gap-6">
-            <a href="tel:+421919040118" onClick={() => window.gtag?.('event', 'call_now_click')} className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Phone className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-black" />
-              </div>
-              <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--military-gold))] text-center">Call Now</span>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--whatsapp-green))] to-green-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
-              </div>
-              <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--whatsapp-green))] text-center">WhatsApp</span>
-            </a>
-            <a href="mailto:fabianmarian8@gmail.com" className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Mail className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
-              </div>
-              <span className="text-sm sm:text-base lg:text-lg font-bold text-[hsl(var(--tactical-orange))] text-center">Email</span>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100090644550474" target="_blank" rel="noopener noreferrer" className="tactical-card group flex flex-col items-center gap-3 sm:gap-4 p-4 sm:p-6 lg:p-8 min-w-[100px] sm:min-w-[120px]">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Facebook className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
-              </div>
-              <span className="text-sm sm:text-base lg:text-lg font-bold text-blue-600 text-center">Facebook</span>
-            </a>
-          </div>
           
           {/* Google Maps Location */}
           <div className="mt-12 lg:mt-16">
@@ -303,6 +277,38 @@ const Index = () => {
               <li><a href="/taxi-banska-bystrica" className="text-base font-medium hover:underline">Taxi Banská Bystrica</a></li>
               <li><a href="/banska-bystrica-military-taxi" className="text-base font-medium hover:underline">Banská Bystrica military taxi</a></li>
             </ul>
+          </nav>
+        </div>
+      </section>
+
+      {/* Quick Contact - compact bottom section */}
+      <section className="py-6 px-4">
+        <div className="container mx-auto">
+          <nav aria-label="Quick contact" className="grid grid-cols-4 gap-3 max-w-md mx-auto">
+            <a href="tel:+421919040118" onClick={() => window.gtag?.('event', 'call_now_click')} className="tactical-card group flex flex-col items-center gap-2 p-2">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-black" />
+              </div>
+              <span className="text-xs sm:text-sm font-semibold text-[hsl(var(--military-gold))] text-center">Call</span>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=421919040118" target="_blank" rel="noopener noreferrer" onClick={() => window.gtag?.('event', 'whatsapp_click')} className="tactical-card group flex flex-col items-center gap-2 p-2">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[hsl(var(--whatsapp-green))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+              </div>
+              <span className="text-xs sm:text-sm font-semibold text-[hsl(var(--whatsapp-green))] text-center">WhatsApp</span>
+            </a>
+            <a href="mailto:fabianmarian8@gmail.com" className="tactical-card group flex flex-col items-center gap-2 p-2">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+              </div>
+              <span className="text-xs sm:text-sm font-semibold text-[hsl(var(--tactical-orange))] text-center">Email</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100090644550474" target="_blank" rel="noopener noreferrer" className="tactical-card group flex flex-col items-center gap-2 p-2">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[hsl(var(--secondary))] to-[hsl(var(--combat-green))] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Facebook className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+              </div>
+              <span className="text-xs sm:text-sm font-semibold text-[hsl(var(--secondary))] text-center">Facebook</span>
+            </a>
           </nav>
         </div>
       </section>
