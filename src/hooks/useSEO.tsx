@@ -4,7 +4,8 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-  canonical?: string;
+  canonical?: string | null;
+  robots?: string | null;
   ogImage?: string;
   jsonLd?: object;
 }
@@ -64,6 +65,7 @@ export const useSEO = ({
   description, 
   keywords, 
   canonical, 
+  robots,
   ogImage = "https://www.lesttaxi.com/images/cover-1200x630.jpg",
   jsonLd 
 }: SEOProps) => {
@@ -86,6 +88,12 @@ export const useSEO = ({
       if (metaKeywords) {
         metaKeywords.setAttribute('content', keywords);
       }
+    }
+    
+    // If canonical is explicitly null, remove all canonical links
+    if (canonical === null) {
+      const existingCanonicalLinks = document.querySelectorAll('link[rel="canonical"]');
+      existingCanonicalLinks.forEach(link => link.remove());
     }
     
     // Update canonical URL if provided
@@ -119,14 +127,25 @@ export const useSEO = ({
         document.head.appendChild(ogUrl);
       }
 
-      // Add robots meta immediately after og:url
+      // Add robots meta immediately after og:url (defaults to index,follow unless overridden)
       let robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
       if (!robotsMeta) {
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name', 'robots');
       }
-      robotsMeta.setAttribute('content', 'index, follow');
+      robotsMeta.setAttribute('content', robots ?? 'index, follow');
       ogUrl.insertAdjacentElement('afterend', robotsMeta);
+    }
+
+    // When canonical is not provided, still honor an explicit robots value
+    if (!canonical && robots !== undefined && robots !== null) {
+      let robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+      if (!robotsMeta) {
+        robotsMeta = document.createElement('meta');
+        robotsMeta.setAttribute('name', 'robots');
+        document.head.appendChild(robotsMeta);
+      }
+      robotsMeta.setAttribute('content', robots);
     }
 
     // Update Open Graph tags
@@ -196,5 +215,5 @@ export const useSEO = ({
       script.textContent = JSON.stringify(jsonLd);
       document.head.appendChild(script);
     }
-  }, [title, description, keywords, canonical, ogImage, jsonLd]);
+  }, [title, description, keywords, canonical, robots, ogImage, jsonLd]);
 };
