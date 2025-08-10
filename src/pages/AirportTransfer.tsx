@@ -19,7 +19,7 @@ const AirportTransfer = () => {
         "@type": "TaxiService",
         "name": "Airport Transfer from Lešť Base",
         "description": "Professional airport transfers from Lešť Base to Sliač (SLD), Budapest (BUD), Vienna (VIE) and Bratislava (BTS) with fixed pricing and flight tracking.",
-        "provider": { "@id": "https://www.lesttaxi.com/#business" },
+        "provider": { "@id": "https://www.lesttaxi.com/#taxi" },
         "serviceType": "Airport Transportation",
         "areaServed": [
           { "@type": "Place", "name": "Lešť Military Base, Slovakia" },

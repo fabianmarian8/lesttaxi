@@ -19,7 +19,7 @@ const TaxiBanskaBystrica = () => {
       "@type": "TaxiService",
       "name": "Taxi Banská Bystrica - Lešť Transport",
       "url": "https://www.lesttaxi.com/taxi-banska-bystrica",
-      "provider": { "@id": "https://www.lesttaxi.com/#business" },
+      "provider": { "@id": "https://www.lesttaxi.com/#taxi" },
       "serviceArea": [
         {
           "@type": "City",
