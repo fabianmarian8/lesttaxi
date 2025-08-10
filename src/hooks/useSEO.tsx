@@ -9,6 +9,30 @@ interface SEOProps {
   jsonLd?: object;
 }
 
+const BUSINESS_ID = "https://www.lesttaxi.com/#taxi";
+
+const BUSINESS_ENTITY = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": BUSINESS_ID,
+  "name": "Taxi Lešť",
+  "telephone": "+421 919 040 118",
+  "url": "https://www.lesttaxi.com/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zvolenská cesta 52",
+    "addressLocality": "Lešť",
+    "postalCode": "962 63",
+    "addressCountry": "SK"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 48.349999, "longitude": 19.306345 },
+  "image": [
+    "https://www.lesttaxi.com/images/cover-1200x630.jpg",
+    "https://www.lesttaxi.com/images/logo-512.png"
+  ],
+  "priceRange": "€€"
+};
+
 // Normalize URLs for canonical/og:url
 const normalizeCanonical = (input: string): string => {
   try {
@@ -139,54 +163,23 @@ export const useSEO = ({
     updateTwitterTag('twitter:image', ogImage);
     updateTwitterTag('twitter:site', '@lesttaxi');
     
-    // Add central business entity for homepage
-    const isHomepage = canonical === 'https://www.lesttaxi.com/' || canonical === 'https://www.lesttaxi.com';
-    if (isHomepage) {
-      // Remove existing business script if any
-      const existingBusinessScript = document.querySelector('script[type="application/ld+json"]#business-jsonld');
-      if (existingBusinessScript) {
-        existingBusinessScript.remove();
-      }
-      
-      const businessJsonLd = {
-        "@context": "https://schema.org",
-        "@type": ["TaxiService","LocalBusiness"],
-        "@id": "https://www.lesttaxi.com/#business",
-        "name": "LEST TAXI",
-        "url": "https://www.lesttaxi.com/",
-        "telephone": "+421919040118",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Zvolenská cesta 52",
-          "addressLocality": "Lešť",
-          "addressRegion": "Banskobystrický kraj",
-          "postalCode": "96263",
-          "addressCountry": "SK"
-        },
-        "geo": { "@type": "GeoCoordinates", "latitude": 48.349999, "longitude": 19.306345 },
-        "image": [
-          "https://www.lesttaxi.com/images/cover-1200x630.jpg",
-          "https://www.lesttaxi.com/images/logo-512.png"
-        ],
-        "priceRange": "€€",
-        "openingHoursSpecification": [{
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "00:00", "closes": "24:00"
-        }]
-      };
-      
-      const businessScript = document.createElement('script');
-      businessScript.type = 'application/ld+json';
-      businessScript.id = 'business-jsonld';
-      businessScript.textContent = JSON.stringify(businessJsonLd);
-      // Insert after canonical link
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink) {
-        canonicalLink.insertAdjacentElement('afterend', businessScript);
-      } else {
-        document.head.appendChild(businessScript);
-      }
+    // Add central business entity on all pages
+    // Remove existing business script if any
+    const existingBusinessScript = document.querySelector('script[type="application/ld+json"]#business-jsonld');
+    if (existingBusinessScript) {
+      existingBusinessScript.remove();
+    }
+    
+    const businessScript = document.createElement('script');
+    businessScript.type = 'application/ld+json';
+    businessScript.id = 'business-jsonld';
+    businessScript.textContent = JSON.stringify(BUSINESS_ENTITY);
+    // Insert after canonical link
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.insertAdjacentElement('afterend', businessScript);
+    } else {
+      document.head.appendChild(businessScript);
     }
 
     // Add JSON-LD structured data if provided
