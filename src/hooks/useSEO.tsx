@@ -164,6 +164,11 @@ export const useSEO = ({
           "addressCountry": "SK"
         },
         "geo": { "@type": "GeoCoordinates", "latitude": 48.349999, "longitude": 19.306345 },
+        "image": [
+          "https://www.lesttaxi.com/images/cover-1200x630.jpg",
+          "https://www.lesttaxi.com/images/logo-512.png"
+        ],
+        "priceRange": "€€",
         "openingHoursSpecification": [{
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
