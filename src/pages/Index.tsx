@@ -143,33 +143,33 @@ const Index = () => {
       </section>
 
       {/* Elite Services Section */}
-      <section className="py-4 sm:py-8 px-3 sm:px-6 relative">
+      <section className="py-3 sm:py-6 px-3 sm:px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10" />
         <div className="container mx-auto relative z-10">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-black text-center mb-4 sm:mb-8 lg:mb-12 combat-text">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-black text-center mb-3 sm:mb-6 lg:mb-8 combat-text">
             Military Transportation Services at Lest Base
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-            <div className="tactical-card text-center group p-4 sm:p-6">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-                <Car className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-black" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+            <div className="tactical-card text-center group p-3 sm:p-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                <Car className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-black" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--military-gold))] text-wrap-mobile">Airport Transfers from Lest Base</h3>
-              <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 text-[hsl(var(--military-gold))] text-wrap-mobile">Airport Transfers from Lest Base</h3>
+              <p className="text-muted-foreground leading-relaxed text-wrap-mobile text-sm">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
             </div>
-            <div className="tactical-card text-center group p-4 sm:p-6">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-                <MapPin className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-white" />
+            <div className="tactical-card text-center group p-3 sm:p-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                <MapPin className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-white" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--tactical-orange))] text-wrap-mobile">US Military Base Transport</h3>
-              <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Specialized transport for military personnel with complete base protocol understanding and security clearance.</p>
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 text-[hsl(var(--tactical-orange))] text-wrap-mobile">US Military Base Transport</h3>
+              <p className="text-muted-foreground leading-relaxed text-wrap-mobile text-sm">Specialized transport for military personnel with complete base protocol understanding and security clearance.</p>
             </div>
-            <div className="tactical-card text-center group p-4 sm:p-6">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-                <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-[hsl(var(--military-gold))]" />
+            <div className="tactical-card text-center group p-3 sm:p-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 lg:h-8 lg:w-8 text-[hsl(var(--military-gold))]" />
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-[hsl(var(--combat-green))] text-wrap-mobile">Slovakia City Transport</h3>
-              <p className="text-muted-foreground leading-relaxed text-wrap-mobile">Convenient urban transportation to cities, shopping centers, and important destinations across Slovakia.</p>
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 text-[hsl(var(--combat-green))] text-wrap-mobile">Slovakia City Transport</h3>
+              <p className="text-muted-foreground leading-relaxed text-wrap-mobile text-sm">Convenient urban transportation to cities, shopping centers, and important destinations across Slovakia.</p>
             </div>
           </div>
         </div>
