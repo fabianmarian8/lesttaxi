@@ -100,37 +100,21 @@ export const useSEO = ({
     if (canonical) {
       const normalized = normalizeCanonical(canonical);
       
-      // Ensure exactly one canonical link exists: update first if found, remove duplicates; else create
-      const canonicalLinks = document.head.querySelectorAll('link[rel="canonical"]') as NodeListOf<HTMLLinkElement>;
-      let canonicalLink: HTMLLinkElement | null = null;
-      if (canonicalLinks.length > 0) {
-        canonicalLink = canonicalLinks[0];
-        canonicalLink.setAttribute('href', normalized);
-        // Remove any extra canonical links
-        canonicalLinks.forEach((lnk, idx) => { if (idx > 0) lnk.remove(); });
-      } else {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        canonicalLink.setAttribute('href', normalized);
-        document.head.insertBefore(canonicalLink, document.head.firstChild);
-      }
+      // Remove any existing canonical and og:url to avoid duplicates
+      document.head.querySelectorAll('link[rel="canonical"]').forEach(n => n.remove());
+      document.head.querySelectorAll('meta[property="og:url"]').forEach(n => n.remove());
 
-      // Add or update og:url right after canonical
-      let ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null;
-      if (!ogUrl) {
-        ogUrl = document.createElement('meta');
-        ogUrl.setAttribute('property', 'og:url');
-      }
+      // Create canonical link at the top
+      const canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      canonicalLink.setAttribute('href', normalized);
+      document.head.insertBefore(canonicalLink, document.head.firstChild);
+
+      // Create og:url immediately after canonical
+      const ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
       ogUrl.setAttribute('content', normalized);
-      // Ensure canonical -> og:url order at the top
-      const headFirst = document.head.firstChild;
-      if (canonicalLink && canonicalLink.parentNode) {
-        canonicalLink.insertAdjacentElement('afterend', ogUrl);
-      } else if (headFirst) {
-        document.head.insertBefore(ogUrl, headFirst.nextSibling);
-      } else {
-        document.head.appendChild(ogUrl);
-      }
+      canonicalLink.insertAdjacentElement('afterend', ogUrl);
 
       // Add robots meta immediately after og:url (defaults to index,follow unless overridden)
       let robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
