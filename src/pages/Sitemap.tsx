@@ -52,7 +52,10 @@ const Sitemap = () => {
   return (
     <main>
       <section aria-labelledby="sitemap-heading" className="container mx-auto px-6 py-12">
-        <h1 id="sitemap-heading" className="text-3xl font-bold mb-8">Sitemap</h1>
+        <h1 id="sitemap-heading" className="text-3xl font-bold mb-8">Sitemap - Mapa stránok</h1>
+        <p className="text-lg text-muted-foreground mb-8 text-center">
+          Kompletný zoznam všetkých stránok a služieb LEST TAXI
+        </p>
         <ul className="grid gap-6 md:grid-cols-2">
           {paths.map((p) => {
             const hideLikeBg = p === "/kfc-delivery" || p === "/mcdonalds-delivery";

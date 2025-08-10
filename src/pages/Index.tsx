@@ -9,6 +9,8 @@ import { OptimizedImage } from "@/components/OptimizedImage";
 import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RelatedServices } from "@/components/RelatedServices";
+import { ServicesNavigation } from "@/components/ServicesNavigation";
+import { TextLinksSection } from "@/components/TextLinksSection";
 const Index = () => {
   useSEO({
     title: "Taxi Lešť | Lest Base Airport Transfer | 24/7 Slovakia Transport",
@@ -251,6 +253,16 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Services Navigation - SEO Friendly Links */}
+      <div className="relative z-10">
+        <ServicesNavigation />
+      </div>
+
+      {/* Text Links Section - SEO Optimization */}
+      <div className="relative z-10">
+        <TextLinksSection />
+      </div>
 
       {/* Related Services */}
       <div className="relative z-10">
