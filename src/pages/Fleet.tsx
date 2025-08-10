@@ -11,10 +11,9 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 
 const Fleet = () => {
   useSEO({
-    title: "Our Fleet - Professional Taxi Vehicles | LEST TAXI",
+    title: "Fleet | LEST TAXI",
     description: "Modern and safe taxi fleet for military personnel. Sedans, SUVs, minivans available. Air conditioning, GPS tracking, professional drivers.",
-    keywords: "taxi fleet Slovakia, military taxi vehicles, professional cars, safe transport, modern fleet",
-    canonical: "https://www.lesttaxi.com/fleet"
+    canonical: "/fleet"
   });
 
   const vehicles = [

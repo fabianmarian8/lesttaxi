@@ -8,10 +8,9 @@ import { StandardHero } from "@/components/StandardHero";
 
 const FAQ = () => {
   useSEO({
-    title: "FAQ - Frequently Asked Questions | LEST TAXI",
+    title: "FAQ | LEST TAXI",
     description: "Get answers to common questions about our military taxi service. Booking, pricing, vehicle types, service areas, and more.",
-    keywords: "taxi FAQ Slovakia, military taxi questions, booking help, service information",
-    canonical: "https://www.lesttaxi.com/faq"
+    canonical: "/faq"
   });
 
   const faqs = [

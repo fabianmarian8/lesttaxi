@@ -107,12 +107,28 @@ export const useSEO = ({
       if (!ogUrl) {
         ogUrl = document.createElement('meta');
         ogUrl.setAttribute('property', 'og:url');
-        document.head.appendChild(ogUrl);
       }
       ogUrl.setAttribute('content', normalized);
-      canonicalLink.insertAdjacentElement('afterend', ogUrl);
+      // Ensure canonical -> og:url order at the top
+      const headFirst = document.head.firstChild;
+      if (canonicalLink && canonicalLink.parentNode) {
+        canonicalLink.insertAdjacentElement('afterend', ogUrl);
+      } else if (headFirst) {
+        document.head.insertBefore(ogUrl, headFirst.nextSibling);
+      } else {
+        document.head.appendChild(ogUrl);
+      }
+
+      // Add robots meta immediately after og:url
+      let robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+      if (!robotsMeta) {
+        robotsMeta = document.createElement('meta');
+        robotsMeta.setAttribute('name', 'robots');
+      }
+      robotsMeta.setAttribute('content', 'index, follow');
+      ogUrl.insertAdjacentElement('afterend', robotsMeta);
     }
-    
+
     // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);

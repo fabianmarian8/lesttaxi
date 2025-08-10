@@ -30,9 +30,9 @@ const Feedback = () => {
   const watchedFields = watch();
 
   useSEO({
-    title: "Feedback and Complaints | Military Taxi Slovakia",
+    title: "Feedback | LEST TAXI",
     description: "Leave us feedback or complaints. We value every feedback and continuously strive to improve our services.",
-    keywords: "feedback, complaint, review, military taxi, Slovakia"
+    canonical: "/feedback"
   });
 
   const onSubmit = async (data: FeedbackFormData) => {

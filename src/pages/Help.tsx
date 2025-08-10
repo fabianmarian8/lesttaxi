@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowLeft, MapPin, Heart, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { OptimizedImage } from "@/components/OptimizedImage";
+import { useSEO } from "@/hooks/useSEO";
 
 const Help = () => {
   const handleWhatsAppClick = () => {
@@ -15,6 +16,11 @@ const Help = () => {
     window.open('tel:+421919040118');
   };
 
+  useSEO({
+    title: "Help | LEST TAXI",
+    description: "24/7 help, local tips, and quick contact options for LEST TAXI.",
+    canonical: "/help"
+  });
   // BreadcrumbList structured data
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
