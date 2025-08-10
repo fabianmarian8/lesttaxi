@@ -31,6 +31,11 @@ const BUSINESS_ENTITY = {
     "https://www.lesttaxi.com/images/cover-1200x630.jpg",
     "https://www.lesttaxi.com/images/logo-512.png"
   ],
+  "sameAs": [
+    "https://maps.app.goo.gl/BvojguYHpiLMdBGf8",
+    "https://www.facebook.com/profile.php?id=100090644550474"
+  ],
+  "hasMap": "https://maps.app.goo.gl/BvojguYHpiLMdBGf8",
   "priceRange": "€€"
 };
 
