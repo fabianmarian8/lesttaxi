@@ -9,7 +9,6 @@ import { BookingForm } from "@/components/BookingForm";
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
-
 import { RelatedServices } from "@/components/RelatedServices";
 import { ServicesNavigation } from "@/components/ServicesNavigation";
 import { TextLinksSection } from "@/components/TextLinksSection";
@@ -183,16 +182,11 @@ const Index = () => {
           <div className="max-w-2xl mx-auto mb-16">
             <Collapsible open={isBookingOpen} onOpenChange={setIsBookingOpen}>
               <CollapsibleTrigger asChild>
-                <Button
-                  variant="taxi"
-                  size="lg"
-                  className="w-full justify-center h-auto px-6 py-4"
-                  onClick={() => {
-                    window.gtag?.('event', 'booking_form_toggle', { state: !isBookingOpen ? 'open' : 'close' });
-                  }}
-                  aria-expanded={isBookingOpen}
-                  aria-controls="booking-form-content"
-                >
+                <Button variant="taxi" size="lg" className="w-full justify-center h-auto px-6 py-4" onClick={() => {
+                window.gtag?.('event', 'booking_form_toggle', {
+                  state: !isBookingOpen ? 'open' : 'close'
+                });
+              }} aria-expanded={isBookingOpen} aria-controls="booking-form-content">
                   Book Your Ride
                   <ChevronDown className={`ml-2 h-5 w-5 transition-transform ${isBookingOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </Button>
@@ -228,26 +222,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action Section (modeled after Taxi Banská Bystrica) */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10 relative">
-        <div className="container mx-auto text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 combat-text">
-            Ready to Book Your Transport from Lešť?
-          </h2>
-          <p className="text-base sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Professional military-friendly taxi service with English-speaking drivers, fixed rates and 24/7 availability. Book instantly via WhatsApp or call us now.
-          </p>
-          <div className="flex gap-4 sm:gap-6 justify-center">
-            <Button onClick={() => window.open('https://api.whatsapp.com/send?phone=421919040118&text=Hello,%20I%20need%20a%20taxi%20from%20Lešť%20Base', '_blank')} variant="whatsapp" size="lg">
-              <MessageCircle className="h-5 w-5 mr-2" />
-              Book on WhatsApp
-            </Button>
-            <Button onClick={() => window.open('tel:+421919040118', '_self')} variant="secondary" size="lg">
-              <Phone className="h-5 w-5 mr-2" />
-              Call +421 919 040 118
-            </Button>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Services Navigation - SEO Friendly Links */}
       <div className="relative z-10">
