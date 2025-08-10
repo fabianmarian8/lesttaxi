@@ -174,9 +174,6 @@ const Index = () => {
       <section className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />
         <div className="container mx-auto relative z-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-black text-center mb-8 sm:mb-12 lg:mb-16 combat-text">
-            Contact LEST TAXI - Book Your Military Transport
-          </h2>
           <div className="max-w-2xl mx-auto mb-16">
             <BookingForm />
           </div>
