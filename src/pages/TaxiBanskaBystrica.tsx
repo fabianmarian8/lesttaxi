@@ -19,7 +19,7 @@ const TaxiBanskaBystrica = () => {
       "@type": "TaxiService",
       "name": "Taxi Banská Bystrica - Lešť Transport",
       "url": "https://www.lesttaxi.com/taxi-banska-bystrica",
-      "telephone": "+421919040118",
+      "provider": { "@id": "https://www.lesttaxi.com/#business" },
       "serviceArea": [
         {
           "@type": "City",
