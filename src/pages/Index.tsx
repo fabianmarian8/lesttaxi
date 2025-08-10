@@ -211,19 +211,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Feedback Section */}
-      <section className="py-16 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--stealth-gray))] to-[hsl(var(--night-ops))] opacity-95" />
-        <div className="container mx-auto text-center relative z-10">
-          <Link to="/feedback" className="tactical-card inline-flex items-center gap-3 px-8 py-4 text-lg font-semibold bg-orange-700 text-white hover:bg-orange-800 hover:scale-110 transition-all duration-300">
-            Feedback / Complaint
-          </Link>
-        </div>
-      </section>
-
-      {/* Call to Action Section (modeled after Taxi Banská Bystrica) */}
-      
-
       {/* Services Navigation - SEO Friendly Links */}
       <div className="relative z-10">
         <ServicesNavigation />
@@ -288,6 +275,13 @@ const Index = () => {
               <span className="text-xs sm:text-sm font-semibold text-[hsl(var(--secondary))] text-center">Facebook</span>
             </a>
           </nav>
+          
+          {/* Feedback Section - moved to bottom */}
+          <div className="text-center mt-6">
+            <Link to="/feedback" className="tactical-card inline-flex items-center gap-3 px-4 py-2 text-sm font-semibold bg-orange-700 text-white hover:bg-orange-800 hover:scale-110 transition-all duration-300">
+              Feedback / Complaint
+            </Link>
+          </div>
         </div>
       </section>
 
