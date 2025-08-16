@@ -53,15 +53,14 @@ const AirportTransfer = () => {
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
-            <OptimizedImage 
-              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
-              alt="LEST TAXI circular logo with military taxi car icon" 
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-full bg-white p-1"
+            <img 
+              src="/lovable-uploads/logo-144.webp" 
+              alt="LEST TAXI circular logo with military taxi car icon"
+              width={144}
+              height={144}
               loading="eager"
-              responsive={true}
-              sizes="48px"
+              decoding="async"
+              className="h-12 w-12 rounded-full bg-white p-1"
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>

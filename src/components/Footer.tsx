@@ -40,14 +40,14 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <OptimizedImage 
-                src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
-                alt="LEST TAXI logo" 
+              <img 
+                src="/lovable-uploads/logo-144.webp" 
+                alt="LEST TAXI logo"
+                width={144}
+                height={144}
+                loading="eager"
+                decoding="async"
                 className="h-12 w-12 rounded-full"
-                width={48}
-                height={48}
-                responsive={true}
-                sizes="48px"
               />
               <div>
                 <h3 className="text-xl font-bold text-[hsl(var(--military-gold))]">LEST TAXI</h3>

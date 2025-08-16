@@ -101,7 +101,7 @@ const Help = () => {
       <div 
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `url('/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp')`,
+          backgroundImage: `url('/lovable-uploads/logo-144.webp')`,
           backgroundSize: '200px 200px',
           backgroundRepeat: 'repeat'
         }}
@@ -119,13 +119,14 @@ const Help = () => {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <OptimizedImage 
-              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
+            <img 
+              src="/lovable-uploads/logo-144.webp" 
               alt="LEST TAXI circular logo with military taxi car icon" 
-              width={40}
-              height={40}
+              width={144}
+              height={144}
+              loading="eager"
+              decoding="async"
               className="h-10 w-10 rounded-full bg-white p-1"
-              loading="lazy"
             />
             <h1 className="text-xl font-bold tracking-wider">FRANKO TAXI</h1>
           </div>
