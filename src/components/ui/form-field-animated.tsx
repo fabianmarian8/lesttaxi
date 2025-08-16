@@ -52,13 +52,14 @@ export const AnimatedFormField = React.forwardRef<
     onBlur?.(e);
   };
 
-  return (
-    <motion.div 
-      className="space-y-2"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    return (
+      <motion.div 
+        className="space-y-2 transform-gpu will-change-transform [contain:layout_style]"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        layout={false}
+      >
       <Label 
         htmlFor={id}
         className={cn(
@@ -75,6 +76,8 @@ export const AnimatedFormField = React.forwardRef<
         <motion.div
           whileFocus={{ scale: 1.01 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="transform-gpu will-change-transform"
+          layout={false}
         >
           <Component
             id={id}
@@ -105,7 +108,8 @@ export const AnimatedFormField = React.forwardRef<
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 transform-gpu will-change-transform"
+              layout={false}
             >
               <div className="animate-spin rounded-full h-4 w-4 border-2 border-primary border-t-transparent" />
             </motion.div>
@@ -116,7 +120,8 @@ export const AnimatedFormField = React.forwardRef<
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 transform-gpu will-change-transform"
+              layout={false}
             >
               <Check className="h-4 w-4 text-green-500" />
             </motion.div>
@@ -127,7 +132,8 @@ export const AnimatedFormField = React.forwardRef<
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 transform-gpu will-change-transform"
+              layout={false}
             >
               <AlertCircle className="h-4 w-4 text-destructive" />
             </motion.div>
@@ -143,7 +149,8 @@ export const AnimatedFormField = React.forwardRef<
             animate={{ opacity: 1, height: "auto", y: 0 }}
             exit={{ opacity: 0, height: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="text-sm text-destructive flex items-center gap-1"
+            className="text-sm text-destructive flex items-center gap-1 transform-gpu will-change-transform"
+            layout={false}
           >
             <AlertCircle className="h-3 w-3" />
             {error}

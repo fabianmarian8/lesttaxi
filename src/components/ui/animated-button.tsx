@@ -83,7 +83,8 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 500, damping: 30 }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 transform-gpu will-change-transform"
+            layout={false}
           >
             <Check className="h-4 w-4" />
             {successText}
@@ -96,7 +97,8 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 transform-gpu will-change-transform"
+            layout={false}
           >
             <Loader2 className="h-4 w-4 animate-spin" />
             {loadingText}
@@ -121,12 +123,13 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
 
     return (
       <motion.button
-        className={cn(buttonVariants({ variant: getVariant(), size, className }))}
+        className={cn(buttonVariants({ variant: getVariant(), size, className }), "transform-gpu will-change-transform [contain:strict]")}
         ref={ref}
         disabled={disabled || loading}
         whileHover={!loading && !disabled ? { scale: 1.02 } : {}}
         whileTap={!loading && !disabled ? { scale: 0.98 } : {}}
         transition={{ type: "spring", stiffness: 400, damping: 25 }}
+        layout={false}
         {...props}
       >
         {getContent()}

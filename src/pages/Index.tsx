@@ -151,21 +151,21 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
             <div className="tactical-card text-center group p-2 sm:p-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500 transform-gpu will-change-transform [contain:strict]">
                 <Car className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-black" />
               </div>
               <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2 text-[hsl(var(--military-gold))] text-wrap-mobile">Airport Transfers from Lest Base</h3>
               <p className="text-muted-foreground leading-relaxed text-wrap-mobile text-xs sm:text-sm">Reliable transportation to Budapest, Vienna, and Bratislava airports with professional punctuality and secure service.</p>
             </div>
             <div className="tactical-card text-center group p-2 sm:p-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 rounded-full bg-gradient-to-br from-[hsl(var(--tactical-orange))] to-[hsl(var(--military-bronze))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500 transform-gpu will-change-transform [contain:strict]">
                 <MapPin className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-white" />
               </div>
               <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2 text-[hsl(var(--tactical-orange))] text-wrap-mobile">US Military Base Transport</h3>
               <p className="text-muted-foreground leading-relaxed text-wrap-mobile text-xs sm:text-sm">Specialized transport for military personnel with complete base protocol understanding and security clearance.</p>
             </div>
             <div className="tactical-card text-center group p-2 sm:p-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-2 sm:mb-3 rounded-full bg-gradient-to-br from-[hsl(var(--combat-green))] to-[hsl(var(--military-green))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-500 transform-gpu will-change-transform [contain:strict]">
                 <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 text-[hsl(var(--military-gold))]" />
               </div>
               <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2 text-[hsl(var(--combat-green))] text-wrap-mobile">Slovakia City Transport</h3>
@@ -183,16 +183,16 @@ const Index = () => {
           <div className="max-w-2xl mx-auto mb-4 sm:mb-6">
             <Collapsible open={isBookingOpen} onOpenChange={setIsBookingOpen}>
               <CollapsibleTrigger asChild>
-                <Button variant="taxi" size="lg" className="w-full justify-center h-auto px-6 py-4" onClick={() => {
+                <Button variant="taxi" size="lg" className="w-full justify-center h-auto px-6 py-4 transform-gpu will-change-transform" onClick={() => {
                 window.gtag?.('event', 'booking_form_toggle', {
                   state: !isBookingOpen ? 'open' : 'close'
                 });
               }} aria-expanded={isBookingOpen} aria-controls="booking-form-content">
                   Book Your Ride
-                  <ChevronDown className={`ml-2 h-5 w-5 transition-transform ${isBookingOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                  <ChevronDown className={`ml-2 h-5 w-5 transition-transform transform-gpu will-change-transform ${isBookingOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </Button>
               </CollapsibleTrigger>
-              <CollapsibleContent id="booking-form-content" className="mt-6">
+              <CollapsibleContent id="booking-form-content" className="mt-6 [will-change:height] [contain:layout_style]">
                 <BookingForm />
               </CollapsibleContent>
             </Collapsible>
@@ -218,16 +218,16 @@ const Index = () => {
         <div className="container mx-auto max-w-2xl">
           <Collapsible open={isMapOpen} onOpenChange={setIsMapOpen}>
             <CollapsibleTrigger asChild>
-              <Button variant="taxi" size="lg" className="w-full justify-center h-auto px-6 py-4" onClick={() => {
+              <Button variant="taxi" size="lg" className="w-full justify-center h-auto px-6 py-4 transform-gpu will-change-transform" onClick={() => {
                 window.gtag?.('event', 'map_toggle', {
                   state: !isMapOpen ? 'open' : 'close'
                 });
               }} aria-expanded={isMapOpen} aria-controls="map-content">
                 Your Location in Lešť
-                <ChevronDown className={`ml-2 h-5 w-5 transition-transform ${isMapOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
+                <ChevronDown className={`ml-2 h-5 w-5 transition-transform transform-gpu will-change-transform ${isMapOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
               </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent id="map-content" className="mt-6">
+            <CollapsibleContent id="map-content" className="mt-6 [will-change:height] [contain:layout_style]">
               <div className="tactical-card p-4 mx-auto max-w-4xl">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10606.190694779916!2d19.30634581363969!3d48.34999898836313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476aace20de6e3b3%3A0x34f254bbfa7193c9!2s962%2063%20Lest&#39;!5e0!3m2!1ssk!2ssk!4v1754488714914!5m2!1ssk!2ssk" width="100%" height="300" style={{
                   border: 0,
@@ -269,7 +269,7 @@ const Index = () => {
         <div className="container mx-auto">
           <nav aria-label="Quick contact" className="grid grid-cols-4 gap-3 max-w-md mx-auto">
             <a href="tel:+421919040118" onClick={() => window.gtag?.('event', 'call_now_click')} className="tactical-card group flex flex-col items-center gap-2 p-2">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-[hsl(var(--military-gold))] to-[hsl(var(--elite-gold))] flex items-center justify-center group-hover:scale-110 transition-transform transform-gpu will-change-transform [contain:strict]">
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-black" />
               </div>
               <span className="text-xs sm:text-sm font-semibold text-[hsl(var(--military-gold))] text-center">Call</span>
