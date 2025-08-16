@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { MessageCircle, Phone, Plane, Clock, Shield, MapPin } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { StandardHero } from "@/components/StandardHero";
-
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 import { RelatedServices } from "@/components/RelatedServices";
 
@@ -112,14 +112,14 @@ const AirportTransportSlovakia = () => {
       {/* Header */}
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
-          <img 
+          <OptimizedImage 
             src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
             alt="LEST TAXI logo" 
             className="h-16 w-16 rounded-full"
-            width="64"
-            height="64"
-            loading="eager"
-            decoding="async"
+            width={64}
+            height={64}
+            responsive={true}
+            sizes="64px"
           />
           <div className="flex gap-4">
             <Button onClick={openWhatsApp} variant="whatsapp" size="sm">

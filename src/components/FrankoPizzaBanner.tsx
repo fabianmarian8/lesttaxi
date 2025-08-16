@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { OptimizedImage } from '@/components/OptimizedImage';
 import { X, Pizza } from 'lucide-react';
 
 export const FrankoPizzaBanner = () => {
@@ -35,16 +35,14 @@ export const FrankoPizzaBanner = () => {
           aria-label="Order pizza delivery from Franko Pizza - Fast delivery to your location"
           title="🍕 Franko Pizza Delivery - Order now!"
         >
-          <img
+          <OptimizedImage
             src="/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e.webp"
-            srcSet="/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e-80.webp 80w, /lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e-160.webp 160w"
-            sizes="80px"
-            alt="Franko Pizza"
-            width="80"
-            height="80"
-            loading="lazy"
-            decoding="async"
+            alt="Franko Pizza - Premium pizza delivery service"
+            width={80}
+            height={60}
             className="w-20 h-15 object-contain group-hover:brightness-110 transition-all duration-300"
+            responsive={true}
+            sizes="80px"
           />
           
           {/* Pizza icon overlay */}

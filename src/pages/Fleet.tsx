@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Car, Users, Luggage, Shield, MessageCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO } from "@/hooks/useSEO";
-
+import { OptimizedImage } from "@/components/OptimizedImage";
 import { BreadcrumbNavigation } from "@/components/BreadcrumbNavigation";
 import { StandardHero } from "@/components/StandardHero";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -173,14 +173,13 @@ const Fleet = () => {
       <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
-            <img 
+            <OptimizedImage 
               src="/images/logo-main.webp"
               alt="LEST TAXI circular logo with military taxi car icon" 
               className="h-12 w-12 rounded-full bg-white p-1"
-              width="48"
-              height="48"
+              width={48}
+              height={48}
               loading="eager"
-              decoding="async"
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>
@@ -248,27 +247,29 @@ const Fleet = () => {
           {/* Real Fleet Images */}
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.webp" 
                 alt="Professional white Toyota taxi vehicles lined up in formation ready for military transport service" 
                 className="rounded-lg shadow-xl w-full mb-4"
-                width="600"
-                height="400"
+                width={600}
+                height={400}
                 loading="lazy"
-                decoding="async"
+                responsive={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <h4 className="text-xl font-semibold mb-2">Professional Fleet</h4>
               <p className="text-muted-foreground">Clean, modern vehicles maintained to the highest standards</p>
             </div>
             <div className="text-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.webp" 
                 alt="LEST TAXI white Toyota sedan parked at Europa Shopping Center parking area" 
                 className="rounded-lg shadow-xl w-full mb-4"
-                width="600"
-                height="400"
+                width={600}
+                height={400}
                 loading="lazy"
-                decoding="async"
+                responsive={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <h4 className="text-xl font-semibold mb-2">Local Expertise</h4>
               <p className="text-muted-foreground">We know every route and destination in Slovakia</p>

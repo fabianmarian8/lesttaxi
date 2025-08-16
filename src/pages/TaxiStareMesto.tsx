@@ -3,7 +3,7 @@ import { MapPin, Phone, MessageCircle, Clock, Car, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { useSEO } from "@/hooks/useSEO";
-
+import { OptimizedImage } from "@/components/OptimizedImage";
 
 const TaxiStareMesto = () => {
   const serviceJsonLd = {
@@ -29,14 +29,12 @@ const TaxiStareMesto = () => {
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
           <Link to="/">
-            <img 
+            <OptimizedImage 
               src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
               alt="LEST TAXI Professional Military Transport Service" 
               className="h-16 w-16 rounded-full bg-white/10 p-2"
-              width="64"
-              height="64"
-              loading="eager"
-              decoding="async"
+              width={64}
+              height={64}
             />
           </Link>
           <Link to="/" className="text-[hsl(var(--military-gold))] hover:text-[hsl(var(--elite-gold))] transition-colors">
