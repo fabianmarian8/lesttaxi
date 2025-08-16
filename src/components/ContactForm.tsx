@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { AnimatedButton } from "@/components/ui/animated-button";
 import { AnimatedFormField } from "@/components/ui/form-field-animated";
@@ -69,73 +70,105 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto animate-fade-in-up">
-      {isSuccess ? (
-        <div className="text-center space-y-4 p-8 animate-scale-in">
-          <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center animate-bounce-gentle">
-            <Sparkles className="h-8 w-8 text-green-600" />
-          </div>
-          <h3 className="text-xl font-semibold text-green-700 animate-fade-in-up">
-            Message Sent Successfully!
-          </h3>
-          <p className="text-muted-foreground animate-fade-in-up">
-            We'll get back to you soon.
-          </p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          <AnimatedFormField
-            id="name"
-            name="name"
-            label="Name"
-            placeholder="Your name"
-            value={watchedFields.name || ""}
-            error={errors.name?.message}
-            isValid={!errors.name && touchedFields.name}
-            required
-            {...register("name")}
-          />
-          
-          <AnimatedFormField
-            id="email"
-            name="email"
-            label="Email"
-            type="email"
-            placeholder="your@email.com"
-            value={watchedFields.email || ""}
-            error={errors.email?.message}
-            isValid={!errors.email && touchedFields.email}
-            required
-            {...register("email")}
-          />
-          
-          <AnimatedFormField
-            id="message"
-            name="message"
-            label="Message"
-            placeholder="Your message..."
-            value={watchedFields.message || ""}
-            error={errors.message?.message}
-            isValid={!errors.message && touchedFields.message}
-            rows={4}
-            required
-            {...register("message")}
-          />
-          
-          <div className="animate-fade-in-up">
-            <AnimatedButton
-              type="submit"
-              className="w-full"
-              loading={isSubmitting}
-              disabled={!isValid || isSubmitting}
-              loadingText="Sending..."
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-md mx-auto"
+    >
+      <AnimatePresence mode="wait">
+        {isSuccess ? (
+          <motion.div
+            key="success"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="text-center space-y-4 p-8"
+          >
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1, rotate: 360 }}
+              transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+              className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center"
             >
-              Send Message
-            </AnimatedButton>
-          </div>
-        </form>
-      )}
-    </div>
+              <Sparkles className="h-8 w-8 text-green-600" />
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-xl font-semibold text-green-700"
+            >
+              Message Sent Successfully!
+            </motion.h3>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-muted-foreground"
+            >
+              We'll get back to you soon.
+            </motion.p>
+          </motion.div>
+        ) : (
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <AnimatedFormField
+              id="name"
+              name="name"
+              label="Name"
+              placeholder="Your name"
+              value={watchedFields.name || ""}
+              error={errors.name?.message}
+              isValid={!errors.name && touchedFields.name}
+              required
+              {...register("name")}
+            />
+            
+            <AnimatedFormField
+              id="email"
+              name="email"
+              label="Email"
+              type="email"
+              placeholder="your@email.com"
+              value={watchedFields.email || ""}
+              error={errors.email?.message}
+              isValid={!errors.email && touchedFields.email}
+              required
+              {...register("email")}
+            />
+            
+            <AnimatedFormField
+              id="message"
+              name="message"
+              label="Message"
+              placeholder="Your message..."
+              value={watchedFields.message || ""}
+              error={errors.message?.message}
+              isValid={!errors.message && touchedFields.message}
+              rows={4}
+              required
+              {...register("message")}
+            />
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <AnimatedButton
+                type="submit"
+                className="w-full"
+                loading={isSubmitting}
+                disabled={!isValid || isSubmitting}
+                loadingText="Sending..."
+              >
+                Send Message
+              </AnimatedButton>
+            </motion.div>
+          </form>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 

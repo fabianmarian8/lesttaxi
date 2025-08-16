@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
+import { motion } from "framer-motion";
 import { Loader2, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background animated-button focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -67,7 +68,7 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
     disabled,
     ...props 
   }, ref) => {
-    const Comp = asChild ? Slot : "button";
+    const Comp = asChild ? Slot : motion.button;
     
     const getVariant = () => {
       if (loading) return "loading";
@@ -78,19 +79,28 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
     const getContent = () => {
       if (success) {
         return (
-          <div className="flex items-center gap-2 animate-scale-in">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+            className="flex items-center gap-2"
+          >
             <Check className="h-4 w-4" />
             {successText}
-          </div>
+          </motion.div>
         );
       }
       
       if (loading) {
         return (
-          <div className="flex items-center gap-2 animate-fade-in-up">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex items-center gap-2"
+          >
             <Loader2 className="h-4 w-4 animate-spin" />
             {loadingText}
-          </div>
+          </motion.div>
         );
       }
       
@@ -110,14 +120,17 @@ const AnimatedButton = React.forwardRef<HTMLButtonElement, AnimatedButtonProps>(
     }
 
     return (
-      <Comp
+      <motion.button
         className={cn(buttonVariants({ variant: getVariant(), size, className }))}
         ref={ref}
         disabled={disabled || loading}
+        whileHover={!loading && !disabled ? { scale: 1.02 } : {}}
+        whileTap={!loading && !disabled ? { scale: 0.98 } : {}}
+        transition={{ type: "spring", stiffness: 400, damping: 25 }}
         {...props}
       >
         {getContent()}
-      </Comp>
+      </motion.button>
     );
   }
 );

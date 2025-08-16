@@ -203,50 +203,6 @@
     }
   }
 
-  /* Performance-optimized button animations */
-  @keyframes button-hover {
-    from { transform: scale(1); }
-    to { transform: scale(1.02); }
-  }
-
-  @keyframes button-tap {
-    from { transform: scale(1); }
-    to { transform: scale(0.98); }
-  }
-
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fade-out-down {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-  }
-
-  @keyframes scale-in {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
   @keyframes bounce-gentle {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
     40% { transform: translateY(-8px); }
@@ -258,29 +214,6 @@
     50% { opacity: 0.6; }
   }
 
-  /* Performance-focused animation classes */
-  .animated-button {
-    @apply transition-transform duration-200 ease-out;
-    will-change: transform;
-  }
-
-  .animated-button:hover:not(:disabled) {
-    animation: button-hover 0.2s ease-out forwards;
-  }
-
-  .animated-button:active:not(:disabled) {
-    animation: button-tap 0.1s ease-out forwards;
-  }
-
-  .animated-form-field {
-    @apply transition-all duration-200 ease-out;
-    will-change: transform, opacity;
-  }
-
-  .animated-form-field.focused {
-    @apply ring-2 ring-primary ring-offset-2;
-  }
-
   .animate-bounce-gentle {
     animation: bounce-gentle 0.6s ease-in-out;
   }
@@ -289,48 +222,9 @@
     animation: pulse-gentle 2s infinite;
   }
 
-  .animate-fade-in-up {
-    animation: fade-in-up 0.3s ease-out;
-  }
-
-  .animate-fade-out-down {
-    animation: fade-out-down 0.3s ease-out;
-  }
-
-  .animate-scale-in {
-    animation: scale-in 0.2s ease-out;
-  }
-
-  /* Content visibility optimization */
-  .content-auto {
-    content-visibility: auto;
-  }
-
-  /* Hardware acceleration for smooth animations */
-  .hw-accelerated {
-    transform: translateZ(0);
-    will-change: transform;
-  }
-
-  /* SUV image LCP optimization */
   .rav4-image {
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    contain: layout style paint;
     border: 0 !important;
     box-shadow: none !important;
     outline: none !important;
-  }
-  
-  /* Hero section optimization for LCP */
-  .hero-section {
-    content-visibility: auto;
-    contain-intrinsic-size: 600px;
-  }
-  
-  /* Off-screen content optimization */
-  .below-fold {
-    content-visibility: auto;
   }
 }
