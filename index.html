@@ -58,8 +58,9 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="/images/cover-1200x630.jpg" as="image">
     <link rel="preload" href="/images/logo-main.webp" as="image">
-    <!-- Preload SUV hero image for LCP optimization -->
-    <link rel="preload" href="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" as="image" type="image/png">
+    <!-- Preload SUV hero image for LCP optimization with WebP support -->
+    <link rel="preload" href="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.webp" as="image" type="image/webp" imagesrcset="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.webp" imagesizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw">
+    <link rel="preload" href="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" as="image" type="image/png" imagesrcset="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.png" imagesizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw">
     
     <!-- Critical CSS inline for above-the-fold content -->
     <style>

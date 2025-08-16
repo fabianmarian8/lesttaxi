@@ -27,8 +27,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   // Determine loading strategy
   const imageLoading = loading || (priority ? "eager" : "lazy");
-  // Only optimize images from assets folder that have WebP versions
+  // Optimize both assets and lovable-uploads images
   const isAssetImage = src.includes('/assets/');
+  const isLovableUpload = src.includes('/lovable-uploads/');
   
   // Generate srcset for responsive images
   const generateSrcSet = (basePath: string, extension: string) => {
@@ -43,8 +44,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Auto-enable responsive for large images
   const shouldUseResponsive = responsive || (width && width > 400);
   
-  if (!isAssetImage) {
-    // For non-asset images (like lovable-uploads), use regular img tag
+  // For non-optimizable images, use regular img tag with optimizations
+  if (!isAssetImage && !isLovableUpload) {
     return (
       <img
         src={src}
@@ -56,6 +57,36 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         decoding="async"
         {...(priority && { fetchpriority: "high" })}
       />
+    );
+  }
+  
+  // For lovable-uploads, try WebP versions
+  if (isLovableUpload) {
+    const baseSrc = src.replace(/\.[^/.]+$/, "");
+    const webpSrc = `${baseSrc}.webp`;
+    
+    return (
+      <picture>
+        {/* WebP format for better compression */}
+        <source 
+          srcSet={webpSrc} 
+          type="image/webp"
+          {...(shouldUseResponsive && { sizes: sizes || "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" })}
+        />
+        
+        {/* Fallback to original format */}
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className={className}
+          loading={imageLoading}
+          decoding="async"
+          {...(priority && { fetchpriority: "high" })}
+          {...(shouldUseResponsive && { sizes: sizes || "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" })}
+        />
+      </picture>
     );
   }
   

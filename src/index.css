@@ -312,9 +312,25 @@
     will-change: transform;
   }
 
+  /* SUV image LCP optimization */
   .rav4-image {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    contain: layout style paint;
     border: 0 !important;
     box-shadow: none !important;
     outline: none !important;
+  }
+  
+  /* Hero section optimization for LCP */
+  .hero-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 600px;
+  }
+  
+  /* Off-screen content optimization */
+  .below-fold {
+    content-visibility: auto;
   }
 }
