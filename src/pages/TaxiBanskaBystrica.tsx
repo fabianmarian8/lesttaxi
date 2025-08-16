@@ -131,7 +131,7 @@ const TaxiBanskaBystrica = () => {
       />
 
       {/* Destinations Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 combat-text">
             Banská Bystrica Destinations & Pricing
@@ -157,7 +157,7 @@ const TaxiBanskaBystrica = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 to-[hsl(var(--combat-green))]/10">
+      <section className="py-16 px-6 bg-gradient-to-br from-[hsl(var(--military-gold))]/10 to-[hsl(var(--combat-green))]/10 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 combat-text">
             Why Choose Our Banská Bystrica Service?

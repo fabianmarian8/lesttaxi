@@ -159,7 +159,7 @@ const PriceList = () => {
       </StandardHero>
 
       {/* Main Destinations */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Main Destinations from Lešť Base</h2>
           <div className="max-w-6xl mx-auto">
@@ -205,7 +205,7 @@ const PriceList = () => {
       </section>
 
       {/* Local Services */}
-      <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5">
+      <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Local Services & Delivery</h2>
           <div className="max-w-4xl mx-auto">

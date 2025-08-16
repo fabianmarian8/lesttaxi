@@ -78,7 +78,7 @@ const AirportTransfer = () => {
       />
 
       {/* Airport Options */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Airport Transfer Destinations</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -110,7 +110,7 @@ const AirportTransfer = () => {
       </section>
 
       {/* Features */}
-      <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5">
+      <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--military-green))]/5 to-[hsl(var(--military-gold))]/5 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Airport Service?</h2>
           <div className="grid md:grid-cols-3 gap-8">

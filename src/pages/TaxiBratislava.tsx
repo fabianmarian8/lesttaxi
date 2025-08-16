@@ -131,7 +131,7 @@ const TaxiBratislava = () => {
       </section>
 
       {/* Service Details */}
-      <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5">
+      <section className="py-16 px-6 bg-gradient-to-r from-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center combat-text">
             Why Choose Our Bratislava Taxi Service?
@@ -160,7 +160,7 @@ const TaxiBratislava = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold mb-12 text-center combat-text">
             Frequently Asked Questions - Bratislava Transport

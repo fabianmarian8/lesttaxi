@@ -143,7 +143,7 @@ const Index = () => {
       </section>
 
       {/* Elite Services Section */}
-      <section className="py-2 sm:py-4 px-3 sm:px-6 relative">
+      <section className="py-2 sm:py-4 px-3 sm:px-6 relative [content-visibility:auto] [contain:layout_paint_style]">
         <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--combat-green))]/20 to-[hsl(var(--military-gold))]/10" />
         <div className="container mx-auto relative z-10">
           <h2 className="text-base sm:text-lg md:text-xl lg:text-3xl font-black text-center mb-2 sm:mb-4 lg:mb-6 combat-text">
@@ -177,7 +177,7 @@ const Index = () => {
 
 
       {/* Command Center Contact */}
-      <section className="py-4 sm:py-6 px-6 relative">
+      <section className="py-4 sm:py-6 px-6 relative [content-visibility:auto] [contain:layout_paint_style]">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--background))] via-[hsl(var(--combat-green))]/10 to-[hsl(var(--military-gold))]/5" />
         <div className="container mx-auto relative z-10">
           <div className="max-w-2xl mx-auto mb-4 sm:mb-6">
@@ -247,7 +247,7 @@ const Index = () => {
       <FloatingWhatsApp />
 
       {/* Populárne trasy (nad footerom) */}
-      <section className="py-12 px-6">
+      <section className="py-12 px-6 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-center mb-6 combat-text">Populárne trasy</h2>
           <nav aria-label="Populárne trasy">
@@ -265,7 +265,7 @@ const Index = () => {
       </section>
 
       {/* Quick Contact - compact bottom section */}
-      <section className="py-6 px-4">
+      <section className="py-6 px-4 [content-visibility:auto] [contain:layout_paint_style]">
         <div className="container mx-auto">
           <nav aria-label="Quick contact" className="grid grid-cols-4 gap-3 max-w-md mx-auto">
             <a href="tel:+421919040118" onClick={() => window.gtag?.('event', 'call_now_click')} className="tactical-card group flex flex-col items-center gap-2 p-2">
