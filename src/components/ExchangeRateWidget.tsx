@@ -75,9 +75,9 @@ const ExchangeRateWidget: React.FC = () => {
 
   if (isLoading && !exchangeRate) {
     return (
-      <div className="glass-effect rounded-lg px-3 py-2 flex items-center space-x-2 border border-primary/20">
-        <DollarSign className="w-4 h-4 text-primary animate-pulse" />
-        <span className="text-sm font-medium text-foreground/80">Loading...</span>
+      <div className="glass-effect rounded-lg px-2 py-1 sm:px-3 sm:py-2 flex items-center space-x-1 sm:space-x-2 border border-primary/20" style={{ minWidth: '140px', minHeight: '32px' }}>
+        <DollarSign className="w-3 h-3 sm:w-4 sm:h-4 text-primary animate-pulse" />
+        <span className="text-xs sm:text-sm font-medium text-foreground/80">Loading...</span>
       </div>
     );
   }
@@ -86,6 +86,7 @@ const ExchangeRateWidget: React.FC = () => {
     <div 
       className="glass-effect rounded-lg px-2 py-1 sm:px-3 sm:py-2 flex items-center space-x-1 sm:space-x-2 border border-primary/20 hover:border-primary/40 transition-all duration-300 cursor-pointer group"
       title={`Last updated: ${lastUpdated?.toLocaleTimeString() || 'Unknown'}`}
+      style={{ minWidth: '140px', minHeight: '32px' }}
     >
       <DollarSign className="w-3 h-3 sm:w-4 sm:h-4 text-primary group-hover:text-accent transition-colors" />
       <div className="flex items-center space-x-1">

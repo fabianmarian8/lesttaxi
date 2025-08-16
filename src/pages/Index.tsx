@@ -194,9 +194,9 @@ const Index = () => {
                   <ChevronDown className={`ml-2 h-5 w-5 transition-transform transform-gpu will-change-transform ${isBookingOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </Button>
               </CollapsibleTrigger>
-              <CollapsibleContent id="booking-form-content" className="mt-6 [will-change:height] [contain:layout_style]">
+              <CollapsibleContent id="booking-form-content" className="mt-6 [will-change:height] [contain:layout_style]" style={{ minHeight: '400px' }}>
                 <Suspense fallback={
-                  <div className="flex items-center justify-center p-8">
+                  <div className="flex items-center justify-center p-8" style={{ height: '400px' }}>
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
                   </div>
                 }>

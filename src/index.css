@@ -231,4 +231,26 @@
   /* Performance optimizations for forced reflow reduction */
   :where(main>section,.collapsible-content,.tactical-card,.hero,.booking,.contact){content-visibility:auto;contain-intrinsic-size:1000px 800px;}
   :where(.anim,.tactical-card,.cta,.hero img){will-change:transform;transform:translateZ(0);}
+  
+  /* CLS Prevention - Layout Stabilization */
+  .fixed[class*="pizza"], .fixed[class*="banner"] {
+    contain: layout style size;
+    min-width: 100px;
+    min-height: 80px;
+  }
+  
+  .glass-effect {
+    contain: layout style;
+  }
+  
+  /* Aspect ratio preservation for images */
+  img, picture {
+    aspect-ratio: attr(width) / attr(height);
+  }
+  
+  /* Suspense loading stabilization */
+  [data-suspense] {
+    min-height: 400px;
+    contain: layout;
+  }
 }
