@@ -1,5 +1,4 @@
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -53,12 +52,7 @@ export const AnimatedFormField = React.forwardRef<
   };
 
   return (
-    <motion.div 
-      className="space-y-2"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="space-y-2 animate-fade-in-up">
       <Label 
         htmlFor={id}
         className={cn(
@@ -72,85 +66,55 @@ export const AnimatedFormField = React.forwardRef<
       </Label>
       
       <div className="relative">
-        <motion.div
-          whileFocus={{ scale: 1.01 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        >
-          <Component
-            id={id}
-            name={name}
-            type={type}
-            placeholder={placeholder}
-            value={value}
-            onChange={onChange}
-            onFocus={handleFocus}
-            onBlur={handleBlur}
-            rows={rows}
-            className={cn(
-              "transition-all duration-200 pr-10",
-              isFocused && "ring-2 ring-primary ring-offset-2",
-              error && "border-destructive focus-visible:ring-destructive",
-              isValid && !error && "border-green-500",
-              className
-            )}
-            ref={ref as any}
-            {...props}
-          />
-        </motion.div>
+        <Component
+          id={id}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          rows={rows}
+          className={cn(
+            "animated-form-field pr-10",
+            isFocused && "focused",
+            error && "border-destructive focus-visible:ring-destructive",
+            isValid && !error && "border-green-500",
+            className
+          )}
+          ref={ref as any}
+          {...props}
+        />
         
         {/* Validation indicators */}
-        <AnimatePresence>
-          {isValidating && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 }}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
-            >
-              <div className="animate-spin rounded-full h-4 w-4 border-2 border-primary border-t-transparent" />
-            </motion.div>
-          )}
-          
-          {isValid && !error && !isValidating && value && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 }}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
-            >
-              <Check className="h-4 w-4 text-green-500" />
-            </motion.div>
-          )}
-          
-          {error && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 }}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
-            >
-              <AlertCircle className="h-4 w-4 text-destructive" />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isValidating && (
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 animate-scale-in">
+            <div className="animate-spin rounded-full h-4 w-4 border-2 border-primary border-t-transparent" />
+          </div>
+        )}
+        
+        {isValid && !error && !isValidating && value && (
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 animate-scale-in">
+            <Check className="h-4 w-4 text-green-500" />
+          </div>
+        )}
+        
+        {error && (
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 animate-scale-in">
+            <AlertCircle className="h-4 w-4 text-destructive" />
+          </div>
+        )}
       </div>
       
       {/* Error message */}
-      <AnimatePresence>
-        {error && (
-          <motion.p
-            initial={{ opacity: 0, height: 0, y: -10 }}
-            animate={{ opacity: 1, height: "auto", y: 0 }}
-            exit={{ opacity: 0, height: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="text-sm text-destructive flex items-center gap-1"
-          >
-            <AlertCircle className="h-3 w-3" />
-            {error}
-          </motion.p>
-        )}
-      </AnimatePresence>
-    </motion.div>
+      {error && (
+        <p className="text-sm text-destructive flex items-center gap-1 animate-fade-in-up">
+          <AlertCircle className="h-3 w-3" />
+          {error}
+        </p>
+      )}
+    </div>
   );
 });
 
