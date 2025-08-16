@@ -132,7 +132,7 @@ const PriceList = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
             <OptimizedImage 
-              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
               alt="LEST TAXI circular logo with military taxi car icon" 
               width={48}
               height={48}

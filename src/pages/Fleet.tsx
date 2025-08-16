@@ -248,7 +248,7 @@ const Fleet = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <OptimizedImage 
-                src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
+                src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.webp" 
                 alt="Professional white Toyota taxi vehicles lined up in formation ready for military transport service" 
                 className="rounded-lg shadow-xl w-full mb-4"
                 width={600}
@@ -262,7 +262,7 @@ const Fleet = () => {
             </div>
             <div className="text-center">
               <OptimizedImage 
-                src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.png" 
+                src="/lovable-uploads/83d79a32-aec1-47b1-b1a5-76fb5ba38e71.webp" 
                 alt="LEST TAXI white Toyota sedan parked at Europa Shopping Center parking area" 
                 className="rounded-lg shadow-xl w-full mb-4"
                 width={600}

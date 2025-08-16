@@ -100,7 +100,7 @@ const TaxiBanskaBystrica = () => {
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
           <OptimizedImage 
-            src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+            src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
             alt="LEST TAXI logo" 
             className="h-16 w-16 rounded-full"
             width={64}

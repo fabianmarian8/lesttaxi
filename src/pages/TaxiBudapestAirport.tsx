@@ -31,7 +31,7 @@ const TaxiBudapestAirport = () => {
         <nav className="container mx-auto flex justify-between items-center">
           <Link to="/">
             <OptimizedImage 
-              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.png" 
+              src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
               alt="LEST TAXI Professional Military Transport Service" 
               className="h-16 w-16 rounded-full bg-white/10 p-2"
               width={64}

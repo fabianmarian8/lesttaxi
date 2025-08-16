@@ -10,7 +10,7 @@ const MilitaryAccommodation = () => {
     description: "Hotel transport for US military in Slovakia. Airport pickups, accommodation transfers. English-speaking drivers 24/7.",
     keywords: "military accommodation transport, US soldiers hotel transfers, military housing Slovakia, American military hotel service, accommodation transport Lest",
     canonical: "https://www.lesttaxi.com/military-accommodation-transport",
-    ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png",
+    ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "TaxiService",
@@ -132,7 +132,7 @@ const MilitaryAccommodation = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <OptimizedImage 
-              src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
+              src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.webp" 
               alt="FRANKO TAXI circular logo with professional taxi service branding" 
               width={48}
               height={48}

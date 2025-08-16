@@ -12,7 +12,7 @@ const BanskaBystricaTaxi = () => {
     description: "Professional taxi service from Lest Military Base to Banská Bystrica. 24/7 transport for US military personnel. English speaking drivers, fixed rates, reliable service.",
     keywords: "Banská Bystrica taxi military, US soldiers transport Banská Bystrica, Lest base to Banská Bystrica, military taxi Slovakia, American soldiers taxi",
     canonical: "https://www.lesttaxi.com/banska-bystrica-military-taxi",
-    ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png",
+    ogImage: "/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "TaxiService",
@@ -108,7 +108,7 @@ const BanskaBystricaTaxi = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <OptimizedImage 
-              src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.png" 
+              src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.webp" 
               alt="FRANKO TAXI circular logo with professional taxi service branding" 
               width={48}
               height={48}
