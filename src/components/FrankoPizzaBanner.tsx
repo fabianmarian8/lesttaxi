@@ -37,6 +37,8 @@ export const FrankoPizzaBanner = () => {
         >
           <img
             src="/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e.webp"
+            srcSet="/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e-80.webp 80w, /lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e-160.webp 160w, /lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e.webp 256w"
+            sizes="80px"
             alt="Franko Pizza - Premium pizza delivery service"
             width="80"
             height="80"
