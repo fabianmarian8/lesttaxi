@@ -3,9 +3,11 @@ import { MapPin, Phone, Mail, Car, MessageCircle, HelpCircle, Facebook, ChevronD
 import { Link } from "react-router-dom";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import ExchangeRateWidget from "@/components/ExchangeRateWidget";
-import { BookingForm } from "@/components/BookingForm";
+
+// Lazy load BookingForm to reduce initial bundle size
+const BookingForm = lazy(() => import("@/components/BookingForm").then(module => ({ default: module.BookingForm })));
 import { useSEO } from "@/hooks/useSEO";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { FrankoPizzaBanner } from "@/components/FrankoPizzaBanner";
@@ -193,7 +195,13 @@ const Index = () => {
                 </Button>
               </CollapsibleTrigger>
               <CollapsibleContent id="booking-form-content" className="mt-6 [will-change:height] [contain:layout_style]">
-                <BookingForm />
+                <Suspense fallback={
+                  <div className="flex items-center justify-center p-8">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                  </div>
+                }>
+                  <BookingForm />
+                </Suspense>
               </CollapsibleContent>
             </Collapsible>
           </div>

@@ -23,15 +23,21 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false
+      },
       output: {
         // Better code splitting for performance
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', 'lucide-react'],
+          'ui-core': ['@radix-ui/react-dialog', '@radix-ui/react-toast'],
+          'ui-icons': ['lucide-react'],
+          'ui-forms': ['@radix-ui/react-collapsible', '@radix-ui/react-accordion'],
           forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'forms-extended': ['@/components/BookingForm', '@/components/ContactForm'],
-          analytics: ['@/hooks/useAnalytics', 'web-vitals'],
+          analytics: ['@/hooks/useAnalytics'],
           widgets: ['@/components/HolidayStatusWidget', '@/components/ExchangeRateWidget'],
           charts: ['recharts'],
           utils: ['clsx', 'tailwind-merge', 'class-variance-authority']

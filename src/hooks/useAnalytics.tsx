@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 declare global {
   interface Window {
@@ -7,9 +7,20 @@ declare global {
 }
 
 export const useAnalytics = () => {
+  const [userInteracted, setUserInteracted] = useState(false);
+
   useEffect(() => {
-    // Core Web Vitals tracking
-    const trackWebVitals = async () => {
+    // Track user interaction for conditional loading
+    const handleUserInteraction = () => {
+      if (!userInteracted) {
+        setUserInteracted(true);
+        // Load web-vitals only after user interaction
+        loadWebVitals();
+      }
+    };
+
+    // Core Web Vitals tracking - lazy loaded
+    const loadWebVitals = async () => {
       try {
         const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals');
         
@@ -63,7 +74,7 @@ export const useAnalytics = () => {
       }
     };
 
-    // Track page view
+    // Track page view (immediate)
     const trackPageView = () => {
       window.gtag?.('config', 'G-9HLRQ0J9S3', {
         page_title: document.title,
@@ -71,9 +82,21 @@ export const useAnalytics = () => {
       });
     };
 
-    // Initialize tracking
+    // Initialize immediate tracking
     trackPageView();
-    trackWebVitals();
+
+    // Add event listeners for user interaction
+    const events = ['scroll', 'click', 'keydown', 'mousemove', 'touchstart'];
+    events.forEach(event => {
+      document.addEventListener(event, handleUserInteraction, { once: true, passive: true });
+    });
+
+    // Fallback: load after 3 seconds if no interaction
+    const fallbackTimer = setTimeout(() => {
+      if (!userInteracted) {
+        handleUserInteraction();
+      }
+    }, 3000);
 
     // Track errors
     const handleError = (event: ErrorEvent) => {
@@ -87,6 +110,10 @@ export const useAnalytics = () => {
     
     return () => {
       window.removeEventListener('error', handleError);
+      clearTimeout(fallbackTimer);
+      events.forEach(event => {
+        document.removeEventListener(event, handleUserInteraction);
+      });
     };
   }, []);
 };
