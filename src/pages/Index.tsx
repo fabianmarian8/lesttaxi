@@ -92,7 +92,7 @@ const Index = () => {
       {/* Enhanced Header with Glass Effect */}
       <header className="glass-effect backdrop-blur-xl py-2 sm:py-4 px-4 sm:px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
-              <OptimizedImage src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" alt="LEST TAXI circular logo with military taxi car icon" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full bg-white/10 p-1 sm:p-2 backdrop-blur-sm border border-white/30 pulse-glow" width={80} height={80} priority={true} />
+              <OptimizedImage src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" alt="LEST TAXI circular logo with military taxi car icon" className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full bg-white/10 p-1 sm:p-2 backdrop-blur-sm border border-white/30 pulse-glow" width={80} height={80} priority={true} responsive={true} sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, 80px" />
           
           <div className="flex items-center gap-2 sm:gap-4">
             <ExchangeRateWidget />
@@ -133,7 +133,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex flex-col items-center lg:items-center text-center">
-              <OptimizedImage src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.webp" alt="Professional white Toyota taxi vehicle ready for military personnel transport at Lest Base" className="rav4-image rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl" width={600} height={450} priority={true} responsive={true} sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw" />
+              <OptimizedImage src="/lovable-uploads/2c4085f5-69ea-4561-baae-9a987e4939e7.webp" alt="Professional white Toyota taxi vehicle ready for military personnel transport at Lest Base" className="rav4-image rounded-xl w-full max-w-xs sm:max-w-md lg:max-w-lg shadow-2xl" width={600} height={450} priority={true} responsive={true} sizes="(max-width: 640px) 320px, (max-width: 768px) 480px, 640px" />
               <p className="mt-3 sm:mt-4 max-w-2xl text-[0.8rem] sm:text-sm text-muted-foreground leading-relaxed">
                 LEST TAXI provides fast transfers between Lešť Base and Zvolen or Banská Bystrica, typically to Europa Shopping Center, SNP Square, and the bus/train station. We also operate longer routes to Bratislava, Vienna, and Budapest, including the airports VIE, BTS, BUD. Pricing is transparent with fixed fares on popular routes. We plan with buffer time, monitor traffic, and for airport rides adjust arrival to real conditions. If you don’t need a ride right now, we can buy and deliver what you need—groceries, supplies, goodies, small items—straight to the base or city. With LEST TAXI you’ll get where you’re going on time and safely.
               </p>

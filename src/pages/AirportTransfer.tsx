@@ -60,6 +60,8 @@ const AirportTransfer = () => {
               height={48}
               className="h-12 w-12 rounded-full bg-white p-1"
               loading="eager"
+              responsive={true}
+              sizes="48px"
             />
             <span className="font-bold text-lg">LEST TAXI</span>
           </Link>

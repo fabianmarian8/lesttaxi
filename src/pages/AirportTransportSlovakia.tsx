@@ -118,6 +118,8 @@ const AirportTransportSlovakia = () => {
             className="h-16 w-16 rounded-full"
             width={64}
             height={64}
+            responsive={true}
+            sizes="64px"
           />
           <div className="flex gap-4">
             <Button onClick={openWhatsApp} variant="whatsapp" size="sm">

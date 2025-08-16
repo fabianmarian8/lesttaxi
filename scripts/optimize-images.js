@@ -19,7 +19,17 @@ const CONFIG = {
     path.join(__dirname, '../src/assets'),
     path.join(__dirname, '../public/lovable-uploads')
   ],
+  // Default breakpoints for general images
   breakpoints: [320, 640, 800, 1200, 1600],
+  // Specific breakpoints for different image types
+  specificBreakpoints: {
+    // Logo breakpoints - optimize for small display sizes (48x48 main display)
+    '08bb4537-9151-4684-bf39-abc2900ea374': [48, 96, 192, 384, 512, 1024],
+    // Taxi vehicle - optimize for medium display sizes (320x240 main display)
+    '2c4085f5-69ea-4561-baae-9a987e4939e7': [320, 480, 640, 960, 1280],
+    // Banner - optimize for small display sizes (80x80 main display)
+    'c673d198-bf62-4c01-8827-484fb2d3df6e': [80, 160, 256, 320]
+  },
   formats: ['avif', 'webp'],
   quality: {
     avif: 50,
@@ -27,7 +37,7 @@ const CONFIG = {
     jpeg: 85,
     png: 95
   },
-  extensions: ['.jpg', '.jpeg', '.png']
+  extensions: ['.jpg', '.jpeg', '.png', '.webp']
 };
 
 /**
@@ -55,8 +65,14 @@ async function generateResponsiveSizes(inputPath, outputDir) {
   
   const results = [];
   
+  // Get specific breakpoints for this image or use defaults
+  const imageId = name.replace(/\.(webp|avif|jpg|jpeg|png)$/, '');
+  const breakpoints = CONFIG.specificBreakpoints[imageId] || CONFIG.breakpoints;
+  
+  console.log(`Using breakpoints for ${name}:`, breakpoints);
+  
   // Generate different sizes
-  for (const width of CONFIG.breakpoints) {
+  for (const width of breakpoints) {
     if (width > metadata.width * 2) continue; // Skip sizes larger than 2x original
     
     for (const format of CONFIG.formats) {

@@ -41,6 +41,8 @@ export const FrankoPizzaBanner = () => {
             width={80}
             height={60}
             className="w-20 h-15 object-contain group-hover:brightness-110 transition-all duration-300"
+            responsive={true}
+            sizes="80px"
           />
           
           {/* Pizza icon overlay */}

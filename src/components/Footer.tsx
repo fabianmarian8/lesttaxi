@@ -46,6 +46,8 @@ export const Footer = () => {
                 className="h-12 w-12 rounded-full"
                 width={48}
                 height={48}
+                responsive={true}
+                sizes="48px"
               />
               <div>
                 <h3 className="text-xl font-bold text-[hsl(var(--military-gold))]">LEST TAXI</h3>
