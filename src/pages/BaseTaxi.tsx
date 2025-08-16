@@ -15,7 +15,7 @@ const BaseTaxi = () => {
     description: "Specialized base taxi service for US military personnel at Lest Base. 24/7 gate pickup, security clearance, fixed rates. Book now via WhatsApp +421 919 040 118",
     keywords: "base taxi Lest, military transport Slovakia, Lest base pickup, gate service, US military taxi, base transport",
     canonical: "https://www.lesttaxi.com/base-taxi",
-    ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
+    ogImage: "https://www.lesttaxi.com/cdn-cgi/image/width=96,quality=70,format=auto/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -83,13 +83,13 @@ const BaseTaxi = () => {
         <header className="bg-gradient-to-r from-[hsl(var(--military-gold))] to-[hsl(46,90%,45%)] text-white py-3 px-6 shadow-lg">
           <div className="container mx-auto flex justify-between items-center">
             <Link to="/" className="flex items-center gap-3">
-              <OptimizedImage 
-                src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
-                alt="LEST TAXI circular logo with military taxi car icon" 
-                width={48}
-                height={48}
+              <img 
+                src="/cdn-cgi/image/width=96,quality=70,format=auto/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
+                alt="LEST TAXI circular logo with military taxi car icon"
+                width="48"
+                height="48"
                 className="h-12 w-12 rounded-full bg-white p-1"
-                loading="eager"
+                loading="lazy"
               />
               <span className="font-bold text-lg">LEST TAXI</span>
             </Link>
