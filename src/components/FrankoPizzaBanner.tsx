@@ -36,7 +36,7 @@ export const FrankoPizzaBanner = () => {
           title="🍕 Franko Pizza Delivery - Order now!"
         >
           <OptimizedImage
-            src="/lovable-uploads/1-ec86ca1b.webp"
+            src="/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e.png"
             alt="Franko Pizza - Premium pizza delivery service"
             width={80}
             height={60}
