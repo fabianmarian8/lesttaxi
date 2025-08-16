@@ -227,4 +227,8 @@
     box-shadow: none !important;
     outline: none !important;
   }
+
+  /* Performance optimizations for forced reflow reduction */
+  :where(main>section,.collapsible-content,.tactical-card,.hero,.booking,.contact){content-visibility:auto;contain-intrinsic-size:1000px 800px;}
+  :where(.anim,.tactical-card,.cta,.hero img){will-change:transform;transform:translateZ(0);}
 }
