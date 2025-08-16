@@ -30,6 +30,9 @@ export default defineConfig(({ mode }) => ({
           router: ['react-router-dom'],
           ui: ['@radix-ui/react-dialog', '@radix-ui/react-toast', 'lucide-react'],
           forms: ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'forms-extended': ['@/components/BookingForm', '@/components/ContactForm'],
+          analytics: ['@/hooks/useAnalytics', 'web-vitals'],
+          widgets: ['@/components/HolidayStatusWidget', '@/components/ExchangeRateWidget'],
           charts: ['recharts'],
           utils: ['clsx', 'tailwind-merge', 'class-variance-authority']
         },

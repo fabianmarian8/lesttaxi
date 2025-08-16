@@ -50,12 +50,19 @@
     <!-- Fallback for browsers without JS -->
     <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter&display=swap" rel="stylesheet"></noscript>
     
-    <!-- DNS prefetch for external resources -->
-    <link rel="dns-prefetch" href="//plausible.io" />
+    <!-- DNS prefetch and preconnect for external resources -->
+    <link rel="preconnect" href="https://plausible.io" crossorigin />
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
+    
+    <!-- Critical resource preloading for parallel downloads -->
+    <link rel="preload" as="style" href="/assets/css/index.css" />
+    <link rel="modulepreload" href="/assets/vendor.js" />
+    <link rel="modulepreload" href="/assets/ui.js" />
+    <link rel="modulepreload" href="/assets/router.js" />
+    <link rel="modulepreload" href="/assets/forms.js" />
     
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="OuNM9gJ+By5q0cOjELFf+g" async></script>
@@ -106,6 +113,38 @@
         backdrop-filter: blur(10px); 
         border: 1px solid rgba(255, 255, 255, 0.1); 
       }
+      
+      /* Critical hero and navigation styles */
+      .hero-section { 
+        background: linear-gradient(135deg, hsl(var(--military-gold))/10, hsl(var(--combat-green))/10);
+        padding: 4rem 1.5rem;
+        text-align: center;
+      }
+      .combat-text { 
+        font-family: 'Orbitron', system-ui;
+        font-weight: 900;
+        letter-spacing: -0.025em;
+      }
+      .btn-primary {
+        background: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        padding: 1rem 2rem;
+        border-radius: var(--radius);
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .btn-primary:hover { transform: translateY(-2px); }
+      
+      /* Layout utilities */
+      .flex { display: flex; }
+      .flex-col { flex-direction: column; }
+      .items-center { align-items: center; }
+      .justify-center { justify-content: center; }
+      .gap-4 { gap: 1rem; }
+      .text-center { text-align: center; }
+      .mb-8 { margin-bottom: 2rem; }
     </style>
     
     <!-- Async load main CSS -->
