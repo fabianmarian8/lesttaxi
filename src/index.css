@@ -29,17 +29,17 @@
     --accent-foreground: 12 10% 8%;
 
     /* Military Theme Colors */
-    --military-gold: hsl(43, 96%, 56%);
-    --military-green: hsl(88, 45%, 20%);
-    --military-bronze: hsl(35, 85%, 45%);
-    --whatsapp-green: hsl(142, 70%, 49%);
+    --military-gold: 43 96% 56%;
+    --military-green: 88 45% 20%;
+    --military-bronze: 35 85% 45%;
+    --whatsapp-green: 142 70% 49%;
 
     /* Elite Military Colors */
-    --elite-gold: hsl(48, 100%, 67%);
-    --combat-green: hsl(94, 50%, 15%);
-    --tactical-orange: hsl(25, 95%, 62%);
-    --stealth-gray: hsl(220, 10%, 15%);
-    --night-ops: hsl(220, 15%, 8%);
+    --elite-gold: 48 100% 67%;
+    --combat-green: 94 50% 15%;
+    --tactical-orange: 25 95% 62%;
+    --stealth-gray: 220 10% 15%;
+    --night-ops: 220 15% 8%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -51,14 +51,14 @@
     --radius: 0.75rem;
 
     /* Advanced Gradients */
-    --gradient-hero: linear-gradient(135deg, var(--military-gold) 0%, var(--elite-gold) 50%, var(--tactical-orange) 100%);
-    --gradient-combat: linear-gradient(180deg, var(--combat-green) 0%, var(--military-green) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--military-gold)) 0%, hsl(var(--elite-gold)) 50%, hsl(var(--tactical-orange)) 100%);
+    --gradient-combat: linear-gradient(180deg, hsl(var(--combat-green)) 0%, hsl(var(--military-green)) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
     
     /* Advanced Shadows */
-    --shadow-neon: 0 0 20px hsla(43, 96%, 56%, 0.3), 0 0 40px hsla(43, 96%, 56%, 0.1);
+    --shadow-neon: 0 0 20px hsl(var(--military-gold) / 0.3), 0 0 40px hsl(var(--military-gold) / 0.1);
     --shadow-tactical: 0 8px 32px rgba(0,0,0,0.4), 0 2px 8px rgba(0,0,0,0.2);
-    --shadow-elite: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px hsla(48, 100%, 67%, 0.2);
+    --shadow-elite: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px hsl(var(--elite-gold) / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -172,10 +172,10 @@
 
   @keyframes pulse-glow {
     from {
-      box-shadow: 0 0 10px hsla(43, 96%, 56%, 0.3);
+      box-shadow: 0 0 10px hsl(var(--military-gold) / 0.3);
     }
     to {
-      box-shadow: 0 0 30px hsla(43, 96%, 56%, 0.6), 0 0 60px hsla(43, 96%, 56%, 0.3);
+      box-shadow: 0 0 30px hsl(var(--military-gold) / 0.6), 0 0 60px hsl(var(--military-gold) / 0.3);
     }
   }
 
@@ -226,27 +226,5 @@
     border: 0 !important;
     box-shadow: none !important;
     outline: none !important;
-  }
-
-  /* Performance optimizations for forced reflow reduction */
-  :where(main>section,.collapsible-content,.tactical-card,.hero,.booking,.contact){content-visibility:auto;contain-intrinsic-size:1000px 800px;}
-  :where(.anim,.tactical-card,.cta,.hero img){will-change:transform;transform:translateZ(0);}
-  
-  /* CLS Prevention - Layout Stabilization */
-  .fixed[class*="pizza"], .fixed[class*="banner"] {
-    contain: layout style size;
-    min-width: 100px;
-    min-height: 80px;
-  }
-  
-  .glass-effect {
-    contain: layout style;
-  }
-  
-  
-  /* Suspense loading stabilization */
-  [data-suspense] {
-    min-height: 400px;
-    contain: layout;
   }
 }

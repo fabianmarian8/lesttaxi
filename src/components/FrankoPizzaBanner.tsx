@@ -24,19 +24,11 @@ export const FrankoPizzaBanner = () => {
     window.gtag?.('event', 'franko_pizza_dismissed');
   };
 
+  if (!isVisible) return null;
+
   return (
-    <div 
-      className="fixed top-20 right-2 z-30 sm:right-4 sm:top-24"
-      style={{
-        opacity: isVisible ? 1 : 0,
-        pointerEvents: isVisible ? 'auto' : 'none',
-        minWidth: '100px',
-        minHeight: '80px'
-      }}
-    >
-      <div className="relative tactical-card glass-effect p-3 rounded-xl border border-military-gold/30 hover:border-military-gold/60 transition-all duration-300 floating group hover:shadow-tactical w-[100px] h-[80px] flex items-center justify-center">
-        {/* Main content wrapper */}
-        <div className="relative">
+    <div className="fixed top-20 right-2 z-30 sm:right-4 sm:top-24">
+      <div className="relative tactical-card glass-effect p-3 rounded-xl border border-military-gold/30 hover:border-military-gold/60 transition-all duration-300 floating group hover:shadow-tactical">
         <button
           onClick={handleClick}
           className="group relative transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-military-gold/50 rounded-lg"
@@ -72,7 +64,6 @@ export const FrankoPizzaBanner = () => {
         >
           <X className="w-3 h-3" />
         </button>
-        </div>
       </div>
     </div>
   );
