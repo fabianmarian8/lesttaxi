@@ -35,13 +35,14 @@ export const FrankoPizzaBanner = () => {
           aria-label="Order pizza delivery from Franko Pizza - Fast delivery to your location"
           title="🍕 Franko Pizza Delivery - Order now!"
         >
-          <img
-            src="/cdn-cgi/image/width=160,quality=70,format=auto/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e.webp"
+          <OptimizedImage
+            src="/lovable-uploads/c673d198-bf62-4c01-8827-484fb2d3df6e.webp"
             alt="Franko Pizza - Premium pizza delivery service"
-            width="80"
-            height="80"
+            width={80}
+            height={60}
             className="w-20 h-15 object-contain group-hover:brightness-110 transition-all duration-300"
-            loading="lazy"
+            responsive={true}
+            sizes="80px"
           />
           
           {/* Pizza icon overlay */}

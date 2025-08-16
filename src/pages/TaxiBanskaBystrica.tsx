@@ -13,7 +13,7 @@ const TaxiBanskaBystrica = () => {
     description: "Professional taxi Lešť service - airport transfers, Banská Bystrica, Zvolen, Budapest or anywhere 24/7 availability",
     keywords: "taxi banská bystrica, taxi lešť, lest base transport, banská bystrica transport, slovakia taxi service, airport transfer banská bystrica",
     canonical: "https://www.lesttaxi.com/taxi-banska-bystrica",
-    ogImage: "https://www.lesttaxi.com/cdn-cgi/image/width=96,quality=70,format=auto/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
+    ogImage: "https://www.lesttaxi.com/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp",
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "TaxiService",
@@ -99,13 +99,12 @@ const TaxiBanskaBystrica = () => {
       {/* Header */}
       <header className="glass-effect backdrop-blur-xl py-4 px-6 relative z-10 border-b border-white/20">
         <nav className="container mx-auto flex justify-between items-center">
-          <img 
-            src="/cdn-cgi/image/width=96,quality=70,format=auto/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
-            alt="LEST TAXI logo"
+          <OptimizedImage 
+            src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
+            alt="LEST TAXI logo" 
             className="h-16 w-16 rounded-full"
-            width="64"
-            height="64"
-            loading="lazy"
+            width={64}
+            height={64}
           />
           <div className="flex gap-4">
             <Button onClick={openWhatsApp} variant="whatsapp" size="sm">
