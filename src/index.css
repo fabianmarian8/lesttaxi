@@ -243,10 +243,6 @@
     contain: layout style;
   }
   
-  /* Aspect ratio preservation for images */
-  img, picture {
-    aspect-ratio: attr(width) / attr(height);
-  }
   
   /* Suspense loading stabilization */
   [data-suspense] {
