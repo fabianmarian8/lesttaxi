@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Clock, DollarSign, Phone, MessageCircle, Car, Shield, Star, ShoppingBag } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
-import { OptimizedImage } from "@/components/OptimizedImage";
+
 import { StandardHero } from "@/components/StandardHero";
 import { ServiceIcon } from "@/components/ServiceIcon";
 
@@ -107,13 +107,14 @@ const BanskaBystricaTaxi = () => {
       <header className="bg-gray-900 shadow-sm border-b border-gray-700">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <OptimizedImage 
+            <img 
               src="/lovable-uploads/6ca94396-9524-4fbf-a518-111877aa3f81.webp" 
               alt="FRANKO TAXI circular logo with professional taxi service branding" 
-              width={48}
-              height={48}
+              width="48"
+              height="48"
               className="h-12 w-auto"
               loading="eager"
+              decoding="async"
             />
             <span className="text-2xl font-bold text-white">FRANKO TAXI</span>
           </div>

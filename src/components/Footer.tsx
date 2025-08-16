@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
-import { OptimizedImage } from "@/components/OptimizedImage";
+
 
 export const Footer = () => {
   const mainServices = [
@@ -40,14 +40,14 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <OptimizedImage 
+              <img 
                 src="/lovable-uploads/08bb4537-9151-4684-bf39-abc2900ea374.webp" 
                 alt="LEST TAXI logo" 
                 className="h-12 w-12 rounded-full"
-                width={48}
-                height={48}
-                responsive={true}
-                sizes="48px"
+                width="48"
+                height="48"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <h3 className="text-xl font-bold text-[hsl(var(--military-gold))]">LEST TAXI</h3>

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Home, Phone, MessageCircle, CalendarCheck } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
-import { OptimizedImage } from "@/components/OptimizedImage";
+
 
 const NotFound = () => {
   const location = useLocation();
@@ -32,12 +32,14 @@ const NotFound = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
         <div className="text-center max-w-2xl mx-auto">
           {/* Logo */}
-          <OptimizedImage 
+          <img 
             src="/lovable-uploads/d06e156c-11ad-4666-802d-c6279072dc7f.webp" 
             alt="LEST TAXI Logo" 
-            width={96}
-            height={96}
+            width="96"
+            height="96"
             className="h-24 w-24 mx-auto mb-8 rounded-full bg-white/10 p-2 backdrop-blur-sm border border-white/30"
+            loading="lazy"
+            decoding="async"
           />
           
           <h1 className="text-8xl font-black mb-6 combat-text text-[hsl(var(--military-gold))]">404</h1>
